@@ -8,8 +8,6 @@ namespace CS2Cheat.Core;
 
 public static class User32
 {
-    #region routines
-
     [DllImport("user32.dll", SetLastError = true)]
     public static extern bool ClientToScreen(IntPtr hWnd, out Point lpPoint);
 
@@ -39,6 +37,4 @@ public static class User32
 
     [DllImport("user32.dll")]
     public static extern uint SendInput(uint nInputs, Utility.Input[] pInputs, int cbSize);
-
-    #endregion
 }

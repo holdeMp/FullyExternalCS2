@@ -1,31 +1,38 @@
-﻿using CS2Cheat.Data.Entity;
-using CS2Cheat.Utils;
+﻿namespace CS2Cheat.Data.Game;
 
-namespace CS2Cheat.Data.Game;
+using System.Diagnostics.CodeAnalysis;
+using Entity;
+using Microsoft.Extensions.Hosting;
 
-public class GameData : ThreadedServiceBase
+public sealed class GameData : BackgroundService
 {
-    #region properties
-
-    protected override string ThreadName => nameof(GameData);
-
-    private GameProcess? GameProcess { get; set; }
-
-    public Player? Player { get; private set; }
-
-    public Entity.Entity[]? Entities { get; private set; }
-
-    #endregion
-
-    #region methods
-
-    /// <inheritdoc />
     public GameData(GameProcess gameProcess)
     {
         GameProcess = gameProcess;
         Player = new Player();
-        Entities = Enumerable.Range(0, 64).Select(index => new Entity.Entity(index)).ToArray();
+        Entities = Enumerable.Range(0, 64).Select(index => new Entity(index)).ToArray();
     }
+
+    private GameProcess? GameProcess
+    {
+        get;
+        set;
+    }
+
+    public Player? Player
+    {
+        get;
+        private set;
+    }
+
+    public Entity[]? Entities
+    {
+        get;
+        private set;
+    }
+
+    [MemberNotNullWhen(true, nameof(Player))]
+    public bool IsPlayerValid => Player != null;
 
     public override void Dispose()
     {
@@ -36,15 +43,21 @@ public class GameData : ThreadedServiceBase
         GameProcess = null;
     }
 
-    protected override void FrameAction()
+    protected override Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        if (GameProcess == null || !GameProcess.IsValid) return;
-        if (Player != null) Player.Update(GameProcess);
+        if (GameProcess is not { IsValid: true })
+        {
+            return Task.CompletedTask;
+        }
+
+        Player?.Update(GameProcess);
 
         if (Entities != null)
+        {
             foreach (var entity in Entities)
+            {
                 entity.Update(GameProcess);
+            }
+        }
     }
-
-    #endregion
 }

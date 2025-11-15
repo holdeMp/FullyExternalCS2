@@ -1,12 +1,14 @@
-using CS2Cheat.Core.Data;
-using CS2Cheat.Data.Entity;
 using Color = SharpDX.Color;
 
 namespace CS2Cheat.Features;
 
+using Core.Data;
+using Data.Entity;
+using Graphics;
+
 public static class SkeletonEsp
 {
-    private static readonly (string Start, string End)[] BoneConnections =
+    private static readonly (string Start, string End)[] _boneConnections =
     [
         // Spine chain
         ("head", "neck_0"),
@@ -35,12 +37,15 @@ public static class SkeletonEsp
         ("leg_lower_R", "ankle_R")
     ];
 
-    public static void Draw(Graphics.Graphics graphics)
+    public static void Draw(Graphics graphics)
     {
         var player = graphics.GameData.Player;
         foreach (var entity in graphics.GameData.Entities)
         {
-            if (!IsValidEntity(entity, player)) continue;
+            if (!IsValidEntity(entity, player))
+            {
+                continue;
+            }
 
             var color = GetTeamColor(entity.Team);
             DrawSkeleton(graphics, entity, color);
@@ -48,26 +53,26 @@ public static class SkeletonEsp
     }
 
 
-    private static bool IsValidEntity(Entity entity, Player player)
-    {
-        return entity.IsAlive() &&
-               entity.AddressBase != player.AddressBase;
-    }
+    private static bool IsValidEntity(Entity entity, Player player) =>
+        entity.IsAlive() &&
+        entity.AddressBase != player.AddressBase;
 
-    private static Color GetTeamColor(Team team)
-    {
-        return team == Team.Terrorists ? Color.Yellow : Color.Blue;
-    }
+    private static Color GetTeamColor(Team team) => team == Team.Terrorists ? Color.Yellow : Color.Blue;
 
-    private static void DrawSkeleton(Graphics.Graphics graphics, Entity entity, Color color)
+    private static void DrawSkeleton(Graphics graphics, Entity entity, Color color)
     {
         var bonePositions = entity.BonePos;
-        if (bonePositions == null) return;
+        if (bonePositions == null)
+        {
+            return;
+        }
 
-        foreach (var (startBone, endBone) in BoneConnections)
+        foreach (var (startBone, endBone) in _boneConnections)
         {
             if (!bonePositions.ContainsKey(startBone) || !bonePositions.ContainsKey(endBone))
+            {
                 continue;
+            }
 
             graphics.DrawLineWorld(color, bonePositions[startBone], bonePositions[endBone]);
         }

@@ -1,10 +1,11 @@
-﻿using System.Runtime.InteropServices;
+﻿namespace CS2Cheat.Core;
 
-namespace CS2Cheat.Core;
+using System.Runtime.InteropServices;
 
-public abstract class Kernel32
+public abstract partial class Kernel32
 {
-    [DllImport("kernel32.dll", SetLastError = true)]
-    public static extern bool ReadProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress,
-        [Out] IntPtr lpBuffer, int dwSize, out int lpNumberOfBytesRead);
+    [LibraryImport("kernel32.dll", SetLastError = true)]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    public static partial bool ReadProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress,
+        out IntPtr lpBuffer, int dwSize, out int lpNumberOfBytesRead);
 }

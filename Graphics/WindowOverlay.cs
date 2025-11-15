@@ -1,15 +1,15 @@
-using System.Windows.Threading;
-using CS2Cheat.Data.Game;
-using CS2Cheat.Utils;
-using GameOverlay.Windows;
-using SharpDX;
 using static System.Windows.Application;
-using Color = SharpDX.Color;
-using Rectangle = System.Drawing.Rectangle;
 
 namespace CS2Cheat.Graphics;
 
-public class WindowOverlay : ThreadedServiceBase
+using System.Windows.Threading;
+using Data.Game;
+using GameOverlay.Windows;
+using SharpDX;
+using Utils;
+using Rectangle = Rectangle;
+
+public class WindowOverlay : IDisposable
 {
     public WindowOverlay(GameProcess gameProcess)
     {
@@ -30,13 +30,25 @@ public class WindowOverlay : ThreadedServiceBase
         Window.Create();
     }
 
-    protected override string ThreadName => nameof(WindowOverlay);
+    protected virtual string ThreadName => nameof(WindowOverlay);
 
-    private GameProcess GameProcess { get; set; }
+    private GameProcess GameProcess
+    {
+        get;
+        set;
+    }
 
-    public OverlayWindow Window { get; private set; }
+    public OverlayWindow Window
+    {
+        get;
+        private set;
+    }
 
-    private static FpsCounter? FpsCounter { get; set; }
+    private static FpsCounter? FpsCounter
+    {
+        get;
+        set;
+    }
 
 
     public override void Dispose()
@@ -44,20 +56,19 @@ public class WindowOverlay : ThreadedServiceBase
         base.Dispose();
 
         Window.Dispose();
-        Window = default;
+        Window = null;
 
-        FpsCounter = default;
-        GameProcess = default;
+        FpsCounter = null;
+        GameProcess = null;
     }
 
-    protected override void FrameAction()
+    protected virtual void FrameAction()
     {
         FpsCounter?.Update();
         Update(GameProcess.WindowRectangleClient);
     }
 
-    private void Update(Rectangle windowRectangle)
-    {
+    private void Update(Rectangle windowRectangle) =>
         Current.Dispatcher.Invoke(() =>
         {
             if (Window.X != windowRectangle.Location.X || Window.Y != windowRectangle.Location.Y ||
@@ -79,7 +90,6 @@ public class WindowOverlay : ThreadedServiceBase
                 }
             }
         }, DispatcherPriority.Normal);
-    }
 
     public static void Draw(GameProcess gameProcess, Graphics graphics)
     {
@@ -95,6 +105,6 @@ public class WindowOverlay : ThreadedServiceBase
             new Vector2(0, 0)
         );
         //fps count
-        graphics.FontConsolas32.DrawText(default, $"{FpsCounter!.Fps} FPS", 5, 5, Color.White);
+        graphics.FontConsolas32.DrawText(null, $"{FpsCounter!.Fps} FPS", 5, 5, Color.White);
     }
 }

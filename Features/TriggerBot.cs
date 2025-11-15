@@ -1,10 +1,11 @@
-using CS2Cheat.Data.Game;
-using CS2Cheat.Utils;
 using Keys = Process.NET.Native.Types.Keys;
 
 namespace CS2Cheat.Features;
 
-public sealed class TriggerBot : ThreadedServiceBase
+using Data.Game;
+using Utils;
+
+public sealed class TriggerBot : IDisposable
 {
     private const float MaxVelocityThreshold = 18f;
     private const int TriggerDelayMs = 5;
@@ -28,56 +29,82 @@ public sealed class TriggerBot : ThreadedServiceBase
 
     private static ConfigManager Config => _config ??= ConfigManager.Load();
 
-    protected override string ThreadName => nameof(TriggerBot);
+    protected string ThreadName => nameof(TriggerBot);
 
-    protected override async void FrameAction()
+    public override void Dispose()
+    {
+        base.Dispose();
+        GC.SuppressFinalize(this);
+    }
+
+    protected async void FrameAction()
     {
         if (!ShouldExecuteTriggerBot())
+        {
             return;
+        }
 
         var targetEntity = GetTargetEntity();
         if (targetEntity == IntPtr.Zero)
+        {
             return;
+        }
 
-        if (_gameProcess.Process == null) return;
+        if (_gameProcess.Process == null)
+        {
+            return;
+        }
 
-        var entityTeam = _gameProcess.Process.Read<int>(targetEntity + Offsets.m_iTeamNum);
+        var entityTeam = _gameProcess.Process.Read<int>(targetEntity + Offsets.MiTeamNum);
         if (!ShouldTriggerOnEntity(entityTeam))
+        {
             return;
+        }
 
         await ExecuteTrigger();
     }
 
-    private bool ShouldExecuteTriggerBot()
-    {
-        return _gameProcess.IsValid && IsHotKeyDown();
-    }
+    private bool ShouldExecuteTriggerBot() => _gameProcess.IsValid && IsHotKeyDown();
 
     private IntPtr GetTargetEntity()
     {
-        if (_gameProcess.ModuleClient == null) return IntPtr.Zero;
+        if (_gameProcess.ModuleClient == null)
+        {
+            return IntPtr.Zero;
+        }
 
-        var localPlayerPawn = _gameProcess.ModuleClient.Read<IntPtr>(Offsets.dwLocalPlayerPawn);
-        if (localPlayerPawn == IntPtr.Zero) return IntPtr.Zero;
+        var localPlayerPawn = _gameProcess.ModuleClient.Read<IntPtr>(Offsets.DwLocalPlayerPawn);
+        if (localPlayerPawn == IntPtr.Zero)
+        {
+            return IntPtr.Zero;
+        }
 
-        if (_gameProcess.Process == null) return IntPtr.Zero;
+        if (_gameProcess.Process == null)
+        {
+            return IntPtr.Zero;
+        }
 
-        var entityId = _gameProcess.Process.Read<int>(localPlayerPawn + Offsets.m_iIDEntIndex);
+        var entityId = _gameProcess.Process.Read<int>(localPlayerPawn + Offsets.MiIdEntIndex);
 
         if (entityId < 0)
+        {
             return IntPtr.Zero;
+        }
 
-        var entityList = _gameProcess.ModuleClient.Read<IntPtr>(Offsets.dwEntityList);
+        var entityList = _gameProcess.ModuleClient.Read<IntPtr>(Offsets.DwEntityList);
         var entityEntry = _gameProcess.Process.Read<IntPtr>(
-            entityList + EntityListMultiplier * (entityId >> EntityIndexShift) + EntityEntryOffset);
+            entityList + (EntityListMultiplier * (entityId >> EntityIndexShift)) + EntityEntryOffset);
 
         return _gameProcess.Process.Read<IntPtr>(
-            entityEntry + EntityStride * (entityId & EntityIndexMask));
+            entityEntry + (EntityStride * (entityId & EntityIndexMask)));
     }
 
     private bool ShouldTriggerOnEntity(int entityTeam)
     {
-        if (_gameData.Player == null) return false;
+        if (_gameData.Player == null)
+        {
+            return false;
+        }
 
         var isDifferentTeam = _gameData.Player.Team != entityTeam.ToTeam();
         var isSpecialCondition = _gameData.Player.FFlags == 65664;
@@ -93,15 +120,5 @@ public sealed class TriggerBot : ThreadedServiceBase
         Utility.MouseLeftUp();
     }
 
-    public static bool IsHotKeyDown()
-    {
-        return _triggerBotHotKey.IsKeyDown();
-    }
-
-    public override void Dispose()
-    {
-        base.Dispose();
-        GC.SuppressFinalize(this);
-    }
-
+    public static bool IsHotKeyDown() => _triggerBotHotKey.IsKeyDown();
 }

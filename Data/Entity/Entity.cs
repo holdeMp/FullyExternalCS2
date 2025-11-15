@@ -1,9 +1,9 @@
-using System.Collections.Concurrent;
-using CS2Cheat.Data.Game;
-using CS2Cheat.Utils;
-using SharpDX;
-
 namespace CS2Cheat.Data.Entity;
+
+using System.Collections.Concurrent;
+using Game;
+using SharpDX;
+using Utils;
 
 public class Entity : EntityBase
 {
@@ -19,54 +19,84 @@ public class Entity : EntityBase
         ));
     }
 
-    protected internal bool IsSpotted { get; private set; }
-    protected internal string Name { get; private set; } = string.Empty;
-    protected internal int IsInScope { get; private set; }
-    protected internal int FlashAlpha { get; private set; }
-    public IReadOnlyDictionary<string, Vector3> BonePos => _bonePositions;
-    public int Id { get; }
-
-    public override bool IsAlive()
+    protected internal bool IsSpotted
     {
-        return base.IsAlive() && !_dormant;
+        get;
+        private set;
     }
+
+    protected internal string Name
+    {
+        get;
+        private set;
+    } = string.Empty;
+
+    protected internal int IsInScope
+    {
+        get;
+        private set;
+    }
+
+    protected internal int FlashAlpha
+    {
+        get;
+        private set;
+    }
+
+    public IReadOnlyDictionary<string, Vector3> BonePos => _bonePositions;
+
+    public int Id
+    {
+        get;
+    }
+
+    public override bool IsAlive() => base.IsAlive() && !_dormant;
 
     protected override IntPtr ReadControllerBase(GameProcess gameProcess)
     {
         var entryIndex = (Id & 0x7FFF) >> 9;
 
-        if (gameProcess?.Process == null) return IntPtr.Zero;
+        if (gameProcess?.Process == null)
+        {
+            return IntPtr.Zero;
+        }
 
-        var listEntry = gameProcess.Process.Read<IntPtr>(EntityList + 8 * entryIndex + 16);
+        var listEntry = gameProcess.Process.Read<IntPtr>(EntityList + (8 * entryIndex) + 16);
 
         return listEntry != IntPtr.Zero
-            ? gameProcess.Process.Read<IntPtr>(listEntry + 112 * (Id & 0x1FF))
+            ? gameProcess.Process.Read<IntPtr>(listEntry + (112 * (Id & 0x1FF)))
             : IntPtr.Zero;
     }
 
     protected override IntPtr ReadAddressBase(GameProcess gameProcess)
     {
-        if (gameProcess?.Process == null) return IntPtr.Zero;
+        if (gameProcess?.Process == null)
+        {
+            return IntPtr.Zero;
+        }
 
-        var playerPawn = gameProcess.Process.Read<int>(ControllerBase + Offsets.m_hPawn);
+        var playerPawn = gameProcess.Process.Read<int>(ControllerBase + Offsets.MhPawn);
         var pawnIndex = (playerPawn & 0x7FFF) >> 9;
-        var listEntry = gameProcess.Process.Read<IntPtr>(EntityList + 0x8 * pawnIndex + 16);
+        var listEntry = gameProcess.Process.Read<IntPtr>(EntityList + (0x8 * pawnIndex) + 16);
 
         return listEntry != IntPtr.Zero
-            ? gameProcess.Process.Read<IntPtr>(listEntry + 112 * (playerPawn & 0x1FF))
+            ? gameProcess.Process.Read<IntPtr>(listEntry + (112 * (playerPawn & 0x1FF)))
             : IntPtr.Zero;
     }
 
     public override bool Update(GameProcess gameProcess)
     {
-        if (!base.Update(gameProcess)) return false;
+        if (!base.Update(gameProcess))
+        {
+            return false;
+        }
 
-        _dormant = gameProcess.Process != null && gameProcess.Process.Read<bool>(AddressBase + Offsets.m_bDormant);
-        IsSpotted = gameProcess.Process?.Read<bool>(AddressBase + Offsets.m_entitySpottedState + 0x8) ?? false;
-        IsInScope = gameProcess.Process?.Read<int>(AddressBase + Offsets.m_bIsScoped) ?? 0;
-        FlashAlpha = gameProcess.Process?.Read<int>(AddressBase + Offsets.m_flFlashDuration) ?? 0;
+        _dormant = gameProcess.Process != null && gameProcess.Process.Read<bool>(AddressBase + Offsets.MbDormant);
+        IsSpotted = gameProcess.Process?.Read<bool>(AddressBase + Offsets.MEntitySpottedState + 0x8) ?? false;
+        IsInScope = gameProcess.Process?.Read<int>(AddressBase + Offsets.MbIsScoped) ?? 0;
+        FlashAlpha = gameProcess.Process?.Read<int>(AddressBase + Offsets.MFlFlashDuration) ?? 0;
         Name = gameProcess.Process != null
-            ? gameProcess.Process.ReadString(ControllerBase + Offsets.m_iszPlayerName)
+            ? gameProcess.Process.ReadString(ControllerBase + Offsets.MIszPlayerName)
             : string.Empty;
 
         return !IsAlive() || UpdateBonePositions(gameProcess);
@@ -76,14 +106,17 @@ public class Entity : EntityBase
     {
         try
         {
-            if (gameProcess?.Process == null) return false;
+            if (gameProcess?.Process == null)
+            {
+                return false;
+            }
 
-            var gameSceneNode = gameProcess.Process.Read<IntPtr>(AddressBase + Offsets.m_pGameSceneNode);
-            var boneArray = gameProcess.Process.Read<IntPtr>(gameSceneNode + Offsets.m_modelState + 128);
+            var gameSceneNode = gameProcess.Process.Read<IntPtr>(AddressBase + Offsets.MpGameSceneNode);
+            var boneArray = gameProcess.Process.Read<IntPtr>(gameSceneNode + Offsets.MModelState + 128);
 
             foreach (var (boneName, boneIndex) in Offsets.Bones)
             {
-                var bonePos = gameProcess.Process.Read<Vector3>(boneArray + boneIndex * 32);
+                var bonePos = gameProcess.Process.Read<Vector3>(boneArray + (boneIndex * 32));
                 _bonePositions.AddOrUpdate(boneName, bonePos, (_, _) => bonePos);
             }
 
@@ -94,5 +127,4 @@ public class Entity : EntityBase
             return false;
         }
     }
-
 }

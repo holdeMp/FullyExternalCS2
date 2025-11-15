@@ -1,27 +1,24 @@
-﻿using System.Windows.Threading;
-using CS2Cheat.Core.Data;
-using CS2Cheat.Data.Game;
-using CS2Cheat.Features;
-using CS2Cheat.Utils;
-using SharpDX;
-using SharpDX.Direct3D9;
-using static System.Windows.Application;
-using Color = SharpDX.Color;
-using Font = SharpDX.Direct3D9.Font;
-using FontWeight = SharpDX.Direct3D9.FontWeight;
+﻿using static System.Windows.Application;
 
 namespace CS2Cheat.Graphics;
 
-public class Graphics : ThreadedServiceBase
+using Core.Data;
+using Data.Game;
+using Features;
+using SharpDX;
+using SharpDX.Direct3D9;
+using Utils;
+
+public class Graphics : IDisposable
 {
-    private static readonly VertexElement[] VertexElements =
+    private static readonly VertexElement[] _vertexElements =
     {
         new(0, 0, DeclarationType.Float4, DeclarationMethod.Default, DeclarationUsage.PositionTransformed, 0),
         new(0, 16, DeclarationType.Color, DeclarationMethod.Default, DeclarationUsage.Color, 0),
         VertexElement.VertexDeclarationEnd
     };
 
-    private readonly object _deviceLock = new();
+    private readonly Lock _deviceLock = new();
 
     private readonly List<Vertex> _vertices = [];
 
@@ -39,18 +36,47 @@ public class Graphics : ThreadedServiceBase
         InitializeDevice();
     }
 
-    protected override string ThreadName => nameof(Graphics);
+    protected virtual string ThreadName => nameof(Graphics);
 
-    private WindowOverlay WindowOverlay { get; }
-    public GameProcess GameProcess { get; }
-    public GameData GameData { get; }
-    public Font? FontAzonix64 { get; private set; }
-    public Font? FontConsolas32 { get; private set; }
-    public Font? Undefeated { get; private set; }
+    private WindowOverlay WindowOverlay
+    {
+        get;
+    }
+
+    public GameProcess GameProcess
+    {
+        get;
+    }
+
+    public GameData GameData
+    {
+        get;
+    }
+
+    public Font? FontAzonix64
+    {
+        get;
+        private set;
+    }
+
+    public Font? FontConsolas32
+    {
+        get;
+        private set;
+    }
+
+    public Font? Undefeated
+    {
+        get;
+        private set;
+    }
 
     public override void Dispose()
     {
-        if (_isDisposed) return;
+        if (_isDisposed)
+        {
+            return;
+        }
 
         base.Dispose();
 
@@ -70,9 +96,8 @@ public class Graphics : ThreadedServiceBase
         InitializeFonts();
     }
 
-    private PresentParameters CreatePresentParameters()
-    {
-        return new PresentParameters
+    private PresentParameters CreatePresentParameters() =>
+        new()
         {
             Windowed = true,
             SwapEffect = SwapEffect.Discard,
@@ -86,7 +111,6 @@ public class Graphics : ThreadedServiceBase
             PresentationInterval = PresentInterval.Immediate,
             MultiSampleType = MultisampleType.TwoSamples
         };
-    }
 
     private void InitializeFonts()
     {
@@ -96,9 +120,8 @@ public class Graphics : ThreadedServiceBase
     }
 
     private static FontDescription CreateFontDescription(string faceName, int height,
-        FontCharacterSet characterSet = FontCharacterSet.Ansi)
-    {
-        return new FontDescription
+        FontCharacterSet characterSet = FontCharacterSet.Ansi) =>
+        new()
         {
             Height = height,
             Italic = false,
@@ -110,11 +133,13 @@ public class Graphics : ThreadedServiceBase
             Quality = FontQuality.ClearType,
             Weight = FontWeight.Regular
         };
-    }
 
-    protected override void FrameAction()
+    protected virtual void FrameAction()
     {
-        if (!GameProcess.IsValid) return;
+        if (!GameProcess.IsValid)
+        {
+            return;
+        }
 
         var newResolution = new Vector2(WindowOverlay.Window.Width, WindowOverlay.Window.Height);
         if (!_currentResolution.Equals(newResolution))
@@ -140,7 +165,10 @@ public class Graphics : ThreadedServiceBase
     {
         lock (_deviceLock)
         {
-            if (_device == null) return;
+            if (_device == null)
+            {
+                return;
+            }
 
             ConfigureRenderState();
             _device.Clear(ClearFlags.Target | ClearFlags.ZBuffer, Color.FromAbgr(0), 1, 0);
@@ -155,7 +183,10 @@ public class Graphics : ThreadedServiceBase
 
     private void ConfigureRenderState()
     {
-        if (_device == null) return;
+        if (_device == null)
+        {
+            return;
+        }
 
         _device.SetRenderState(RenderState.AlphaBlendEnable, true);
         _device.SetRenderState(RenderState.AlphaTestEnable, false);
@@ -178,17 +209,38 @@ public class Graphics : ThreadedServiceBase
     {
         WindowOverlay.Draw(GameProcess, this);
         var features = ConfigManager.Load();
-        if (features.EspAimCrosshair) EspAimCrosshair.Draw(this);
-        if (features.EspBox) EspBox.Draw(this);
-        if (features.SkeletonEsp) SkeletonEsp.Draw(this);
-        if (features.BombTimer) BombTimer.Draw(this);
+        if (features.EspAimCrosshair)
+        {
+            EspAimCrosshair.Draw(this);
+        }
+
+        if (features.EspBox)
+        {
+            EspBox.Draw(this);
+        }
+
+        if (features.SkeletonEsp)
+        {
+            SkeletonEsp.Draw(this);
+        }
+
+        if (features.BombTimer)
+        {
+            BombTimer.Draw(this);
+        }
     }
 
     private void RenderVertices()
     {
-        if (_vertices.Count == 0) return;
+        if (_vertices.Count == 0)
+        {
+            return;
+        }
 
-        if (_device == null) return;
+        if (_device == null)
+        {
+            return;
+        }
 
         using var vertices = new VertexBuffer(_device, _vertices.Count * 20, Usage.WriteOnly, VertexFormat.None,
             Pool.Managed);
@@ -196,7 +248,7 @@ public class Graphics : ThreadedServiceBase
         vertices.Unlock();
 
         _device.SetStreamSource(0, vertices, 0, 20);
-        using var vertexDecl = new VertexDeclaration(_device, VertexElements);
+        using var vertexDecl = new VertexDeclaration(_device, _vertexElements);
         _device.VertexDeclaration = vertexDecl;
         _device.DrawPrimitives(PrimitiveType.LineList, 0, _vertices.Count / 2);
     }
@@ -211,19 +263,23 @@ public class Graphics : ThreadedServiceBase
 
     public void DrawLine(Color color, params Vector2[] verts)
     {
-        if (verts.Length < 2 || verts.Length % 2 != 0) return;
+        if (verts.Length < 2 || verts.Length % 2 != 0)
+        {
+            return;
+        }
 
         foreach (var vertex in verts)
-            _vertices.Add(new Vertex
-            {
-                Color = color,
-                Position = new Vector4(vertex.X, vertex.Y, 0.5f, 1.0f)
-            });
+        {
+            _vertices.Add(new Vertex { Color = color, Position = new Vector4(vertex.X, vertex.Y, 0.5f, 1.0f) });
+        }
     }
 
     public void DrawLineWorld(Color color, params Vector3[] verticesWorld)
     {
-        if (GameData.Player == null) return;
+        if (GameData.Player == null)
+        {
+            return;
+        }
 
         var screenVertices = verticesWorld
             .Select(v => GameData.Player.MatrixViewProjectionViewport.Transform(v))
@@ -238,13 +294,13 @@ public class Graphics : ThreadedServiceBase
     {
         var vertices = new[]
         {
-            topLeft,
-            new Vector2(bottomRight.X, topLeft.Y),
-            bottomRight,
-            new Vector2(topLeft.X, bottomRight.Y),
+            topLeft, new Vector2(bottomRight.X, topLeft.Y), bottomRight, new Vector2(topLeft.X, bottomRight.Y),
             topLeft
         };
 
-        for (var i = 0; i < vertices.Length - 1; i++) DrawLine(color, vertices[i], vertices[i + 1]);
+        for (var i = 0; i < vertices.Length - 1; i++)
+        {
+            DrawLine(color, vertices[i], vertices[i + 1]);
+        }
     }
 }

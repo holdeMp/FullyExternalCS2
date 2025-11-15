@@ -1,27 +1,27 @@
-﻿using System.Diagnostics;
+﻿namespace CS2Cheat.Utils;
 
-namespace CS2Cheat.Utils;
+using System.Diagnostics;
 
-public class Module(System.Diagnostics.Process process, ProcessModule processModule) : IDisposable
+public class Module(Process process, ProcessModule processModule) : IDisposable
 {
-    #region routines
-
     public void Dispose()
     {
         Process.Dispose();
-        Process = default;
+        Process = null;
 
         ProcessModule.Dispose();
-        ProcessModule = default;
+        ProcessModule = null;
     }
 
-    #endregion
+    public Process Process
+    {
+        get;
+        private set;
+    } = process;
 
-    #region properties
-
-    public System.Diagnostics.Process Process { get; private set; } = process;
-
-    public ProcessModule ProcessModule { get; private set; } = processModule;
-
-    #endregion
+    public ProcessModule ProcessModule
+    {
+        get;
+        private set;
+    } = processModule;
 }

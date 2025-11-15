@@ -1,4336 +1,21071 @@
+namespace CS2Cheat.Utils.OffsetsDTO;
+
 using Newtonsoft.Json;
 
-namespace CS2Cheat.DTO.ClientDllDTO;
-
-public class ClientDllDTO
+[JsonObject]
+[Serializable]
+public class ClientDllDto
 {
-    [JsonProperty("client.dll")] public ClientDll clientdll { get; set; }
+    [JsonProperty("client.dll")]
+    public ClientDll? ClientDll
+    {
+        get;
+        set;
+    }
 }
 
+[JsonObject]
+[Serializable]
 public class ClientDll
 {
-    public Classes classes { get; set; }
-    public Enums enums { get; set; }
+    public Classes Classes
+    {
+        get;
+        set;
+    }
+
+    public Enums Enums
+    {
+        get;
+        set;
+    }
 }
 
 public class ActiveModelConfigT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class AudioparamsT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CAnimGraphNetworkedVariables
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CAttributeContainer
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CAttributeList
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CAttributeManager
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBarnLight
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBaseAnimGraph
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBaseAnimGraphController
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBaseButton
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CBaseClientUIEntity
+public class CBaseClientUiEntity
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBaseCombatCharacter
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBaseCombatCharacterWaterWakeModeT
 {
-    public int alignment { get; set; }
-    public Members members { get; set; }
-    public string type { get; set; }
+    public int Alignment
+    {
+        get;
+        set;
+    }
+
+    public Members Members
+    {
+        get;
+        set;
+    }
+
+    public string Type
+    {
+        get;
+        set;
+    }
 }
 
-public class CBaseCSGrenade
+public class CBaseCsGrenade
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CBaseCSGrenadeProjectile
+public class CBaseCsGrenadeProjectile
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBaseDoor
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBaseEntity
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CBaseEntityAPI
+public class CBaseEntityApi
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBaseFire
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBaseFlex
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBaseGrenade
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBaseModelEntity
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBasePlayerController
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CBasePlayerControllerAPI
+public class CBasePlayerControllerApi
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBasePlayerPawn
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBasePlayerVData
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBasePlayerWeapon
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBasePlayerWeaponVData
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBasePropDoor
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBaseTrigger
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBaseViewModel
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBeam
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBodyComponentBaseAnimGraph
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBodyComponentPoint
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBodyComponentSkeletonInstance
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBombTarget
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CBreakableProp
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CC4
+public class Cc4
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CChicken
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CClientPointEntityAPI
+public class CClientPointEntityApi
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CCollisionProperty
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CColorCorrection
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CColorCorrectionVolume
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CCompositeMaterialEditorDoc
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSArmsRaceScript
+public class CcsArmsRaceScript
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSDeathmatchScript
+public class CcsDeathmatchScript
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSGameModeRulesArmsRace
+public class CcsGameModeRulesArmsRace
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSGameModeRulesDeathmatch
+public class CcsGameModeRulesDeathmatch
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSGameModeScript
+public class CcsGameModeScript
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSGameRules
+public class CcsGameRules
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSGameRulesProxy
+public class CcsGameRulesProxy
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSGOTeamPreviewCharacterPosition
+public class CcsgoTeamPreviewCharacterPosition
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSGOViewModel
+public class CcsgoViewModel
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSObserverPawn
+public class CcsObserverPawn
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSObserverPawnAPI
+public class CcsObserverPawnApi
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSPlayerActionTrackingServices
+public class CcsPlayerActionTrackingServices
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSPlayerBaseCameraServices
+public class CcsPlayerBaseCameraServices
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSPlayerBulletServices
+public class CcsPlayerBulletServices
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSPlayerBuyServices
+public class CcsPlayerBuyServices
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSPlayerController
+public class CcsPlayerController
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSPlayerControllerActionTrackingServices
+public class CcsPlayerControllerActionTrackingServices
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSPlayerControllerAPI
+public class CcsPlayerControllerApi
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSPlayerControllerDamageServices
+public class CcsPlayerControllerDamageServices
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSPlayerControllerInGameMoneyServices
+public class CcsPlayerControllerInGameMoneyServices
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSPlayerControllerInventoryServices
+public class CcsPlayerControllerInventoryServices
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSPlayerHostageServices
+public class CcsPlayerHostageServices
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSPlayerItemServices
+public class CcsPlayerItemServices
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSPlayerMovementServices
+public class CcsPlayerMovementServices
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSPlayerPawn
+public class CcsPlayerPawn
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSPlayerPawnAPI
+public class CcsPlayerPawnApi
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSPlayerPawnBase
+public class CcsPlayerPawnBase
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSPlayerPingServices
+public class CcsPlayerPingServices
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSPlayerResource
+public class CcsPlayerResource
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSPlayerViewModelServices
+public class CcsPlayerViewModelServices
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSPlayerWeaponServices
+public class CcsPlayerWeaponServices
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSTakeDamageInfoAPI
+public class CcsTakeDamageInfoApi
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSTeam
+public class CcsTeam
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSWeaponBase
+public class CcsWeaponBase
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSWeaponBaseAPI
+public class CcsWeaponBaseApi
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSWeaponBaseGun
+public class CcsWeaponBaseGun
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSWeaponBaseVData
+public class CcsWeaponBaseVData
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CCSWeaponBaseVDataAPI
+public class CcsWeaponBaseVDataApi
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CDamageRecord
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CDecoyProjectile
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CDynamicLight
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CDynamicProp
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CDynamicPropAPI
+public class CDynamicPropApi
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEconEntity
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEconItemAttribute
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEconItemView
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEffectData
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEntityDissolve
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEntityFlame
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEntityIdentity
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEntityInstance
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEnvCombinedLightProbeVolume
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEnvCubemap
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEnvCubemapFog
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEnvDecal
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEnvDetailController
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEnvLightProbeVolume
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEnvParticleGlow
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEnvScreenOverlay
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEnvSky
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEnvVolumetricFogController
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEnvVolumetricFogVolume
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEnvWind
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEnvWindClientside
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CEnvWindShared
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CFireSmoke
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CFish
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CFists
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CFogController
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CFogplayerparamsT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CFootstepControl
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CFuncConveyor
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CFuncElectrifiedVolume
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CFuncLadder
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CFuncMonitor
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CFuncMoveLinear
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CFuncRotating
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CGameSceneNode
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CGameSceneNodeHandle
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CGlowProperty
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CGradientFog
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CHandleTest
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CHitboxComponent
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CHostage
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CInferno
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CInfoOffscreenPanoramaTexture
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CInfoVisibilityBox
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CInfoWorldLayer
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CItem
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CItemDogtags
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class Classes
 {
-    public ActiveModelConfigT ActiveModelConfig_t { get; set; }
-    public CAnimGraphNetworkedVariables CAnimGraphNetworkedVariables { get; set; }
-    public CAttributeList CAttributeList { get; set; }
-    public CAttributeManager CAttributeManager { get; set; }
-    public CBaseAnimGraph CBaseAnimGraph { get; set; }
-    public CBaseAnimGraphController CBaseAnimGraphController { get; set; }
-    public CBasePlayerController CBasePlayerController { get; set; }
-    public CBasePlayerControllerAPI CBasePlayerControllerAPI { get; set; }
-    public CBasePlayerVData CBasePlayerVData { get; set; }
-    public CBasePlayerWeaponVData CBasePlayerWeaponVData { get; set; }
-    public CBodyComponentBaseAnimGraph CBodyComponentBaseAnimGraph { get; set; }
-    public CBodyComponentPoint CBodyComponentPoint { get; set; }
-    public CBodyComponentSkeletonInstance CBodyComponentSkeletonInstance { get; set; }
-    public CBombTarget CBombTarget { get; set; }
-    public CCSArmsRaceScript CCSArmsRaceScript { get; set; }
-    public CCSDeathmatchScript CCSDeathmatchScript { get; set; }
-    public CCSGameModeRulesArmsRace CCSGameModeRules_ArmsRace { get; set; }
-    public CCSGameModeRulesDeathmatch CCSGameModeRules_Deathmatch { get; set; }
-    public CCSGameModeScript CCSGameModeScript { get; set; }
-    public CCSPlayerBaseCameraServices CCSPlayerBase_CameraServices { get; set; }
-    public CCSPlayerController CCSPlayerController { get; set; }
-    public CCSPlayerControllerAPI CCSPlayerControllerAPI { get; set; }
-    public CCSPlayerControllerActionTrackingServices CCSPlayerController_ActionTrackingServices { get; set; }
-    public CCSPlayerControllerDamageServices CCSPlayerController_DamageServices { get; set; }
-    public CCSPlayerControllerInGameMoneyServices CCSPlayerController_InGameMoneyServices { get; set; }
-    public CCSPlayerControllerInventoryServices CCSPlayerController_InventoryServices { get; set; }
-    public CCSPlayerActionTrackingServices CCSPlayer_ActionTrackingServices { get; set; }
-    public CCSPlayerBulletServices CCSPlayer_BulletServices { get; set; }
-    public CCSPlayerBuyServices CCSPlayer_BuyServices { get; set; }
-    public CCSPlayerHostageServices CCSPlayer_HostageServices { get; set; }
-    public CCSPlayerItemServices CCSPlayer_ItemServices { get; set; }
-    public CCSPlayerMovementServices CCSPlayer_MovementServices { get; set; }
-    public CCSPlayerPingServices CCSPlayer_PingServices { get; set; }
-    public CCSPlayerViewModelServices CCSPlayer_ViewModelServices { get; set; }
-    public CCSPlayerWeaponServices CCSPlayer_WeaponServices { get; set; }
-    public CCSTakeDamageInfoAPI CCSTakeDamageInfoAPI { get; set; }
-    public CCSWeaponBaseAPI CCSWeaponBaseAPI { get; set; }
-    public CCSWeaponBaseVData CCSWeaponBaseVData { get; set; }
-    public CCSWeaponBaseVDataAPI CCSWeaponBaseVDataAPI { get; set; }
-    public CClientPointEntityAPI CClientPointEntityAPI { get; set; }
-    public CCollisionProperty CCollisionProperty { get; set; }
-    public CCompositeMaterialEditorDoc CCompositeMaterialEditorDoc { get; set; }
-    public CDamageRecord CDamageRecord { get; set; }
-    public CDynamicPropAPI CDynamicPropAPI { get; set; }
-    public CEconItemAttribute CEconItemAttribute { get; set; }
-    public CEffectData CEffectData { get; set; }
-    public CEntityIdentity CEntityIdentity { get; set; }
-    public CEntityInstance CEntityInstance { get; set; }
-    public CGameSceneNode CGameSceneNode { get; set; }
-    public CGameSceneNodeHandle CGameSceneNodeHandle { get; set; }
-    public CGlowProperty CGlowProperty { get; set; }
-    public CHitboxComponent CHitboxComponent { get; set; }
-    public CInfoOffscreenPanoramaTexture CInfoOffscreenPanoramaTexture { get; set; }
-    public CInfoWorldLayer CInfoWorldLayer { get; set; }
-    public CLightComponent CLightComponent { get; set; }
-    public CModelState CModelState { get; set; }
-    public CNetworkedSequenceOperation CNetworkedSequenceOperation { get; set; }
-    public CPlayerCameraServices CPlayer_CameraServices { get; set; }
-    public CPlayerMovementServices CPlayer_MovementServices { get; set; }
-    public CPlayerMovementServicesHumanoid CPlayer_MovementServices_Humanoid { get; set; }
-    public CPlayerObserverServices CPlayer_ObserverServices { get; set; }
-    public CPlayerWeaponServices CPlayer_WeaponServices { get; set; }
-    public CPrecipitationVData CPrecipitationVData { get; set; }
-    public CProjectedTextureBase CProjectedTextureBase { get; set; }
-    public CPulseGraphInstanceClientEntity CPulseGraphInstance_ClientEntity { get; set; }
-    public CSMatchStatsT CSMatchStats_t { get; set; }
-    public CSPerRoundStatsT CSPerRoundStats_t { get; set; }
-    public CSkeletonInstance CSkeletonInstance { get; set; }
-    public CTakeDamageInfoAPI CTakeDamageInfoAPI { get; set; }
-    public CTimeline CTimeline { get; set; }
-    public CAttributeContainer C_AttributeContainer { get; set; }
-    public CBarnLight C_BarnLight { get; set; }
-    public CBaseButton C_BaseButton { get; set; }
-    public CBaseCSGrenade C_BaseCSGrenade { get; set; }
-    public CBaseCSGrenadeProjectile C_BaseCSGrenadeProjectile { get; set; }
-    public CBaseClientUIEntity C_BaseClientUIEntity { get; set; }
-    public CBaseCombatCharacter C_BaseCombatCharacter { get; set; }
-    public CBaseDoor C_BaseDoor { get; set; }
-    public CBaseEntity C_BaseEntity { get; set; }
-    public CBaseEntityAPI C_BaseEntityAPI { get; set; }
-    public CBaseFire C_BaseFire { get; set; }
-    public CBaseFlex C_BaseFlex { get; set; }
-    public CBaseGrenade C_BaseGrenade { get; set; }
-    public CBaseModelEntity C_BaseModelEntity { get; set; }
-    public CBasePlayerPawn C_BasePlayerPawn { get; set; }
-    public CBasePlayerWeapon C_BasePlayerWeapon { get; set; }
-    public CBasePropDoor C_BasePropDoor { get; set; }
-    public CBaseTrigger C_BaseTrigger { get; set; }
-    public CBaseViewModel C_BaseViewModel { get; set; }
-    public CBeam C_Beam { get; set; }
-    public CBreakableProp C_BreakableProp { get; set; }
-    public CC4 C_C4 { get; set; }
-    public CCSGOViewModel C_CSGOViewModel { get; set; }
-    public CCSGOTeamPreviewCharacterPosition C_CSGO_TeamPreviewCharacterPosition { get; set; }
-    public CCSGameRules C_CSGameRules { get; set; }
-    public CCSGameRulesProxy C_CSGameRulesProxy { get; set; }
-    public CCSObserverPawn C_CSObserverPawn { get; set; }
-    public CCSObserverPawnAPI C_CSObserverPawnAPI { get; set; }
-    public CCSPlayerPawn C_CSPlayerPawn { get; set; }
-    public CCSPlayerPawnAPI C_CSPlayerPawnAPI { get; set; }
-    public CCSPlayerPawnBase C_CSPlayerPawnBase { get; set; }
-    public CCSPlayerResource C_CSPlayerResource { get; set; }
-    public CCSTeam C_CSTeam { get; set; }
-    public CCSWeaponBase C_CSWeaponBase { get; set; }
-    public CCSWeaponBaseGun C_CSWeaponBaseGun { get; set; }
-    public CChicken C_Chicken { get; set; }
-    public CColorCorrection C_ColorCorrection { get; set; }
-    public CColorCorrectionVolume C_ColorCorrectionVolume { get; set; }
-    public CDecoyProjectile C_DecoyProjectile { get; set; }
-    public CDynamicLight C_DynamicLight { get; set; }
-    public CDynamicProp C_DynamicProp { get; set; }
-    public CEconEntity C_EconEntity { get; set; }
-    public CEconItemView C_EconItemView { get; set; }
-    public CEntityDissolve C_EntityDissolve { get; set; }
-    public CEntityFlame C_EntityFlame { get; set; }
-    public CEnvCombinedLightProbeVolume C_EnvCombinedLightProbeVolume { get; set; }
-    public CEnvCubemap C_EnvCubemap { get; set; }
-    public CEnvCubemapFog C_EnvCubemapFog { get; set; }
-    public CEnvDecal C_EnvDecal { get; set; }
-    public CEnvDetailController C_EnvDetailController { get; set; }
-    public CEnvLightProbeVolume C_EnvLightProbeVolume { get; set; }
-    public CEnvParticleGlow C_EnvParticleGlow { get; set; }
-    public CEnvScreenOverlay C_EnvScreenOverlay { get; set; }
-    public CEnvSky C_EnvSky { get; set; }
-    public CEnvVolumetricFogController C_EnvVolumetricFogController { get; set; }
-    public CEnvVolumetricFogVolume C_EnvVolumetricFogVolume { get; set; }
-    public CEnvWind C_EnvWind { get; set; }
-    public CEnvWindClientside C_EnvWindClientside { get; set; }
-    public CEnvWindShared C_EnvWindShared { get; set; }
-    public CFireSmoke C_FireSmoke { get; set; }
-    public CFish C_Fish { get; set; }
-    public CFists C_Fists { get; set; }
-    public CFogController C_FogController { get; set; }
-    public CFootstepControl C_FootstepControl { get; set; }
-    public CFuncConveyor C_FuncConveyor { get; set; }
-    public CFuncElectrifiedVolume C_FuncElectrifiedVolume { get; set; }
-    public CFuncLadder C_FuncLadder { get; set; }
-    public CFuncMonitor C_FuncMonitor { get; set; }
-    public CFuncMoveLinear C_FuncMoveLinear { get; set; }
-    public CFuncRotating C_FuncRotating { get; set; }
-    public CGradientFog C_GradientFog { get; set; }
-    public CHandleTest C_HandleTest { get; set; }
-    public CHostage C_Hostage { get; set; }
-    public CInferno C_Inferno { get; set; }
-    public CInfoVisibilityBox C_InfoVisibilityBox { get; set; }
-    public CItem C_Item { get; set; }
-    public CItemDogtags C_ItemDogtags { get; set; }
-    public CLightEntity C_LightEntity { get; set; }
-    public CLightGlow C_LightGlow { get; set; }
-    public CMapVetoPickController C_MapVetoPickController { get; set; }
-    public CMolotovProjectile C_MolotovProjectile { get; set; }
-    public COmniLight C_OmniLight { get; set; }
-    public CParticleSystem C_ParticleSystem { get; set; }
-    public CPathParticleRope C_PathParticleRope { get; set; }
-    public CPhysicsProp C_PhysicsProp { get; set; }
-    public CPlantedC4 C_PlantedC4 { get; set; }
-    public CPlayerPing C_PlayerPing { get; set; }
-    public CPlayerSprayDecal C_PlayerSprayDecal { get; set; }
-    public CPlayerVisibility C_PlayerVisibility { get; set; }
-    public CPointCamera C_PointCamera { get; set; }
-    public CPointClientUIDialog C_PointClientUIDialog { get; set; }
-    public CPointClientUIHUD C_PointClientUIHUD { get; set; }
-    public CPointClientUIWorldPanel C_PointClientUIWorldPanel { get; set; }
-    public CPointClientUIWorldTextPanel C_PointClientUIWorldTextPanel { get; set; }
-    public CPointCommentaryNode C_PointCommentaryNode { get; set; }
-    public CPointValueRemapper C_PointValueRemapper { get; set; }
-    public CPointWorldText C_PointWorldText { get; set; }
-    public CPostProcessingVolume C_PostProcessingVolume { get; set; }
-    public CRagdollManager C_RagdollManager { get; set; }
-    public CRagdollProp C_RagdollProp { get; set; }
-    public CRagdollPropAttached C_RagdollPropAttached { get; set; }
-    public CRectLight C_RectLight { get; set; }
-    public CRetakeGameRules C_RetakeGameRules { get; set; }
-    public CRopeKeyframe C_RopeKeyframe { get; set; }
-    public CSceneEntity C_SceneEntity { get; set; }
-    public CShatterGlassShardPhysics C_ShatterGlassShardPhysics { get; set; }
-    public CSkyCamera C_SkyCamera { get; set; }
-    public CSmokeGrenadeProjectile C_SmokeGrenadeProjectile { get; set; }
-    public CSoundAreaEntityBase C_SoundAreaEntityBase { get; set; }
-    public CSoundAreaEntityOrientedBox C_SoundAreaEntityOrientedBox { get; set; }
-    public CSoundAreaEntitySphere C_SoundAreaEntitySphere { get; set; }
-    public CSoundOpvarSetPointBase C_SoundOpvarSetPointBase { get; set; }
-    public CSpotlightEnd C_SpotlightEnd { get; set; }
-    public CSprite C_Sprite { get; set; }
-    public CSun C_Sun { get; set; }
-    public CTeam C_Team { get; set; }
-    public CTeamRoundTimer C_TeamRoundTimer { get; set; }
-    public CTextureBasedAnimatable C_TextureBasedAnimatable { get; set; }
-    public CTonemapController2 C_TonemapController2 { get; set; }
-    public CTriggerBuoyancy C_TriggerBuoyancy { get; set; }
-    public CTriggerPhysics C_TriggerPhysics { get; set; }
-    public CVoteController C_VoteController { get; set; }
-    public CWeaponBaseItem C_WeaponBaseItem { get; set; }
-    public CWeaponShield C_WeaponShield { get; set; }
-    public CWeaponTaser C_WeaponTaser { get; set; }
-    public CFogplayerparamsT C_fogplayerparams_t { get; set; }
-    public CompMatMutatorConditionT CompMatMutatorCondition_t { get; set; }
-    public CompMatPropertyMutatorT CompMatPropertyMutator_t { get; set; }
-    public CompositeMaterialAssemblyProcedureT CompositeMaterialAssemblyProcedure_t { get; set; }
-    public CompositeMaterialEditorPointT CompositeMaterialEditorPoint_t { get; set; }
-    public CompositeMaterialInputContainerT CompositeMaterialInputContainer_t { get; set; }
-    public CompositeMaterialInputLooseVariableT CompositeMaterialInputLooseVariable_t { get; set; }
-    public CompositeMaterialMatchFilterT CompositeMaterialMatchFilter_t { get; set; }
-    public CompositeMaterialT CompositeMaterial_t { get; set; }
-    public CountdownTimer CountdownTimer { get; set; }
-    public EngineCountdownTimer EngineCountdownTimer { get; set; }
-    public EntityRenderAttributeT EntityRenderAttribute_t { get; set; }
-    public EntitySpottedStateT EntitySpottedState_t { get; set; }
-    public GeneratedTextureHandleT GeneratedTextureHandle_t { get; set; }
-    public IntervalTimer IntervalTimer { get; set; }
-    public PhysicsRagdollPoseT PhysicsRagdollPose_t { get; set; }
-    public SellbackPurchaseEntryT SellbackPurchaseEntry_t { get; set; }
-    public VPhysicsCollisionAttributeT VPhysicsCollisionAttribute_t { get; set; }
-    public ViewAngleServerChangeT ViewAngleServerChange_t { get; set; }
-    public WeaponPurchaseCountT WeaponPurchaseCount_t { get; set; }
-    public WeaponPurchaseTrackerT WeaponPurchaseTracker_t { get; set; }
-    public AudioparamsT audioparams_t { get; set; }
-    public FogparamsT fogparams_t { get; set; }
-    public ShardModelDescT shard_model_desc_t { get; set; }
-    public Sky3dparamsT sky3dparams_t { get; set; }
+    public ActiveModelConfigT ActiveModelConfigT
+    {
+        get;
+        set;
+    }
+
+    public CAnimGraphNetworkedVariables CAnimGraphNetworkedVariables
+    {
+        get;
+        set;
+    }
+
+    public CAttributeList CAttributeList
+    {
+        get;
+        set;
+    }
+
+    public CAttributeManager CAttributeManager
+    {
+        get;
+        set;
+    }
+
+    public CBaseAnimGraph CBaseAnimGraph
+    {
+        get;
+        set;
+    }
+
+    public CBaseAnimGraphController CBaseAnimGraphController
+    {
+        get;
+        set;
+    }
+
+    public CBasePlayerController CBasePlayerController
+    {
+        get;
+        set;
+    }
+
+    public CBasePlayerControllerApi CBasePlayerControllerApi
+    {
+        get;
+        set;
+    }
+
+    public CBasePlayerVData CBasePlayerVData
+    {
+        get;
+        set;
+    }
+
+    public CBasePlayerWeaponVData CBasePlayerWeaponVData
+    {
+        get;
+        set;
+    }
+
+    public CBodyComponentBaseAnimGraph CBodyComponentBaseAnimGraph
+    {
+        get;
+        set;
+    }
+
+    public CBodyComponentPoint CBodyComponentPoint
+    {
+        get;
+        set;
+    }
+
+    public CBodyComponentSkeletonInstance CBodyComponentSkeletonInstance
+    {
+        get;
+        set;
+    }
+
+    public CBombTarget CBombTarget
+    {
+        get;
+        set;
+    }
+
+    public CcsArmsRaceScript CcsArmsRaceScript
+    {
+        get;
+        set;
+    }
+
+    public CcsDeathmatchScript CcsDeathmatchScript
+    {
+        get;
+        set;
+    }
+
+    public CcsGameModeRulesArmsRace CcsGameModeRulesArmsRace
+    {
+        get;
+        set;
+    }
+
+    public CcsGameModeRulesDeathmatch CcsGameModeRulesDeathmatch
+    {
+        get;
+        set;
+    }
+
+    public CcsGameModeScript CcsGameModeScript
+    {
+        get;
+        set;
+    }
+
+    public CcsPlayerBaseCameraServices CcsPlayerBaseCameraServices
+    {
+        get;
+        set;
+    }
+
+    public CcsPlayerController CcsPlayerController
+    {
+        get;
+        set;
+    }
+
+    public CcsPlayerControllerApi CcsPlayerControllerApi
+    {
+        get;
+        set;
+    }
+
+    public CcsPlayerControllerActionTrackingServices CcsPlayerControllerActionTrackingServices
+    {
+        get;
+        set;
+    }
+
+    public CcsPlayerControllerDamageServices CcsPlayerControllerDamageServices
+    {
+        get;
+        set;
+    }
+
+    public CcsPlayerControllerInGameMoneyServices CcsPlayerControllerInGameMoneyServices
+    {
+        get;
+        set;
+    }
+
+    public CcsPlayerControllerInventoryServices CcsPlayerControllerInventoryServices
+    {
+        get;
+        set;
+    }
+
+    public CcsPlayerActionTrackingServices CcsPlayerActionTrackingServices
+    {
+        get;
+        set;
+    }
+
+    public CcsPlayerBulletServices CcsPlayerBulletServices
+    {
+        get;
+        set;
+    }
+
+    public CcsPlayerBuyServices CcsPlayerBuyServices
+    {
+        get;
+        set;
+    }
+
+    public CcsPlayerHostageServices CcsPlayerHostageServices
+    {
+        get;
+        set;
+    }
+
+    public CcsPlayerItemServices CcsPlayerItemServices
+    {
+        get;
+        set;
+    }
+
+    public CcsPlayerMovementServices CcsPlayerMovementServices
+    {
+        get;
+        set;
+    }
+
+    public CcsPlayerPingServices CcsPlayerPingServices
+    {
+        get;
+        set;
+    }
+
+    public CcsPlayerViewModelServices CcsPlayerViewModelServices
+    {
+        get;
+        set;
+    }
+
+    public CcsPlayerWeaponServices CcsPlayerWeaponServices
+    {
+        get;
+        set;
+    }
+
+    public CcsTakeDamageInfoApi CcsTakeDamageInfoApi
+    {
+        get;
+        set;
+    }
+
+    public CcsWeaponBaseApi CcsWeaponBaseApi
+    {
+        get;
+        set;
+    }
+
+    public CcsWeaponBaseVData CcsWeaponBaseVData
+    {
+        get;
+        set;
+    }
+
+    public CcsWeaponBaseVDataApi CcsWeaponBaseVDataApi
+    {
+        get;
+        set;
+    }
+
+    public CClientPointEntityApi CClientPointEntityApi
+    {
+        get;
+        set;
+    }
+
+    public CCollisionProperty CCollisionProperty
+    {
+        get;
+        set;
+    }
+
+    public CCompositeMaterialEditorDoc CCompositeMaterialEditorDoc
+    {
+        get;
+        set;
+    }
+
+    public CDamageRecord CDamageRecord
+    {
+        get;
+        set;
+    }
+
+    public CDynamicPropApi CDynamicPropApi
+    {
+        get;
+        set;
+    }
+
+    public CEconItemAttribute CEconItemAttribute
+    {
+        get;
+        set;
+    }
+
+    public CEffectData CEffectData
+    {
+        get;
+        set;
+    }
+
+    public CEntityIdentity CEntityIdentity
+    {
+        get;
+        set;
+    }
+
+    public CEntityInstance CEntityInstance
+    {
+        get;
+        set;
+    }
+
+    public CGameSceneNode CGameSceneNode
+    {
+        get;
+        set;
+    }
+
+    public CGameSceneNodeHandle CGameSceneNodeHandle
+    {
+        get;
+        set;
+    }
+
+    public CGlowProperty CGlowProperty
+    {
+        get;
+        set;
+    }
+
+    public CHitboxComponent CHitboxComponent
+    {
+        get;
+        set;
+    }
+
+    public CInfoOffscreenPanoramaTexture CInfoOffscreenPanoramaTexture
+    {
+        get;
+        set;
+    }
+
+    public CInfoWorldLayer CInfoWorldLayer
+    {
+        get;
+        set;
+    }
+
+    public CLightComponent CLightComponent
+    {
+        get;
+        set;
+    }
+
+    public CModelState CModelState
+    {
+        get;
+        set;
+    }
+
+    public CNetworkedSequenceOperation CNetworkedSequenceOperation
+    {
+        get;
+        set;
+    }
+
+    public CPlayerCameraServices CPlayerCameraServices
+    {
+        get;
+        set;
+    }
+
+    public CPlayerMovementServices CPlayerMovementServices
+    {
+        get;
+        set;
+    }
+
+    public CPlayerMovementServicesHumanoid CPlayerMovementServicesHumanoid
+    {
+        get;
+        set;
+    }
+
+    public CPlayerObserverServices CPlayerObserverServices
+    {
+        get;
+        set;
+    }
+
+    public CPlayerWeaponServices CPlayerWeaponServices
+    {
+        get;
+        set;
+    }
+
+    public CPrecipitationVData CPrecipitationVData
+    {
+        get;
+        set;
+    }
+
+    public CProjectedTextureBase CProjectedTextureBase
+    {
+        get;
+        set;
+    }
+
+    public CPulseGraphInstanceClientEntity CPulseGraphInstanceClientEntity
+    {
+        get;
+        set;
+    }
+
+    public CsMatchStatsT CsMatchStatsT
+    {
+        get;
+        set;
+    }
+
+    public CsPerRoundStatsT CsPerRoundStatsT
+    {
+        get;
+        set;
+    }
+
+    public CSkeletonInstance CSkeletonInstance
+    {
+        get;
+        set;
+    }
+
+    public CTakeDamageInfoApi CTakeDamageInfoApi
+    {
+        get;
+        set;
+    }
+
+    public CTimeline CTimeline
+    {
+        get;
+        set;
+    }
+
+    public CAttributeContainer CAttributeContainer
+    {
+        get;
+        set;
+    }
+
+    public CBarnLight CBarnLight
+    {
+        get;
+        set;
+    }
+
+    public CBaseButton CBaseButton
+    {
+        get;
+        set;
+    }
+
+    public CBaseCsGrenade CBaseCsGrenade
+    {
+        get;
+        set;
+    }
+
+    public CBaseCsGrenadeProjectile CBaseCsGrenadeProjectile
+    {
+        get;
+        set;
+    }
+
+    public CBaseClientUiEntity CBaseClientUiEntity
+    {
+        get;
+        set;
+    }
+
+    public CBaseCombatCharacter CBaseCombatCharacter
+    {
+        get;
+        set;
+    }
+
+    public CBaseDoor CBaseDoor
+    {
+        get;
+        set;
+    }
+
+    public CBaseEntity CBaseEntity
+    {
+        get;
+        set;
+    }
+
+    public CBaseEntityApi CBaseEntityApi
+    {
+        get;
+        set;
+    }
+
+    public CBaseFire CBaseFire
+    {
+        get;
+        set;
+    }
+
+    public CBaseFlex CBaseFlex
+    {
+        get;
+        set;
+    }
+
+    public CBaseGrenade CBaseGrenade
+    {
+        get;
+        set;
+    }
+
+    public CBaseModelEntity CBaseModelEntity
+    {
+        get;
+        set;
+    }
+
+    public CBasePlayerPawn CBasePlayerPawn
+    {
+        get;
+        set;
+    }
+
+    public CBasePlayerWeapon CBasePlayerWeapon
+    {
+        get;
+        set;
+    }
+
+    public CBasePropDoor CBasePropDoor
+    {
+        get;
+        set;
+    }
+
+    public CBaseTrigger CBaseTrigger
+    {
+        get;
+        set;
+    }
+
+    public CBaseViewModel CBaseViewModel
+    {
+        get;
+        set;
+    }
+
+    public CBeam CBeam
+    {
+        get;
+        set;
+    }
+
+    public CBreakableProp CBreakableProp
+    {
+        get;
+        set;
+    }
+
+    public Cc4 Cc4
+    {
+        get;
+        set;
+    }
+
+    public CcsgoViewModel CCsgoViewModel
+    {
+        get;
+        set;
+    }
+
+    public CcsgoTeamPreviewCharacterPosition CCsgoTeamPreviewCharacterPosition
+    {
+        get;
+        set;
+    }
+
+    public CcsGameRules CCsGameRules
+    {
+        get;
+        set;
+    }
+
+    public CcsGameRulesProxy CCsGameRulesProxy
+    {
+        get;
+        set;
+    }
+
+    public CcsObserverPawn CCsObserverPawn
+    {
+        get;
+        set;
+    }
+
+    public CcsObserverPawnApi CCsObserverPawnApi
+    {
+        get;
+        set;
+    }
+
+    public CcsPlayerPawn CCsPlayerPawn
+    {
+        get;
+        set;
+    }
+
+    public CcsPlayerPawnApi CCsPlayerPawnApi
+    {
+        get;
+        set;
+    }
+
+    public CcsPlayerPawnBase CCsPlayerPawnBase
+    {
+        get;
+        set;
+    }
+
+    public CcsPlayerResource CCsPlayerResource
+    {
+        get;
+        set;
+    }
+
+    public CcsTeam CCsTeam
+    {
+        get;
+        set;
+    }
+
+    public CcsWeaponBase CCsWeaponBase
+    {
+        get;
+        set;
+    }
+
+    public CcsWeaponBaseGun CCsWeaponBaseGun
+    {
+        get;
+        set;
+    }
+
+    public CChicken CChicken
+    {
+        get;
+        set;
+    }
+
+    public CColorCorrection CColorCorrection
+    {
+        get;
+        set;
+    }
+
+    public CColorCorrectionVolume CColorCorrectionVolume
+    {
+        get;
+        set;
+    }
+
+    public CDecoyProjectile CDecoyProjectile
+    {
+        get;
+        set;
+    }
+
+    public CDynamicLight CDynamicLight
+    {
+        get;
+        set;
+    }
+
+    public CDynamicProp CDynamicProp
+    {
+        get;
+        set;
+    }
+
+    public CEconEntity CEconEntity
+    {
+        get;
+        set;
+    }
+
+    public CEconItemView CEconItemView
+    {
+        get;
+        set;
+    }
+
+    public CEntityDissolve CEntityDissolve
+    {
+        get;
+        set;
+    }
+
+    public CEntityFlame CEntityFlame
+    {
+        get;
+        set;
+    }
+
+    public CEnvCombinedLightProbeVolume CEnvCombinedLightProbeVolume
+    {
+        get;
+        set;
+    }
+
+    public CEnvCubemap CEnvCubemap
+    {
+        get;
+        set;
+    }
+
+    public CEnvCubemapFog CEnvCubemapFog
+    {
+        get;
+        set;
+    }
+
+    public CEnvDecal CEnvDecal
+    {
+        get;
+        set;
+    }
+
+    public CEnvDetailController CEnvDetailController
+    {
+        get;
+        set;
+    }
+
+    public CEnvLightProbeVolume CEnvLightProbeVolume
+    {
+        get;
+        set;
+    }
+
+    public CEnvParticleGlow CEnvParticleGlow
+    {
+        get;
+        set;
+    }
+
+    public CEnvScreenOverlay CEnvScreenOverlay
+    {
+        get;
+        set;
+    }
+
+    public CEnvSky CEnvSky
+    {
+        get;
+        set;
+    }
+
+    public CEnvVolumetricFogController CEnvVolumetricFogController
+    {
+        get;
+        set;
+    }
+
+    public CEnvVolumetricFogVolume CEnvVolumetricFogVolume
+    {
+        get;
+        set;
+    }
+
+    public CEnvWind CEnvWind
+    {
+        get;
+        set;
+    }
+
+    public CEnvWindClientside CEnvWindClientside
+    {
+        get;
+        set;
+    }
+
+    public CEnvWindShared CEnvWindShared
+    {
+        get;
+        set;
+    }
+
+    public CFireSmoke CFireSmoke
+    {
+        get;
+        set;
+    }
+
+    public CFish CFish
+    {
+        get;
+        set;
+    }
+
+    public CFists CFists
+    {
+        get;
+        set;
+    }
+
+    public CFogController CFogController
+    {
+        get;
+        set;
+    }
+
+    public CFootstepControl CFootstepControl
+    {
+        get;
+        set;
+    }
+
+    public CFuncConveyor CFuncConveyor
+    {
+        get;
+        set;
+    }
+
+    public CFuncElectrifiedVolume CFuncElectrifiedVolume
+    {
+        get;
+        set;
+    }
+
+    public CFuncLadder CFuncLadder
+    {
+        get;
+        set;
+    }
+
+    public CFuncMonitor CFuncMonitor
+    {
+        get;
+        set;
+    }
+
+    public CFuncMoveLinear CFuncMoveLinear
+    {
+        get;
+        set;
+    }
+
+    public CFuncRotating CFuncRotating
+    {
+        get;
+        set;
+    }
+
+    public CGradientFog CGradientFog
+    {
+        get;
+        set;
+    }
+
+    public CHandleTest CHandleTest
+    {
+        get;
+        set;
+    }
+
+    public CHostage CHostage
+    {
+        get;
+        set;
+    }
+
+    public CInferno CInferno
+    {
+        get;
+        set;
+    }
+
+    public CInfoVisibilityBox CInfoVisibilityBox
+    {
+        get;
+        set;
+    }
+
+    public CItem CItem
+    {
+        get;
+        set;
+    }
+
+    public CItemDogtags CItemDogtags
+    {
+        get;
+        set;
+    }
+
+    public CLightEntity CLightEntity
+    {
+        get;
+        set;
+    }
+
+    public CLightGlow CLightGlow
+    {
+        get;
+        set;
+    }
+
+    public CMapVetoPickController CMapVetoPickController
+    {
+        get;
+        set;
+    }
+
+    public CMolotovProjectile CMolotovProjectile
+    {
+        get;
+        set;
+    }
+
+    public COmniLight COmniLight
+    {
+        get;
+        set;
+    }
+
+    public CParticleSystem CParticleSystem
+    {
+        get;
+        set;
+    }
+
+    public CPathParticleRope CPathParticleRope
+    {
+        get;
+        set;
+    }
+
+    public CPhysicsProp CPhysicsProp
+    {
+        get;
+        set;
+    }
+
+    public CPlantedC4 CPlantedC4
+    {
+        get;
+        set;
+    }
+
+    public CPlayerPing CPlayerPing
+    {
+        get;
+        set;
+    }
+
+    public CPlayerSprayDecal CPlayerSprayDecal
+    {
+        get;
+        set;
+    }
+
+    public CPlayerVisibility CPlayerVisibility
+    {
+        get;
+        set;
+    }
+
+    public CPointCamera CPointCamera
+    {
+        get;
+        set;
+    }
+
+    public CPointClientUiDialog CPointClientUiDialog
+    {
+        get;
+        set;
+    }
+
+    public CPointClientUihud CPointClientUihud
+    {
+        get;
+        set;
+    }
+
+    public CPointClientUiWorldPanel CPointClientUiWorldPanel
+    {
+        get;
+        set;
+    }
+
+    public CPointClientUiWorldTextPanel CPointClientUiWorldTextPanel
+    {
+        get;
+        set;
+    }
+
+    public CPointCommentaryNode CPointCommentaryNode
+    {
+        get;
+        set;
+    }
+
+    public CPointValueRemapper CPointValueRemapper
+    {
+        get;
+        set;
+    }
+
+    public CPointWorldText CPointWorldText
+    {
+        get;
+        set;
+    }
+
+    public CPostProcessingVolume CPostProcessingVolume
+    {
+        get;
+        set;
+    }
+
+    public CRagdollManager CRagdollManager
+    {
+        get;
+        set;
+    }
+
+    public CRagdollProp CRagdollProp
+    {
+        get;
+        set;
+    }
+
+    public CRagdollPropAttached CRagdollPropAttached
+    {
+        get;
+        set;
+    }
+
+    public CRectLight CRectLight
+    {
+        get;
+        set;
+    }
+
+    public CRetakeGameRules CRetakeGameRules
+    {
+        get;
+        set;
+    }
+
+    public CRopeKeyframe CRopeKeyframe
+    {
+        get;
+        set;
+    }
+
+    public CSceneEntity CSceneEntity
+    {
+        get;
+        set;
+    }
+
+    public CShatterGlassShardPhysics CShatterGlassShardPhysics
+    {
+        get;
+        set;
+    }
+
+    public CSkyCamera CSkyCamera
+    {
+        get;
+        set;
+    }
+
+    public CSmokeGrenadeProjectile CSmokeGrenadeProjectile
+    {
+        get;
+        set;
+    }
+
+    public CSoundAreaEntityBase CSoundAreaEntityBase
+    {
+        get;
+        set;
+    }
+
+    public CSoundAreaEntityOrientedBox CSoundAreaEntityOrientedBox
+    {
+        get;
+        set;
+    }
+
+    public CSoundAreaEntitySphere CSoundAreaEntitySphere
+    {
+        get;
+        set;
+    }
+
+    public CSoundOpvarSetPointBase CSoundOpvarSetPointBase
+    {
+        get;
+        set;
+    }
+
+    public CSpotlightEnd CSpotlightEnd
+    {
+        get;
+        set;
+    }
+
+    public CSprite CSprite
+    {
+        get;
+        set;
+    }
+
+    public CSun CSun
+    {
+        get;
+        set;
+    }
+
+    public CTeam CTeam
+    {
+        get;
+        set;
+    }
+
+    public CTeamRoundTimer CTeamRoundTimer
+    {
+        get;
+        set;
+    }
+
+    public CTextureBasedAnimatable CTextureBasedAnimatable
+    {
+        get;
+        set;
+    }
+
+    public CTonemapController2 CTonemapController2
+    {
+        get;
+        set;
+    }
+
+    public CTriggerBuoyancy CTriggerBuoyancy
+    {
+        get;
+        set;
+    }
+
+    public CTriggerPhysics CTriggerPhysics
+    {
+        get;
+        set;
+    }
+
+    public CVoteController CVoteController
+    {
+        get;
+        set;
+    }
+
+    public CWeaponBaseItem CWeaponBaseItem
+    {
+        get;
+        set;
+    }
+
+    public CWeaponShield CWeaponShield
+    {
+        get;
+        set;
+    }
+
+    public CWeaponTaser CWeaponTaser
+    {
+        get;
+        set;
+    }
+
+    public CFogplayerparamsT CFogplayerparamsT
+    {
+        get;
+        set;
+    }
+
+    public CompMatMutatorConditionT CompMatMutatorConditionT
+    {
+        get;
+        set;
+    }
+
+    public CompMatPropertyMutatorT CompMatPropertyMutatorT
+    {
+        get;
+        set;
+    }
+
+    public CompositeMaterialAssemblyProcedureT CompositeMaterialAssemblyProcedureT
+    {
+        get;
+        set;
+    }
+
+    public CompositeMaterialEditorPointT CompositeMaterialEditorPointT
+    {
+        get;
+        set;
+    }
+
+    public CompositeMaterialInputContainerT CompositeMaterialInputContainerT
+    {
+        get;
+        set;
+    }
+
+    public CompositeMaterialInputLooseVariableT CompositeMaterialInputLooseVariableT
+    {
+        get;
+        set;
+    }
+
+    public CompositeMaterialMatchFilterT CompositeMaterialMatchFilterT
+    {
+        get;
+        set;
+    }
+
+    public CompositeMaterialT CompositeMaterialT
+    {
+        get;
+        set;
+    }
+
+    public CountdownTimer CountdownTimer
+    {
+        get;
+        set;
+    }
+
+    public EngineCountdownTimer EngineCountdownTimer
+    {
+        get;
+        set;
+    }
+
+    public EntityRenderAttributeT EntityRenderAttributeT
+    {
+        get;
+        set;
+    }
+
+    public EntitySpottedStateT EntitySpottedStateT
+    {
+        get;
+        set;
+    }
+
+    public GeneratedTextureHandleT GeneratedTextureHandleT
+    {
+        get;
+        set;
+    }
+
+    public IntervalTimer IntervalTimer
+    {
+        get;
+        set;
+    }
+
+    public PhysicsRagdollPoseT PhysicsRagdollPoseT
+    {
+        get;
+        set;
+    }
+
+    public SellbackPurchaseEntryT SellbackPurchaseEntryT
+    {
+        get;
+        set;
+    }
+
+    public VPhysicsCollisionAttributeT VPhysicsCollisionAttributeT
+    {
+        get;
+        set;
+    }
+
+    public ViewAngleServerChangeT ViewAngleServerChangeT
+    {
+        get;
+        set;
+    }
+
+    public WeaponPurchaseCountT WeaponPurchaseCountT
+    {
+        get;
+        set;
+    }
+
+    public WeaponPurchaseTrackerT WeaponPurchaseTrackerT
+    {
+        get;
+        set;
+    }
+
+    public AudioparamsT AudioparamsT
+    {
+        get;
+        set;
+    }
+
+    public FogparamsT FogparamsT
+    {
+        get;
+        set;
+    }
+
+    public ShardModelDescT ShardModelDescT
+    {
+        get;
+        set;
+    }
+
+    public Sky3dparamsT Sky3dparamsT
+    {
+        get;
+        set;
+    }
 }
 
 public class CLightComponent
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CLightEntity
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CLightGlow
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CMapVetoPickController
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CModelState
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CMolotovProjectile
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CNetworkedSequenceOperation
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class COmniLight
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CompMatMutatorConditionT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CompMatPropertyMutatorConditionTypeT
 {
-    public int alignment { get; set; }
-    public Members members { get; set; }
-    public string type { get; set; }
+    public int Alignment
+    {
+        get;
+        set;
+    }
+
+    public Members Members
+    {
+        get;
+        set;
+    }
+
+    public string Type
+    {
+        get;
+        set;
+    }
 }
 
 public class CompMatPropertyMutatorT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CompMatPropertyMutatorTypeT
 {
-    public int alignment { get; set; }
-    public Members members { get; set; }
-    public string type { get; set; }
+    public int Alignment
+    {
+        get;
+        set;
+    }
+
+    public Members Members
+    {
+        get;
+        set;
+    }
+
+    public string Type
+    {
+        get;
+        set;
+    }
 }
 
 public class CompositeMaterialAssemblyProcedureT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CompositeMaterialEditorPointT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CompositeMaterialInputContainerSourceTypeT
 {
-    public int alignment { get; set; }
-    public Members members { get; set; }
-    public string type { get; set; }
+    public int Alignment
+    {
+        get;
+        set;
+    }
+
+    public Members Members
+    {
+        get;
+        set;
+    }
+
+    public string Type
+    {
+        get;
+        set;
+    }
 }
 
 public class CompositeMaterialInputContainerT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CompositeMaterialInputLooseVariableT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CompositeMaterialInputLooseVariableTypeT
 {
-    public int alignment { get; set; }
-    public Members members { get; set; }
-    public string type { get; set; }
+    public int Alignment
+    {
+        get;
+        set;
+    }
+
+    public Members Members
+    {
+        get;
+        set;
+    }
+
+    public string Type
+    {
+        get;
+        set;
+    }
 }
 
 public class CompositeMaterialInputTextureTypeT
 {
-    public int alignment { get; set; }
-    public Members members { get; set; }
-    public string type { get; set; }
+    public int Alignment
+    {
+        get;
+        set;
+    }
+
+    public Members Members
+    {
+        get;
+        set;
+    }
+
+    public string Type
+    {
+        get;
+        set;
+    }
 }
 
 public class CompositeMaterialMatchFilterT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CompositeMaterialMatchFilterTypeT
 {
-    public int alignment { get; set; }
-    public Members members { get; set; }
-    public string type { get; set; }
+    public int Alignment
+    {
+        get;
+        set;
+    }
+
+    public Members Members
+    {
+        get;
+        set;
+    }
+
+    public string Type
+    {
+        get;
+        set;
+    }
 }
 
 public class CompositeMaterialT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CompositeMaterialVarSystemVarT
 {
-    public int alignment { get; set; }
-    public Members members { get; set; }
-    public string type { get; set; }
+    public int Alignment
+    {
+        get;
+        set;
+    }
+
+    public Members Members
+    {
+        get;
+        set;
+    }
+
+    public string Type
+    {
+        get;
+        set;
+    }
 }
 
 public class CountdownTimer
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CParticleSystem
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CPathParticleRope
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CPhysicsProp
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CPlantedC4
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CPlayerCameraServices
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CPlayerMovementServices
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CPlayerMovementServicesHumanoid
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CPlayerObserverServices
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CPlayerPing
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CPlayerSprayDecal
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CPlayerVisibility
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CPlayerWeaponServices
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CPointCamera
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CPointClientUIDialog
+public class CPointClientUiDialog
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CPointClientUIHUD
+public class CPointClientUihud
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CPointClientUIWorldPanel
+public class CPointClientUiWorldPanel
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CPointClientUIWorldTextPanel
+public class CPointClientUiWorldTextPanel
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CPointCommentaryNode
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CPointValueRemapper
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CPointWorldText
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CPostProcessingVolume
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CPrecipitationVData
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CProjectedTextureBase
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CPulseGraphInstanceClientEntity
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CRagdollManager
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CRagdollProp
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CRagdollPropAttached
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CRectLight
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CRetakeGameRules
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CRopeKeyframe
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CSceneEntity
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CShatterGlassShardPhysics
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CSkeletonInstance
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CSkyCamera
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CSMatchStatsT
+public class CsMatchStatsT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CSmokeGrenadeProjectile
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CSoundAreaEntityBase
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CSoundAreaEntityOrientedBox
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CSoundAreaEntitySphere
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CSoundOpvarSetPointBase
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CSPerRoundStatsT
+public class CsPerRoundStatsT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CSpotlightEnd
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CSprite
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CSun
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
-public class CTakeDamageInfoAPI
+public class CTakeDamageInfoApi
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CTeam
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CTeamRoundTimer
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CTextureBasedAnimatable
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CTimeline
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CTonemapController2
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CTriggerBuoyancy
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CTriggerPhysics
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CVoteController
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CWeaponBaseItem
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CWeaponShield
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class CWeaponTaser
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public string parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public string Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class EngineCountdownTimer
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class EntityRenderAttributeT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class EntitySpottedStateT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class Enums
 {
-    public CBaseCombatCharacterWaterWakeModeT C_BaseCombatCharacter__WaterWakeMode_t { get; set; }
-    public CompMatPropertyMutatorConditionTypeT CompMatPropertyMutatorConditionType_t { get; set; }
-    public CompMatPropertyMutatorTypeT CompMatPropertyMutatorType_t { get; set; }
-    public CompositeMaterialInputContainerSourceTypeT CompositeMaterialInputContainerSourceType_t { get; set; }
-    public CompositeMaterialInputLooseVariableTypeT CompositeMaterialInputLooseVariableType_t { get; set; }
-    public CompositeMaterialInputTextureTypeT CompositeMaterialInputTextureType_t { get; set; }
-    public CompositeMaterialMatchFilterTypeT CompositeMaterialMatchFilterType_t { get; set; }
-    public CompositeMaterialVarSystemVarT CompositeMaterialVarSystemVar_t { get; set; }
+    public CBaseCombatCharacterWaterWakeModeT CBaseCombatCharacterWaterWakeModeT
+    {
+        get;
+        set;
+    }
+
+    public CompMatPropertyMutatorConditionTypeT CompMatPropertyMutatorConditionTypeT
+    {
+        get;
+        set;
+    }
+
+    public CompMatPropertyMutatorTypeT CompMatPropertyMutatorTypeT
+    {
+        get;
+        set;
+    }
+
+    public CompositeMaterialInputContainerSourceTypeT CompositeMaterialInputContainerSourceTypeT
+    {
+        get;
+        set;
+    }
+
+    public CompositeMaterialInputLooseVariableTypeT CompositeMaterialInputLooseVariableTypeT
+    {
+        get;
+        set;
+    }
+
+    public CompositeMaterialInputTextureTypeT CompositeMaterialInputTextureTypeT
+    {
+        get;
+        set;
+    }
+
+    public CompositeMaterialMatchFilterTypeT CompositeMaterialMatchFilterTypeT
+    {
+        get;
+        set;
+    }
+
+    public CompositeMaterialVarSystemVarT CompositeMaterialVarSystemVarT
+    {
+        get;
+        set;
+    }
 }
 
 public class Fields
 {
-    public int m_AssociatedEntities { get; set; }
-    public int m_AssociatedEntityNames { get; set; }
-    public int m_Handle { get; set; }
-    public int m_Name { get; set; }
-    public int m_aShootSounds { get; set; }
-    public int m_bAllowFlipping { get; set; }
-    public int m_bAutoSwitchFrom { get; set; }
-    public int m_bAutoSwitchTo { get; set; }
-    public int m_bBuiltRightHanded { get; set; }
-    public int m_bLinkedCooldowns { get; set; }
-    public int m_iDefaultClip1 { get; set; }
-    public int m_iDefaultClip2 { get; set; }
-    public int m_iFlags { get; set; }
-    public int m_iMaxClip1 { get; set; }
-    public int m_iMaxClip2 { get; set; }
-    public int m_iPosition { get; set; }
-    public int m_iRumbleEffect { get; set; }
-    public int m_iSlot { get; set; }
-    public int m_iWeight { get; set; }
-    public int m_nPrimaryAmmoType { get; set; }
-    public int m_nSecondaryAmmoType { get; set; }
-    public int m_sMuzzleAttachment { get; set; }
-    public int m_szMuzzleFlashParticle { get; set; }
-    public int m_szWorldModel { get; set; }
-    public int m_ArmorValue { get; set; }
-    public int m_GunGameImmunityColor { get; set; }
-    public int m_angEyeAngles { get; set; }
-    public int m_angLastMuzzleFlashAngle { get; set; }
-    public int m_angShootAngleHistory { get; set; }
-    public int m_angStashedShootAngles { get; set; }
-    public int m_bCachedPlaneIsValid { get; set; }
-    public int m_bCanMoveDuringFreezePeriod { get; set; }
-    public int m_bClipHitStaticWorld { get; set; }
-    public int m_bDeferStartMusicOnWarmup { get; set; }
-    public int m_bFlashBuildUp { get; set; }
-    public int m_bFlashDspHasBeenCleared { get; set; }
-    public int m_bFlashScreenshotHasBeenGrabbed { get; set; }
-    public int m_bGrenadeParametersStashed { get; set; }
-    public int m_bGuardianShouldSprayCustomXMark { get; set; }
-    public int m_bGunGameImmunity { get; set; }
-    public int m_bHasDeathInfo { get; set; }
-    public int m_bHasMovedSinceSpawn { get; set; }
-    public int m_bHasNightVision { get; set; }
-    public int m_bHideTargetID { get; set; }
-    public int m_bHud_MiniScoreHidden { get; set; }
-    public int m_bHud_RadarHidden { get; set; }
-    public int m_bInNoDefuseArea { get; set; }
-    public int m_bIsDefusing { get; set; }
-    public int m_bIsGrabbingHostage { get; set; }
-    public int m_bIsRescuing { get; set; }
-    public int m_bIsScoped { get; set; }
-    public int m_bIsWalking { get; set; }
-    public int m_bKilledByHeadshot { get; set; }
-    public int m_bKilledByTaser { get; set; }
-    public int m_bNightVisionOn { get; set; }
-    public int m_bOldIsScoped { get; set; }
-    public int m_bResumeZoom { get; set; }
-    public int m_bScreenTearFrameCaptured { get; set; }
-    public int m_bShouldAutobuyDMWeapons { get; set; }
-    public int m_bShouldAutobuyNow { get; set; }
-    public int m_bStrafing { get; set; }
-    public int m_bSuppressGuardianTooFarWarningAudio { get; set; }
-    public int m_bWaitForNoAttack { get; set; }
-    public int m_cycleLatch { get; set; }
-    public int m_delayTargetIDTimer { get; set; }
-    public int m_entitySpottedState { get; set; }
-    public int m_fImmuneToGunGameDamageTime { get; set; }
-    public int m_fImmuneToGunGameDamageTimeLast { get; set; }
-    public int m_fMolotovDamageTime { get; set; }
-    public int m_fMolotovUseTime { get; set; }
-    public int m_fNextThinkPushAway { get; set; }
-    public int m_fRenderingClipPlane { get; set; }
-    public int m_flClientDeathTime { get; set; }
-    public int m_flCurrentMusicStartTime { get; set; }
-    public int m_flDeathCCWeight { get; set; }
-    public int m_flDeathInfoTime { get; set; }
-    public int m_flDetectedByEnemySensorTime { get; set; }
-    public int m_flEmitSoundTime { get; set; }
-    public int m_flFlashBangTime { get; set; }
-    public int m_flFlashDuration { get; set; }
-    public int m_flFlashMaxAlpha { get; set; }
-    public int m_flFlashOverlayAlpha { get; set; }
-    public int m_flFlashScreenshotAlpha { get; set; }
-    public int m_flGuardianTooFarDistFrac { get; set; }
-    public int m_flHealthFadeAlpha { get; set; }
-    public int m_flHealthFadeValue { get; set; }
-    public int m_flHitHeading { get; set; }
-    public int m_flLastCollisionCeiling { get; set; }
-    public int m_flLastCollisionCeilingChangeTime { get; set; }
-    public int m_flLastSmokeAge { get; set; }
-    public int m_flLastSmokeOverlayAlpha { get; set; }
-    public int m_flLastSpawnTimeIndex { get; set; }
-    public int m_flLowerBodyYawTarget { get; set; }
-    public int m_flMusicRoundStartTime { get; set; }
-    public int m_flNextGuardianTooFarWarning { get; set; }
-    public int m_flNextMagDropTime { get; set; }
-    public int m_flNightVisionAlpha { get; set; }
-    public int m_flPrevMatchEndTime { get; set; }
-    public int m_flPrevRoundEndTime { get; set; }
-    public int m_flProgressBarStartTime { get; set; }
-    public int m_flSlopeDropHeight { get; set; }
-    public int m_flSlopeDropOffset { get; set; }
-    public int m_flVelocityModifier { get; set; }
-    public int m_grenadeParameterStashTime { get; set; }
-    public int m_hMuzzleFlashShape { get; set; }
-    public int m_hOriginalController { get; set; }
-    public int m_holdTargetIDTimer { get; set; }
-    public int m_iAddonBits { get; set; }
-    public int m_iBlockingUseActionInProgress { get; set; }
-    public int m_iDirection { get; set; }
-    public int m_iHealthBarRenderMaskIndex { get; set; }
-    public int m_iIDEntIndex { get; set; }
-    public int m_iMoveState { get; set; }
-    public int m_iOldIDEntIndex { get; set; }
-    public int m_iPlayerState { get; set; }
-    public int m_iPrimaryAddon { get; set; }
-    public int m_iProgressBarDuration { get; set; }
-    public int m_iSecondaryAddon { get; set; }
-    public int m_iShotsFired { get; set; }
-    public int m_iStartAccount { get; set; }
-    public int m_iTargetedWeaponEntIndex { get; set; }
-    public int m_iThrowGrenadeCounter { get; set; }
-    public int m_ignoreLadderJumpTime { get; set; }
-    public int m_ladderSurpressionTimer { get; set; }
-    public int m_lastLadderNormal { get; set; }
-    public int m_lastLadderPos { get; set; }
-    public int m_lastStandingPos { get; set; }
-    public int m_nDeathCamMusic { get; set; }
-    public int m_nHeavyAssaultSuitCooldownRemaining { get; set; }
-    public int m_nHitBodyPart { get; set; }
-    public int m_nLastClipPlaneSetupFrame { get; set; }
-    public int m_nLastConcurrentKilled { get; set; }
-    public int m_nLastKillerIndex { get; set; }
-    public int m_nLastMagDropAttachmentIndex { get; set; }
-    public int m_nMyCollisionGroup { get; set; }
-    public int m_nPlayerInfernoBodyFx { get; set; }
-    public int m_nPlayerInfernoFootFx { get; set; }
-    public int m_nPlayerSmokedFx { get; set; }
-    public int m_nSurvivalTeamNumber { get; set; }
-    public int m_nWhichBombZone { get; set; }
-    public int m_pClippingWeapon { get; set; }
-    public int m_pPingServices { get; set; }
-    public int m_pViewModelServices { get; set; }
-    public int m_previousPlayerState { get; set; }
-    public int m_serverIntendedCycle { get; set; }
-    public int m_thirdPersonHeading { get; set; }
-    public int m_unCurrentEquipmentValue { get; set; }
-    public int m_unFreezetimeEndEquipmentValue { get; set; }
-    public int m_unRoundStartEquipmentValue { get; set; }
-    public int m_vHeadConstraintOffset { get; set; }
-    public int m_vLastSmokeOverlayColor { get; set; }
-    public int m_vecBulletHitModels { get; set; }
-    public int m_vecDeathInfoOrigin { get; set; }
-    public int m_vecIntroStartEyePosition { get; set; }
-    public int m_vecIntroStartPlayerForward { get; set; }
-    public int m_vecLastAliveLocalVelocity { get; set; }
-    public int m_vecLastClipCameraForward { get; set; }
-    public int m_vecLastClipCameraPos { get; set; }
-    public int m_vecLastMuzzleFlashPos { get; set; }
-    public int m_vecPickupModelSlerpers { get; set; }
-    public int m_vecPlayerPatchEconIndices { get; set; }
-    public int m_vecStashedGrenadeThrowPosition { get; set; }
-    public int m_vecStashedVelocity { get; set; }
-    public int m_vecThirdPersonViewPositionOverride { get; set; }
-    public int m_vecThrowPositionHistory { get; set; }
-    public int m_vecVelocityHistory { get; set; }
-    public int m_bEndMatchNextMapAllVoted { get; set; }
-    public int m_bHostageAlive { get; set; }
-    public int m_bombsiteCenterA { get; set; }
-    public int m_bombsiteCenterB { get; set; }
-    public int m_foundGoalPositions { get; set; }
-    public int m_hostageRescueX { get; set; }
-    public int m_hostageRescueY { get; set; }
-    public int m_hostageRescueZ { get; set; }
-    public int m_iHostageEntityIDs { get; set; }
-    public int m_isHostageFollowingSomeone { get; set; }
-    public int m_bSurrendered { get; set; }
-    public int m_iClanID { get; set; }
-    public int m_numMapVictories { get; set; }
-    public int m_scoreFirstHalf { get; set; }
-    public int m_scoreOvertime { get; set; }
-    public int m_scoreSecondHalf { get; set; }
-    public int m_szClanTeamname { get; set; }
-    public int m_szTeamFlagImage { get; set; }
-    public int m_szTeamLogoImage { get; set; }
-    public int m_szTeamMatchStat { get; set; }
-    public int m_ClientPreviousWeaponState { get; set; }
-    public int m_IronSightController { get; set; }
-    public int m_OnPlayerPickup { get; set; }
-    public int m_bBurstMode { get; set; }
-    public int m_bFireOnEmpty { get; set; }
-    public int m_bGlowForPing { get; set; }
-    public int m_bInReload { get; set; }
-    public int m_bIsHauledBack { get; set; }
-    public int m_bOldFirstPersonSpectatedState { get; set; }
-    public int m_bReloadVisuallyComplete { get; set; }
-    public int m_bReloadsWithClips { get; set; }
-    public int m_bSilencerOn { get; set; }
-    public int m_bUIWeapon { get; set; }
-    public int m_bVisualsDataSet { get; set; }
-    public int m_bWasOwnedByCT { get; set; }
-    public int m_bWasOwnedByTerrorist { get; set; }
-    public int m_donated { get; set; }
-    public int m_ePlayerFireEvent { get; set; }
-    public int m_ePlayerFireEventAttackType { get; set; }
-    public int m_fAccuracyPenalty { get; set; }
-    public int m_fAccuracySmoothedForZoom { get; set; }
-    public int m_fLastShotTime { get; set; }
-    public int m_fScopeZoomEndTime { get; set; }
-    public int m_flCrosshairDistance { get; set; }
-    public int m_flDroppedAtTime { get; set; }
-    public int m_flFireSequenceStartTime { get; set; }
-    public int m_flGunAccuracyPositionDeprecated { get; set; }
-    public int m_flLastAccuracyUpdateTime { get; set; }
-    public int m_flLastLOSTraceFailureTime { get; set; }
-    public int m_flLastMagDropRequestTime { get; set; }
-    public int m_flNextAttackRenderTimeOffset { get; set; }
-    public int m_flNextClientFireBulletTime { get; set; }
-    public int m_flNextClientFireBulletTime_Repredict { get; set; }
-    public int m_flPostponeFireReadyFrac { get; set; }
-    public int m_flRecoilIndex { get; set; }
-    public int m_flTimeSilencerSwitchComplete { get; set; }
-    public int m_flTimeWeaponIdle { get; set; }
-    public int m_flTurningInaccuracy { get; set; }
-    public int m_flTurningInaccuracyDelta { get; set; }
-    public int m_flWatTickOffset { get; set; }
-    public int m_gunHeat { get; set; }
-    public int m_hCurrentThirdPersonSequence { get; set; }
-    public int m_hOurPing { get; set; }
-    public int m_hPrevOwner { get; set; }
-    public int m_iAlpha { get; set; }
-    public int m_iAmmoLastCheck { get; set; }
-    public int m_iCrosshairTextureID { get; set; }
-    public int m_iIronSightMode { get; set; }
-    public int m_iNumEmptyAttacks { get; set; }
-    public int m_iOriginalTeamNumber { get; set; }
-    public int m_iRecoilIndex { get; set; }
-    public int m_iScopeTextureID { get; set; }
-    public int m_iState { get; set; }
-    public int m_lastSmokeTime { get; set; }
-    public int m_nDropTick { get; set; }
-    public int m_nFireSequenceStartTimeAck { get; set; }
-    public int m_nFireSequenceStartTimeChange { get; set; }
-    public int m_nLastEmptySoundCmdNum { get; set; }
-    public int m_nOurPingIndex { get; set; }
-    public int m_nPostponeFireReadyTicks { get; set; }
-    public int m_nSilencerBoneIndex { get; set; }
-    public int m_nViewModelIndex { get; set; }
-    public int m_seqFirePrimary { get; set; }
-    public int m_seqFireSecondary { get; set; }
-    public int m_seqIdle { get; set; }
-    public int m_smokeAttachments { get; set; }
-    public int m_thirdPersonFireSequences { get; set; }
-    public int m_thirdPersonSequences { get; set; }
-    public int m_vecOurPingPos { get; set; }
-    public int m_vecTurningInaccuracyEyeDirLast { get; set; }
-    public int m_weaponMode { get; set; }
-    public int m_bNeedsBoltAction { get; set; }
-    public int m_iBurstShotsRemaining { get; set; }
-    public int m_iSilencerBodygroup { get; set; }
-    public int m_inPrecache { get; set; }
-    public int m_silencedModelIndex { get; set; }
-    public int m_zoomLevel { get; set; }
-    public int m_AttributeManager { get; set; }
-    public int m_OriginalOwnerXuidHigh { get; set; }
-    public int m_OriginalOwnerXuidLow { get; set; }
-    public int m_bAttributesInitialized { get; set; }
-    public int m_hHolidayHatAddon { get; set; }
-    public int m_hWaterWakeParticles { get; set; }
-    public int m_jumpedThisFrame { get; set; }
-    public int m_leader { get; set; }
-    public int m_MaxFalloff { get; set; }
-    public int m_MinFalloff { get; set; }
-    public int m_bClientSide { get; set; }
-    public int m_bEnabled { get; set; }
-    public int m_bEnabledOnClient { get; set; }
-    public int m_bExclusive { get; set; }
-    public int m_bFadingIn { get; set; }
-    public int m_bMaster { get; set; }
-    public int m_flCurWeight { get; set; }
-    public int m_flCurWeightOnClient { get; set; }
-    public int m_flFadeDuration { get; set; }
-    public int m_flFadeInDuration { get; set; }
-    public int m_flFadeOutDuration { get; set; }
-    public int m_flFadeStartTime { get; set; }
-    public int m_flFadeStartWeight { get; set; }
-    public int m_flMaxWeight { get; set; }
-    public int m_netlookupFilename { get; set; }
-    public int m_vecOrigin { get; set; }
-    public int m_FadeDuration { get; set; }
-    public int m_LastEnterTime { get; set; }
-    public int m_LastEnterWeight { get; set; }
-    public int m_LastExitTime { get; set; }
-    public int m_LastExitWeight { get; set; }
-    public int m_MaxWeight { get; set; }
-    public int m_Weight { get; set; }
-    public int m_lookupFilename { get; set; }
-    public int m_flTimeParticleEffectSpawn { get; set; }
-    public int m_nClientLastKnownDecoyShotTick { get; set; }
-    public int m_nDecoyShotTick { get; set; }
-    public int __m_pChainEntity { get; set; }
-    public int m_animationController { get; set; }
-    public int m_Exponent { get; set; }
-    public int m_Flags { get; set; }
-    public int m_InnerAngle { get; set; }
-    public int m_LightStyle { get; set; }
-    public int m_OuterAngle { get; set; }
-    public int m_Radius { get; set; }
-    public int m_SpotRadius { get; set; }
-    public int m_OnAnimReachedEnd { get; set; }
-    public int m_OnAnimReachedStart { get; set; }
-    public int m_bCreateNonSolid { get; set; }
-    public int m_bFiredStartEndOutput { get; set; }
-    public int m_bForceNpcExclude { get; set; }
-    public int m_bIsOverrideProp { get; set; }
-    public int m_bRandomizeCycle { get; set; }
-    public int m_bStartDisabled { get; set; }
-    public int m_bUseAnimGraph { get; set; }
-    public int m_bUseHitboxesForRenderBox { get; set; }
-    public int m_glowColor { get; set; }
-    public int m_iCachedFrameCount { get; set; }
-    public int m_iInitialGlowState { get; set; }
-    public int m_iszIdleAnim { get; set; }
-    public int m_nGlowRange { get; set; }
-    public int m_nGlowRangeMin { get; set; }
-    public int m_nGlowTeam { get; set; }
-    public int m_nIdleAnimLoopMode { get; set; }
-    public int m_pOutputAnimBegun { get; set; }
-    public int m_pOutputAnimLoopCycleOver { get; set; }
-    public int m_pOutputAnimOver { get; set; }
-    public int m_vecCachedRenderMaxs { get; set; }
-    public int m_vecCachedRenderMins { get; set; }
-    public int m_bAttachmentDirty { get; set; }
-    public int m_bClientside { get; set; }
-    public int m_bParticleSystemsCreated { get; set; }
-    public int m_flFallbackWear { get; set; }
-    public int m_flFlexDelayTime { get; set; }
-    public int m_flFlexDelayedWeight { get; set; }
-    public int m_hOldProvidee { get; set; }
-    public int m_hViewmodelAttachment { get; set; }
-    public int m_iNumOwnerValidationRetries { get; set; }
-    public int m_iOldTeam { get; set; }
-    public int m_nFallbackPaintKit { get; set; }
-    public int m_nFallbackSeed { get; set; }
-    public int m_nFallbackStatTrak { get; set; }
-    public int m_nUnloadedModelIndex { get; set; }
-    public int m_vecAttachedModels { get; set; }
-    public int m_vecAttachedParticles { get; set; }
-    public int m_AttributeList { get; set; }
-    public int m_NetworkedDynamicAttributes { get; set; }
-    public int m_bDisallowSOC { get; set; }
-    public int m_bInitialized { get; set; }
-    public int m_bInitializedTags { get; set; }
-    public int m_bInventoryImageRgbaRequested { get; set; }
-    public int m_bInventoryImageTriedCache { get; set; }
-    public int m_bIsStoreItem { get; set; }
-    public int m_bIsTradeItem { get; set; }
-    public int m_bRestoreCustomMaterialAfterPrecache { get; set; }
-    public int m_iAccountID { get; set; }
-    public int m_iEntityLevel { get; set; }
-    public int m_iEntityQuality { get; set; }
-    public int m_iEntityQuantity { get; set; }
-    public int m_iInventoryPosition { get; set; }
-    public int m_iItemDefinitionIndex { get; set; }
-    public int m_iItemID { get; set; }
-    public int m_iItemIDHigh { get; set; }
-    public int m_iItemIDLow { get; set; }
-    public int m_iQualityOverride { get; set; }
-    public int m_iRarityOverride { get; set; }
-    public int m_nInventoryImageRgbaHeight { get; set; }
-    public int m_nInventoryImageRgbaWidth { get; set; }
-    public int m_szCurrentLoadCachedFileName { get; set; }
-    public int m_szCustomName { get; set; }
-    public int m_szCustomNameOverride { get; set; }
-    public int m_unClientFlags { get; set; }
-    public int m_unOverrideStyle { get; set; }
-    public int m_bCoreExplode { get; set; }
-    public int m_bLinkedToServerEnt { get; set; }
-    public int m_flFadeInLength { get; set; }
-    public int m_flFadeInStart { get; set; }
-    public int m_flFadeOutLength { get; set; }
-    public int m_flFadeOutModelLength { get; set; }
-    public int m_flFadeOutModelStart { get; set; }
-    public int m_flFadeOutStart { get; set; }
-    public int m_flNextSparkTime { get; set; }
-    public int m_flStartTime { get; set; }
-    public int m_nDissolveType { get; set; }
-    public int m_nMagnitude { get; set; }
-    public int m_vDissolverOrigin { get; set; }
-    public int m_bCheapEffect { get; set; }
-    public int m_hEntAttached { get; set; }
-    public int m_hOldAttached { get; set; }
-    public int m_Color { get; set; }
-    public int m_bCustomCubemapTexture { get; set; }
-    public int m_bMoveable { get; set; }
-    public int m_flBrightness { get; set; }
-    public int m_flEdgeFadeDist { get; set; }
-    public int m_hCubemapTexture { get; set; }
-    public int m_hLightProbeDirectLightIndicesTexture { get; set; }
-    public int m_hLightProbeDirectLightScalarsTexture { get; set; }
-    public int m_hLightProbeDirectLightShadowsTexture { get; set; }
-    public int m_hLightProbeTexture { get; set; }
-    public int m_nEnvCubeMapArrayIndex { get; set; }
-    public int m_nHandshake { get; set; }
-    public int m_nLightProbeAtlasX { get; set; }
-    public int m_nLightProbeAtlasY { get; set; }
-    public int m_nLightProbeAtlasZ { get; set; }
-    public int m_nLightProbeSizeX { get; set; }
-    public int m_nLightProbeSizeY { get; set; }
-    public int m_nLightProbeSizeZ { get; set; }
-    public int m_nPriority { get; set; }
-    public int m_vBoxMaxs { get; set; }
-    public int m_vBoxMins { get; set; }
-    public int m_vEdgeFadeDists { get; set; }
-    public int m_bCopyDiffuseFromDefaultCubemap { get; set; }
-    public int m_bDefaultEnvMap { get; set; }
-    public int m_bDefaultSpecEnvMap { get; set; }
-    public int m_bIndoorCubeMap { get; set; }
-    public int m_flDiffuseScale { get; set; }
-    public int m_flInfluenceRadius { get; set; }
-    public int m_vBoxProjectMaxs { get; set; }
-    public int m_vBoxProjectMins { get; set; }
-    public int m_bActive { get; set; }
-    public int m_bFirstTime { get; set; }
-    public int m_bHasHeightFogEnd { get; set; }
-    public int m_bHeightFogEnabled { get; set; }
-    public int m_flEndDistance { get; set; }
-    public int m_flFogFalloffExponent { get; set; }
-    public int m_flFogHeightEnd { get; set; }
-    public int m_flFogHeightExponent { get; set; }
-    public int m_flFogHeightStart { get; set; }
-    public int m_flFogHeightWidth { get; set; }
-    public int m_flFogMaxOpacity { get; set; }
-    public int m_flLODBias { get; set; }
-    public int m_flStartDistance { get; set; }
-    public int m_hFogCubemapTexture { get; set; }
-    public int m_hSkyMaterial { get; set; }
-    public int m_iszSkyEntity { get; set; }
-    public int m_nCubemapSourceType { get; set; }
-    public int m_bProjectOnCharacters { get; set; }
-    public int m_bProjectOnWater { get; set; }
-    public int m_bProjectOnWorld { get; set; }
-    public int m_flDepth { get; set; }
-    public int m_flDepthSortBias { get; set; }
-    public int m_flHeight { get; set; }
-    public int m_flWidth { get; set; }
-    public int m_hDecalMaterial { get; set; }
-    public int m_nRenderOrder { get; set; }
-    public int m_sceneNode { get; set; }
-    public int m_flFadeEndDist { get; set; }
-    public int m_flFadeStartDist { get; set; }
-    public int m_ColorTint { get; set; }
-    public int m_flAlphaScale { get; set; }
-    public int m_flRadiusScale { get; set; }
-    public int m_flSelfIllumScale { get; set; }
-    public int m_hTextureOverride { get; set; }
-    public int m_bIsActive { get; set; }
-    public int m_bWasActive { get; set; }
-    public int m_flCurrentOverlayTime { get; set; }
-    public int m_flOverlayTimes { get; set; }
-    public int m_iCachedDesiredOverlay { get; set; }
-    public int m_iCurrentOverlay { get; set; }
-    public int m_iDesiredOverlay { get; set; }
-    public int m_iszOverlayNames { get; set; }
-    public int m_flBrightnessScale { get; set; }
-    public int m_flFogMaxEnd { get; set; }
-    public int m_flFogMaxStart { get; set; }
-    public int m_flFogMinEnd { get; set; }
-    public int m_flFogMinStart { get; set; }
-    public int m_hSkyMaterialLightingOnly { get; set; }
-    public int m_nFogType { get; set; }
-    public int m_vTintColor { get; set; }
-    public int m_vTintColorLightingOnly { get; set; }
-    public int m_bEnableIndirect { get; set; }
-    public int m_bIsMaster { get; set; }
-    public int m_flAnisotropy { get; set; }
-    public int m_flDefaultAnisotropy { get; set; }
-    public int m_flDefaultDrawDistance { get; set; }
-    public int m_flDefaultScattering { get; set; }
-    public int m_flDrawDistance { get; set; }
-    public int m_flFadeInEnd { get; set; }
-    public int m_flFadeSpeed { get; set; }
-    public int m_flIndirectStrength { get; set; }
-    public int m_flScattering { get; set; }
-    public int m_flStartAnisoTime { get; set; }
-    public int m_flStartAnisotropy { get; set; }
-    public int m_flStartDrawDistance { get; set; }
-    public int m_flStartDrawDistanceTime { get; set; }
-    public int m_flStartScatterTime { get; set; }
-    public int m_flStartScattering { get; set; }
-    public int m_hFogIndirectTexture { get; set; }
-    public int m_nForceRefreshCount { get; set; }
-    public int m_nIndirectTextureDimX { get; set; }
-    public int m_nIndirectTextureDimY { get; set; }
-    public int m_nIndirectTextureDimZ { get; set; }
-    public int m_flFalloffExponent { get; set; }
-    public int m_flStrength { get; set; }
-    public int m_nFalloffShape { get; set; }
-    public int m_EnvWindShared { get; set; }
-    public int m_CurrentSwayVector { get; set; }
-    public int m_PrevSwayVector { get; set; }
-    public int m_bGusting { get; set; }
-    public int m_currentWindVector { get; set; }
-    public int m_flAveWindSpeed { get; set; }
-    public int m_flGustDuration { get; set; }
-    public int m_flInitialWindSpeed { get; set; }
-    public int m_flMaxGustDelay { get; set; }
-    public int m_flMinGustDelay { get; set; }
-    public int m_flSimTime { get; set; }
-    public int m_flSwayTime { get; set; }
-    public int m_flSwitchTime { get; set; }
-    public int m_flVariationTime { get; set; }
-    public int m_flWindAngleVariation { get; set; }
-    public int m_flWindSpeed { get; set; }
-    public int m_flWindSpeedVariation { get; set; }
-    public int m_iEntIndex { get; set; }
-    public int m_iGustDirChange { get; set; }
-    public int m_iInitialWindDir { get; set; }
-    public int m_iMaxGust { get; set; }
-    public int m_iMaxWind { get; set; }
-    public int m_iMinGust { get; set; }
-    public int m_iMinWind { get; set; }
-    public int m_iWindDir { get; set; }
-    public int m_iWindSeed { get; set; }
-    public int m_iszGustSound { get; set; }
-    public int m_location { get; set; }
-    public int m_windRadius { get; set; }
-    public int m_skeletonInstance { get; set; }
-    public int m_bClipTested { get; set; }
-    public int m_bFadingOut { get; set; }
-    public int m_flChildFlameSpread { get; set; }
-    public int m_flClipPerc { get; set; }
-    public int m_flScaleEnd { get; set; }
-    public int m_flScaleRegister { get; set; }
-    public int m_flScaleStart { get; set; }
-    public int m_flScaleTimeEnd { get; set; }
-    public int m_flScaleTimeStart { get; set; }
-    public int m_nFlameFromAboveModelIndex { get; set; }
-    public int m_nFlameModelIndex { get; set; }
-    public int m_pFireOverlay { get; set; }
-    public int m_tParticleSpawn { get; set; }
-    public int m_actualAngles { get; set; }
-    public int m_actualPos { get; set; }
-    public int m_angle { get; set; }
-    public int m_angles { get; set; }
-    public int m_averageError { get; set; }
-    public int m_buoyancy { get; set; }
-    public int m_deathAngle { get; set; }
-    public int m_deathDepth { get; set; }
-    public int m_errorHistory { get; set; }
-    public int m_errorHistoryCount { get; set; }
-    public int m_errorHistoryIndex { get; set; }
-    public int m_gotUpdate { get; set; }
-    public int m_localLifeState { get; set; }
-    public int m_poolOrigin { get; set; }
-    public int m_pos { get; set; }
-    public int m_vel { get; set; }
-    public int m_waterLevel { get; set; }
-    public int m_wigglePhase { get; set; }
-    public int m_wiggleRate { get; set; }
-    public int m_wiggleTimer { get; set; }
-    public int m_x { get; set; }
-    public int m_y { get; set; }
-    public int m_z { get; set; }
-    public int m_bPlayingUninterruptableAct { get; set; }
-    public int m_nUninterruptableActivity { get; set; }
-    public int m_bUseAngles { get; set; }
-    public int m_fog { get; set; }
-    public int m_iChangedVariables { get; set; }
-    public int m_destination { get; set; }
-    public int m_source { get; set; }
-    public int m_flCurrentConveyorOffset { get; set; }
-    public int m_flCurrentConveyorSpeed { get; set; }
-    public int m_flTargetSpeed { get; set; }
-    public int m_flTransitionStartSpeed { get; set; }
-    public int m_hConveyorModels { get; set; }
-    public int m_nTransitionDurationTicks { get; set; }
-    public int m_nTransitionStartTick { get; set; }
-    public int m_vecMoveDirEntitySpace { get; set; }
-    public int m_EffectName { get; set; }
-    public int m_bState { get; set; }
-    public int m_nAmbientEffect { get; set; }
-    public int m_Dismounts { get; set; }
-    public int m_bDisabled { get; set; }
-    public int m_bFakeLadder { get; set; }
-    public int m_bHasSlack { get; set; }
-    public int m_flAutoRideSpeed { get; set; }
-    public int m_vecLadderDir { get; set; }
-    public int m_vecLocalTop { get; set; }
-    public int m_vecPlayerMountPositionBottom { get; set; }
-    public int m_vecPlayerMountPositionTop { get; set; }
-    public int m_bDraw3DSkybox { get; set; }
-    public int m_bRenderShadows { get; set; }
-    public int m_bUseUniqueColorTarget { get; set; }
-    public int m_brushModelName { get; set; }
-    public int m_hTargetCamera { get; set; }
-    public int m_nResolutionEnum { get; set; }
-    public int m_targetCamera { get; set; }
-    public int m_bBombPlantedHere { get; set; }
-    public int m_bGradientFogNeedsTextures { get; set; }
-    public int m_bIsEnabled { get; set; }
-    public int m_flFadeTime { get; set; }
-    public int m_flFarZ { get; set; }
-    public int m_flFogEndDistance { get; set; }
-    public int m_flFogEndHeight { get; set; }
-    public int m_flFogStartDistance { get; set; }
-    public int m_flFogStartHeight { get; set; }
-    public int m_flFogStrength { get; set; }
-    public int m_flFogVerticalExponent { get; set; }
-    public int m_fogColor { get; set; }
-    public int m_hGradientFogTexture { get; set; }
-    public int m_bSendHandle { get; set; }
-    public int m_bHandsHaveBeenCut { get; set; }
-    public int m_blinkTimer { get; set; }
-    public int m_chestAttachment { get; set; }
-    public int m_eyeAttachment { get; set; }
-    public int m_fLastGrabTime { get; set; }
-    public int m_fNewestAlphaThinkTime { get; set; }
-    public int m_flDeadOrRescuedTime { get; set; }
-    public int m_flDropStartTime { get; set; }
-    public int m_flGrabSuccessTime { get; set; }
-    public int m_flRescueStartTime { get; set; }
-    public int m_hHostageGrabber { get; set; }
-    public int m_isInit { get; set; }
-    public int m_isRescued { get; set; }
-    public int m_lookAroundTimer { get; set; }
-    public int m_lookAt { get; set; }
-    public int m_nHostageState { get; set; }
-    public int m_pPredictionOwner { get; set; }
-    public int m_reuseTimer { get; set; }
-    public int m_vecGrabbedPos { get; set; }
-    public int m_BurnNormal { get; set; }
-    public int m_bFireIsBurning { get; set; }
-    public int m_bInPostEffectTime { get; set; }
-    public int m_blosCheck { get; set; }
-    public int m_drawableCount { get; set; }
-    public int m_fireCount { get; set; }
-    public int m_fireParentPositions { get; set; }
-    public int m_firePositions { get; set; }
-    public int m_flLastGrassBurnThink { get; set; }
-    public int m_lastFireCount { get; set; }
-    public int m_maxBounds { get; set; }
-    public int m_maxFireHalfWidth { get; set; }
-    public int m_maxFireHeight { get; set; }
-    public int m_minBounds { get; set; }
-    public int m_nFireEffectTickBegin { get; set; }
-    public int m_nFireLifetime { get; set; }
-    public int m_nInfernoType { get; set; }
-    public int m_nfxFireDamageEffect { get; set; }
-    public int m_nlosperiod { get; set; }
-    public int m_nMode { get; set; }
-    public int m_vBoxSize { get; set; }
-    public int m_bShouldGlow { get; set; }
-    public int m_pReticleHintTextName { get; set; }
-    public int m_KillingPlayer { get; set; }
-    public int m_OwningPlayer { get; set; }
-    public int m_CLightComponent { get; set; }
-    public int m_Glow { get; set; }
-    public int m_flGlowProxySize { get; set; }
-    public int m_flHDRColorScale { get; set; }
-    public int m_nHorizontalSize { get; set; }
-    public int m_nMaxDist { get; set; }
-    public int m_nMinDist { get; set; }
-    public int m_nOuterMaxDist { get; set; }
-    public int m_nVerticalSize { get; set; }
-    public int m_pOuter { get; set; }
-    public int m_bDisabledHud { get; set; }
-    public int m_nAccountIDs { get; set; }
-    public int m_nCurrentPhase { get; set; }
-    public int m_nDraftType { get; set; }
-    public int m_nMapId0 { get; set; }
-    public int m_nMapId1 { get; set; }
-    public int m_nMapId2 { get; set; }
-    public int m_nMapId3 { get; set; }
-    public int m_nMapId4 { get; set; }
-    public int m_nMapId5 { get; set; }
-    public int m_nPhaseDurationTicks { get; set; }
-    public int m_nPhaseStartTick { get; set; }
-    public int m_nPostDataUpdateTick { get; set; }
-    public int m_nStartingSide0 { get; set; }
-    public int m_nTeamWinningCoinToss { get; set; }
-    public int m_nTeamWithFirstChoice { get; set; }
-    public int m_nVoteMapIdsList { get; set; }
-    public int m_bIsIncGrenade { get; set; }
-    public int m_bShowLight { get; set; }
-    public int m_flInnerAngle { get; set; }
-    public int m_flOuterAngle { get; set; }
-    public int m_bAnimateDuringGameplayPause { get; set; }
-    public int m_bFrozen { get; set; }
-    public int m_bNoFreeze { get; set; }
-    public int m_bNoRamp { get; set; }
-    public int m_bNoSave { get; set; }
-    public int m_bOldActive { get; set; }
-    public int m_bOldFrozen { get; set; }
-    public int m_bStartActive { get; set; }
-    public int m_clrTint { get; set; }
-    public int m_flFreezeTransitionDuration { get; set; }
-    public int m_flPreSimTime { get; set; }
-    public int m_hControlPointEnts { get; set; }
-    public int m_iEffectIndex { get; set; }
-    public int m_iServerControlPointAssignments { get; set; }
-    public int m_iszControlPointNames { get; set; }
-    public int m_iszEffectName { get; set; }
-    public int m_nDataCP { get; set; }
-    public int m_nStopType { get; set; }
-    public int m_nTintCP { get; set; }
-    public int m_szSnapshotFileName { get; set; }
-    public int m_vServerControlPoints { get; set; }
-    public int m_vecDataCPValue { get; set; }
-    public int m_PathNodes_Color { get; set; }
-    public int m_PathNodes_Name { get; set; }
-    public int m_PathNodes_PinEnabled { get; set; }
-    public int m_PathNodes_Position { get; set; }
-    public int m_PathNodes_RadiusScale { get; set; }
-    public int m_PathNodes_TangentIn { get; set; }
-    public int m_PathNodes_TangentOut { get; set; }
-    public int m_flMaxSimulationTime { get; set; }
-    public int m_flParticleSpacing { get; set; }
-    public int m_flRadius { get; set; }
-    public int m_flSlack { get; set; }
-    public int m_nEffectState { get; set; }
-    public int m_bAwake { get; set; }
-    public int m_bBeingDefused { get; set; }
-    public int m_bBombDefused { get; set; }
-    public int m_bBombTicking { get; set; }
-    public int m_bC4Activated { get; set; }
-    public int m_bCannotBeDefused { get; set; }
-    public int m_bExplodeWarning { get; set; }
-    public int m_bHasExploded { get; set; }
-    public int m_bRadarFlash { get; set; }
-    public int m_bTenSecWarning { get; set; }
-    public int m_bTriggerWarning { get; set; }
-    public int m_fLastDefuseTime { get; set; }
-    public int m_flC4Blow { get; set; }
-    public int m_flC4ExplodeSpectateDuration { get; set; }
-    public int m_flDefuseCountDown { get; set; }
-    public int m_flDefuseLength { get; set; }
-    public int m_flNextBeep { get; set; }
-    public int m_flNextGlow { get; set; }
-    public int m_flNextRadarFlashTime { get; set; }
-    public int m_flTimerLength { get; set; }
-    public int m_hBombDefuser { get; set; }
-    public int m_hControlPanel { get; set; }
-    public int m_hDefuserMultimeter { get; set; }
-    public int m_nBombSite { get; set; }
-    public int m_nSourceSoundscapeHash { get; set; }
-    public int m_pBombDefuser { get; set; }
-    public int m_vecC4ExplodeSpectateAng { get; set; }
-    public int m_vecC4ExplodeSpectatePos { get; set; }
-    public int m_bUrgent { get; set; }
-    public int m_hPingedEntity { get; set; }
-    public int m_hPlayer { get; set; }
-    public int m_iType { get; set; }
-    public int m_szPlaceName { get; set; }
-    public int m_SprayRenderHelper { get; set; }
-    public int m_flCreationTime { get; set; }
-    public int m_nEntity { get; set; }
-    public int m_nHitbox { get; set; }
-    public int m_nPlayer { get; set; }
-    public int m_nTintID { get; set; }
-    public int m_nUniqueID { get; set; }
-    public int m_nVersion { get; set; }
-    public int m_rtGcTime { get; set; }
-    public int m_ubSignature { get; set; }
-    public int m_unAccountID { get; set; }
-    public int m_unTraceID { get; set; }
-    public int m_vecEndPos { get; set; }
-    public int m_vecLeft { get; set; }
-    public int m_vecNormal { get; set; }
-    public int m_vecStart { get; set; }
-    public int m_flFogDistanceMultiplier { get; set; }
-    public int m_flFogMaxDensityMultiplier { get; set; }
-    public int m_flVisibilityStrength { get; set; }
-    public int m_DegreesPerSecond { get; set; }
-    public int m_FOV { get; set; }
-    public int m_FogColor { get; set; }
-    public int m_Resolution { get; set; }
-    public int m_TargetFOV { get; set; }
-    public int m_bCanHLTVUse { get; set; }
-    public int m_bDofEnabled { get; set; }
-    public int m_bFogEnable { get; set; }
-    public int m_bIsOn { get; set; }
-    public int m_bNoSky { get; set; }
-    public int m_bUseScreenAspectRatio { get; set; }
-    public int m_fBrightness { get; set; }
-    public int m_flAspectRatio { get; set; }
-    public int m_flDofFarBlurry { get; set; }
-    public int m_flDofFarCrisp { get; set; }
-    public int m_flDofNearBlurry { get; set; }
-    public int m_flDofNearCrisp { get; set; }
-    public int m_flDofTiltToGround { get; set; }
-    public int m_flFogEnd { get; set; }
-    public int m_flFogMaxDensity { get; set; }
-    public int m_flFogStart { get; set; }
-    public int m_flZFar { get; set; }
-    public int m_flZNear { get; set; }
-    public int m_pNext { get; set; }
-    public int m_bStartEnabled { get; set; }
-    public int m_hActivator { get; set; }
-    public int m_bAllowInteractionFromAllSceneWorlds { get; set; }
-    public int m_bCheckCSSClasses { get; set; }
-    public int m_bIgnoreInput { get; set; }
-    public int m_flDPI { get; set; }
-    public int m_flDepthOffset { get; set; }
-    public int m_flInteractDistance { get; set; }
-    public int m_unHorizontalAlign { get; set; }
-    public int m_unOrientation { get; set; }
-    public int m_unOwnerContext { get; set; }
-    public int m_unVerticalAlign { get; set; }
-    public int m_vecCSSClasses { get; set; }
-    public int m_anchorDeltaTransform { get; set; }
-    public int m_bDisableMipGen { get; set; }
-    public int m_bExcludeFromSaveGames { get; set; }
-    public int m_bFollowPlayerAcrossTeleport { get; set; }
-    public int m_bForceRecreateNextUpdate { get; set; }
-    public int m_bGrabbable { get; set; }
-    public int m_bLit { get; set; }
-    public int m_bMoveViewToPlayerNextThink { get; set; }
-    public int m_bNoDepth { get; set; }
-    public int m_bOnlyRenderToTexture { get; set; }
-    public int m_bOpaque { get; set; }
-    public int m_bRenderBackface { get; set; }
-    public int m_bUseOffScreenIndicator { get; set; }
-    public int m_nExplicitImageLayout { get; set; }
-    public int m_pOffScreenIndicator { get; set; }
-    public int m_messageText { get; set; }
-    public int m_bListenedTo { get; set; }
-    public int m_bRestartAfterRestore { get; set; }
-    public int m_flEndTime { get; set; }
-    public int m_flStartTimeInCommentary { get; set; }
-    public int m_hViewPosition { get; set; }
-    public int m_iNodeNumber { get; set; }
-    public int m_iNodeNumberMax { get; set; }
-    public int m_iszCommentaryFile { get; set; }
-    public int m_iszSpeakers { get; set; }
-    public int m_iszTitle { get; set; }
-    public int m_bDisabledOld { get; set; }
-    public int m_bEngaged { get; set; }
-    public int m_bFirstUpdate { get; set; }
-    public int m_bRequiresUseKey { get; set; }
-    public int m_bUpdateOnClient { get; set; }
-    public int m_flCurrentMomentum { get; set; }
-    public int m_flDisengageDistance { get; set; }
-    public int m_flEngageDistance { get; set; }
-    public int m_flInputOffset { get; set; }
-    public int m_flMaximumChangePerSecond { get; set; }
-    public int m_flMomentumModifier { get; set; }
-    public int m_flPreviousUpdateTickTime { get; set; }
-    public int m_flPreviousValue { get; set; }
-    public int m_flRatchetOffset { get; set; }
-    public int m_flSnapValue { get; set; }
-    public int m_hOutputEntities { get; set; }
-    public int m_hRemapLineEnd { get; set; }
-    public int m_hRemapLineStart { get; set; }
-    public int m_nHapticsType { get; set; }
-    public int m_nInputType { get; set; }
-    public int m_nMomentumType { get; set; }
-    public int m_nOutputType { get; set; }
-    public int m_nRatchetType { get; set; }
-    public int m_vecPreviousTestPoint { get; set; }
-    public int m_FontName { get; set; }
-    public int m_bFullbright { get; set; }
-    public int m_flFontSize { get; set; }
-    public int m_flWorldUnitsPerPx { get; set; }
-    public int m_nJustifyHorizontal { get; set; }
-    public int m_nJustifyVertical { get; set; }
-    public int m_nReorientMode { get; set; }
-    public int m_bExposureControl { get; set; }
-    public int m_flExposureCompensation { get; set; }
-    public int m_flExposureFadeSpeedDown { get; set; }
-    public int m_flExposureFadeSpeedUp { get; set; }
-    public int m_flMaxExposure { get; set; }
-    public int m_flMaxLogExposure { get; set; }
-    public int m_flMinExposure { get; set; }
-    public int m_flMinLogExposure { get; set; }
-    public int m_flRate { get; set; }
-    public int m_flTonemapEVSmoothingRange { get; set; }
-    public int m_flTonemapMinAvgLum { get; set; }
-    public int m_flTonemapPercentBrightPixels { get; set; }
-    public int m_flTonemapPercentTarget { get; set; }
-    public int m_hPostSettings { get; set; }
-    public int m_iCurrentMaxRagdollCount { get; set; }
-    public int m_WeaponSequence { get; set; }
-    public int m_flBlendWeight { get; set; }
-    public int m_flBlendWeightCurrent { get; set; }
-    public int m_hRagdollSource { get; set; }
-    public int m_iEyeAttachment { get; set; }
-    public int m_parentPhysicsBoneIndices { get; set; }
-    public int m_ragAngles { get; set; }
-    public int m_ragPos { get; set; }
-    public int m_worldSpaceBoneComputationOrder { get; set; }
-    public int m_attachmentPointBoneSpace { get; set; }
-    public int m_attachmentPointRagdollSpace { get; set; }
-    public int m_bHasParent { get; set; }
-    public int m_boneIndexAttached { get; set; }
-    public int m_parentTime { get; set; }
-    public int m_ragdollAttachedObjectIndex { get; set; }
-    public int m_vecOffset { get; set; }
-    public int m_bBlockersPresent { get; set; }
-    public int m_bRoundInProgress { get; set; }
-    public int m_iBombSite { get; set; }
-    public int m_iFirstSecondHalfRound { get; set; }
-    public int m_nMatchSeed { get; set; }
-    public int m_LightValues { get; set; }
-    public int m_LinksTouchingSomething { get; set; }
-    public int m_PhysicsDelegate { get; set; }
-    public int m_RopeFlags { get; set; }
-    public int m_RopeLength { get; set; }
-    public int m_Slack { get; set; }
-    public int m_Subdiv { get; set; }
-    public int m_TextureHeight { get; set; }
-    public int m_TextureScale { get; set; }
-    public int m_Width { get; set; }
-    public int m_bApplyWind { get; set; }
-    public int m_bConstrainBetweenEndpoints { get; set; }
-    public int m_bEndPointAttachmentAnglesDirty { get; set; }
-    public int m_bEndPointAttachmentPositionsDirty { get; set; }
-    public int m_bNewDataThisFrame { get; set; }
-    public int m_bPhysicsInitted { get; set; }
-    public int m_bPrevEndPointPos { get; set; }
-    public int m_fLockedPoints { get; set; }
-    public int m_fPrevLockedPoints { get; set; }
-    public int m_flCurScroll { get; set; }
-    public int m_flCurrentGustLifetime { get; set; }
-    public int m_flCurrentGustTimer { get; set; }
-    public int m_flScrollSpeed { get; set; }
-    public int m_flTimeToNextGust { get; set; }
-    public int m_hEndPoint { get; set; }
-    public int m_hMaterial { get; set; }
-    public int m_hStartPoint { get; set; }
-    public int m_iEndAttachment { get; set; }
-    public int m_iForcePointMoveCounter { get; set; }
-    public int m_iRopeMaterialModelIndex { get; set; }
-    public int m_iStartAttachment { get; set; }
-    public int m_nChangeCount { get; set; }
-    public int m_nLinksTouchingSomething { get; set; }
-    public int m_nSegments { get; set; }
-    public int m_vCachedEndPointAttachmentAngle { get; set; }
-    public int m_vCachedEndPointAttachmentPos { get; set; }
-    public int m_vColorMod { get; set; }
-    public int m_vPrevEndPointPos { get; set; }
-    public int m_vWindDir { get; set; }
-    public int m_vecImpulse { get; set; }
-    public int m_vecPreviousImpulse { get; set; }
-    public int m_QueuedEvents { get; set; }
-    public int m_bAutogenerated { get; set; }
-    public int m_bClientOnly { get; set; }
-    public int m_bIsPlayingBack { get; set; }
-    public int m_bMultiplayer { get; set; }
-    public int m_bPaused { get; set; }
-    public int m_bWasPlaying { get; set; }
-    public int m_flCurrentTime { get; set; }
-    public int m_flForceClientTime { get; set; }
-    public int m_hActorList { get; set; }
-    public int m_hOwner { get; set; }
-    public int m_nSceneStringIndex { get; set; }
-    public int m_ShardDesc { get; set; }
-    public int m_skyboxData { get; set; }
-    public int m_skyboxSlotToken { get; set; }
-    public int m_VoxelFrameData { get; set; }
-    public int m_bDidSmokeEffect { get; set; }
-    public int m_bSmokeEffectSpawned { get; set; }
-    public int m_bSmokeVolumeDataReceived { get; set; }
-    public int m_nRandomSeed { get; set; }
-    public int m_nSmokeEffectTickBegin { get; set; }
-    public int m_vSmokeColor { get; set; }
-    public int m_vSmokeDetonationPos { get; set; }
-    public int m_bWasEnabled { get; set; }
-    public int m_iszSoundAreaType { get; set; }
-    public int m_vPos { get; set; }
-    public int m_flDMBonusStartTime { get; set; }
-    public int m_flDMBonusTimeLength { get; set; }
-    public int m_nDMBonusWeaponLoadoutSlot { get; set; }
-    public int m_vMax { get; set; }
-    public int m_vMin { get; set; }
-    public int m_bUseAutoCompare { get; set; }
-    public int m_iOpvarIndex { get; set; }
-    public int m_iszOperatorName { get; set; }
-    public int m_iszOpvarName { get; set; }
-    public int m_iszStackName { get; set; }
-    public int m_flLightScale { get; set; }
-    public int m_bWorldSpaceScale { get; set; }
-    public int m_flBrightnessDuration { get; set; }
-    public int m_flBrightnessTimeStart { get; set; }
-    public int m_flDestScale { get; set; }
-    public int m_flDieTime { get; set; }
-    public int m_flFrame { get; set; }
-    public int m_flLastTime { get; set; }
-    public int m_flMaxFrame { get; set; }
-    public int m_flScaleDuration { get; set; }
-    public int m_flSpriteFramerate { get; set; }
-    public int m_flSpriteScale { get; set; }
-    public int m_flStartScale { get; set; }
-    public int m_hAttachedToEntity { get; set; }
-    public int m_hOldSpriteMaterial { get; set; }
-    public int m_hSpriteMaterial { get; set; }
-    public int m_nAttachment { get; set; }
-    public int m_nBrightness { get; set; }
-    public int m_nDestBrightness { get; set; }
-    public int m_nSpriteHeight { get; set; }
-    public int m_nSpriteWidth { get; set; }
-    public int m_nStartBrightness { get; set; }
-    public int m_bOn { get; set; }
-    public int m_bmaxColor { get; set; }
-    public int m_clrOverlay { get; set; }
-    public int m_fdistNormalize { get; set; }
-    public int m_flAlphaHaze { get; set; }
-    public int m_flAlphaHdr { get; set; }
-    public int m_flFarZScale { get; set; }
-    public int m_flHazeScale { get; set; }
-    public int m_flRotation { get; set; }
-    public int m_flSize { get; set; }
-    public int m_fxSSSunFlareEffectIndex { get; set; }
-    public int m_fxSunFlareEffectIndex { get; set; }
-    public int m_iszSSEffectName { get; set; }
-    public int m_vDirection { get; set; }
-    public int m_vSunPos { get; set; }
-    public int m_aPlayerControllers { get; set; }
-    public int m_aPlayers { get; set; }
-    public int m_iScore { get; set; }
-    public int m_szTeamname { get; set; }
-    public int m_bAutoCountdown { get; set; }
-    public int m_bFire10SecRemain { get; set; }
-    public int m_bFire1MinRemain { get; set; }
-    public int m_bFire1SecRemain { get; set; }
-    public int m_bFire2MinRemain { get; set; }
-    public int m_bFire2SecRemain { get; set; }
-    public int m_bFire30SecRemain { get; set; }
-    public int m_bFire3MinRemain { get; set; }
-    public int m_bFire3SecRemain { get; set; }
-    public int m_bFire4MinRemain { get; set; }
-    public int m_bFire4SecRemain { get; set; }
-    public int m_bFire5MinRemain { get; set; }
-    public int m_bFire5SecRemain { get; set; }
-    public int m_bFireFinished { get; set; }
-    public int m_bInCaptureWatchState { get; set; }
-    public int m_bIsDisabled { get; set; }
-    public int m_bShowInHUD { get; set; }
-    public int m_bStartPaused { get; set; }
-    public int m_bStopWatchTimer { get; set; }
-    public int m_bTimerPaused { get; set; }
-    public int m_flTimeRemaining { get; set; }
-    public int m_flTimerEndTime { get; set; }
-    public int m_flTotalTime { get; set; }
-    public int m_nOldTimerLength { get; set; }
-    public int m_nOldTimerState { get; set; }
-    public int m_nSetupTimeLength { get; set; }
-    public int m_nState { get; set; }
-    public int m_nTimerInitialLength { get; set; }
-    public int m_nTimerLength { get; set; }
-    public int m_nTimerMaxLength { get; set; }
-    public int m_bLoop { get; set; }
-    public int m_flFPS { get; set; }
-    public int m_flStartFrame { get; set; }
-    public int m_hPositionKeys { get; set; }
-    public int m_hRotationKeys { get; set; }
-    public int m_vAnimationBoundsMax { get; set; }
-    public int m_vAnimationBoundsMin { get; set; }
-    public int m_flAutoExposureMax { get; set; }
-    public int m_flAutoExposureMin { get; set; }
-    public int m_flExposureAdaptationSpeedDown { get; set; }
-    public int m_flExposureAdaptationSpeedUp { get; set; }
-    public int m_BuoyancyHelper { get; set; }
-    public int m_flFluidDensity { get; set; }
-    public int m_angularDamping { get; set; }
-    public int m_angularLimit { get; set; }
-    public int m_bCollapseToForcePoint { get; set; }
-    public int m_bConvertToDebrisWhenPossible { get; set; }
-    public int m_flDampingRatio { get; set; }
-    public int m_flFrequency { get; set; }
-    public int m_gravityScale { get; set; }
-    public int m_linearDamping { get; set; }
-    public int m_linearForce { get; set; }
-    public int m_linearLimit { get; set; }
-    public int m_vecLinearForceDirection { get; set; }
-    public int m_vecLinearForcePointAt { get; set; }
-    public int m_vecLinearForcePointAtWorld { get; set; }
-    public int m_bIsYesNoVote { get; set; }
-    public int m_bTypeDirty { get; set; }
-    public int m_bVotesDirty { get; set; }
-    public int m_iActiveIssueIndex { get; set; }
-    public int m_iOnlyTeamToVote { get; set; }
-    public int m_nPotentialVotes { get; set; }
-    public int m_nVoteOptionCount { get; set; }
-    public int m_SequenceCompleteTimer { get; set; }
-    public int m_bRedraw { get; set; }
-    public int m_flDisplayHealth { get; set; }
-    public int m_fFireTime { get; set; }
-    public int m_NewColor { get; set; }
-    public int m_OldColor { get; set; }
-    public int m_flNewEnd { get; set; }
-    public int m_flNewFarZ { get; set; }
-    public int m_flNewHDRColorScale { get; set; }
-    public int m_flNewMaxDensity { get; set; }
-    public int m_flNewStart { get; set; }
-    public int m_flOldEnd { get; set; }
-    public int m_flOldFarZ { get; set; }
-    public int m_flOldHDRColorScale { get; set; }
-    public int m_flOldMaxDensity { get; set; }
-    public int m_flOldStart { get; set; }
-    public int m_flTransitionTime { get; set; }
-    public int m_hCtrl { get; set; }
-    public int m_bPassWhenTrue { get; set; }
-    public int m_nMutatorCondition { get; set; }
-    public int m_strMutatorConditionContainerName { get; set; }
-    public int m_strMutatorConditionContainerVarName { get; set; }
-    public int m_strMutatorConditionContainerVarValue { get; set; }
-    public int m_bCaptureInRenderDoc { get; set; }
-    public int m_bIsScratchTarget { get; set; }
-    public int m_bSplatDebugInfo { get; set; }
-    public int m_colDrawText_Color { get; set; }
-    public int m_nMutatorCommandType { get; set; }
-    public int m_nResolution { get; set; }
-    public int m_nSetValue_Value { get; set; }
-    public int m_strCopyKeysWithSuffix_FindSuffix { get; set; }
-    public int m_strCopyKeysWithSuffix_InputContainerSrc { get; set; }
-    public int m_strCopyKeysWithSuffix_ReplaceSuffix { get; set; }
-    public int m_strCopyMatchingKeys_InputContainerSrc { get; set; }
-    public int m_strCopyProperty_InputContainerProperty { get; set; }
-    public int m_strCopyProperty_InputContainerSrc { get; set; }
-    public int m_strCopyProperty_TargetProperty { get; set; }
-    public int m_strDrawText_Font { get; set; }
-    public int m_strDrawText_InputContainerProperty { get; set; }
-    public int m_strDrawText_InputContainerSrc { get; set; }
-    public int m_strGenerateTexture_InitialContainer { get; set; }
-    public int m_strGenerateTexture_TargetParam { get; set; }
-    public int m_strInitWith_Container { get; set; }
-    public int m_strPopInputQueue_Container { get; set; }
-    public int m_strRandomRollInputVars_SeedInputVar { get; set; }
-    public int m_vecConditionalMutators { get; set; }
-    public int m_vecConditions { get; set; }
-    public int m_vecDrawText_Position { get; set; }
-    public int m_vecRandomRollInputVars_InputVarsToRoll { get; set; }
-    public int m_vecTexGenInstructions { get; set; }
-    public int m_vecCompMatIncludes { get; set; }
-    public int m_vecCompositeInputContainers { get; set; }
-    public int m_vecMatchFilters { get; set; }
-    public int m_vecPropertyMutators { get; set; }
-    public int m_OwnerOnlyPredNetBoolVariables { get; set; }
-    public int m_OwnerOnlyPredNetByteVariables { get; set; }
-    public int m_OwnerOnlyPredNetFloatVariables { get; set; }
-    public int m_OwnerOnlyPredNetGlobalSymbolVariables { get; set; }
-    public int m_OwnerOnlyPredNetIntVariables { get; set; }
-    public int m_OwnerOnlyPredNetQuaternionVariables { get; set; }
-    public int m_OwnerOnlyPredNetUInt16Variables { get; set; }
-    public int m_OwnerOnlyPredNetUInt32Variables { get; set; }
-    public int m_OwnerOnlyPredNetUInt64Variables { get; set; }
-    public int m_OwnerOnlyPredNetVectorVariables { get; set; }
-    public int m_PredNetBoolVariables { get; set; }
-    public int m_PredNetByteVariables { get; set; }
-    public int m_PredNetFloatVariables { get; set; }
-    public int m_PredNetGlobalSymbolVariables { get; set; }
-    public int m_PredNetIntVariables { get; set; }
-    public int m_PredNetQuaternionVariables { get; set; }
-    public int m_PredNetUInt16Variables { get; set; }
-    public int m_PredNetUInt32Variables { get; set; }
-    public int m_PredNetUInt64Variables { get; set; }
-    public int m_PredNetVectorVariables { get; set; }
-    public int m_flLastTeleportTime { get; set; }
-    public int m_nBoolVariablesCount { get; set; }
-    public int m_nOwnerOnlyBoolVariablesCount { get; set; }
-    public int m_nRandomSeedOffset { get; set; }
-    public int m_flFOVRate { get; set; }
-    public int m_flFOVTime { get; set; }
-    public int m_flLastShotFOV { get; set; }
-    public int m_hZoomOwner { get; set; }
-    public int m_iFOV { get; set; }
-    public int m_iFOVStart { get; set; }
-    public int m_ChildModelName { get; set; }
-    public int m_KVModelStateChoices { get; set; }
-    public int m_ModelName { get; set; }
-    public int m_bEnableChildModel { get; set; }
-    public int m_flCycle { get; set; }
-    public int m_nSequenceIndex { get; set; }
-    public int m_vecCompositeMaterialAssemblyProcedures { get; set; }
-    public int m_vecCompositeMaterials { get; set; }
-    public int m_bExposeExternally { get; set; }
-    public int m_nCompositeMaterialInputContainerSourceType { get; set; }
-    public int m_strAlias { get; set; }
-    public int m_strAttrName { get; set; }
-    public int m_strAttrNameForVar { get; set; }
-    public int m_strSpecificContainerMaterial { get; set; }
-    public int m_vecLooseVariables { get; set; }
-    public int m_bExposedVariableIsFixedRange { get; set; }
-    public int m_bHasFloatBounds { get; set; }
-    public int m_bValueBoolean { get; set; }
-    public int m_cValueColor4 { get; set; }
-    public int m_flValueFloatW { get; set; }
-    public int m_flValueFloatW_Max { get; set; }
-    public int m_flValueFloatW_Min { get; set; }
-    public int m_flValueFloatX { get; set; }
-    public int m_flValueFloatX_Max { get; set; }
-    public int m_flValueFloatX_Min { get; set; }
-    public int m_flValueFloatY { get; set; }
-    public int m_flValueFloatY_Max { get; set; }
-    public int m_flValueFloatY_Min { get; set; }
-    public int m_flValueFloatZ { get; set; }
-    public int m_flValueFloatZ_Max { get; set; }
-    public int m_flValueFloatZ_Min { get; set; }
-    public int m_nTextureType { get; set; }
-    public int m_nValueIntW { get; set; }
-    public int m_nValueIntX { get; set; }
-    public int m_nValueIntY { get; set; }
-    public int m_nValueIntZ { get; set; }
-    public int m_nValueSystemVar { get; set; }
-    public int m_nVariableType { get; set; }
-    public int m_strExposedFriendlyGroupName { get; set; }
-    public int m_strExposedFriendlyName { get; set; }
-    public int m_strExposedHiddenWhenTrue { get; set; }
-    public int m_strExposedVisibleWhenTrue { get; set; }
-    public int m_strName { get; set; }
-    public int m_strResourceMaterial { get; set; }
-    public int m_strString { get; set; }
-    public int m_strTextureCompilationVtexTemplate { get; set; }
-    public int m_strTextureContentAssetPath { get; set; }
-    public int m_strTextureRuntimeResourcePath { get; set; }
-    public int m_nCompositeMaterialMatchFilterType { get; set; }
-    public int m_strMatchFilter { get; set; }
-    public int m_strMatchValue { get; set; }
-    public int m_FinalKVs { get; set; }
-    public int m_PreGenerationKVs { get; set; }
-    public int m_TargetKVs { get; set; }
-    public int m_vecGeneratedTextures { get; set; }
-    public int m_duration { get; set; }
-    public int m_nWorldGroupId { get; set; }
-    public int m_timescale { get; set; }
-    public int m_timestamp { get; set; }
-    public int m_ID { get; set; }
-    public int m_Values { get; set; }
-    public int m_bSpotted { get; set; }
-    public int m_bSpottedByMask { get; set; }
-    public int m_strBitmapName { get; set; }
-    public int m_bAbandonAllowsSurrender { get; set; }
-    public int m_bAbandonOffersInstantSurrender { get; set; }
-    public int m_bCanControlObservedBot { get; set; }
-    public int m_bCannotBeKicked { get; set; }
-    public int m_bControllingBot { get; set; }
-    public int m_bDisconnection1MinWarningPrinted { get; set; }
-    public int m_bEverFullyConnected { get; set; }
-    public int m_bEverPlayedOnTeam { get; set; }
-    public int m_bHasBeenControlledByPlayerThisRound { get; set; }
-    public int m_bHasCommunicationAbuseMute { get; set; }
-    public int m_bHasControlledBotThisRound { get; set; }
-    public int m_bIsPlayerNameDirty { get; set; }
-    public int m_bMvpNoMusic { get; set; }
-    public int m_bPawnHasDefuser { get; set; }
-    public int m_bPawnHasHelmet { get; set; }
-    public int m_bPawnIsAlive { get; set; }
-    public int m_bScoreReported { get; set; }
-    public int m_eMvpReason { get; set; }
-    public int m_flForceTeamTime { get; set; }
-    public int m_flPreviousForceJoinTeamTime { get; set; }
-    public int m_hObserverPawn { get; set; }
-    public int m_hOriginalControllerOfCurrentPawn { get; set; }
-    public int m_hPlayerPawn { get; set; }
-    public int m_iCoachingTeam { get; set; }
-    public int m_iCompTeammateColor { get; set; }
-    public int m_iCompetitiveRankType { get; set; }
-    public int m_iCompetitiveRanking { get; set; }
-    public int m_iCompetitiveRankingPredicted_Loss { get; set; }
-    public int m_iCompetitiveRankingPredicted_Tie { get; set; }
-    public int m_iCompetitiveRankingPredicted_Win { get; set; }
-    public int m_iCompetitiveWins { get; set; }
-    public int m_iDraftIndex { get; set; }
-    public int m_iMVPs { get; set; }
-    public int m_iMusicKitID { get; set; }
-    public int m_iMusicKitMVPs { get; set; }
-    public int m_iPawnArmor { get; set; }
-    public int m_iPawnBotDifficulty { get; set; }
-    public int m_iPawnHealth { get; set; }
-    public int m_iPawnLifetimeEnd { get; set; }
-    public int m_iPawnLifetimeStart { get; set; }
-    public int m_iPendingTeamNum { get; set; }
-    public int m_iPing { get; set; }
-    public int m_msQueuedModeDisconnectionTimestamp { get; set; }
-    public int m_nBotsControlledThisRound { get; set; }
-    public int m_nDisconnectionTick { get; set; }
-    public int m_nEndMatchNextMapVote { get; set; }
-    public int m_nPawnCharacterDefIndex { get; set; }
-    public int m_nPlayerDominated { get; set; }
-    public int m_nPlayerDominatingMe { get; set; }
-    public int m_nQuestProgressReason { get; set; }
-    public int m_pActionTrackingServices { get; set; }
-    public int m_pDamageServices { get; set; }
-    public int m_pInGameMoneyServices { get; set; }
-    public int m_pInventoryServices { get; set; }
-    public int m_sSanitizedPlayerName { get; set; }
-    public int m_szClan { get; set; }
-    public int m_szCrosshairCodes { get; set; }
-    public int m_uiAbandonRecordedReason { get; set; }
-    public int m_unActiveQuestId { get; set; }
-    public int m_unPlayerTvControlFlags { get; set; }
-    public int m_vecKills { get; set; }
-    public int m_Transforms { get; set; }
-    public int m_bDirty { get; set; }
-    public int m_bPrevHelmet { get; set; }
-    public int m_hItem { get; set; }
-    public int m_nCost { get; set; }
-    public int m_nPrevArmor { get; set; }
-    public int m_unDefIdx { get; set; }
-    public int m_nCollisionFunctionMask { get; set; }
-    public int m_nCollisionGroup { get; set; }
-    public int m_nEntityId { get; set; }
-    public int m_nHierarchyId { get; set; }
-    public int m_nInteractsAs { get; set; }
-    public int m_nInteractsExclude { get; set; }
-    public int m_nInteractsWith { get; set; }
-    public int m_nOwnerId { get; set; }
-    public int nIndex { get; set; }
-    public int nType { get; set; }
-    public int qAngle { get; set; }
-    public int m_nCount { get; set; }
-    public int m_nItemDefIndex { get; set; }
-    public int m_weaponPurchases { get; set; }
-    public int localBits { get; set; }
-    public int localSound { get; set; }
-    public int soundEventHash { get; set; }
-    public int soundscapeEntityListIndex { get; set; }
-    public int soundscapeIndex { get; set; }
-    public int HDRColorScale { get; set; }
-    public int blend { get; set; }
-    public int blendtobackground { get; set; }
-    public int colorPrimary { get; set; }
-    public int colorPrimaryLerpTo { get; set; }
-    public int colorSecondary { get; set; }
-    public int colorSecondaryLerpTo { get; set; }
-    public int dirPrimary { get; set; }
-    public int duration { get; set; }
-    public int enable { get; set; }
-    public int end { get; set; }
-    public int endLerpTo { get; set; }
-    public int exponent { get; set; }
-    public int farz { get; set; }
-    public int lerptime { get; set; }
-    public int locallightscale { get; set; }
-    public int m_bNoReflectionFog { get; set; }
-    public int m_bPadding { get; set; }
-    public int maxdensity { get; set; }
-    public int maxdensityLerpTo { get; set; }
-    public int scattering { get; set; }
-    public int skyboxFogFactor { get; set; }
-    public int skyboxFogFactorLerpTo { get; set; }
-    public int start { get; set; }
-    public int startLerpTo { get; set; }
-    public int m_ShatterPanelMode { get; set; }
-    public int m_SurfacePropStringToken { get; set; }
-    public int m_bParentFrozen { get; set; }
-    public int m_flGlassHalfThickness { get; set; }
-    public int m_nModelID { get; set; }
-    public int m_solid { get; set; }
-    public int m_vecPanelSize { get; set; }
-    public int m_vecPanelVertices { get; set; }
-    public int m_vecStressPositionA { get; set; }
-    public int m_vecStressPositionB { get; set; }
-    public int bClip3DSkyBoxNearToWorldFar { get; set; }
-    public int flClip3DSkyBoxNearToWorldFarOffset { get; set; }
-    public int fog { get; set; }
-    public int m_nWorldGroupID { get; set; }
-    public int origin { get; set; }
-    public int scale { get; set; }
-    public int m_iNumRoundKills { get; set; }
-    public int m_iNumRoundKillsHeadshots { get; set; }
-    public int m_matchStats { get; set; }
-    public int m_perRoundStats { get; set; }
-    public int m_unTotalRoundDamageDealt { get; set; }
-    public int m_DamageList { get; set; }
-    public int m_nSendUpdate { get; set; }
-    public int m_iAccount { get; set; }
-    public int m_iCashSpentThisRound { get; set; }
-    public int m_iTotalCashSpent { get; set; }
-    public int m_nPreviousAccount { get; set; }
-    public int m_nPersonaDataPublicCommendsFriendly { get; set; }
-    public int m_nPersonaDataPublicCommendsLeader { get; set; }
-    public int m_nPersonaDataPublicCommendsTeacher { get; set; }
-    public int m_nPersonaDataPublicLevel { get; set; }
-    public int m_nPersonaDataXpTrailLevel { get; set; }
-    public int m_rank { get; set; }
-    public int m_unMusicID { get; set; }
-    public int m_vecServerAuthoritativeWeaponSlots { get; set; }
-    public int m_hLastWeaponBeforeC4AutoSwitch { get; set; }
-    public int m_weaponPurchasesThisMatch { get; set; }
-    public int m_weaponPurchasesThisRound { get; set; }
-    public int m_totalHitsOnServer { get; set; }
-    public int m_vecSellbackPurchaseEntries { get; set; }
-    public int m_Attributes { get; set; }
-    public int m_pManager { get; set; }
-    public int m_hCarriedHostage { get; set; }
-    public int m_hCarriedHostageProp { get; set; }
-    public int m_bHasDefuser { get; set; }
-    public int m_bHasHeavyArmor { get; set; }
-    public int m_bHasHelmet { get; set; }
-    public int m_StuckLast { get; set; }
-    public int m_bDesiresDuck { get; set; }
-    public int m_bDuckOverride { get; set; }
-    public int m_bHasWalkMovedSinceLastJump { get; set; }
-    public int m_bInStuckTest { get; set; }
-    public int m_bOldJumpPressed { get; set; }
-    public int m_bSpeedCropped { get; set; }
-    public int m_duckUntilOnGround { get; set; }
-    public int m_fStashGrenadeParameterWhen { get; set; }
-    public int m_flDuckAmount { get; set; }
-    public int m_flDuckOffset { get; set; }
-    public int m_flDuckSpeed { get; set; }
-    public int m_flHeightAtJumpStart { get; set; }
-    public int m_flJumpPressedTime { get; set; }
-    public int m_flJumpUntil { get; set; }
-    public int m_flJumpVel { get; set; }
-    public int m_flLastDuckTime { get; set; }
-    public int m_flMaxFallVelocity { get; set; }
-    public int m_flMaxJumpHeightThisJump { get; set; }
-    public int m_flOffsetTickCompleteTime { get; set; }
-    public int m_flOffsetTickStashedSpeed { get; set; }
-    public int m_flStamina { get; set; }
-    public int m_flStuckCheckTime { get; set; }
-    public int m_flWaterEntryTime { get; set; }
-    public int m_nButtonDownMaskPrev { get; set; }
-    public int m_nDuckJumpTimeMsecs { get; set; }
-    public int m_nDuckTimeMsecs { get; set; }
-    public int m_nGameCodeHasMovedPlayerAfterCommand { get; set; }
-    public int m_nJumpTimeMsecs { get; set; }
-    public int m_nLadderSurfacePropIndex { get; set; }
-    public int m_nOldWaterLevel { get; set; }
-    public int m_nTraceCount { get; set; }
-    public int m_vecForward { get; set; }
-    public int m_vecLadderNormal { get; set; }
-    public int m_vecLastPositionAtFullCrouchSpeed { get; set; }
-    public int m_vecUp { get; set; }
-    public int m_hPlayerPing { get; set; }
-    public int m_hViewModel { get; set; }
-    public int m_bIsHoldingLookAtWeapon { get; set; }
-    public int m_bIsLookingAtWeapon { get; set; }
-    public int m_flNextAttack { get; set; }
-    public int m_nOldInputHistoryCount { get; set; }
-    public int m_nOldShootPositionHistoryCount { get; set; }
-    public int m_DefaultLoadoutSlot { get; set; }
-    public int m_GearSlot { get; set; }
-    public int m_GearSlotPosition { get; set; }
-    public int m_WeaponCategory { get; set; }
-    public int m_WeaponType { get; set; }
-    public int m_angPivotAngle { get; set; }
-    public int m_bCannotShootUnderwater { get; set; }
-    public int m_bHasBurstMode { get; set; }
-    public int m_bHideViewModelWhenZoomed { get; set; }
-    public int m_bIsFullAuto { get; set; }
-    public int m_bIsRevolver { get; set; }
-    public int m_bMeleeWeapon { get; set; }
-    public int m_bUnzoomsAfterShot { get; set; }
-    public int m_eSilencerType { get; set; }
-    public int m_flArmorRatio { get; set; }
-    public int m_flAttackMovespeedFactor { get; set; }
-    public int m_flBotAudibleRange { get; set; }
-    public int m_flCycleTime { get; set; }
-    public int m_flFlinchVelocityModifierLarge { get; set; }
-    public int m_flFlinchVelocityModifierSmall { get; set; }
-    public int m_flHeadshotMultiplier { get; set; }
-    public int m_flHeatPerShot { get; set; }
-    public int m_flIdleInterval { get; set; }
-    public int m_flInaccuracyAltSoundThreshold { get; set; }
-    public int m_flInaccuracyCrouch { get; set; }
-    public int m_flInaccuracyFire { get; set; }
-    public int m_flInaccuracyJump { get; set; }
-    public int m_flInaccuracyJumpApex { get; set; }
-    public int m_flInaccuracyJumpInitial { get; set; }
-    public int m_flInaccuracyLadder { get; set; }
-    public int m_flInaccuracyLand { get; set; }
-    public int m_flInaccuracyMove { get; set; }
-    public int m_flInaccuracyPitchShift { get; set; }
-    public int m_flInaccuracyReload { get; set; }
-    public int m_flInaccuracyStand { get; set; }
-    public int m_flIronSightFOV { get; set; }
-    public int m_flIronSightLooseness { get; set; }
-    public int m_flIronSightPivotForward { get; set; }
-    public int m_flIronSightPullUpSpeed { get; set; }
-    public int m_flIronSightPutDownSpeed { get; set; }
-    public int m_flMaxSpeed { get; set; }
-    public int m_flPenetration { get; set; }
-    public int m_flRange { get; set; }
-    public int m_flRangeModifier { get; set; }
-    public int m_flRecoilAngle { get; set; }
-    public int m_flRecoilAngleVariance { get; set; }
-    public int m_flRecoilMagnitude { get; set; }
-    public int m_flRecoilMagnitudeVariance { get; set; }
-    public int m_flRecoveryTimeCrouch { get; set; }
-    public int m_flRecoveryTimeCrouchFinal { get; set; }
-    public int m_flRecoveryTimeStand { get; set; }
-    public int m_flRecoveryTimeStandFinal { get; set; }
-    public int m_flSpread { get; set; }
-    public int m_flThrowVelocity { get; set; }
-    public int m_flTimeToIdleAfterFire { get; set; }
-    public int m_flZoomTime0 { get; set; }
-    public int m_flZoomTime1 { get; set; }
-    public int m_flZoomTime2 { get; set; }
-    public int m_nCrosshairDeltaDistance { get; set; }
-    public int m_nCrosshairMinDistance { get; set; }
-    public int m_nDamage { get; set; }
-    public int m_nKillAward { get; set; }
-    public int m_nNumBullets { get; set; }
-    public int m_nPrice { get; set; }
-    public int m_nPrimaryReserveAmmoMax { get; set; }
-    public int m_nRecoilSeed { get; set; }
-    public int m_nRecoveryTransitionEndBullet { get; set; }
-    public int m_nRecoveryTransitionStartBullet { get; set; }
-    public int m_nSecondaryReserveAmmoMax { get; set; }
-    public int m_nSpreadSeed { get; set; }
-    public int m_nTracerFrequency { get; set; }
-    public int m_nZoomFOV1 { get; set; }
-    public int m_nZoomFOV2 { get; set; }
-    public int m_nZoomLevels { get; set; }
-    public int m_sWrongTeamMsg { get; set; }
-    public int m_szAimsightLensMaskModel { get; set; }
-    public int m_szAnimClass { get; set; }
-    public int m_szAnimExtension { get; set; }
-    public int m_szEjectBrassEffect { get; set; }
-    public int m_szHeatEffect { get; set; }
-    public int m_szMagazineModel { get; set; }
-    public int m_szMuzzleFlashParticleAlt { get; set; }
-    public int m_szMuzzleFlashThirdPersonParticle { get; set; }
-    public int m_szMuzzleFlashThirdPersonParticleAlt { get; set; }
-    public int m_szName { get; set; }
-    public int m_szPlayerModel { get; set; }
-    public int m_szTracerParticle { get; set; }
-    public int m_szUseRadioSubtitle { get; set; }
-    public int m_szViewModel { get; set; }
-    public int m_szWorldDroppedModel { get; set; }
-    public int m_vecIronSightEyePos { get; set; }
-    public int m_CachedResults { get; set; }
-    public int m_ProviderType { get; set; }
-    public int m_Providers { get; set; }
-    public int m_bPreventLoopback { get; set; }
-    public int m_hOuter { get; set; }
-    public int m_iReapplyProvisionParity { get; set; }
-    public int m_CollisionGroup { get; set; }
-    public int m_collisionAttribute { get; set; }
-    public int m_flBoundingRadius { get; set; }
-    public int m_flCapsuleRadius { get; set; }
-    public int m_nEnablePhysics { get; set; }
-    public int m_nSolidType { get; set; }
-    public int m_nSurroundType { get; set; }
-    public int m_triggerBloat { get; set; }
-    public int m_usSolidFlags { get; set; }
-    public int m_vCapsuleCenter1 { get; set; }
-    public int m_vCapsuleCenter2 { get; set; }
-    public int m_vecMaxs { get; set; }
-    public int m_vecMins { get; set; }
-    public int m_vecSpecifiedSurroundingMaxs { get; set; }
-    public int m_vecSpecifiedSurroundingMins { get; set; }
-    public int m_vecSurroundingMaxs { get; set; }
-    public int m_vecSurroundingMins { get; set; }
-    public int m_KVthumbnail { get; set; }
-    public int m_Points { get; set; }
-    public int m_DamagerXuid { get; set; }
-    public int m_PlayerDamager { get; set; }
-    public int m_PlayerRecipient { get; set; }
-    public int m_RecipientXuid { get; set; }
-    public int m_bIsOtherEnemy { get; set; }
-    public int m_hPlayerControllerDamager { get; set; }
-    public int m_hPlayerControllerRecipient { get; set; }
-    public int m_iActualHealthRemoved { get; set; }
-    public int m_iDamage { get; set; }
-    public int m_iLastBulletUpdate { get; set; }
-    public int m_iNumHits { get; set; }
-    public int m_killType { get; set; }
-    public int m_szPlayerDamagerName { get; set; }
-    public int m_szPlayerRecipientName { get; set; }
-    public int m_bSetBonus { get; set; }
-    public int m_flInitialValue { get; set; }
-    public int m_flValue { get; set; }
-    public int m_iAttributeDefinitionIndex { get; set; }
-    public int m_nRefundableCurrency { get; set; }
-    public int m_fFlags { get; set; }
-    public int m_flMagnitude { get; set; }
-    public int m_flScale { get; set; }
-    public int m_hEntity { get; set; }
-    public int m_hOtherEntity { get; set; }
-    public int m_iEffectName { get; set; }
-    public int m_nAttachmentIndex { get; set; }
-    public int m_nAttachmentName { get; set; }
-    public int m_nColor { get; set; }
-    public int m_nDamageType { get; set; }
-    public int m_nEffectIndex { get; set; }
-    public int m_nExplosionType { get; set; }
-    public int m_nHitBox { get; set; }
-    public int m_nMaterial { get; set; }
-    public int m_nPenetrate { get; set; }
-    public int m_nSurfaceProp { get; set; }
-    public int m_vAngles { get; set; }
-    public int m_vNormal { get; set; }
-    public int m_vOrigin { get; set; }
-    public int m_vStart { get; set; }
-    public int m_PathIndex { get; set; }
-    public int m_designerName { get; set; }
-    public int m_fDataObjectTypes { get; set; }
-    public int m_flags { get; set; }
-    public int m_name { get; set; }
-    public int m_nameStringableIndex { get; set; }
-    public int m_pNextByClass { get; set; }
-    public int m_pPrev { get; set; }
-    public int m_pPrevByClass { get; set; }
-    public int m_worldGroupId { get; set; }
-    public int m_CScriptComponent { get; set; }
-    public int m_bVisibleinPVS { get; set; }
-    public int m_iszPrivateVScripts { get; set; }
-    public int m_pEntity { get; set; }
-    public int m_angAbsRotation { get; set; }
-    public int m_angRotation { get; set; }
-    public int m_bBoneMergeFlex { get; set; }
-    public int m_bDebugAbsOriginChanges { get; set; }
-    public int m_bDirtyBoneMergeBoneToRoot { get; set; }
-    public int m_bDirtyBoneMergeInfo { get; set; }
-    public int m_bDirtyHierarchy { get; set; }
-    public int m_bDormant { get; set; }
-    public int m_bForceParentToBeNetworked { get; set; }
-    public int m_bNetworkedAnglesChanged { get; set; }
-    public int m_bNetworkedPositionChanged { get; set; }
-    public int m_bNetworkedScaleChanged { get; set; }
-    public int m_bWillBeCallingPostDataUpdate { get; set; }
-    public int m_flAbsScale { get; set; }
-    public int m_flZOffset { get; set; }
-    public int m_hParent { get; set; }
-    public int m_hierarchyAttachName { get; set; }
-    public int m_nDoNotSetAnimTimeInInvalidatePhysicsCount { get; set; }
-    public int m_nHierarchicalDepth { get; set; }
-    public int m_nHierarchyType { get; set; }
-    public int m_nLatchAbsOrigin { get; set; }
-    public int m_nParentAttachmentOrBone { get; set; }
-    public int m_nodeToWorld { get; set; }
-    public int m_pChild { get; set; }
-    public int m_pNextSibling { get; set; }
-    public int m_pOwner { get; set; }
-    public int m_pParent { get; set; }
-    public int m_vRenderOrigin { get; set; }
-    public int m_vecAbsOrigin { get; set; }
-    public int m_bAnimGraphUpdateEnabled { get; set; }
-    public int m_bAnimationUpdateScheduled { get; set; }
-    public int m_bBuiltRagdoll { get; set; }
-    public int m_bClientRagdoll { get; set; }
-    public int m_bHasAnimatedMaterialAttributes { get; set; }
-    public int m_bInitiallyPopulateInterpHistory { get; set; }
-    public int m_bSuppressAnimEventSounds { get; set; }
-    public int m_flMaxSlopeDistance { get; set; }
-    public int m_nForceBone { get; set; }
-    public int m_pClientsideRagdoll { get; set; }
-    public int m_pRagdollPose { get; set; }
-    public int m_vLastSlopeCheckPos { get; set; }
-    public int m_vecForce { get; set; }
-    public int m_bEligibleForScreenHighlight { get; set; }
-    public int m_bFlashing { get; set; }
-    public int m_bGlowing { get; set; }
-    public int m_fGlowColor { get; set; }
-    public int m_flGlowStartTime { get; set; }
-    public int m_flGlowTime { get; set; }
-    public int m_glowColorOverride { get; set; }
-    public int m_iGlowTeam { get; set; }
-    public int m_iGlowType { get; set; }
-    public int m_bvDisabledHitGroups { get; set; }
-    public int m_RenderAttrName { get; set; }
-    public int m_TargetEntities { get; set; }
-    public int m_nResolutionX { get; set; }
-    public int m_nResolutionY { get; set; }
-    public int m_nTargetChangeCount { get; set; }
-    public int m_szLayoutFileName { get; set; }
-    public int m_bCreateAsChildSpawnGroup { get; set; }
-    public int m_bEntitiesSpawned { get; set; }
-    public int m_bWorldLayerActuallyVisible { get; set; }
-    public int m_bWorldLayerVisible { get; set; }
-    public int m_hLayerSpawnGroup { get; set; }
-    public int m_layerName { get; set; }
-    public int m_pOutputOnEntitiesSpawned { get; set; }
-    public int m_worldName { get; set; }
-    public int m_Pattern { get; set; }
-    public int m_SecondaryColor { get; set; }
-    public int m_SkyAmbientBounce { get; set; }
-    public int m_SkyColor { get; set; }
-    public int m_bFlicker { get; set; }
-    public int m_bMixedShadows { get; set; }
-    public int m_bPrecomputedFieldsValid { get; set; }
-    public int m_bRenderDiffuse { get; set; }
-    public int m_bRenderToCubemaps { get; set; }
-    public int m_bRenderTransmissive { get; set; }
-    public int m_bUseSecondaryColor { get; set; }
-    public int m_bUsesBakedShadowing { get; set; }
-    public int m_flAttenuation0 { get; set; }
-    public int m_flAttenuation1 { get; set; }
-    public int m_flAttenuation2 { get; set; }
-    public int m_flBrightnessMult { get; set; }
-    public int m_flCapsuleLength { get; set; }
-    public int m_flFadeMaxDist { get; set; }
-    public int m_flFadeMinDist { get; set; }
-    public int m_flFalloff { get; set; }
-    public int m_flFogContributionStength { get; set; }
-    public int m_flLightStyleStartTime { get; set; }
-    public int m_flMinRoughness { get; set; }
-    public int m_flNearClipPlane { get; set; }
-    public int m_flOrthoLightHeight { get; set; }
-    public int m_flOrthoLightWidth { get; set; }
-    public int m_flPhi { get; set; }
-    public int m_flPrecomputedMaxRange { get; set; }
-    public int m_flShadowCascadeCrossFade { get; set; }
-    public int m_flShadowCascadeDistance0 { get; set; }
-    public int m_flShadowCascadeDistance1 { get; set; }
-    public int m_flShadowCascadeDistance2 { get; set; }
-    public int m_flShadowCascadeDistance3 { get; set; }
-    public int m_flShadowCascadeDistanceFade { get; set; }
-    public int m_flShadowFadeMaxDist { get; set; }
-    public int m_flShadowFadeMinDist { get; set; }
-    public int m_flSkyIntensity { get; set; }
-    public int m_flTheta { get; set; }
-    public int m_hLightCookie { get; set; }
-    public int m_nBakedShadowIndex { get; set; }
-    public int m_nCascadeRenderStaticObjects { get; set; }
-    public int m_nCascades { get; set; }
-    public int m_nCastShadows { get; set; }
-    public int m_nDirectLight { get; set; }
-    public int m_nFogLightingMode { get; set; }
-    public int m_nIndirectLight { get; set; }
-    public int m_nRenderSpecular { get; set; }
-    public int m_nShadowCascadeResolution0 { get; set; }
-    public int m_nShadowCascadeResolution1 { get; set; }
-    public int m_nShadowCascadeResolution2 { get; set; }
-    public int m_nShadowCascadeResolution3 { get; set; }
-    public int m_nShadowHeight { get; set; }
-    public int m_nShadowPriority { get; set; }
-    public int m_nShadowWidth { get; set; }
-    public int m_nStyle { get; set; }
-    public int m_vPrecomputedBoundsMaxs { get; set; }
-    public int m_vPrecomputedBoundsMins { get; set; }
-    public int m_vPrecomputedOBBAngles { get; set; }
-    public int m_vPrecomputedOBBExtent { get; set; }
-    public int m_vPrecomputedOBBOrigin { get; set; }
-    public int m_MeshGroupMask { get; set; }
-    public int m_bClientClothCreationSuppressed { get; set; }
-    public int m_hModel { get; set; }
-    public int m_nClothUpdateFlags { get; set; }
-    public int m_nForceLOD { get; set; }
-    public int m_nIdealMotionType { get; set; }
-    public int m_bDiscontinuity { get; set; }
-    public int m_bSequenceChangeNetworked { get; set; }
-    public int m_flPrevCycle { get; set; }
-    public int m_flPrevCycleForAnimEventDetection { get; set; }
-    public int m_flPrevCycleFromDiscontinuity { get; set; }
-    public int m_flWeight { get; set; }
-    public int m_hSequence { get; set; }
-    public int m_CurrentFog { get; set; }
-    public int m_OverrideFogColor { get; set; }
-    public int m_PlayerFog { get; set; }
-    public int m_PostProcessingVolumes { get; set; }
-    public int m_angDemoViewAngles { get; set; }
-    public int m_audio { get; set; }
-    public int m_bOverrideFogColor { get; set; }
-    public int m_bOverrideFogStartEnd { get; set; }
-    public int m_fOverrideFogEnd { get; set; }
-    public int m_fOverrideFogStart { get; set; }
-    public int m_flCsViewPunchAngleTickRatio { get; set; }
-    public int m_flOldPlayerViewOffsetZ { get; set; }
-    public int m_flOldPlayerZ { get; set; }
-    public int m_hActivePostProcessingVolume { get; set; }
-    public int m_hColorCorrectionCtrl { get; set; }
-    public int m_hOldFogController { get; set; }
-    public int m_hTonemapController { get; set; }
-    public int m_hViewEntity { get; set; }
-    public int m_nCsViewPunchAngleTick { get; set; }
-    public int m_vecCsViewPunchAngle { get; set; }
-    public int m_arrForceSubtickMoveWhen { get; set; }
-    public int m_flForwardMove { get; set; }
-    public int m_flLeftMove { get; set; }
-    public int m_flMaxspeed { get; set; }
-    public int m_flUpMove { get; set; }
-    public int m_nButtonDoublePressed { get; set; }
-    public int m_nButtons { get; set; }
-    public int m_nImpulse { get; set; }
-    public int m_nLastCommandNumberProcessed { get; set; }
-    public int m_nQueuedButtonChangeMask { get; set; }
-    public int m_nQueuedButtonDownMask { get; set; }
-    public int m_nToggleButtonDownMask { get; set; }
-    public int m_pButtonPressedCmdNumber { get; set; }
-    public int m_vecLastMovementImpulses { get; set; }
-    public int m_vecOldViewAngles { get; set; }
-    public int m_animGraphNetworkedVars { get; set; }
-    public int m_bLastUpdateSkipped { get; set; }
-    public int m_bNetworkedAnimationInputsChanged { get; set; }
-    public int m_bNetworkedSequenceChanged { get; set; }
-    public int m_bSequenceFinished { get; set; }
-    public int m_flPlaybackRate { get; set; }
-    public int m_flPrevAnimUpdateTime { get; set; }
-    public int m_flSeqFixedCycle { get; set; }
-    public int m_flSeqStartTime { get; set; }
-    public int m_flSoundSyncTime { get; set; }
-    public int m_nAnimLoopMode { get; set; }
-    public int m_nNotifyState { get; set; }
-    public int m_bDucked { get; set; }
-    public int m_bDucking { get; set; }
-    public int m_bInCrouch { get; set; }
-    public int m_bInDuckJump { get; set; }
-    public int m_flCrouchTransitionStartTime { get; set; }
-    public int m_flFallVelocity { get; set; }
-    public int m_flStepSoundTime { get; set; }
-    public int m_flSurfaceFriction { get; set; }
-    public int m_groundNormal { get; set; }
-    public int m_nCrouchState { get; set; }
-    public int m_nStepside { get; set; }
-    public int m_surfaceProps { get; set; }
-    public int m_bForcedObserverMode { get; set; }
-    public int m_flObserverChaseDistance { get; set; }
-    public int m_flObserverChaseDistanceCalcTime { get; set; }
-    public int m_hObserverTarget { get; set; }
-    public int m_iObserverLastMode { get; set; }
-    public int m_iObserverMode { get; set; }
-    public int m_hActiveWeapon { get; set; }
-    public int m_hLastWeapon { get; set; }
-    public int m_hMyWeapons { get; set; }
-    public int m_iAmmo { get; set; }
-    public int m_bBatchSameVolumeType { get; set; }
-    public int m_flInnerDistance { get; set; }
-    public int m_nAttachType { get; set; }
-    public int m_nRTEnvCP { get; set; }
-    public int m_nRTEnvCPComponent { get; set; }
-    public int m_szModifier { get; set; }
-    public int m_szParticlePrecipitationEffect { get; set; }
-    public int m_LightColor { get; set; }
-    public int m_SpotlightTextureName { get; set; }
-    public int m_bAlwaysUpdate { get; set; }
-    public int m_bCameraSpace { get; set; }
-    public int m_bEnableShadows { get; set; }
-    public int m_bFlipHorizontal { get; set; }
-    public int m_bLightOnlyTarget { get; set; }
-    public int m_bLightWorld { get; set; }
-    public int m_bSimpleProjection { get; set; }
-    public int m_bVolumetric { get; set; }
-    public int m_flAmbient { get; set; }
-    public int m_flColorTransitionTime { get; set; }
-    public int m_flFlashlightTime { get; set; }
-    public int m_flIntensity { get; set; }
-    public int m_flLightFOV { get; set; }
-    public int m_flLinearAttenuation { get; set; }
-    public int m_flNearZ { get; set; }
-    public int m_flNoiseStrength { get; set; }
-    public int m_flPlaneOffset { get; set; }
-    public int m_flProjectionSize { get; set; }
-    public int m_flQuadraticAttenuation { get; set; }
-    public int m_flVolumetricIntensity { get; set; }
-    public int m_hTargetEntity { get; set; }
-    public int m_nNumPlanes { get; set; }
-    public int m_nShadowQuality { get; set; }
-    public int m_nSpotlightTextureFrame { get; set; }
-    public int m_iEnemy3Ks { get; set; }
-    public int m_iEnemy4Ks { get; set; }
-    public int m_iEnemy5Ks { get; set; }
-    public int m_iEnemyKnifeKills { get; set; }
-    public int m_iEnemyTaserKills { get; set; }
-    public int m_iAssists { get; set; }
-    public int m_iCashEarned { get; set; }
-    public int m_iDeaths { get; set; }
-    public int m_iEnemiesFlashed { get; set; }
-    public int m_iEquipmentValue { get; set; }
-    public int m_iHeadShotKills { get; set; }
-    public int m_iKillReward { get; set; }
-    public int m_iKills { get; set; }
-    public int m_iLiveTime { get; set; }
-    public int m_iMoneySaved { get; set; }
-    public int m_iObjective { get; set; }
-    public int m_iUtilityDamage { get; set; }
-    public int m_bDirtyMotionType { get; set; }
-    public int m_bDisableSolidCollisionsForHierarchy { get; set; }
-    public int m_bIsAnimationEnabled { get; set; }
-    public int m_bIsGeneratingLatchedParentSpaceState { get; set; }
-    public int m_bUseParentRenderBounds { get; set; }
-    public int m_materialGroup { get; set; }
-    public int m_modelState { get; set; }
-    public int m_nHitboxSet { get; set; }
-    public int m_CommandContext { get; set; }
-    public int m_bIsHLTV { get; set; }
-    public int m_bIsLocalPlayerController { get; set; }
-    public int m_hPawn { get; set; }
-    public int m_hPredictedPawn { get; set; }
-    public int m_hSplitOwner { get; set; }
-    public int m_hSplitScreenPlayers { get; set; }
-    public int m_iConnected { get; set; }
-    public int m_iDesiredFOV { get; set; }
-    public int m_iszPlayerName { get; set; }
-    public int m_nFinalPredictedTick { get; set; }
-    public int m_nInButtonsWhichAreToggles { get; set; }
-    public int m_nSplitScreenSlot { get; set; }
-    public int m_nTickBase { get; set; }
-    public int m_steamID { get; set; }
-    public int m_bStopped { get; set; }
-    public int m_flFinalValue { get; set; }
-    public int m_flInterval { get; set; }
-    public int m_flValues { get; set; }
-    public int m_nBucketCount { get; set; }
-    public int m_nCompressionType { get; set; }
-    public int m_nValueCounts { get; set; }
-    public int m_Item { get; set; }
-    public int m_iExternalItemProviderRegisteredToken { get; set; }
-    public int m_ullRegisteredAsItemID { get; set; }
-    public int m_LightStyleEvents { get; set; }
-    public int m_LightStyleString { get; set; }
-    public int m_LightStyleTargets { get; set; }
-    public int m_QueuedLightStyleStrings { get; set; }
-    public int m_StyleEvent { get; set; }
-    public int m_bContactShadow { get; set; }
-    public int m_fAlternateColorBrightness { get; set; }
-    public int m_flBounceScale { get; set; }
-    public int m_flColorTemperature { get; set; }
-    public int m_flFadeSizeEnd { get; set; }
-    public int m_flFadeSizeStart { get; set; }
-    public int m_flFogScale { get; set; }
-    public int m_flLuminaireAnisotropy { get; set; }
-    public int m_flLuminaireSize { get; set; }
-    public int m_flShadowFadeSizeEnd { get; set; }
-    public int m_flShadowFadeSizeStart { get; set; }
-    public int m_flShape { get; set; }
-    public int m_flSkirt { get; set; }
-    public int m_flSkirtNear { get; set; }
-    public int m_flSoftX { get; set; }
-    public int m_flSoftY { get; set; }
-    public int m_nBakeSpecularToCubemaps { get; set; }
-    public int m_nBounceLight { get; set; }
-    public int m_nColorMode { get; set; }
-    public int m_nFog { get; set; }
-    public int m_nFogShadows { get; set; }
-    public int m_nLuminaireShape { get; set; }
-    public int m_nShadowMapSize { get; set; }
-    public int m_vAlternateColor { get; set; }
-    public int m_vBakeSpecularToCubemapsSize { get; set; }
-    public int m_vShear { get; set; }
-    public int m_vSizeParams { get; set; }
-    public int m_glowEntity { get; set; }
-    public int m_szDisplayText { get; set; }
-    public int m_usable { get; set; }
-    public int m_bClientPredictDelete { get; set; }
-    public int m_bIsHeldByPlayer { get; set; }
-    public int m_bJumpThrow { get; set; }
-    public int m_bJustPulledPin { get; set; }
-    public int m_bPinPulled { get; set; }
-    public int m_bThrowAnimating { get; set; }
-    public int m_fDropTime { get; set; }
-    public int m_fThrowTime { get; set; }
-    public int m_flNextHoldFrac { get; set; }
-    public int m_flThrowStrength { get; set; }
-    public int m_flThrowStrengthApproach { get; set; }
-    public int m_hSwitchToWeaponAfterThrow { get; set; }
-    public int m_nNextHoldTick { get; set; }
-    public int flNextTrailLineTime { get; set; }
-    public int m_arrTrajectoryTrailPointCreationTimes { get; set; }
-    public int m_arrTrajectoryTrailPoints { get; set; }
-    public int m_bCanCreateGrenadeTrail { get; set; }
-    public int m_bExplodeEffectBegan { get; set; }
-    public int m_flSpawnTime { get; set; }
-    public int m_flTrajectoryTrailEffectCreationTime { get; set; }
-    public int m_hSnapshotTrajectoryParticleSnapshot { get; set; }
-    public int m_nBounces { get; set; }
-    public int m_nExplodeEffectIndex { get; set; }
-    public int m_nExplodeEffectTickBegin { get; set; }
-    public int m_nSnapshotTrajectoryEffectIndex { get; set; }
-    public int m_vInitialPosition { get; set; }
-    public int m_vInitialVelocity { get; set; }
-    public int m_vecExplodeEffectOrigin { get; set; }
-    public int vecLastTrailLinePos { get; set; }
-    public int m_DialogXMLName { get; set; }
-    public int m_PanelClassName { get; set; }
-    public int m_PanelID { get; set; }
-    public int m_bloodColor { get; set; }
-    public int m_flFieldOfView { get; set; }
-    public int m_flWaterNextTraceTime { get; set; }
-    public int m_flWaterWorldZ { get; set; }
-    public int m_hMyWearables { get; set; }
-    public int m_leftFootAttachment { get; set; }
-    public int m_nWaterWakeMode { get; set; }
-    public int m_rightFootAttachment { get; set; }
-    public int m_bIsUsable { get; set; }
-    public int m_CBodyComponent { get; set; }
-    public int m_DataChangeEventRef { get; set; }
-    public int m_EntClientFlags { get; set; }
-    public int m_ListEntry { get; set; }
-    public int m_MoveCollide { get; set; }
-    public int m_MoveType { get; set; }
-    public int m_NetworkTransmitComponent { get; set; }
-    public int m_Particles { get; set; }
-    public int m_aThinkFunctions { get; set; }
-    public int m_bAnimTimeChanged { get; set; }
-    public int m_bAnimatedEveryTick { get; set; }
-    public int m_bApplyLayerMatchIDToModel { get; set; }
-    public int m_bClientSideRagdoll { get; set; }
-    public int m_bHasAddedVarsToInterpolation { get; set; }
-    public int m_bHasSuccessfullyInterpolated { get; set; }
-    public int m_bInterpolateEvenWithNoModel { get; set; }
-    public int m_bIsPlatform { get; set; }
-    public int m_bPredictable { get; set; }
-    public int m_bPredictionEligible { get; set; }
-    public int m_bRenderEvenWhenNotSuccessfullyInterpolated { get; set; }
-    public int m_bRenderWithViewModels { get; set; }
-    public int m_bSimulationTimeChanged { get; set; }
-    public int m_bTakesDamage { get; set; }
-    public int m_dependencies { get; set; }
-    public int m_fBBoxVisFlags { get; set; }
-    public int m_fEffects { get; set; }
-    public int m_flAnimTime { get; set; }
-    public int m_flCreateTime { get; set; }
-    public int m_flElasticity { get; set; }
-    public int m_flFriction { get; set; }
-    public int m_flGravityScale { get; set; }
-    public int m_flNavIgnoreUntilTime { get; set; }
-    public int m_flProxyRandomValue { get; set; }
-    public int m_flSimulationTime { get; set; }
-    public int m_flSpeed { get; set; }
-    public int m_flTimeScale { get; set; }
-    public int m_flWaterLevel { get; set; }
-    public int m_hEffectEntity { get; set; }
-    public int m_hGroundEntity { get; set; }
-    public int m_hOldMoveParent { get; set; }
-    public int m_hOwnerEntity { get; set; }
-    public int m_hSceneObjectController { get; set; }
-    public int m_hThink { get; set; }
-    public int m_iCurrentThinkContext { get; set; }
-    public int m_iEFlags { get; set; }
-    public int m_iHealth { get; set; }
-    public int m_iMaxHealth { get; set; }
-    public int m_iTeamNum { get; set; }
-    public int m_lifeState { get; set; }
-    public int m_nActualMoveType { get; set; }
-    public int m_nCreationTick { get; set; }
-    public int m_nDisableContextThinkStartTick { get; set; }
-    public int m_nFirstPredictableCommand { get; set; }
-    public int m_nInterpolationLatchDirtyFlags { get; set; }
-    public int m_nLastPredictableCommand { get; set; }
-    public int m_nLastThinkTick { get; set; }
-    public int m_nNextScriptVarRecordID { get; set; }
-    public int m_nNextThinkTick { get; set; }
-    public int m_nNoInterpolationTick { get; set; }
-    public int m_nSceneObjectOverrideFlags { get; set; }
-    public int m_nSimulationTick { get; set; }
-    public int m_nSplitUserPlayerPredictionSlot { get; set; }
-    public int m_nSubclassID { get; set; }
-    public int m_nTakeDamageFlags { get; set; }
-    public int m_nVisibilityNoInterpolationTick { get; set; }
-    public int m_nWaterType { get; set; }
-    public int m_pCollision { get; set; }
-    public int m_pGameSceneNode { get; set; }
-    public int m_pRenderComponent { get; set; }
-    public int m_sUniqueHammerID { get; set; }
-    public int m_spawnflags { get; set; }
-    public int m_tokLayerMatchID { get; set; }
-    public int m_ubInterpolationFrame { get; set; }
-    public int m_vecAbsVelocity { get; set; }
-    public int m_vecAngVelocity { get; set; }
-    public int m_vecBaseVelocity { get; set; }
-    public int m_vecPredictedScriptFloatIDs { get; set; }
-    public int m_vecPredictedScriptFloats { get; set; }
-    public int m_vecVelocity { get; set; }
-    public int m_flScaleTime { get; set; }
-    public int m_nFlags { get; set; }
-    public int m_CachedViewTarget { get; set; }
-    public int m_PhonemeClasses { get; set; }
-    public int m_bResetFlexWeightsOnModelChange { get; set; }
-    public int m_blinktime { get; set; }
-    public int m_blinktoggle { get; set; }
-    public int m_flBlinkAmount { get; set; }
-    public int m_flJawOpenAmount { get; set; }
-    public int m_flexWeight { get; set; }
-    public int m_iBlink { get; set; }
-    public int m_iJawOpen { get; set; }
-    public int m_iMouthAttachment { get; set; }
-    public int m_mEyeOcclusionRendererCameraToBoneTransform { get; set; }
-    public int m_nEyeOcclusionRendererBone { get; set; }
-    public int m_nLastFlexUpdateFrameCount { get; set; }
-    public int m_nNextSceneEventId { get; set; }
-    public int m_prevblinktoggle { get; set; }
-    public int m_vEyeOcclusionRendererHalfExtent { get; set; }
-    public int m_vLookTargetPosition { get; set; }
-    public int m_DmgRadius { get; set; }
-    public int m_ExplosionSound { get; set; }
-    public int m_bHasWarnedAI { get; set; }
-    public int m_bIsLive { get; set; }
-    public int m_bIsSmokeGrenade { get; set; }
-    public int m_flDamage { get; set; }
-    public int m_flDetonateTime { get; set; }
-    public int m_flWarnAITime { get; set; }
-    public int m_hOriginalThrower { get; set; }
-    public int m_hThrower { get; set; }
-    public int m_iszBounceSound { get; set; }
-    public int m_CHitboxComponent { get; set; }
-    public int m_CRenderComponent { get; set; }
-    public int m_ClientOverrideTint { get; set; }
-    public int m_Collision { get; set; }
-    public int m_ConfigEntitiesToPropagateMaterialDecalsTo { get; set; }
-    public int m_bAllowFadeInView { get; set; }
-    public int m_bInitModelEffects { get; set; }
-    public int m_bIsStaticProp { get; set; }
-    public int m_bUseClientOverrideTint { get; set; }
-    public int m_clrRender { get; set; }
-    public int m_fadeMaxDist { get; set; }
-    public int m_fadeMinDist { get; set; }
-    public int m_flDecalHealBloodRate { get; set; }
-    public int m_flDecalHealHeightRate { get; set; }
-    public int m_flFadeScale { get; set; }
-    public int m_flGlowBackfaceMult { get; set; }
-    public int m_flShadowStrength { get; set; }
-    public int m_iOldHealth { get; set; }
-    public int m_nAddDecal { get; set; }
-    public int m_nDecalsAdded { get; set; }
-    public int m_nLastAddDecal { get; set; }
-    public int m_nObjectCulling { get; set; }
-    public int m_nRenderFX { get; set; }
-    public int m_nRenderMode { get; set; }
-    public int m_pClientAlphaProperty { get; set; }
-    public int m_vDecalForwardAxis { get; set; }
-    public int m_vDecalPosition { get; set; }
-    public int m_vecRenderAttributes { get; set; }
-    public int m_vecViewOffset { get; set; }
-    public int m_ServerViewAngleChanges { get; set; }
-    public int m_bIsSwappingToPredictableController { get; set; }
-    public int m_flDeathTime { get; set; }
-    public int m_flFOVSensitivityAdjust { get; set; }
-    public int m_flLastCameraSetupTime { get; set; }
-    public int m_flMouseSensitivity { get; set; }
-    public int m_flOldSimulationTime { get; set; }
-    public int m_flPredictionErrorTime { get; set; }
-    public int m_hController { get; set; }
-    public int m_iHideHUD { get; set; }
-    public int m_nHighestConsumedServerViewAngleChangeIndex { get; set; }
-    public int m_nLastExecutedCommandNumber { get; set; }
-    public int m_nLastExecutedCommandTick { get; set; }
-    public int m_pAutoaimServices { get; set; }
-    public int m_pCameraServices { get; set; }
-    public int m_pFlashlightServices { get; set; }
-    public int m_pItemServices { get; set; }
-    public int m_pMovementServices { get; set; }
-    public int m_pObserverServices { get; set; }
-    public int m_pUseServices { get; set; }
-    public int m_pWaterServices { get; set; }
-    public int m_pWeaponServices { get; set; }
-    public int m_skybox3d { get; set; }
-    public int m_vOldOrigin { get; set; }
-    public int m_vecLastCameraSetupLocalOrigin { get; set; }
-    public int m_vecPredictionError { get; set; }
-    public int v_angle { get; set; }
-    public int v_anglePrevious { get; set; }
-    public int m_flNextPrimaryAttackTickRatio { get; set; }
-    public int m_flNextSecondaryAttackTickRatio { get; set; }
-    public int m_iClip1 { get; set; }
-    public int m_iClip2 { get; set; }
-    public int m_nNextPrimaryAttackTick { get; set; }
-    public int m_nNextSecondaryAttackTick { get; set; }
-    public int m_pReserveAmmo { get; set; }
-    public int m_bLocked { get; set; }
-    public int m_closedAngles { get; set; }
-    public int m_closedPosition { get; set; }
-    public int m_eDoorState { get; set; }
-    public int m_hMaster { get; set; }
-    public int m_modelChanged { get; set; }
-    public int m_vWhereToSetLightingOrigin { get; set; }
-    public int m_bClientSidePredicted { get; set; }
-    public int m_flAnimationStartTime { get; set; }
-    public int m_hOldLayerSequence { get; set; }
-    public int m_hWeapon { get; set; }
-    public int m_hWeaponModel { get; set; }
-    public int m_iCameraAttachment { get; set; }
-    public int m_nAnimationParity { get; set; }
-    public int m_nOldAnimationParity { get; set; }
-    public int m_oldLayer { get; set; }
-    public int m_oldLayerStartTime { get; set; }
-    public int m_previousCycle { get; set; }
-    public int m_previousElapsedDuration { get; set; }
-    public int m_sAnimationPrefix { get; set; }
-    public int m_sVMName { get; set; }
-    public int m_vecLastCameraAngles { get; set; }
-    public int m_vecLastFacing { get; set; }
-    public int m_flArmDamageMultiplier { get; set; }
-    public int m_flChestDamageMultiplier { get; set; }
-    public int m_flCrouchTime { get; set; }
-    public int m_flDrowningDamageInterval { get; set; }
-    public int m_flHeadDamageMultiplier { get; set; }
-    public int m_flHoldBreathTime { get; set; }
-    public int m_flLegDamageMultiplier { get; set; }
-    public int m_flStomachDamageMultiplier { get; set; }
-    public int m_flUseAngleTolerance { get; set; }
-    public int m_flUseRange { get; set; }
-    public int m_nDrowningDamageInitial { get; set; }
-    public int m_nDrowningDamageMax { get; set; }
-    public int m_nWaterSpeed { get; set; }
-    public int m_sModelName { get; set; }
-    public int m_bTurnedOff { get; set; }
-    public int m_fAmplitude { get; set; }
-    public int m_fEndWidth { get; set; }
-    public int m_fFadeLength { get; set; }
-    public int m_fHaloScale { get; set; }
-    public int m_fSpeed { get; set; }
-    public int m_fStartFrame { get; set; }
-    public int m_fWidth { get; set; }
-    public int m_flFireTime { get; set; }
-    public int m_flFrameRate { get; set; }
-    public int m_hAttachEntity { get; set; }
-    public int m_hBaseMaterial { get; set; }
-    public int m_hEndEntity { get; set; }
-    public int m_nAttachIndex { get; set; }
-    public int m_nBeamFlags { get; set; }
-    public int m_nBeamType { get; set; }
-    public int m_nClipStyle { get; set; }
-    public int m_nHaloIndex { get; set; }
-    public int m_nNumBeamEnts { get; set; }
-    public int m_queryHandleHalo { get; set; }
-    public int m_OnBreak { get; set; }
-    public int m_OnHealthChanged { get; set; }
-    public int m_OnTakeDamage { get; set; }
-    public int m_PerformanceMode { get; set; }
-    public int m_bHasBreakPiecesOrCommands { get; set; }
-    public int m_explodeDamage { get; set; }
-    public int m_explodeRadius { get; set; }
-    public int m_explosionBuildupSound { get; set; }
-    public int m_explosionCustomEffect { get; set; }
-    public int m_explosionCustomSound { get; set; }
-    public int m_explosionDelay { get; set; }
-    public int m_explosionModifier { get; set; }
-    public int m_flDefaultFadeScale { get; set; }
-    public int m_flDmgModBullet { get; set; }
-    public int m_flDmgModClub { get; set; }
-    public int m_flDmgModExplosive { get; set; }
-    public int m_flDmgModFire { get; set; }
-    public int m_flLastPhysicsInfluenceTime { get; set; }
-    public int m_flPressureDelay { get; set; }
-    public int m_flPreventDamageBeforeTime { get; set; }
-    public int m_hBreaker { get; set; }
-    public int m_hFlareEnt { get; set; }
-    public int m_hLastAttacker { get; set; }
-    public int m_hPhysicsAttacker { get; set; }
-    public int m_iInteractions { get; set; }
-    public int m_iMinHealthDmg { get; set; }
-    public int m_impactEnergyScale { get; set; }
-    public int m_iszBasePropData { get; set; }
-    public int m_iszPhysicsDamageTableName { get; set; }
-    public int m_noGhostCollision { get; set; }
-    public int m_activeLightParticleIndex { get; set; }
-    public int m_bBombPlacedAnimation { get; set; }
-    public int m_bBombPlanted { get; set; }
-    public int m_bIsPlantingViaUse { get; set; }
-    public int m_bPlayedArmingBeeps { get; set; }
-    public int m_bStartedArming { get; set; }
-    public int m_eActiveLightEffect { get; set; }
-    public int m_fArmedTime { get; set; }
-    public int m_nSpotRules { get; set; }
-    public int m_szScreenText { get; set; }
-    public int m_bNeedToQueueHighResComposite { get; set; }
-    public int m_bShouldIgnoreOffsetAndAccuracy { get; set; }
-    public int m_nLastKnownAssociatedWeaponEntIndex { get; set; }
-    public int m_nOldWeaponParity { get; set; }
-    public int m_nWeaponParity { get; set; }
-    public int m_vLoweredWeaponOffset { get; set; }
-    public int m_agentItem { get; set; }
-    public int m_glovesItem { get; set; }
-    public int m_nOrdinal { get; set; }
-    public int m_nRandom { get; set; }
-    public int m_nVariant { get; set; }
-    public int m_sWeaponName { get; set; }
-    public int m_weaponItem { get; set; }
-    public int m_xuid { get; set; }
-    public int m_MatchDevice { get; set; }
-    public int m_MinimapVerticalSectionHeights { get; set; }
-    public int m_RetakeRules { get; set; }
-    public int m_TeamRespawnWaveTimes { get; set; }
-    public int m_arrFeaturedGiftersAccounts { get; set; }
-    public int m_arrFeaturedGiftersGifts { get; set; }
-    public int m_arrProhibitedItemIndices { get; set; }
-    public int m_arrTournamentActiveCasterAccounts { get; set; }
-    public int m_bAnyHostageReached { get; set; }
-    public int m_bBombDropped { get; set; }
-    public int m_bCTCantBuy { get; set; }
-    public int m_bCTTimeOutActive { get; set; }
-    public int m_bDontIncrementCoopWave { get; set; }
-    public int m_bFreezePeriod { get; set; }
-    public int m_bGamePaused { get; set; }
-    public int m_bGameRestart { get; set; }
-    public int m_bHasMatchStarted { get; set; }
-    public int m_bHasTriggeredCoopSpawnReset { get; set; }
-    public int m_bHasTriggeredRoundStartMusic { get; set; }
-    public int m_bIsDroppingItems { get; set; }
-    public int m_bIsHltvActive { get; set; }
-    public int m_bIsQuestEligible { get; set; }
-    public int m_bIsQueuedMatchmaking { get; set; }
-    public int m_bIsValveDS { get; set; }
-    public int m_bLogoMap { get; set; }
-    public int m_bMapHasBombTarget { get; set; }
-    public int m_bMapHasBuyZone { get; set; }
-    public int m_bMapHasRescueZone { get; set; }
-    public int m_bMarkClientStopRecordAtRoundEnd { get; set; }
-    public int m_bMatchWaitingForResume { get; set; }
-    public int m_bPlayAllStepSoundsOnServer { get; set; }
-    public int m_bRoundEndNoMusic { get; set; }
-    public int m_bRoundEndShowTimerDefend { get; set; }
-    public int m_bServerPaused { get; set; }
-    public int m_bSpawnedTerrorHuntHeavy { get; set; }
-    public int m_bSwitchingTeamsAtRoundReset { get; set; }
-    public int m_bTCantBuy { get; set; }
-    public int m_bTeamIntroPeriod { get; set; }
-    public int m_bTechnicalTimeOut { get; set; }
-    public int m_bTerroristTimeOutActive { get; set; }
-    public int m_bWarmupPeriod { get; set; }
-    public int m_eRoundEndReason { get; set; }
-    public int m_eRoundWinReason { get; set; }
-    public int m_fMatchStartTime { get; set; }
-    public int m_fRoundStartTime { get; set; }
-    public int m_fWarmupPeriodEnd { get; set; }
-    public int m_fWarmupPeriodStart { get; set; }
-    public int m_flCMMItemDropRevealEndTime { get; set; }
-    public int m_flCMMItemDropRevealStartTime { get; set; }
-    public int m_flCTTimeOutRemaining { get; set; }
-    public int m_flGameStartTime { get; set; }
-    public int m_flGuardianBuyUntilTime { get; set; }
-    public int m_flLastPerfSampleTime { get; set; }
-    public int m_flNextRespawnWave { get; set; }
-    public int m_flRestartRoundTime { get; set; }
-    public int m_flTerroristTimeOutRemaining { get; set; }
-    public int m_gamePhase { get; set; }
-    public int m_iHostagesRemaining { get; set; }
-    public int m_iMatchStats_PlayersAlive_CT { get; set; }
-    public int m_iMatchStats_PlayersAlive_T { get; set; }
-    public int m_iMatchStats_RoundResults { get; set; }
-    public int m_iNumConsecutiveCTLoses { get; set; }
-    public int m_iNumConsecutiveTerroristLoses { get; set; }
-    public int m_iRoundEndFunFactData1 { get; set; }
-    public int m_iRoundEndFunFactData2 { get; set; }
-    public int m_iRoundEndFunFactData3 { get; set; }
-    public int m_iRoundEndFunFactPlayerSlot { get; set; }
-    public int m_iRoundEndLegacy { get; set; }
-    public int m_iRoundEndPlayerCount { get; set; }
-    public int m_iRoundEndTimerTime { get; set; }
-    public int m_iRoundEndWinnerTeam { get; set; }
-    public int m_iRoundStartRoundNumber { get; set; }
-    public int m_iRoundTime { get; set; }
-    public int m_iRoundWinStatus { get; set; }
-    public int m_iSpectatorSlotCount { get; set; }
-    public int m_nCTTeamIntroVariant { get; set; }
-    public int m_nCTTimeOuts { get; set; }
-    public int m_nEndMatchMapGroupVoteOptions { get; set; }
-    public int m_nEndMatchMapGroupVoteTypes { get; set; }
-    public int m_nEndMatchMapVoteWinner { get; set; }
-    public int m_nGuardianGrenadesToGiveBots { get; set; }
-    public int m_nGuardianModeSpecialKillsRemaining { get; set; }
-    public int m_nGuardianModeSpecialWeaponNeeded { get; set; }
-    public int m_nGuardianModeWaveNumber { get; set; }
-    public int m_nHalloweenMaskListSeed { get; set; }
-    public int m_nMatchAbortedEarlyReason { get; set; }
-    public int m_nMatchEndCount { get; set; }
-    public int m_nNextMapInMapgroup { get; set; }
-    public int m_nNumHeaviesToSpawn { get; set; }
-    public int m_nOvertimePlaying { get; set; }
-    public int m_nPauseStartTick { get; set; }
-    public int m_nQueuedMatchmakingMode { get; set; }
-    public int m_nRoundEndCount { get; set; }
-    public int m_nRoundStartCount { get; set; }
-    public int m_nRoundsPlayedThisPhase { get; set; }
-    public int m_nServerQuestID { get; set; }
-    public int m_nTTeamIntroVariant { get; set; }
-    public int m_nTerroristTimeOuts { get; set; }
-    public int m_nTotalPausedTicks { get; set; }
-    public int m_nTournamentPredictionsPct { get; set; }
-    public int m_numBestOfMaps { get; set; }
-    public int m_numGlobalGifters { get; set; }
-    public int m_numGlobalGiftsGiven { get; set; }
-    public int m_numGlobalGiftsPeriodSeconds { get; set; }
-    public int m_pGameModeRules { get; set; }
-    public int m_sRoundEndFunFactToken { get; set; }
-    public int m_sRoundEndMessage { get; set; }
-    public int m_szMatchStatTxt { get; set; }
-    public int m_szTournamentEventName { get; set; }
-    public int m_szTournamentEventStage { get; set; }
-    public int m_szTournamentPredictionsTxt { get; set; }
-    public int m_timeUntilNextPhaseStarts { get; set; }
-    public int m_totalRoundsPlayed { get; set; }
-    public int m_vMinimapMaxs { get; set; }
-    public int m_vMinimapMins { get; set; }
-    public int m_pGameRules { get; set; }
-    public int m_hDetectParentChange { get; set; }
-    public int m_EconGloves { get; set; }
-    public int m_RetakesMVPBoostExtraUtility { get; set; }
-    public int m_aimPunchAngle { get; set; }
-    public int m_aimPunchAngleVel { get; set; }
-    public int m_aimPunchCache { get; set; }
-    public int m_aimPunchTickBase { get; set; }
-    public int m_aimPunchTickFraction { get; set; }
-    public int m_bHasFemaleVoice { get; set; }
-    public int m_bInBombZone { get; set; }
-    public int m_bInBuyZone { get; set; }
-    public int m_bInHostageRescueZone { get; set; }
-    public int m_bInLanding { get; set; }
-    public int m_bIsBuyMenuOpen { get; set; }
-    public int m_bLastHeadBoneTransformIsValid { get; set; }
-    public int m_bMustSyncRagdollState { get; set; }
-    public int m_bNeedToReApplyGloves { get; set; }
-    public int m_bOnGroundLastTick { get; set; }
-    public int m_bPrevDefuser { get; set; }
-    public int m_bPreviouslyInBuyZone { get; set; }
-    public int m_bRagdollDamageHeadshot { get; set; }
-    public int m_bRetakesHasDefuseKit { get; set; }
-    public int m_bRetakesMVPLastRound { get; set; }
-    public int m_bSkipOneHeadConstraintUpdate { get; set; }
-    public int m_flHealthShotBoostExpirationTime { get; set; }
-    public int m_flLandingTime { get; set; }
-    public int m_flLandseconds { get; set; }
-    public int m_flLastFiredWeaponTime { get; set; }
-    public int m_flNextSprayDecalTime { get; set; }
-    public int m_flOldFallVelocity { get; set; }
-    public int m_flTimeOfLastInjury { get; set; }
-    public int m_iRetakesMVPBoostItem { get; set; }
-    public int m_iRetakesOffering { get; set; }
-    public int m_iRetakesOfferingCard { get; set; }
-    public int m_lastLandTime { get; set; }
-    public int m_nEconGlovesChanged { get; set; }
-    public int m_nPrevArmorVal { get; set; }
-    public int m_nPrevGrenadeAmmoCount { get; set; }
-    public int m_nRagdollDamageBone { get; set; }
-    public int m_pBulletServices { get; set; }
-    public int m_pBuyServices { get; set; }
-    public int m_pGlowServices { get; set; }
-    public int m_pHostageServices { get; set; }
-    public int m_qDeathEyeAngles { get; set; }
-    public int m_szLastPlaceName { get; set; }
-    public int m_szRagdollDamageWeaponName { get; set; }
-    public int m_unPreviousWeaponHash { get; set; }
-    public int m_unWeaponHash { get; set; }
-    public int m_vRagdollDamageForce { get; set; }
-    public int m_vRagdollDamagePosition { get; set; }
-    public int m_vRagdollServerOrigin { get; set; }
+    public int MAssociatedEntities
+    {
+        get;
+        set;
+    }
+
+    public int MAssociatedEntityNames
+    {
+        get;
+        set;
+    }
+
+    public int MHandle
+    {
+        get;
+        set;
+    }
+
+    public int MName
+    {
+        get;
+        set;
+    }
+
+    public int MaShootSounds
+    {
+        get;
+        set;
+    }
+
+    public int MbAllowFlipping
+    {
+        get;
+        set;
+    }
+
+    public int MbAutoSwitchFrom
+    {
+        get;
+        set;
+    }
+
+    public int MbAutoSwitchTo
+    {
+        get;
+        set;
+    }
+
+    public int MbBuiltRightHanded
+    {
+        get;
+        set;
+    }
+
+    public int MbLinkedCooldowns
+    {
+        get;
+        set;
+    }
+
+    public int MiDefaultClip1
+    {
+        get;
+        set;
+    }
+
+    public int MiDefaultClip2
+    {
+        get;
+        set;
+    }
+
+    public int MiFlags
+    {
+        get;
+        set;
+    }
+
+    public int MiMaxClip1
+    {
+        get;
+        set;
+    }
+
+    public int MiMaxClip2
+    {
+        get;
+        set;
+    }
+
+    public int MiPosition
+    {
+        get;
+        set;
+    }
+
+    public int MiRumbleEffect
+    {
+        get;
+        set;
+    }
+
+    public int MiSlot
+    {
+        get;
+        set;
+    }
+
+    public int MiWeight
+    {
+        get;
+        set;
+    }
+
+    public int MnPrimaryAmmoType
+    {
+        get;
+        set;
+    }
+
+    public int MnSecondaryAmmoType
+    {
+        get;
+        set;
+    }
+
+    public int MsMuzzleAttachment
+    {
+        get;
+        set;
+    }
+
+    public int MSzMuzzleFlashParticle
+    {
+        get;
+        set;
+    }
+
+    public int MSzWorldModel
+    {
+        get;
+        set;
+    }
+
+    public int MArmorValue
+    {
+        get;
+        set;
+    }
+
+    public int MGunGameImmunityColor
+    {
+        get;
+        set;
+    }
+
+    public int MAngEyeAngles
+    {
+        get;
+        set;
+    }
+
+    public int MAngLastMuzzleFlashAngle
+    {
+        get;
+        set;
+    }
+
+    public int MAngShootAngleHistory
+    {
+        get;
+        set;
+    }
+
+    public int MAngStashedShootAngles
+    {
+        get;
+        set;
+    }
+
+    public int MbCachedPlaneIsValid
+    {
+        get;
+        set;
+    }
+
+    public int MbCanMoveDuringFreezePeriod
+    {
+        get;
+        set;
+    }
+
+    public int MbClipHitStaticWorld
+    {
+        get;
+        set;
+    }
+
+    public int MbDeferStartMusicOnWarmup
+    {
+        get;
+        set;
+    }
+
+    public int MbFlashBuildUp
+    {
+        get;
+        set;
+    }
+
+    public int MbFlashDspHasBeenCleared
+    {
+        get;
+        set;
+    }
+
+    public int MbFlashScreenshotHasBeenGrabbed
+    {
+        get;
+        set;
+    }
+
+    public int MbGrenadeParametersStashed
+    {
+        get;
+        set;
+    }
+
+    public int MbGuardianShouldSprayCustomXMark
+    {
+        get;
+        set;
+    }
+
+    public int MbGunGameImmunity
+    {
+        get;
+        set;
+    }
+
+    public int MbHasDeathInfo
+    {
+        get;
+        set;
+    }
+
+    public int MbHasMovedSinceSpawn
+    {
+        get;
+        set;
+    }
+
+    public int MbHasNightVision
+    {
+        get;
+        set;
+    }
+
+    public int MbHideTargetId
+    {
+        get;
+        set;
+    }
+
+    public int MbHudMiniScoreHidden
+    {
+        get;
+        set;
+    }
+
+    public int MbHudRadarHidden
+    {
+        get;
+        set;
+    }
+
+    public int MbInNoDefuseArea
+    {
+        get;
+        set;
+    }
+
+    public int MbIsDefusing
+    {
+        get;
+        set;
+    }
+
+    public int MbIsGrabbingHostage
+    {
+        get;
+        set;
+    }
+
+    public int MbIsRescuing
+    {
+        get;
+        set;
+    }
+
+    public int MbIsScoped
+    {
+        get;
+        set;
+    }
+
+    public int MbIsWalking
+    {
+        get;
+        set;
+    }
+
+    public int MbKilledByHeadshot
+    {
+        get;
+        set;
+    }
+
+    public int MbKilledByTaser
+    {
+        get;
+        set;
+    }
+
+    public int MbNightVisionOn
+    {
+        get;
+        set;
+    }
+
+    public int MbOldIsScoped
+    {
+        get;
+        set;
+    }
+
+    public int MbResumeZoom
+    {
+        get;
+        set;
+    }
+
+    public int MbScreenTearFrameCaptured
+    {
+        get;
+        set;
+    }
+
+    public int MbShouldAutobuyDmWeapons
+    {
+        get;
+        set;
+    }
+
+    public int MbShouldAutobuyNow
+    {
+        get;
+        set;
+    }
+
+    public int MbStrafing
+    {
+        get;
+        set;
+    }
+
+    public int MbSuppressGuardianTooFarWarningAudio
+    {
+        get;
+        set;
+    }
+
+    public int MbWaitForNoAttack
+    {
+        get;
+        set;
+    }
+
+    public int MCycleLatch
+    {
+        get;
+        set;
+    }
+
+    public int MDelayTargetIdTimer
+    {
+        get;
+        set;
+    }
+
+    public int MEntitySpottedState
+    {
+        get;
+        set;
+    }
+
+    public int MfImmuneToGunGameDamageTime
+    {
+        get;
+        set;
+    }
+
+    public int MfImmuneToGunGameDamageTimeLast
+    {
+        get;
+        set;
+    }
+
+    public int MfMolotovDamageTime
+    {
+        get;
+        set;
+    }
+
+    public int MfMolotovUseTime
+    {
+        get;
+        set;
+    }
+
+    public int MfNextThinkPushAway
+    {
+        get;
+        set;
+    }
+
+    public int MfRenderingClipPlane
+    {
+        get;
+        set;
+    }
+
+    public int MFlClientDeathTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlCurrentMusicStartTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlDeathCcWeight
+    {
+        get;
+        set;
+    }
+
+    public int MFlDeathInfoTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlDetectedByEnemySensorTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlEmitSoundTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlFlashBangTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlFlashDuration
+    {
+        get;
+        set;
+    }
+
+    public int MFlFlashMaxAlpha
+    {
+        get;
+        set;
+    }
+
+    public int MFlFlashOverlayAlpha
+    {
+        get;
+        set;
+    }
+
+    public int MFlFlashScreenshotAlpha
+    {
+        get;
+        set;
+    }
+
+    public int MFlGuardianTooFarDistFrac
+    {
+        get;
+        set;
+    }
+
+    public int MFlHealthFadeAlpha
+    {
+        get;
+        set;
+    }
+
+    public int MFlHealthFadeValue
+    {
+        get;
+        set;
+    }
+
+    public int MFlHitHeading
+    {
+        get;
+        set;
+    }
+
+    public int MFlLastCollisionCeiling
+    {
+        get;
+        set;
+    }
+
+    public int MFlLastCollisionCeilingChangeTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlLastSmokeAge
+    {
+        get;
+        set;
+    }
+
+    public int MFlLastSmokeOverlayAlpha
+    {
+        get;
+        set;
+    }
+
+    public int MFlLastSpawnTimeIndex
+    {
+        get;
+        set;
+    }
+
+    public int MFlLowerBodyYawTarget
+    {
+        get;
+        set;
+    }
+
+    public int MFlMusicRoundStartTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlNextGuardianTooFarWarning
+    {
+        get;
+        set;
+    }
+
+    public int MFlNextMagDropTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlNightVisionAlpha
+    {
+        get;
+        set;
+    }
+
+    public int MFlPrevMatchEndTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlPrevRoundEndTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlProgressBarStartTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlSlopeDropHeight
+    {
+        get;
+        set;
+    }
+
+    public int MFlSlopeDropOffset
+    {
+        get;
+        set;
+    }
+
+    public int MFlVelocityModifier
+    {
+        get;
+        set;
+    }
+
+    public int MGrenadeParameterStashTime
+    {
+        get;
+        set;
+    }
+
+    public int MhMuzzleFlashShape
+    {
+        get;
+        set;
+    }
+
+    public int MhOriginalController
+    {
+        get;
+        set;
+    }
+
+    public int MHoldTargetIdTimer
+    {
+        get;
+        set;
+    }
+
+    public int MiAddonBits
+    {
+        get;
+        set;
+    }
+
+    public int MiBlockingUseActionInProgress
+    {
+        get;
+        set;
+    }
+
+    public int MiDirection
+    {
+        get;
+        set;
+    }
+
+    public int MiHealthBarRenderMaskIndex
+    {
+        get;
+        set;
+    }
+
+    public int MiIdEntIndex
+    {
+        get;
+        set;
+    }
+
+    public int MiMoveState
+    {
+        get;
+        set;
+    }
+
+    public int MiOldIdEntIndex
+    {
+        get;
+        set;
+    }
+
+    public int MiPlayerState
+    {
+        get;
+        set;
+    }
+
+    public int MiPrimaryAddon
+    {
+        get;
+        set;
+    }
+
+    public int MiProgressBarDuration
+    {
+        get;
+        set;
+    }
+
+    public int MiSecondaryAddon
+    {
+        get;
+        set;
+    }
+
+    public int MiShotsFired
+    {
+        get;
+        set;
+    }
+
+    public int MiStartAccount
+    {
+        get;
+        set;
+    }
+
+    public int MiTargetedWeaponEntIndex
+    {
+        get;
+        set;
+    }
+
+    public int MiThrowGrenadeCounter
+    {
+        get;
+        set;
+    }
+
+    public int MIgnoreLadderJumpTime
+    {
+        get;
+        set;
+    }
+
+    public int MLadderSurpressionTimer
+    {
+        get;
+        set;
+    }
+
+    public int MLastLadderNormal
+    {
+        get;
+        set;
+    }
+
+    public int MLastLadderPos
+    {
+        get;
+        set;
+    }
+
+    public int MLastStandingPos
+    {
+        get;
+        set;
+    }
+
+    public int MnDeathCamMusic
+    {
+        get;
+        set;
+    }
+
+    public int MnHeavyAssaultSuitCooldownRemaining
+    {
+        get;
+        set;
+    }
+
+    public int MnHitBodyPart
+    {
+        get;
+        set;
+    }
+
+    public int MnLastClipPlaneSetupFrame
+    {
+        get;
+        set;
+    }
+
+    public int MnLastConcurrentKilled
+    {
+        get;
+        set;
+    }
+
+    public int MnLastKillerIndex
+    {
+        get;
+        set;
+    }
+
+    public int MnLastMagDropAttachmentIndex
+    {
+        get;
+        set;
+    }
+
+    public int MnMyCollisionGroup
+    {
+        get;
+        set;
+    }
+
+    public int MnPlayerInfernoBodyFx
+    {
+        get;
+        set;
+    }
+
+    public int MnPlayerInfernoFootFx
+    {
+        get;
+        set;
+    }
+
+    public int MnPlayerSmokedFx
+    {
+        get;
+        set;
+    }
+
+    public int MnSurvivalTeamNumber
+    {
+        get;
+        set;
+    }
+
+    public int MnWhichBombZone
+    {
+        get;
+        set;
+    }
+
+    public int MpClippingWeapon
+    {
+        get;
+        set;
+    }
+
+    public int MpPingServices
+    {
+        get;
+        set;
+    }
+
+    public int MpViewModelServices
+    {
+        get;
+        set;
+    }
+
+    public int MPreviousPlayerState
+    {
+        get;
+        set;
+    }
+
+    public int MServerIntendedCycle
+    {
+        get;
+        set;
+    }
+
+    public int MThirdPersonHeading
+    {
+        get;
+        set;
+    }
+
+    public int MUnCurrentEquipmentValue
+    {
+        get;
+        set;
+    }
+
+    public int MUnFreezetimeEndEquipmentValue
+    {
+        get;
+        set;
+    }
+
+    public int MUnRoundStartEquipmentValue
+    {
+        get;
+        set;
+    }
+
+    public int MvHeadConstraintOffset
+    {
+        get;
+        set;
+    }
+
+    public int MvLastSmokeOverlayColor
+    {
+        get;
+        set;
+    }
+
+    public int MVecBulletHitModels
+    {
+        get;
+        set;
+    }
+
+    public int MVecDeathInfoOrigin
+    {
+        get;
+        set;
+    }
+
+    public int MVecIntroStartEyePosition
+    {
+        get;
+        set;
+    }
+
+    public int MVecIntroStartPlayerForward
+    {
+        get;
+        set;
+    }
+
+    public int MVecLastAliveLocalVelocity
+    {
+        get;
+        set;
+    }
+
+    public int MVecLastClipCameraForward
+    {
+        get;
+        set;
+    }
+
+    public int MVecLastClipCameraPos
+    {
+        get;
+        set;
+    }
+
+    public int MVecLastMuzzleFlashPos
+    {
+        get;
+        set;
+    }
+
+    public int MVecPickupModelSlerpers
+    {
+        get;
+        set;
+    }
+
+    public int MVecPlayerPatchEconIndices
+    {
+        get;
+        set;
+    }
+
+    public int MVecStashedGrenadeThrowPosition
+    {
+        get;
+        set;
+    }
+
+    public int MVecStashedVelocity
+    {
+        get;
+        set;
+    }
+
+    public int MVecThirdPersonViewPositionOverride
+    {
+        get;
+        set;
+    }
+
+    public int MVecThrowPositionHistory
+    {
+        get;
+        set;
+    }
+
+    public int MVecVelocityHistory
+    {
+        get;
+        set;
+    }
+
+    public int MbEndMatchNextMapAllVoted
+    {
+        get;
+        set;
+    }
+
+    public int MbHostageAlive
+    {
+        get;
+        set;
+    }
+
+    public int MBombsiteCenterA
+    {
+        get;
+        set;
+    }
+
+    public int MBombsiteCenterB
+    {
+        get;
+        set;
+    }
+
+    public int MFoundGoalPositions
+    {
+        get;
+        set;
+    }
+
+    public int MHostageRescueX
+    {
+        get;
+        set;
+    }
+
+    public int MHostageRescueY
+    {
+        get;
+        set;
+    }
+
+    public int MHostageRescueZ
+    {
+        get;
+        set;
+    }
+
+    public int MiHostageEntityIDs
+    {
+        get;
+        set;
+    }
+
+    public int MIsHostageFollowingSomeone
+    {
+        get;
+        set;
+    }
+
+    public int MbSurrendered
+    {
+        get;
+        set;
+    }
+
+    public int MiClanId
+    {
+        get;
+        set;
+    }
+
+    public int MNumMapVictories
+    {
+        get;
+        set;
+    }
+
+    public int MScoreFirstHalf
+    {
+        get;
+        set;
+    }
+
+    public int MScoreOvertime
+    {
+        get;
+        set;
+    }
+
+    public int MScoreSecondHalf
+    {
+        get;
+        set;
+    }
+
+    public int MSzClanTeamname
+    {
+        get;
+        set;
+    }
+
+    public int MSzTeamFlagImage
+    {
+        get;
+        set;
+    }
+
+    public int MSzTeamLogoImage
+    {
+        get;
+        set;
+    }
+
+    public int MSzTeamMatchStat
+    {
+        get;
+        set;
+    }
+
+    public int MClientPreviousWeaponState
+    {
+        get;
+        set;
+    }
+
+    public int MIronSightController
+    {
+        get;
+        set;
+    }
+
+    public int MOnPlayerPickup
+    {
+        get;
+        set;
+    }
+
+    public int MbBurstMode
+    {
+        get;
+        set;
+    }
+
+    public int MbFireOnEmpty
+    {
+        get;
+        set;
+    }
+
+    public int MbGlowForPing
+    {
+        get;
+        set;
+    }
+
+    public int MbInReload
+    {
+        get;
+        set;
+    }
+
+    public int MbIsHauledBack
+    {
+        get;
+        set;
+    }
+
+    public int MbOldFirstPersonSpectatedState
+    {
+        get;
+        set;
+    }
+
+    public int MbReloadVisuallyComplete
+    {
+        get;
+        set;
+    }
+
+    public int MbReloadsWithClips
+    {
+        get;
+        set;
+    }
+
+    public int MbSilencerOn
+    {
+        get;
+        set;
+    }
+
+    public int MbUiWeapon
+    {
+        get;
+        set;
+    }
+
+    public int MbVisualsDataSet
+    {
+        get;
+        set;
+    }
+
+    public int MbWasOwnedByCt
+    {
+        get;
+        set;
+    }
+
+    public int MbWasOwnedByTerrorist
+    {
+        get;
+        set;
+    }
+
+    public int MDonated
+    {
+        get;
+        set;
+    }
+
+    public int MePlayerFireEvent
+    {
+        get;
+        set;
+    }
+
+    public int MePlayerFireEventAttackType
+    {
+        get;
+        set;
+    }
+
+    public int MfAccuracyPenalty
+    {
+        get;
+        set;
+    }
+
+    public int MfAccuracySmoothedForZoom
+    {
+        get;
+        set;
+    }
+
+    public int MfLastShotTime
+    {
+        get;
+        set;
+    }
+
+    public int MfScopeZoomEndTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlCrosshairDistance
+    {
+        get;
+        set;
+    }
+
+    public int MFlDroppedAtTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlFireSequenceStartTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlGunAccuracyPositionDeprecated
+    {
+        get;
+        set;
+    }
+
+    public int MFlLastAccuracyUpdateTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlLastLosTraceFailureTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlLastMagDropRequestTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlNextAttackRenderTimeOffset
+    {
+        get;
+        set;
+    }
+
+    public int MFlNextClientFireBulletTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlNextClientFireBulletTimeRepredict
+    {
+        get;
+        set;
+    }
+
+    public int MFlPostponeFireReadyFrac
+    {
+        get;
+        set;
+    }
+
+    public int MFlRecoilIndex
+    {
+        get;
+        set;
+    }
+
+    public int MFlTimeSilencerSwitchComplete
+    {
+        get;
+        set;
+    }
+
+    public int MFlTimeWeaponIdle
+    {
+        get;
+        set;
+    }
+
+    public int MFlTurningInaccuracy
+    {
+        get;
+        set;
+    }
+
+    public int MFlTurningInaccuracyDelta
+    {
+        get;
+        set;
+    }
+
+    public int MFlWatTickOffset
+    {
+        get;
+        set;
+    }
+
+    public int MGunHeat
+    {
+        get;
+        set;
+    }
+
+    public int MhCurrentThirdPersonSequence
+    {
+        get;
+        set;
+    }
+
+    public int MhOurPing
+    {
+        get;
+        set;
+    }
+
+    public int MhPrevOwner
+    {
+        get;
+        set;
+    }
+
+    public int MiAlpha
+    {
+        get;
+        set;
+    }
+
+    public int MiAmmoLastCheck
+    {
+        get;
+        set;
+    }
+
+    public int MiCrosshairTextureId
+    {
+        get;
+        set;
+    }
+
+    public int MiIronSightMode
+    {
+        get;
+        set;
+    }
+
+    public int MiNumEmptyAttacks
+    {
+        get;
+        set;
+    }
+
+    public int MiOriginalTeamNumber
+    {
+        get;
+        set;
+    }
+
+    public int MiRecoilIndex
+    {
+        get;
+        set;
+    }
+
+    public int MiScopeTextureId
+    {
+        get;
+        set;
+    }
+
+    public int MiState
+    {
+        get;
+        set;
+    }
+
+    public int MLastSmokeTime
+    {
+        get;
+        set;
+    }
+
+    public int MnDropTick
+    {
+        get;
+        set;
+    }
+
+    public int MnFireSequenceStartTimeAck
+    {
+        get;
+        set;
+    }
+
+    public int MnFireSequenceStartTimeChange
+    {
+        get;
+        set;
+    }
+
+    public int MnLastEmptySoundCmdNum
+    {
+        get;
+        set;
+    }
+
+    public int MnOurPingIndex
+    {
+        get;
+        set;
+    }
+
+    public int MnPostponeFireReadyTicks
+    {
+        get;
+        set;
+    }
+
+    public int MnSilencerBoneIndex
+    {
+        get;
+        set;
+    }
+
+    public int MnViewModelIndex
+    {
+        get;
+        set;
+    }
+
+    public int MSeqFirePrimary
+    {
+        get;
+        set;
+    }
+
+    public int MSeqFireSecondary
+    {
+        get;
+        set;
+    }
+
+    public int MSeqIdle
+    {
+        get;
+        set;
+    }
+
+    public int MSmokeAttachments
+    {
+        get;
+        set;
+    }
+
+    public int MThirdPersonFireSequences
+    {
+        get;
+        set;
+    }
+
+    public int MThirdPersonSequences
+    {
+        get;
+        set;
+    }
+
+    public int MVecOurPingPos
+    {
+        get;
+        set;
+    }
+
+    public int MVecTurningInaccuracyEyeDirLast
+    {
+        get;
+        set;
+    }
+
+    public int MWeaponMode
+    {
+        get;
+        set;
+    }
+
+    public int MbNeedsBoltAction
+    {
+        get;
+        set;
+    }
+
+    public int MiBurstShotsRemaining
+    {
+        get;
+        set;
+    }
+
+    public int MiSilencerBodygroup
+    {
+        get;
+        set;
+    }
+
+    public int MInPrecache
+    {
+        get;
+        set;
+    }
+
+    public int MSilencedModelIndex
+    {
+        get;
+        set;
+    }
+
+    public int MZoomLevel
+    {
+        get;
+        set;
+    }
+
+    public int MAttributeManager
+    {
+        get;
+        set;
+    }
+
+    public int MOriginalOwnerXuidHigh
+    {
+        get;
+        set;
+    }
+
+    public int MOriginalOwnerXuidLow
+    {
+        get;
+        set;
+    }
+
+    public int MbAttributesInitialized
+    {
+        get;
+        set;
+    }
+
+    public int MhHolidayHatAddon
+    {
+        get;
+        set;
+    }
+
+    public int MhWaterWakeParticles
+    {
+        get;
+        set;
+    }
+
+    public int MJumpedThisFrame
+    {
+        get;
+        set;
+    }
+
+    public int MLeader
+    {
+        get;
+        set;
+    }
+
+    public int MMaxFalloff
+    {
+        get;
+        set;
+    }
+
+    public int MMinFalloff
+    {
+        get;
+        set;
+    }
+
+    public int MbClientSide
+    {
+        get;
+        set;
+    }
+
+    public int MbEnabled
+    {
+        get;
+        set;
+    }
+
+    public int MbEnabledOnClient
+    {
+        get;
+        set;
+    }
+
+    public int MbExclusive
+    {
+        get;
+        set;
+    }
+
+    public int MbFadingIn
+    {
+        get;
+        set;
+    }
+
+    public int MbMaster
+    {
+        get;
+        set;
+    }
+
+    public int MFlCurWeight
+    {
+        get;
+        set;
+    }
+
+    public int MFlCurWeightOnClient
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeDuration
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeInDuration
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeOutDuration
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeStartTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeStartWeight
+    {
+        get;
+        set;
+    }
+
+    public int MFlMaxWeight
+    {
+        get;
+        set;
+    }
+
+    public int MNetlookupFilename
+    {
+        get;
+        set;
+    }
+
+    public int MVecOrigin
+    {
+        get;
+        set;
+    }
+
+    public int MFadeDuration
+    {
+        get;
+        set;
+    }
+
+    public int MLastEnterTime
+    {
+        get;
+        set;
+    }
+
+    public int MLastEnterWeight
+    {
+        get;
+        set;
+    }
+
+    public int MLastExitTime
+    {
+        get;
+        set;
+    }
+
+    public int MLastExitWeight
+    {
+        get;
+        set;
+    }
+
+    public int MMaxWeight
+    {
+        get;
+        set;
+    }
+
+    public int MWeight
+    {
+        get;
+        set;
+    }
+
+    public int MLookupFilename
+    {
+        get;
+        set;
+    }
+
+    public int MFlTimeParticleEffectSpawn
+    {
+        get;
+        set;
+    }
+
+    public int MnClientLastKnownDecoyShotTick
+    {
+        get;
+        set;
+    }
+
+    public int MnDecoyShotTick
+    {
+        get;
+        set;
+    }
+
+    public int MpChainEntity
+    {
+        get;
+        set;
+    }
+
+    public int MAnimationController
+    {
+        get;
+        set;
+    }
+
+    public int MExponent
+    {
+        get;
+        set;
+    }
+
+    public int MFlags
+    {
+        get;
+        set;
+    }
+
+    public int MInnerAngle
+    {
+        get;
+        set;
+    }
+
+    public int MLightStyle
+    {
+        get;
+        set;
+    }
+
+    public int MOuterAngle
+    {
+        get;
+        set;
+    }
+
+    public int MRadius
+    {
+        get;
+        set;
+    }
+
+    public int MSpotRadius
+    {
+        get;
+        set;
+    }
+
+    public int MOnAnimReachedEnd
+    {
+        get;
+        set;
+    }
+
+    public int MOnAnimReachedStart
+    {
+        get;
+        set;
+    }
+
+    public int MbCreateNonSolid
+    {
+        get;
+        set;
+    }
+
+    public int MbFiredStartEndOutput
+    {
+        get;
+        set;
+    }
+
+    public int MbForceNpcExclude
+    {
+        get;
+        set;
+    }
+
+    public int MbIsOverrideProp
+    {
+        get;
+        set;
+    }
+
+    public int MbRandomizeCycle
+    {
+        get;
+        set;
+    }
+
+    public int MbStartDisabled
+    {
+        get;
+        set;
+    }
+
+    public int MbUseAnimGraph
+    {
+        get;
+        set;
+    }
+
+    public int MbUseHitboxesForRenderBox
+    {
+        get;
+        set;
+    }
+
+    public int MGlowColor
+    {
+        get;
+        set;
+    }
+
+    public int MiCachedFrameCount
+    {
+        get;
+        set;
+    }
+
+    public int MiInitialGlowState
+    {
+        get;
+        set;
+    }
+
+    public int MIszIdleAnim
+    {
+        get;
+        set;
+    }
+
+    public int MnGlowRange
+    {
+        get;
+        set;
+    }
+
+    public int MnGlowRangeMin
+    {
+        get;
+        set;
+    }
+
+    public int MnGlowTeam
+    {
+        get;
+        set;
+    }
+
+    public int MnIdleAnimLoopMode
+    {
+        get;
+        set;
+    }
+
+    public int MpOutputAnimBegun
+    {
+        get;
+        set;
+    }
+
+    public int MpOutputAnimLoopCycleOver
+    {
+        get;
+        set;
+    }
+
+    public int MpOutputAnimOver
+    {
+        get;
+        set;
+    }
+
+    public int MVecCachedRenderMaxs
+    {
+        get;
+        set;
+    }
+
+    public int MVecCachedRenderMins
+    {
+        get;
+        set;
+    }
+
+    public int MbAttachmentDirty
+    {
+        get;
+        set;
+    }
+
+    public int MbClientside
+    {
+        get;
+        set;
+    }
+
+    public int MbParticleSystemsCreated
+    {
+        get;
+        set;
+    }
+
+    public int MFlFallbackWear
+    {
+        get;
+        set;
+    }
+
+    public int MFlFlexDelayTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlFlexDelayedWeight
+    {
+        get;
+        set;
+    }
+
+    public int MhOldProvidee
+    {
+        get;
+        set;
+    }
+
+    public int MhViewmodelAttachment
+    {
+        get;
+        set;
+    }
+
+    public int MiNumOwnerValidationRetries
+    {
+        get;
+        set;
+    }
+
+    public int MiOldTeam
+    {
+        get;
+        set;
+    }
+
+    public int MnFallbackPaintKit
+    {
+        get;
+        set;
+    }
+
+    public int MnFallbackSeed
+    {
+        get;
+        set;
+    }
+
+    public int MnFallbackStatTrak
+    {
+        get;
+        set;
+    }
+
+    public int MnUnloadedModelIndex
+    {
+        get;
+        set;
+    }
+
+    public int MVecAttachedModels
+    {
+        get;
+        set;
+    }
+
+    public int MVecAttachedParticles
+    {
+        get;
+        set;
+    }
+
+    public int MAttributeList
+    {
+        get;
+        set;
+    }
+
+    public int MNetworkedDynamicAttributes
+    {
+        get;
+        set;
+    }
+
+    public int MbDisallowSoc
+    {
+        get;
+        set;
+    }
+
+    public int MbInitialized
+    {
+        get;
+        set;
+    }
+
+    public int MbInitializedTags
+    {
+        get;
+        set;
+    }
+
+    public int MbInventoryImageRgbaRequested
+    {
+        get;
+        set;
+    }
+
+    public int MbInventoryImageTriedCache
+    {
+        get;
+        set;
+    }
+
+    public int MbIsStoreItem
+    {
+        get;
+        set;
+    }
+
+    public int MbIsTradeItem
+    {
+        get;
+        set;
+    }
+
+    public int MbRestoreCustomMaterialAfterPrecache
+    {
+        get;
+        set;
+    }
+
+    public int MiAccountId
+    {
+        get;
+        set;
+    }
+
+    public int MiEntityLevel
+    {
+        get;
+        set;
+    }
+
+    public int MiEntityQuality
+    {
+        get;
+        set;
+    }
+
+    public int MiEntityQuantity
+    {
+        get;
+        set;
+    }
+
+    public int MiInventoryPosition
+    {
+        get;
+        set;
+    }
+
+    public int MiItemDefinitionIndex
+    {
+        get;
+        set;
+    }
+
+    public int MiItemId
+    {
+        get;
+        set;
+    }
+
+    public int MiItemIdHigh
+    {
+        get;
+        set;
+    }
+
+    public int MiItemIdLow
+    {
+        get;
+        set;
+    }
+
+    public int MiQualityOverride
+    {
+        get;
+        set;
+    }
+
+    public int MiRarityOverride
+    {
+        get;
+        set;
+    }
+
+    public int MnInventoryImageRgbaHeight
+    {
+        get;
+        set;
+    }
+
+    public int MnInventoryImageRgbaWidth
+    {
+        get;
+        set;
+    }
+
+    public int MSzCurrentLoadCachedFileName
+    {
+        get;
+        set;
+    }
+
+    public int MSzCustomName
+    {
+        get;
+        set;
+    }
+
+    public int MSzCustomNameOverride
+    {
+        get;
+        set;
+    }
+
+    public int MUnClientFlags
+    {
+        get;
+        set;
+    }
+
+    public int MUnOverrideStyle
+    {
+        get;
+        set;
+    }
+
+    public int MbCoreExplode
+    {
+        get;
+        set;
+    }
+
+    public int MbLinkedToServerEnt
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeInLength
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeInStart
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeOutLength
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeOutModelLength
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeOutModelStart
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeOutStart
+    {
+        get;
+        set;
+    }
+
+    public int MFlNextSparkTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlStartTime
+    {
+        get;
+        set;
+    }
+
+    public int MnDissolveType
+    {
+        get;
+        set;
+    }
+
+    public int MnMagnitude
+    {
+        get;
+        set;
+    }
+
+    public int MvDissolverOrigin
+    {
+        get;
+        set;
+    }
+
+    public int MbCheapEffect
+    {
+        get;
+        set;
+    }
+
+    public int MhEntAttached
+    {
+        get;
+        set;
+    }
+
+    public int MhOldAttached
+    {
+        get;
+        set;
+    }
+
+    public int MColor
+    {
+        get;
+        set;
+    }
+
+    public int MbCustomCubemapTexture
+    {
+        get;
+        set;
+    }
+
+    public int MbMoveable
+    {
+        get;
+        set;
+    }
+
+    public int MFlBrightness
+    {
+        get;
+        set;
+    }
+
+    public int MFlEdgeFadeDist
+    {
+        get;
+        set;
+    }
+
+    public int MhCubemapTexture
+    {
+        get;
+        set;
+    }
+
+    public int MhLightProbeDirectLightIndicesTexture
+    {
+        get;
+        set;
+    }
+
+    public int MhLightProbeDirectLightScalarsTexture
+    {
+        get;
+        set;
+    }
+
+    public int MhLightProbeDirectLightShadowsTexture
+    {
+        get;
+        set;
+    }
+
+    public int MhLightProbeTexture
+    {
+        get;
+        set;
+    }
+
+    public int MnEnvCubeMapArrayIndex
+    {
+        get;
+        set;
+    }
+
+    public int MnHandshake
+    {
+        get;
+        set;
+    }
+
+    public int MnLightProbeAtlasX
+    {
+        get;
+        set;
+    }
+
+    public int MnLightProbeAtlasY
+    {
+        get;
+        set;
+    }
+
+    public int MnLightProbeAtlasZ
+    {
+        get;
+        set;
+    }
+
+    public int MnLightProbeSizeX
+    {
+        get;
+        set;
+    }
+
+    public int MnLightProbeSizeY
+    {
+        get;
+        set;
+    }
+
+    public int MnLightProbeSizeZ
+    {
+        get;
+        set;
+    }
+
+    public int MnPriority
+    {
+        get;
+        set;
+    }
+
+    public int MvBoxMaxs
+    {
+        get;
+        set;
+    }
+
+    public int MvBoxMins
+    {
+        get;
+        set;
+    }
+
+    public int MvEdgeFadeDists
+    {
+        get;
+        set;
+    }
+
+    public int MbCopyDiffuseFromDefaultCubemap
+    {
+        get;
+        set;
+    }
+
+    public int MbDefaultEnvMap
+    {
+        get;
+        set;
+    }
+
+    public int MbDefaultSpecEnvMap
+    {
+        get;
+        set;
+    }
+
+    public int MbIndoorCubeMap
+    {
+        get;
+        set;
+    }
+
+    public int MFlDiffuseScale
+    {
+        get;
+        set;
+    }
+
+    public int MFlInfluenceRadius
+    {
+        get;
+        set;
+    }
+
+    public int MvBoxProjectMaxs
+    {
+        get;
+        set;
+    }
+
+    public int MvBoxProjectMins
+    {
+        get;
+        set;
+    }
+
+    public int MbActive
+    {
+        get;
+        set;
+    }
+
+    public int MbFirstTime
+    {
+        get;
+        set;
+    }
+
+    public int MbHasHeightFogEnd
+    {
+        get;
+        set;
+    }
+
+    public int MbHeightFogEnabled
+    {
+        get;
+        set;
+    }
+
+    public int MFlEndDistance
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogFalloffExponent
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogHeightEnd
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogHeightExponent
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogHeightStart
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogHeightWidth
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogMaxOpacity
+    {
+        get;
+        set;
+    }
+
+    public int MFlLodBias
+    {
+        get;
+        set;
+    }
+
+    public int MFlStartDistance
+    {
+        get;
+        set;
+    }
+
+    public int MhFogCubemapTexture
+    {
+        get;
+        set;
+    }
+
+    public int MhSkyMaterial
+    {
+        get;
+        set;
+    }
+
+    public int MIszSkyEntity
+    {
+        get;
+        set;
+    }
+
+    public int MnCubemapSourceType
+    {
+        get;
+        set;
+    }
+
+    public int MbProjectOnCharacters
+    {
+        get;
+        set;
+    }
+
+    public int MbProjectOnWater
+    {
+        get;
+        set;
+    }
+
+    public int MbProjectOnWorld
+    {
+        get;
+        set;
+    }
+
+    public int MFlDepth
+    {
+        get;
+        set;
+    }
+
+    public int MFlDepthSortBias
+    {
+        get;
+        set;
+    }
+
+    public int MFlHeight
+    {
+        get;
+        set;
+    }
+
+    public int MFlWidth
+    {
+        get;
+        set;
+    }
+
+    public int MhDecalMaterial
+    {
+        get;
+        set;
+    }
+
+    public int MnRenderOrder
+    {
+        get;
+        set;
+    }
+
+    public int MSceneNode
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeEndDist
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeStartDist
+    {
+        get;
+        set;
+    }
+
+    public int MColorTint
+    {
+        get;
+        set;
+    }
+
+    public int MFlAlphaScale
+    {
+        get;
+        set;
+    }
+
+    public int MFlRadiusScale
+    {
+        get;
+        set;
+    }
+
+    public int MFlSelfIllumScale
+    {
+        get;
+        set;
+    }
+
+    public int MhTextureOverride
+    {
+        get;
+        set;
+    }
+
+    public int MbIsActive
+    {
+        get;
+        set;
+    }
+
+    public int MbWasActive
+    {
+        get;
+        set;
+    }
+
+    public int MFlCurrentOverlayTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlOverlayTimes
+    {
+        get;
+        set;
+    }
+
+    public int MiCachedDesiredOverlay
+    {
+        get;
+        set;
+    }
+
+    public int MiCurrentOverlay
+    {
+        get;
+        set;
+    }
+
+    public int MiDesiredOverlay
+    {
+        get;
+        set;
+    }
+
+    public int MIszOverlayNames
+    {
+        get;
+        set;
+    }
+
+    public int MFlBrightnessScale
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogMaxEnd
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogMaxStart
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogMinEnd
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogMinStart
+    {
+        get;
+        set;
+    }
+
+    public int MhSkyMaterialLightingOnly
+    {
+        get;
+        set;
+    }
+
+    public int MnFogType
+    {
+        get;
+        set;
+    }
+
+    public int MvTintColor
+    {
+        get;
+        set;
+    }
+
+    public int MvTintColorLightingOnly
+    {
+        get;
+        set;
+    }
+
+    public int MbEnableIndirect
+    {
+        get;
+        set;
+    }
+
+    public int MbIsMaster
+    {
+        get;
+        set;
+    }
+
+    public int MFlAnisotropy
+    {
+        get;
+        set;
+    }
+
+    public int MFlDefaultAnisotropy
+    {
+        get;
+        set;
+    }
+
+    public int MFlDefaultDrawDistance
+    {
+        get;
+        set;
+    }
+
+    public int MFlDefaultScattering
+    {
+        get;
+        set;
+    }
+
+    public int MFlDrawDistance
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeInEnd
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeSpeed
+    {
+        get;
+        set;
+    }
+
+    public int MFlIndirectStrength
+    {
+        get;
+        set;
+    }
+
+    public int MFlScattering
+    {
+        get;
+        set;
+    }
+
+    public int MFlStartAnisoTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlStartAnisotropy
+    {
+        get;
+        set;
+    }
+
+    public int MFlStartDrawDistance
+    {
+        get;
+        set;
+    }
+
+    public int MFlStartDrawDistanceTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlStartScatterTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlStartScattering
+    {
+        get;
+        set;
+    }
+
+    public int MhFogIndirectTexture
+    {
+        get;
+        set;
+    }
+
+    public int MnForceRefreshCount
+    {
+        get;
+        set;
+    }
+
+    public int MnIndirectTextureDimX
+    {
+        get;
+        set;
+    }
+
+    public int MnIndirectTextureDimY
+    {
+        get;
+        set;
+    }
+
+    public int MnIndirectTextureDimZ
+    {
+        get;
+        set;
+    }
+
+    public int MFlFalloffExponent
+    {
+        get;
+        set;
+    }
+
+    public int MFlStrength
+    {
+        get;
+        set;
+    }
+
+    public int MnFalloffShape
+    {
+        get;
+        set;
+    }
+
+    public int MEnvWindShared
+    {
+        get;
+        set;
+    }
+
+    public int MCurrentSwayVector
+    {
+        get;
+        set;
+    }
+
+    public int MPrevSwayVector
+    {
+        get;
+        set;
+    }
+
+    public int MbGusting
+    {
+        get;
+        set;
+    }
+
+    public int MCurrentWindVector
+    {
+        get;
+        set;
+    }
+
+    public int MFlAveWindSpeed
+    {
+        get;
+        set;
+    }
+
+    public int MFlGustDuration
+    {
+        get;
+        set;
+    }
+
+    public int MFlInitialWindSpeed
+    {
+        get;
+        set;
+    }
+
+    public int MFlMaxGustDelay
+    {
+        get;
+        set;
+    }
+
+    public int MFlMinGustDelay
+    {
+        get;
+        set;
+    }
+
+    public int MFlSimTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlSwayTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlSwitchTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlVariationTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlWindAngleVariation
+    {
+        get;
+        set;
+    }
+
+    public int MFlWindSpeed
+    {
+        get;
+        set;
+    }
+
+    public int MFlWindSpeedVariation
+    {
+        get;
+        set;
+    }
+
+    public int MiEntIndex
+    {
+        get;
+        set;
+    }
+
+    public int MiGustDirChange
+    {
+        get;
+        set;
+    }
+
+    public int MiInitialWindDir
+    {
+        get;
+        set;
+    }
+
+    public int MiMaxGust
+    {
+        get;
+        set;
+    }
+
+    public int MiMaxWind
+    {
+        get;
+        set;
+    }
+
+    public int MiMinGust
+    {
+        get;
+        set;
+    }
+
+    public int MiMinWind
+    {
+        get;
+        set;
+    }
+
+    public int MiWindDir
+    {
+        get;
+        set;
+    }
+
+    public int MiWindSeed
+    {
+        get;
+        set;
+    }
+
+    public int MIszGustSound
+    {
+        get;
+        set;
+    }
+
+    public int MLocation
+    {
+        get;
+        set;
+    }
+
+    public int MWindRadius
+    {
+        get;
+        set;
+    }
+
+    public int MSkeletonInstance
+    {
+        get;
+        set;
+    }
+
+    public int MbClipTested
+    {
+        get;
+        set;
+    }
+
+    public int MbFadingOut
+    {
+        get;
+        set;
+    }
+
+    public int MFlChildFlameSpread
+    {
+        get;
+        set;
+    }
+
+    public int MFlClipPerc
+    {
+        get;
+        set;
+    }
+
+    public int MFlScaleEnd
+    {
+        get;
+        set;
+    }
+
+    public int MFlScaleRegister
+    {
+        get;
+        set;
+    }
+
+    public int MFlScaleStart
+    {
+        get;
+        set;
+    }
+
+    public int MFlScaleTimeEnd
+    {
+        get;
+        set;
+    }
+
+    public int MFlScaleTimeStart
+    {
+        get;
+        set;
+    }
+
+    public int MnFlameFromAboveModelIndex
+    {
+        get;
+        set;
+    }
+
+    public int MnFlameModelIndex
+    {
+        get;
+        set;
+    }
+
+    public int MpFireOverlay
+    {
+        get;
+        set;
+    }
+
+    public int MtParticleSpawn
+    {
+        get;
+        set;
+    }
+
+    public int MActualAngles
+    {
+        get;
+        set;
+    }
+
+    public int MActualPos
+    {
+        get;
+        set;
+    }
+
+    public int MAngle
+    {
+        get;
+        set;
+    }
+
+    public int MAngles
+    {
+        get;
+        set;
+    }
+
+    public int MAverageError
+    {
+        get;
+        set;
+    }
+
+    public int MBuoyancy
+    {
+        get;
+        set;
+    }
+
+    public int MDeathAngle
+    {
+        get;
+        set;
+    }
+
+    public int MDeathDepth
+    {
+        get;
+        set;
+    }
+
+    public int MErrorHistory
+    {
+        get;
+        set;
+    }
+
+    public int MErrorHistoryCount
+    {
+        get;
+        set;
+    }
+
+    public int MErrorHistoryIndex
+    {
+        get;
+        set;
+    }
+
+    public int MGotUpdate
+    {
+        get;
+        set;
+    }
+
+    public int MLocalLifeState
+    {
+        get;
+        set;
+    }
+
+    public int MPoolOrigin
+    {
+        get;
+        set;
+    }
+
+    public int MPos
+    {
+        get;
+        set;
+    }
+
+    public int MVel
+    {
+        get;
+        set;
+    }
+
+    public int MWaterLevel
+    {
+        get;
+        set;
+    }
+
+    public int MWigglePhase
+    {
+        get;
+        set;
+    }
+
+    public int MWiggleRate
+    {
+        get;
+        set;
+    }
+
+    public int MWiggleTimer
+    {
+        get;
+        set;
+    }
+
+    public int Mx
+    {
+        get;
+        set;
+    }
+
+    public int My
+    {
+        get;
+        set;
+    }
+
+    public int Mz
+    {
+        get;
+        set;
+    }
+
+    public int MbPlayingUninterruptableAct
+    {
+        get;
+        set;
+    }
+
+    public int MnUninterruptableActivity
+    {
+        get;
+        set;
+    }
+
+    public int MbUseAngles
+    {
+        get;
+        set;
+    }
+
+    public int MFog
+    {
+        get;
+        set;
+    }
+
+    public int MiChangedVariables
+    {
+        get;
+        set;
+    }
+
+    public int MDestination
+    {
+        get;
+        set;
+    }
+
+    public int MSource
+    {
+        get;
+        set;
+    }
+
+    public int MFlCurrentConveyorOffset
+    {
+        get;
+        set;
+    }
+
+    public int MFlCurrentConveyorSpeed
+    {
+        get;
+        set;
+    }
+
+    public int MFlTargetSpeed
+    {
+        get;
+        set;
+    }
+
+    public int MFlTransitionStartSpeed
+    {
+        get;
+        set;
+    }
+
+    public int MhConveyorModels
+    {
+        get;
+        set;
+    }
+
+    public int MnTransitionDurationTicks
+    {
+        get;
+        set;
+    }
+
+    public int MnTransitionStartTick
+    {
+        get;
+        set;
+    }
+
+    public int MVecMoveDirEntitySpace
+    {
+        get;
+        set;
+    }
+
+    public int MEffectName
+    {
+        get;
+        set;
+    }
+
+    public int MbState
+    {
+        get;
+        set;
+    }
+
+    public int MnAmbientEffect
+    {
+        get;
+        set;
+    }
+
+    public int MDismounts
+    {
+        get;
+        set;
+    }
+
+    public int MbDisabled
+    {
+        get;
+        set;
+    }
+
+    public int MbFakeLadder
+    {
+        get;
+        set;
+    }
+
+    public int MbHasSlack
+    {
+        get;
+        set;
+    }
+
+    public int MFlAutoRideSpeed
+    {
+        get;
+        set;
+    }
+
+    public int MVecLadderDir
+    {
+        get;
+        set;
+    }
+
+    public int MVecLocalTop
+    {
+        get;
+        set;
+    }
+
+    public int MVecPlayerMountPositionBottom
+    {
+        get;
+        set;
+    }
+
+    public int MVecPlayerMountPositionTop
+    {
+        get;
+        set;
+    }
+
+    public int MbDraw3DSkybox
+    {
+        get;
+        set;
+    }
+
+    public int MbRenderShadows
+    {
+        get;
+        set;
+    }
+
+    public int MbUseUniqueColorTarget
+    {
+        get;
+        set;
+    }
+
+    public int MBrushModelName
+    {
+        get;
+        set;
+    }
+
+    public int MhTargetCamera
+    {
+        get;
+        set;
+    }
+
+    public int MnResolutionEnum
+    {
+        get;
+        set;
+    }
+
+    public int MTargetCamera
+    {
+        get;
+        set;
+    }
+
+    public int MbBombPlantedHere
+    {
+        get;
+        set;
+    }
+
+    public int MbGradientFogNeedsTextures
+    {
+        get;
+        set;
+    }
+
+    public int MbIsEnabled
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlFarZ
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogEndDistance
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogEndHeight
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogStartDistance
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogStartHeight
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogStrength
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogVerticalExponent
+    {
+        get;
+        set;
+    }
+
+    public int MFogColor
+    {
+        get;
+        set;
+    }
+
+    public int MhGradientFogTexture
+    {
+        get;
+        set;
+    }
+
+    public int MbSendHandle
+    {
+        get;
+        set;
+    }
+
+    public int MbHandsHaveBeenCut
+    {
+        get;
+        set;
+    }
+
+    public int MBlinkTimer
+    {
+        get;
+        set;
+    }
+
+    public int MChestAttachment
+    {
+        get;
+        set;
+    }
+
+    public int MEyeAttachment
+    {
+        get;
+        set;
+    }
+
+    public int MfLastGrabTime
+    {
+        get;
+        set;
+    }
+
+    public int MfNewestAlphaThinkTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlDeadOrRescuedTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlDropStartTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlGrabSuccessTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlRescueStartTime
+    {
+        get;
+        set;
+    }
+
+    public int MhHostageGrabber
+    {
+        get;
+        set;
+    }
+
+    public int MIsInit
+    {
+        get;
+        set;
+    }
+
+    public int MIsRescued
+    {
+        get;
+        set;
+    }
+
+    public int MLookAroundTimer
+    {
+        get;
+        set;
+    }
+
+    public int MLookAt
+    {
+        get;
+        set;
+    }
+
+    public int MnHostageState
+    {
+        get;
+        set;
+    }
+
+    public int MpPredictionOwner
+    {
+        get;
+        set;
+    }
+
+    public int MReuseTimer
+    {
+        get;
+        set;
+    }
+
+    public int MVecGrabbedPos
+    {
+        get;
+        set;
+    }
+
+    public int MBurnNormal
+    {
+        get;
+        set;
+    }
+
+    public int MbFireIsBurning
+    {
+        get;
+        set;
+    }
+
+    public int MbInPostEffectTime
+    {
+        get;
+        set;
+    }
+
+    public int MBlosCheck
+    {
+        get;
+        set;
+    }
+
+    public int MDrawableCount
+    {
+        get;
+        set;
+    }
+
+    public int MFireCount
+    {
+        get;
+        set;
+    }
+
+    public int MFireParentPositions
+    {
+        get;
+        set;
+    }
+
+    public int MFirePositions
+    {
+        get;
+        set;
+    }
+
+    public int MFlLastGrassBurnThink
+    {
+        get;
+        set;
+    }
+
+    public int MLastFireCount
+    {
+        get;
+        set;
+    }
+
+    public int MMaxBounds
+    {
+        get;
+        set;
+    }
+
+    public int MMaxFireHalfWidth
+    {
+        get;
+        set;
+    }
+
+    public int MMaxFireHeight
+    {
+        get;
+        set;
+    }
+
+    public int MMinBounds
+    {
+        get;
+        set;
+    }
+
+    public int MnFireEffectTickBegin
+    {
+        get;
+        set;
+    }
+
+    public int MnFireLifetime
+    {
+        get;
+        set;
+    }
+
+    public int MnInfernoType
+    {
+        get;
+        set;
+    }
+
+    public int MNfxFireDamageEffect
+    {
+        get;
+        set;
+    }
+
+    public int MNlosperiod
+    {
+        get;
+        set;
+    }
+
+    public int MnMode
+    {
+        get;
+        set;
+    }
+
+    public int MvBoxSize
+    {
+        get;
+        set;
+    }
+
+    public int MbShouldGlow
+    {
+        get;
+        set;
+    }
+
+    public int MpReticleHintTextName
+    {
+        get;
+        set;
+    }
+
+    public int MKillingPlayer
+    {
+        get;
+        set;
+    }
+
+    public int MOwningPlayer
+    {
+        get;
+        set;
+    }
+
+    public int McLightComponent
+    {
+        get;
+        set;
+    }
+
+    public int MGlow
+    {
+        get;
+        set;
+    }
+
+    public int MFlGlowProxySize
+    {
+        get;
+        set;
+    }
+
+    public int MFlHdrColorScale
+    {
+        get;
+        set;
+    }
+
+    public int MnHorizontalSize
+    {
+        get;
+        set;
+    }
+
+    public int MnMaxDist
+    {
+        get;
+        set;
+    }
+
+    public int MnMinDist
+    {
+        get;
+        set;
+    }
+
+    public int MnOuterMaxDist
+    {
+        get;
+        set;
+    }
+
+    public int MnVerticalSize
+    {
+        get;
+        set;
+    }
+
+    public int MpOuter
+    {
+        get;
+        set;
+    }
+
+    public int MbDisabledHud
+    {
+        get;
+        set;
+    }
+
+    public int MnAccountIDs
+    {
+        get;
+        set;
+    }
+
+    public int MnCurrentPhase
+    {
+        get;
+        set;
+    }
+
+    public int MnDraftType
+    {
+        get;
+        set;
+    }
+
+    public int MnMapId0
+    {
+        get;
+        set;
+    }
+
+    public int MnMapId1
+    {
+        get;
+        set;
+    }
+
+    public int MnMapId2
+    {
+        get;
+        set;
+    }
+
+    public int MnMapId3
+    {
+        get;
+        set;
+    }
+
+    public int MnMapId4
+    {
+        get;
+        set;
+    }
+
+    public int MnMapId5
+    {
+        get;
+        set;
+    }
+
+    public int MnPhaseDurationTicks
+    {
+        get;
+        set;
+    }
+
+    public int MnPhaseStartTick
+    {
+        get;
+        set;
+    }
+
+    public int MnPostDataUpdateTick
+    {
+        get;
+        set;
+    }
+
+    public int MnStartingSide0
+    {
+        get;
+        set;
+    }
+
+    public int MnTeamWinningCoinToss
+    {
+        get;
+        set;
+    }
+
+    public int MnTeamWithFirstChoice
+    {
+        get;
+        set;
+    }
+
+    public int MnVoteMapIdsList
+    {
+        get;
+        set;
+    }
+
+    public int MbIsIncGrenade
+    {
+        get;
+        set;
+    }
+
+    public int MbShowLight
+    {
+        get;
+        set;
+    }
+
+    public int MFlInnerAngle
+    {
+        get;
+        set;
+    }
+
+    public int MFlOuterAngle
+    {
+        get;
+        set;
+    }
+
+    public int MbAnimateDuringGameplayPause
+    {
+        get;
+        set;
+    }
+
+    public int MbFrozen
+    {
+        get;
+        set;
+    }
+
+    public int MbNoFreeze
+    {
+        get;
+        set;
+    }
+
+    public int MbNoRamp
+    {
+        get;
+        set;
+    }
+
+    public int MbNoSave
+    {
+        get;
+        set;
+    }
+
+    public int MbOldActive
+    {
+        get;
+        set;
+    }
+
+    public int MbOldFrozen
+    {
+        get;
+        set;
+    }
+
+    public int MbStartActive
+    {
+        get;
+        set;
+    }
+
+    public int MClrTint
+    {
+        get;
+        set;
+    }
+
+    public int MFlFreezeTransitionDuration
+    {
+        get;
+        set;
+    }
+
+    public int MFlPreSimTime
+    {
+        get;
+        set;
+    }
+
+    public int MhControlPointEnts
+    {
+        get;
+        set;
+    }
+
+    public int MiEffectIndex
+    {
+        get;
+        set;
+    }
+
+    public int MiServerControlPointAssignments
+    {
+        get;
+        set;
+    }
+
+    public int MIszControlPointNames
+    {
+        get;
+        set;
+    }
+
+    public int MIszEffectName
+    {
+        get;
+        set;
+    }
+
+    public int MnDataCp
+    {
+        get;
+        set;
+    }
+
+    public int MnStopType
+    {
+        get;
+        set;
+    }
+
+    public int MnTintCp
+    {
+        get;
+        set;
+    }
+
+    public int MSzSnapshotFileName
+    {
+        get;
+        set;
+    }
+
+    public int MvServerControlPoints
+    {
+        get;
+        set;
+    }
+
+    public int MVecDataCpValue
+    {
+        get;
+        set;
+    }
+
+    public int MPathNodesColor
+    {
+        get;
+        set;
+    }
+
+    public int MPathNodesName
+    {
+        get;
+        set;
+    }
+
+    public int MPathNodesPinEnabled
+    {
+        get;
+        set;
+    }
+
+    public int MPathNodesPosition
+    {
+        get;
+        set;
+    }
+
+    public int MPathNodesRadiusScale
+    {
+        get;
+        set;
+    }
+
+    public int MPathNodesTangentIn
+    {
+        get;
+        set;
+    }
+
+    public int MPathNodesTangentOut
+    {
+        get;
+        set;
+    }
+
+    public int MFlMaxSimulationTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlParticleSpacing
+    {
+        get;
+        set;
+    }
+
+    public int MFlRadius
+    {
+        get;
+        set;
+    }
+
+    public int MFlSlack
+    {
+        get;
+        set;
+    }
+
+    public int MnEffectState
+    {
+        get;
+        set;
+    }
+
+    public int MbAwake
+    {
+        get;
+        set;
+    }
+
+    public int MbBeingDefused
+    {
+        get;
+        set;
+    }
+
+    public int MbBombDefused
+    {
+        get;
+        set;
+    }
+
+    public int MbBombTicking
+    {
+        get;
+        set;
+    }
+
+    public int Mbc4Activated
+    {
+        get;
+        set;
+    }
+
+    public int MbCannotBeDefused
+    {
+        get;
+        set;
+    }
+
+    public int MbExplodeWarning
+    {
+        get;
+        set;
+    }
+
+    public int MbHasExploded
+    {
+        get;
+        set;
+    }
+
+    public int MbRadarFlash
+    {
+        get;
+        set;
+    }
+
+    public int MbTenSecWarning
+    {
+        get;
+        set;
+    }
+
+    public int MbTriggerWarning
+    {
+        get;
+        set;
+    }
+
+    public int MfLastDefuseTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlC4Blow
+    {
+        get;
+        set;
+    }
+
+    public int MFlC4ExplodeSpectateDuration
+    {
+        get;
+        set;
+    }
+
+    public int MFlDefuseCountDown
+    {
+        get;
+        set;
+    }
+
+    public int MFlDefuseLength
+    {
+        get;
+        set;
+    }
+
+    public int MFlNextBeep
+    {
+        get;
+        set;
+    }
+
+    public int MFlNextGlow
+    {
+        get;
+        set;
+    }
+
+    public int MFlNextRadarFlashTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlTimerLength
+    {
+        get;
+        set;
+    }
+
+    public int MhBombDefuser
+    {
+        get;
+        set;
+    }
+
+    public int MhControlPanel
+    {
+        get;
+        set;
+    }
+
+    public int MhDefuserMultimeter
+    {
+        get;
+        set;
+    }
+
+    public int MnBombSite
+    {
+        get;
+        set;
+    }
+
+    public int MnSourceSoundscapeHash
+    {
+        get;
+        set;
+    }
+
+    public int MpBombDefuser
+    {
+        get;
+        set;
+    }
+
+    public int MVecC4ExplodeSpectateAng
+    {
+        get;
+        set;
+    }
+
+    public int MVecC4ExplodeSpectatePos
+    {
+        get;
+        set;
+    }
+
+    public int MbUrgent
+    {
+        get;
+        set;
+    }
+
+    public int MhPingedEntity
+    {
+        get;
+        set;
+    }
+
+    public int MhPlayer
+    {
+        get;
+        set;
+    }
+
+    public int MiType
+    {
+        get;
+        set;
+    }
+
+    public int MSzPlaceName
+    {
+        get;
+        set;
+    }
+
+    public int MSprayRenderHelper
+    {
+        get;
+        set;
+    }
+
+    public int MFlCreationTime
+    {
+        get;
+        set;
+    }
+
+    public int MnEntity
+    {
+        get;
+        set;
+    }
+
+    public int MnHitbox
+    {
+        get;
+        set;
+    }
+
+    public int MnPlayer
+    {
+        get;
+        set;
+    }
+
+    public int MnTintId
+    {
+        get;
+        set;
+    }
+
+    public int MnUniqueId
+    {
+        get;
+        set;
+    }
+
+    public int MnVersion
+    {
+        get;
+        set;
+    }
+
+    public int MRtGcTime
+    {
+        get;
+        set;
+    }
+
+    public int MUbSignature
+    {
+        get;
+        set;
+    }
+
+    public int MUnAccountId
+    {
+        get;
+        set;
+    }
+
+    public int MUnTraceId
+    {
+        get;
+        set;
+    }
+
+    public int MVecEndPos
+    {
+        get;
+        set;
+    }
+
+    public int MVecLeft
+    {
+        get;
+        set;
+    }
+
+    public int MVecNormal
+    {
+        get;
+        set;
+    }
+
+    public int MVecStart
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogDistanceMultiplier
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogMaxDensityMultiplier
+    {
+        get;
+        set;
+    }
+
+    public int MFlVisibilityStrength
+    {
+        get;
+        set;
+    }
+
+    public int MDegreesPerSecond
+    {
+        get;
+        set;
+    }
+
+    public int MFov
+    {
+        get;
+        set;
+    }
+
+    public int MFogColor
+    {
+        get;
+        set;
+    }
+
+    public int MResolution
+    {
+        get;
+        set;
+    }
+
+    public int MTargetFov
+    {
+        get;
+        set;
+    }
+
+    public int MbCanHltvUse
+    {
+        get;
+        set;
+    }
+
+    public int MbDofEnabled
+    {
+        get;
+        set;
+    }
+
+    public int MbFogEnable
+    {
+        get;
+        set;
+    }
+
+    public int MbIsOn
+    {
+        get;
+        set;
+    }
+
+    public int MbNoSky
+    {
+        get;
+        set;
+    }
+
+    public int MbUseScreenAspectRatio
+    {
+        get;
+        set;
+    }
+
+    public int MfBrightness
+    {
+        get;
+        set;
+    }
+
+    public int MFlAspectRatio
+    {
+        get;
+        set;
+    }
+
+    public int MFlDofFarBlurry
+    {
+        get;
+        set;
+    }
+
+    public int MFlDofFarCrisp
+    {
+        get;
+        set;
+    }
+
+    public int MFlDofNearBlurry
+    {
+        get;
+        set;
+    }
+
+    public int MFlDofNearCrisp
+    {
+        get;
+        set;
+    }
+
+    public int MFlDofTiltToGround
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogEnd
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogMaxDensity
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogStart
+    {
+        get;
+        set;
+    }
+
+    public int MFlZFar
+    {
+        get;
+        set;
+    }
+
+    public int MFlZNear
+    {
+        get;
+        set;
+    }
+
+    public int MpNext
+    {
+        get;
+        set;
+    }
+
+    public int MbStartEnabled
+    {
+        get;
+        set;
+    }
+
+    public int MhActivator
+    {
+        get;
+        set;
+    }
+
+    public int MbAllowInteractionFromAllSceneWorlds
+    {
+        get;
+        set;
+    }
+
+    public int MbCheckCssClasses
+    {
+        get;
+        set;
+    }
+
+    public int MbIgnoreInput
+    {
+        get;
+        set;
+    }
+
+    public int MFlDpi
+    {
+        get;
+        set;
+    }
+
+    public int MFlDepthOffset
+    {
+        get;
+        set;
+    }
+
+    public int MFlInteractDistance
+    {
+        get;
+        set;
+    }
+
+    public int MUnHorizontalAlign
+    {
+        get;
+        set;
+    }
+
+    public int MUnOrientation
+    {
+        get;
+        set;
+    }
+
+    public int MUnOwnerContext
+    {
+        get;
+        set;
+    }
+
+    public int MUnVerticalAlign
+    {
+        get;
+        set;
+    }
+
+    public int MVecCssClasses
+    {
+        get;
+        set;
+    }
+
+    public int MAnchorDeltaTransform
+    {
+        get;
+        set;
+    }
+
+    public int MbDisableMipGen
+    {
+        get;
+        set;
+    }
+
+    public int MbExcludeFromSaveGames
+    {
+        get;
+        set;
+    }
+
+    public int MbFollowPlayerAcrossTeleport
+    {
+        get;
+        set;
+    }
+
+    public int MbForceRecreateNextUpdate
+    {
+        get;
+        set;
+    }
+
+    public int MbGrabbable
+    {
+        get;
+        set;
+    }
+
+    public int MbLit
+    {
+        get;
+        set;
+    }
+
+    public int MbMoveViewToPlayerNextThink
+    {
+        get;
+        set;
+    }
+
+    public int MbNoDepth
+    {
+        get;
+        set;
+    }
+
+    public int MbOnlyRenderToTexture
+    {
+        get;
+        set;
+    }
+
+    public int MbOpaque
+    {
+        get;
+        set;
+    }
+
+    public int MbRenderBackface
+    {
+        get;
+        set;
+    }
+
+    public int MbUseOffScreenIndicator
+    {
+        get;
+        set;
+    }
+
+    public int MnExplicitImageLayout
+    {
+        get;
+        set;
+    }
+
+    public int MpOffScreenIndicator
+    {
+        get;
+        set;
+    }
+
+    public int MMessageText
+    {
+        get;
+        set;
+    }
+
+    public int MbListenedTo
+    {
+        get;
+        set;
+    }
+
+    public int MbRestartAfterRestore
+    {
+        get;
+        set;
+    }
+
+    public int MFlEndTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlStartTimeInCommentary
+    {
+        get;
+        set;
+    }
+
+    public int MhViewPosition
+    {
+        get;
+        set;
+    }
+
+    public int MiNodeNumber
+    {
+        get;
+        set;
+    }
+
+    public int MiNodeNumberMax
+    {
+        get;
+        set;
+    }
+
+    public int MIszCommentaryFile
+    {
+        get;
+        set;
+    }
+
+    public int MIszSpeakers
+    {
+        get;
+        set;
+    }
+
+    public int MIszTitle
+    {
+        get;
+        set;
+    }
+
+    public int MbDisabledOld
+    {
+        get;
+        set;
+    }
+
+    public int MbEngaged
+    {
+        get;
+        set;
+    }
+
+    public int MbFirstUpdate
+    {
+        get;
+        set;
+    }
+
+    public int MbRequiresUseKey
+    {
+        get;
+        set;
+    }
+
+    public int MbUpdateOnClient
+    {
+        get;
+        set;
+    }
+
+    public int MFlCurrentMomentum
+    {
+        get;
+        set;
+    }
+
+    public int MFlDisengageDistance
+    {
+        get;
+        set;
+    }
+
+    public int MFlEngageDistance
+    {
+        get;
+        set;
+    }
+
+    public int MFlInputOffset
+    {
+        get;
+        set;
+    }
+
+    public int MFlMaximumChangePerSecond
+    {
+        get;
+        set;
+    }
+
+    public int MFlMomentumModifier
+    {
+        get;
+        set;
+    }
+
+    public int MFlPreviousUpdateTickTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlPreviousValue
+    {
+        get;
+        set;
+    }
+
+    public int MFlRatchetOffset
+    {
+        get;
+        set;
+    }
+
+    public int MFlSnapValue
+    {
+        get;
+        set;
+    }
+
+    public int MhOutputEntities
+    {
+        get;
+        set;
+    }
+
+    public int MhRemapLineEnd
+    {
+        get;
+        set;
+    }
+
+    public int MhRemapLineStart
+    {
+        get;
+        set;
+    }
+
+    public int MnHapticsType
+    {
+        get;
+        set;
+    }
+
+    public int MnInputType
+    {
+        get;
+        set;
+    }
+
+    public int MnMomentumType
+    {
+        get;
+        set;
+    }
+
+    public int MnOutputType
+    {
+        get;
+        set;
+    }
+
+    public int MnRatchetType
+    {
+        get;
+        set;
+    }
+
+    public int MVecPreviousTestPoint
+    {
+        get;
+        set;
+    }
+
+    public int MFontName
+    {
+        get;
+        set;
+    }
+
+    public int MbFullbright
+    {
+        get;
+        set;
+    }
+
+    public int MFlFontSize
+    {
+        get;
+        set;
+    }
+
+    public int MFlWorldUnitsPerPx
+    {
+        get;
+        set;
+    }
+
+    public int MnJustifyHorizontal
+    {
+        get;
+        set;
+    }
+
+    public int MnJustifyVertical
+    {
+        get;
+        set;
+    }
+
+    public int MnReorientMode
+    {
+        get;
+        set;
+    }
+
+    public int MbExposureControl
+    {
+        get;
+        set;
+    }
+
+    public int MFlExposureCompensation
+    {
+        get;
+        set;
+    }
+
+    public int MFlExposureFadeSpeedDown
+    {
+        get;
+        set;
+    }
+
+    public int MFlExposureFadeSpeedUp
+    {
+        get;
+        set;
+    }
+
+    public int MFlMaxExposure
+    {
+        get;
+        set;
+    }
+
+    public int MFlMaxLogExposure
+    {
+        get;
+        set;
+    }
+
+    public int MFlMinExposure
+    {
+        get;
+        set;
+    }
+
+    public int MFlMinLogExposure
+    {
+        get;
+        set;
+    }
+
+    public int MFlRate
+    {
+        get;
+        set;
+    }
+
+    public int MFlTonemapEvSmoothingRange
+    {
+        get;
+        set;
+    }
+
+    public int MFlTonemapMinAvgLum
+    {
+        get;
+        set;
+    }
+
+    public int MFlTonemapPercentBrightPixels
+    {
+        get;
+        set;
+    }
+
+    public int MFlTonemapPercentTarget
+    {
+        get;
+        set;
+    }
+
+    public int MhPostSettings
+    {
+        get;
+        set;
+    }
+
+    public int MiCurrentMaxRagdollCount
+    {
+        get;
+        set;
+    }
+
+    public int MWeaponSequence
+    {
+        get;
+        set;
+    }
+
+    public int MFlBlendWeight
+    {
+        get;
+        set;
+    }
+
+    public int MFlBlendWeightCurrent
+    {
+        get;
+        set;
+    }
+
+    public int MhRagdollSource
+    {
+        get;
+        set;
+    }
+
+    public int MiEyeAttachment
+    {
+        get;
+        set;
+    }
+
+    public int MParentPhysicsBoneIndices
+    {
+        get;
+        set;
+    }
+
+    public int MRagAngles
+    {
+        get;
+        set;
+    }
+
+    public int MRagPos
+    {
+        get;
+        set;
+    }
+
+    public int MWorldSpaceBoneComputationOrder
+    {
+        get;
+        set;
+    }
+
+    public int MAttachmentPointBoneSpace
+    {
+        get;
+        set;
+    }
+
+    public int MAttachmentPointRagdollSpace
+    {
+        get;
+        set;
+    }
+
+    public int MbHasParent
+    {
+        get;
+        set;
+    }
+
+    public int MBoneIndexAttached
+    {
+        get;
+        set;
+    }
+
+    public int MParentTime
+    {
+        get;
+        set;
+    }
+
+    public int MRagdollAttachedObjectIndex
+    {
+        get;
+        set;
+    }
+
+    public int MVecOffset
+    {
+        get;
+        set;
+    }
+
+    public int MbBlockersPresent
+    {
+        get;
+        set;
+    }
+
+    public int MbRoundInProgress
+    {
+        get;
+        set;
+    }
+
+    public int MiBombSite
+    {
+        get;
+        set;
+    }
+
+    public int MiFirstSecondHalfRound
+    {
+        get;
+        set;
+    }
+
+    public int MnMatchSeed
+    {
+        get;
+        set;
+    }
+
+    public int MLightValues
+    {
+        get;
+        set;
+    }
+
+    public int MLinksTouchingSomething
+    {
+        get;
+        set;
+    }
+
+    public int MPhysicsDelegate
+    {
+        get;
+        set;
+    }
+
+    public int MRopeFlags
+    {
+        get;
+        set;
+    }
+
+    public int MRopeLength
+    {
+        get;
+        set;
+    }
+
+    public int MSlack
+    {
+        get;
+        set;
+    }
+
+    public int MSubdiv
+    {
+        get;
+        set;
+    }
+
+    public int MTextureHeight
+    {
+        get;
+        set;
+    }
+
+    public int MTextureScale
+    {
+        get;
+        set;
+    }
+
+    public int MWidth
+    {
+        get;
+        set;
+    }
+
+    public int MbApplyWind
+    {
+        get;
+        set;
+    }
+
+    public int MbConstrainBetweenEndpoints
+    {
+        get;
+        set;
+    }
+
+    public int MbEndPointAttachmentAnglesDirty
+    {
+        get;
+        set;
+    }
+
+    public int MbEndPointAttachmentPositionsDirty
+    {
+        get;
+        set;
+    }
+
+    public int MbNewDataThisFrame
+    {
+        get;
+        set;
+    }
+
+    public int MbPhysicsInitted
+    {
+        get;
+        set;
+    }
+
+    public int MbPrevEndPointPos
+    {
+        get;
+        set;
+    }
+
+    public int MfLockedPoints
+    {
+        get;
+        set;
+    }
+
+    public int MfPrevLockedPoints
+    {
+        get;
+        set;
+    }
+
+    public int MFlCurScroll
+    {
+        get;
+        set;
+    }
+
+    public int MFlCurrentGustLifetime
+    {
+        get;
+        set;
+    }
+
+    public int MFlCurrentGustTimer
+    {
+        get;
+        set;
+    }
+
+    public int MFlScrollSpeed
+    {
+        get;
+        set;
+    }
+
+    public int MFlTimeToNextGust
+    {
+        get;
+        set;
+    }
+
+    public int MhEndPoint
+    {
+        get;
+        set;
+    }
+
+    public int MhMaterial
+    {
+        get;
+        set;
+    }
+
+    public int MhStartPoint
+    {
+        get;
+        set;
+    }
+
+    public int MiEndAttachment
+    {
+        get;
+        set;
+    }
+
+    public int MiForcePointMoveCounter
+    {
+        get;
+        set;
+    }
+
+    public int MiRopeMaterialModelIndex
+    {
+        get;
+        set;
+    }
+
+    public int MiStartAttachment
+    {
+        get;
+        set;
+    }
+
+    public int MnChangeCount
+    {
+        get;
+        set;
+    }
+
+    public int MnLinksTouchingSomething
+    {
+        get;
+        set;
+    }
+
+    public int MnSegments
+    {
+        get;
+        set;
+    }
+
+    public int MvCachedEndPointAttachmentAngle
+    {
+        get;
+        set;
+    }
+
+    public int MvCachedEndPointAttachmentPos
+    {
+        get;
+        set;
+    }
+
+    public int MvColorMod
+    {
+        get;
+        set;
+    }
+
+    public int MvPrevEndPointPos
+    {
+        get;
+        set;
+    }
+
+    public int MvWindDir
+    {
+        get;
+        set;
+    }
+
+    public int MVecImpulse
+    {
+        get;
+        set;
+    }
+
+    public int MVecPreviousImpulse
+    {
+        get;
+        set;
+    }
+
+    public int MQueuedEvents
+    {
+        get;
+        set;
+    }
+
+    public int MbAutogenerated
+    {
+        get;
+        set;
+    }
+
+    public int MbClientOnly
+    {
+        get;
+        set;
+    }
+
+    public int MbIsPlayingBack
+    {
+        get;
+        set;
+    }
+
+    public int MbMultiplayer
+    {
+        get;
+        set;
+    }
+
+    public int MbPaused
+    {
+        get;
+        set;
+    }
+
+    public int MbWasPlaying
+    {
+        get;
+        set;
+    }
+
+    public int MFlCurrentTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlForceClientTime
+    {
+        get;
+        set;
+    }
+
+    public int MhActorList
+    {
+        get;
+        set;
+    }
+
+    public int MhOwner
+    {
+        get;
+        set;
+    }
+
+    public int MnSceneStringIndex
+    {
+        get;
+        set;
+    }
+
+    public int MShardDesc
+    {
+        get;
+        set;
+    }
+
+    public int MSkyboxData
+    {
+        get;
+        set;
+    }
+
+    public int MSkyboxSlotToken
+    {
+        get;
+        set;
+    }
+
+    public int MVoxelFrameData
+    {
+        get;
+        set;
+    }
+
+    public int MbDidSmokeEffect
+    {
+        get;
+        set;
+    }
+
+    public int MbSmokeEffectSpawned
+    {
+        get;
+        set;
+    }
+
+    public int MbSmokeVolumeDataReceived
+    {
+        get;
+        set;
+    }
+
+    public int MnRandomSeed
+    {
+        get;
+        set;
+    }
+
+    public int MnSmokeEffectTickBegin
+    {
+        get;
+        set;
+    }
+
+    public int MvSmokeColor
+    {
+        get;
+        set;
+    }
+
+    public int MvSmokeDetonationPos
+    {
+        get;
+        set;
+    }
+
+    public int MbWasEnabled
+    {
+        get;
+        set;
+    }
+
+    public int MIszSoundAreaType
+    {
+        get;
+        set;
+    }
+
+    public int MvPos
+    {
+        get;
+        set;
+    }
+
+    public int MFlDmBonusStartTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlDmBonusTimeLength
+    {
+        get;
+        set;
+    }
+
+    public int MnDmBonusWeaponLoadoutSlot
+    {
+        get;
+        set;
+    }
+
+    public int MvMax
+    {
+        get;
+        set;
+    }
+
+    public int MvMin
+    {
+        get;
+        set;
+    }
+
+    public int MbUseAutoCompare
+    {
+        get;
+        set;
+    }
+
+    public int MiOpvarIndex
+    {
+        get;
+        set;
+    }
+
+    public int MIszOperatorName
+    {
+        get;
+        set;
+    }
+
+    public int MIszOpvarName
+    {
+        get;
+        set;
+    }
+
+    public int MIszStackName
+    {
+        get;
+        set;
+    }
+
+    public int MFlLightScale
+    {
+        get;
+        set;
+    }
+
+    public int MbWorldSpaceScale
+    {
+        get;
+        set;
+    }
+
+    public int MFlBrightnessDuration
+    {
+        get;
+        set;
+    }
+
+    public int MFlBrightnessTimeStart
+    {
+        get;
+        set;
+    }
+
+    public int MFlDestScale
+    {
+        get;
+        set;
+    }
+
+    public int MFlDieTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlFrame
+    {
+        get;
+        set;
+    }
+
+    public int MFlLastTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlMaxFrame
+    {
+        get;
+        set;
+    }
+
+    public int MFlScaleDuration
+    {
+        get;
+        set;
+    }
+
+    public int MFlSpriteFramerate
+    {
+        get;
+        set;
+    }
+
+    public int MFlSpriteScale
+    {
+        get;
+        set;
+    }
+
+    public int MFlStartScale
+    {
+        get;
+        set;
+    }
+
+    public int MhAttachedToEntity
+    {
+        get;
+        set;
+    }
+
+    public int MhOldSpriteMaterial
+    {
+        get;
+        set;
+    }
+
+    public int MhSpriteMaterial
+    {
+        get;
+        set;
+    }
+
+    public int MnAttachment
+    {
+        get;
+        set;
+    }
+
+    public int MnBrightness
+    {
+        get;
+        set;
+    }
+
+    public int MnDestBrightness
+    {
+        get;
+        set;
+    }
+
+    public int MnSpriteHeight
+    {
+        get;
+        set;
+    }
+
+    public int MnSpriteWidth
+    {
+        get;
+        set;
+    }
+
+    public int MnStartBrightness
+    {
+        get;
+        set;
+    }
+
+    public int MbOn
+    {
+        get;
+        set;
+    }
+
+    public int MBmaxColor
+    {
+        get;
+        set;
+    }
+
+    public int MClrOverlay
+    {
+        get;
+        set;
+    }
+
+    public int MFdistNormalize
+    {
+        get;
+        set;
+    }
+
+    public int MFlAlphaHaze
+    {
+        get;
+        set;
+    }
+
+    public int MFlAlphaHdr
+    {
+        get;
+        set;
+    }
+
+    public int MFlFarZScale
+    {
+        get;
+        set;
+    }
+
+    public int MFlHazeScale
+    {
+        get;
+        set;
+    }
+
+    public int MFlRotation
+    {
+        get;
+        set;
+    }
+
+    public int MFlSize
+    {
+        get;
+        set;
+    }
+
+    public int MFxSsSunFlareEffectIndex
+    {
+        get;
+        set;
+    }
+
+    public int MFxSunFlareEffectIndex
+    {
+        get;
+        set;
+    }
+
+    public int MIszSsEffectName
+    {
+        get;
+        set;
+    }
+
+    public int MvDirection
+    {
+        get;
+        set;
+    }
+
+    public int MvSunPos
+    {
+        get;
+        set;
+    }
+
+    public int MaPlayerControllers
+    {
+        get;
+        set;
+    }
+
+    public int MaPlayers
+    {
+        get;
+        set;
+    }
+
+    public int MiScore
+    {
+        get;
+        set;
+    }
+
+    public int MSzTeamname
+    {
+        get;
+        set;
+    }
+
+    public int MbAutoCountdown
+    {
+        get;
+        set;
+    }
+
+    public int MbFire10SecRemain
+    {
+        get;
+        set;
+    }
+
+    public int MbFire1MinRemain
+    {
+        get;
+        set;
+    }
+
+    public int MbFire1SecRemain
+    {
+        get;
+        set;
+    }
+
+    public int MbFire2MinRemain
+    {
+        get;
+        set;
+    }
+
+    public int MbFire2SecRemain
+    {
+        get;
+        set;
+    }
+
+    public int MbFire30SecRemain
+    {
+        get;
+        set;
+    }
+
+    public int MbFire3MinRemain
+    {
+        get;
+        set;
+    }
+
+    public int MbFire3SecRemain
+    {
+        get;
+        set;
+    }
+
+    public int MbFire4MinRemain
+    {
+        get;
+        set;
+    }
+
+    public int MbFire4SecRemain
+    {
+        get;
+        set;
+    }
+
+    public int MbFire5MinRemain
+    {
+        get;
+        set;
+    }
+
+    public int MbFire5SecRemain
+    {
+        get;
+        set;
+    }
+
+    public int MbFireFinished
+    {
+        get;
+        set;
+    }
+
+    public int MbInCaptureWatchState
+    {
+        get;
+        set;
+    }
+
+    public int MbIsDisabled
+    {
+        get;
+        set;
+    }
+
+    public int MbShowInHud
+    {
+        get;
+        set;
+    }
+
+    public int MbStartPaused
+    {
+        get;
+        set;
+    }
+
+    public int MbStopWatchTimer
+    {
+        get;
+        set;
+    }
+
+    public int MbTimerPaused
+    {
+        get;
+        set;
+    }
+
+    public int MFlTimeRemaining
+    {
+        get;
+        set;
+    }
+
+    public int MFlTimerEndTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlTotalTime
+    {
+        get;
+        set;
+    }
+
+    public int MnOldTimerLength
+    {
+        get;
+        set;
+    }
+
+    public int MnOldTimerState
+    {
+        get;
+        set;
+    }
+
+    public int MnSetupTimeLength
+    {
+        get;
+        set;
+    }
+
+    public int MnState
+    {
+        get;
+        set;
+    }
+
+    public int MnTimerInitialLength
+    {
+        get;
+        set;
+    }
+
+    public int MnTimerLength
+    {
+        get;
+        set;
+    }
+
+    public int MnTimerMaxLength
+    {
+        get;
+        set;
+    }
+
+    public int MbLoop
+    {
+        get;
+        set;
+    }
+
+    public int MFlFps
+    {
+        get;
+        set;
+    }
+
+    public int MFlStartFrame
+    {
+        get;
+        set;
+    }
+
+    public int MhPositionKeys
+    {
+        get;
+        set;
+    }
+
+    public int MhRotationKeys
+    {
+        get;
+        set;
+    }
+
+    public int MvAnimationBoundsMax
+    {
+        get;
+        set;
+    }
+
+    public int MvAnimationBoundsMin
+    {
+        get;
+        set;
+    }
+
+    public int MFlAutoExposureMax
+    {
+        get;
+        set;
+    }
+
+    public int MFlAutoExposureMin
+    {
+        get;
+        set;
+    }
+
+    public int MFlExposureAdaptationSpeedDown
+    {
+        get;
+        set;
+    }
+
+    public int MFlExposureAdaptationSpeedUp
+    {
+        get;
+        set;
+    }
+
+    public int MBuoyancyHelper
+    {
+        get;
+        set;
+    }
+
+    public int MFlFluidDensity
+    {
+        get;
+        set;
+    }
+
+    public int MAngularDamping
+    {
+        get;
+        set;
+    }
+
+    public int MAngularLimit
+    {
+        get;
+        set;
+    }
+
+    public int MbCollapseToForcePoint
+    {
+        get;
+        set;
+    }
+
+    public int MbConvertToDebrisWhenPossible
+    {
+        get;
+        set;
+    }
+
+    public int MFlDampingRatio
+    {
+        get;
+        set;
+    }
+
+    public int MFlFrequency
+    {
+        get;
+        set;
+    }
+
+    public int MGravityScale
+    {
+        get;
+        set;
+    }
+
+    public int MLinearDamping
+    {
+        get;
+        set;
+    }
+
+    public int MLinearForce
+    {
+        get;
+        set;
+    }
+
+    public int MLinearLimit
+    {
+        get;
+        set;
+    }
+
+    public int MVecLinearForceDirection
+    {
+        get;
+        set;
+    }
+
+    public int MVecLinearForcePointAt
+    {
+        get;
+        set;
+    }
+
+    public int MVecLinearForcePointAtWorld
+    {
+        get;
+        set;
+    }
+
+    public int MbIsYesNoVote
+    {
+        get;
+        set;
+    }
+
+    public int MbTypeDirty
+    {
+        get;
+        set;
+    }
+
+    public int MbVotesDirty
+    {
+        get;
+        set;
+    }
+
+    public int MiActiveIssueIndex
+    {
+        get;
+        set;
+    }
+
+    public int MiOnlyTeamToVote
+    {
+        get;
+        set;
+    }
+
+    public int MnPotentialVotes
+    {
+        get;
+        set;
+    }
+
+    public int MnVoteOptionCount
+    {
+        get;
+        set;
+    }
+
+    public int MSequenceCompleteTimer
+    {
+        get;
+        set;
+    }
+
+    public int MbRedraw
+    {
+        get;
+        set;
+    }
+
+    public int MFlDisplayHealth
+    {
+        get;
+        set;
+    }
+
+    public int MfFireTime
+    {
+        get;
+        set;
+    }
+
+    public int MNewColor
+    {
+        get;
+        set;
+    }
+
+    public int MOldColor
+    {
+        get;
+        set;
+    }
+
+    public int MFlNewEnd
+    {
+        get;
+        set;
+    }
+
+    public int MFlNewFarZ
+    {
+        get;
+        set;
+    }
+
+    public int MFlNewHdrColorScale
+    {
+        get;
+        set;
+    }
+
+    public int MFlNewMaxDensity
+    {
+        get;
+        set;
+    }
+
+    public int MFlNewStart
+    {
+        get;
+        set;
+    }
+
+    public int MFlOldEnd
+    {
+        get;
+        set;
+    }
+
+    public int MFlOldFarZ
+    {
+        get;
+        set;
+    }
+
+    public int MFlOldHdrColorScale
+    {
+        get;
+        set;
+    }
+
+    public int MFlOldMaxDensity
+    {
+        get;
+        set;
+    }
+
+    public int MFlOldStart
+    {
+        get;
+        set;
+    }
+
+    public int MFlTransitionTime
+    {
+        get;
+        set;
+    }
+
+    public int MhCtrl
+    {
+        get;
+        set;
+    }
+
+    public int MbPassWhenTrue
+    {
+        get;
+        set;
+    }
+
+    public int MnMutatorCondition
+    {
+        get;
+        set;
+    }
+
+    public int MStrMutatorConditionContainerName
+    {
+        get;
+        set;
+    }
+
+    public int MStrMutatorConditionContainerVarName
+    {
+        get;
+        set;
+    }
+
+    public int MStrMutatorConditionContainerVarValue
+    {
+        get;
+        set;
+    }
+
+    public int MbCaptureInRenderDoc
+    {
+        get;
+        set;
+    }
+
+    public int MbIsScratchTarget
+    {
+        get;
+        set;
+    }
+
+    public int MbSplatDebugInfo
+    {
+        get;
+        set;
+    }
+
+    public int MColDrawTextColor
+    {
+        get;
+        set;
+    }
+
+    public int MnMutatorCommandType
+    {
+        get;
+        set;
+    }
+
+    public int MnResolution
+    {
+        get;
+        set;
+    }
+
+    public int MnSetValueValue
+    {
+        get;
+        set;
+    }
+
+    public int MStrCopyKeysWithSuffixFindSuffix
+    {
+        get;
+        set;
+    }
+
+    public int MStrCopyKeysWithSuffixInputContainerSrc
+    {
+        get;
+        set;
+    }
+
+    public int MStrCopyKeysWithSuffixReplaceSuffix
+    {
+        get;
+        set;
+    }
+
+    public int MStrCopyMatchingKeysInputContainerSrc
+    {
+        get;
+        set;
+    }
+
+    public int MStrCopyPropertyInputContainerProperty
+    {
+        get;
+        set;
+    }
+
+    public int MStrCopyPropertyInputContainerSrc
+    {
+        get;
+        set;
+    }
+
+    public int MStrCopyPropertyTargetProperty
+    {
+        get;
+        set;
+    }
+
+    public int MStrDrawTextFont
+    {
+        get;
+        set;
+    }
+
+    public int MStrDrawTextInputContainerProperty
+    {
+        get;
+        set;
+    }
+
+    public int MStrDrawTextInputContainerSrc
+    {
+        get;
+        set;
+    }
+
+    public int MStrGenerateTextureInitialContainer
+    {
+        get;
+        set;
+    }
+
+    public int MStrGenerateTextureTargetParam
+    {
+        get;
+        set;
+    }
+
+    public int MStrInitWithContainer
+    {
+        get;
+        set;
+    }
+
+    public int MStrPopInputQueueContainer
+    {
+        get;
+        set;
+    }
+
+    public int MStrRandomRollInputVarsSeedInputVar
+    {
+        get;
+        set;
+    }
+
+    public int MVecConditionalMutators
+    {
+        get;
+        set;
+    }
+
+    public int MVecConditions
+    {
+        get;
+        set;
+    }
+
+    public int MVecDrawTextPosition
+    {
+        get;
+        set;
+    }
+
+    public int MVecRandomRollInputVarsInputVarsToRoll
+    {
+        get;
+        set;
+    }
+
+    public int MVecTexGenInstructions
+    {
+        get;
+        set;
+    }
+
+    public int MVecCompMatIncludes
+    {
+        get;
+        set;
+    }
+
+    public int MVecCompositeInputContainers
+    {
+        get;
+        set;
+    }
+
+    public int MVecMatchFilters
+    {
+        get;
+        set;
+    }
+
+    public int MVecPropertyMutators
+    {
+        get;
+        set;
+    }
+
+    public int MOwnerOnlyPredNetBoolVariables
+    {
+        get;
+        set;
+    }
+
+    public int MOwnerOnlyPredNetByteVariables
+    {
+        get;
+        set;
+    }
+
+    public int MOwnerOnlyPredNetFloatVariables
+    {
+        get;
+        set;
+    }
+
+    public int MOwnerOnlyPredNetGlobalSymbolVariables
+    {
+        get;
+        set;
+    }
+
+    public int MOwnerOnlyPredNetIntVariables
+    {
+        get;
+        set;
+    }
+
+    public int MOwnerOnlyPredNetQuaternionVariables
+    {
+        get;
+        set;
+    }
+
+    public int MOwnerOnlyPredNetUInt16Variables
+    {
+        get;
+        set;
+    }
+
+    public int MOwnerOnlyPredNetUInt32Variables
+    {
+        get;
+        set;
+    }
+
+    public int MOwnerOnlyPredNetUInt64Variables
+    {
+        get;
+        set;
+    }
+
+    public int MOwnerOnlyPredNetVectorVariables
+    {
+        get;
+        set;
+    }
+
+    public int MPredNetBoolVariables
+    {
+        get;
+        set;
+    }
+
+    public int MPredNetByteVariables
+    {
+        get;
+        set;
+    }
+
+    public int MPredNetFloatVariables
+    {
+        get;
+        set;
+    }
+
+    public int MPredNetGlobalSymbolVariables
+    {
+        get;
+        set;
+    }
+
+    public int MPredNetIntVariables
+    {
+        get;
+        set;
+    }
+
+    public int MPredNetQuaternionVariables
+    {
+        get;
+        set;
+    }
+
+    public int MPredNetUInt16Variables
+    {
+        get;
+        set;
+    }
+
+    public int MPredNetUInt32Variables
+    {
+        get;
+        set;
+    }
+
+    public int MPredNetUInt64Variables
+    {
+        get;
+        set;
+    }
+
+    public int MPredNetVectorVariables
+    {
+        get;
+        set;
+    }
+
+    public int MFlLastTeleportTime
+    {
+        get;
+        set;
+    }
+
+    public int MnBoolVariablesCount
+    {
+        get;
+        set;
+    }
+
+    public int MnOwnerOnlyBoolVariablesCount
+    {
+        get;
+        set;
+    }
+
+    public int MnRandomSeedOffset
+    {
+        get;
+        set;
+    }
+
+    public int MFlFovRate
+    {
+        get;
+        set;
+    }
+
+    public int MFlFovTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlLastShotFov
+    {
+        get;
+        set;
+    }
+
+    public int MhZoomOwner
+    {
+        get;
+        set;
+    }
+
+    public int MiFov
+    {
+        get;
+        set;
+    }
+
+    public int MiFovStart
+    {
+        get;
+        set;
+    }
+
+    public int MChildModelName
+    {
+        get;
+        set;
+    }
+
+    public int MKvModelStateChoices
+    {
+        get;
+        set;
+    }
+
+    public int MModelName
+    {
+        get;
+        set;
+    }
+
+    public int MbEnableChildModel
+    {
+        get;
+        set;
+    }
+
+    public int MFlCycle
+    {
+        get;
+        set;
+    }
+
+    public int MnSequenceIndex
+    {
+        get;
+        set;
+    }
+
+    public int MVecCompositeMaterialAssemblyProcedures
+    {
+        get;
+        set;
+    }
+
+    public int MVecCompositeMaterials
+    {
+        get;
+        set;
+    }
+
+    public int MbExposeExternally
+    {
+        get;
+        set;
+    }
+
+    public int MnCompositeMaterialInputContainerSourceType
+    {
+        get;
+        set;
+    }
+
+    public int MStrAlias
+    {
+        get;
+        set;
+    }
+
+    public int MStrAttrName
+    {
+        get;
+        set;
+    }
+
+    public int MStrAttrNameForVar
+    {
+        get;
+        set;
+    }
+
+    public int MStrSpecificContainerMaterial
+    {
+        get;
+        set;
+    }
+
+    public int MVecLooseVariables
+    {
+        get;
+        set;
+    }
+
+    public int MbExposedVariableIsFixedRange
+    {
+        get;
+        set;
+    }
+
+    public int MbHasFloatBounds
+    {
+        get;
+        set;
+    }
+
+    public int MbValueBoolean
+    {
+        get;
+        set;
+    }
+
+    public int McValueColor4
+    {
+        get;
+        set;
+    }
+
+    public int MFlValueFloatW
+    {
+        get;
+        set;
+    }
+
+    public int MFlValueFloatWMax
+    {
+        get;
+        set;
+    }
+
+    public int MFlValueFloatWMin
+    {
+        get;
+        set;
+    }
+
+    public int MFlValueFloatX
+    {
+        get;
+        set;
+    }
+
+    public int MFlValueFloatXMax
+    {
+        get;
+        set;
+    }
+
+    public int MFlValueFloatXMin
+    {
+        get;
+        set;
+    }
+
+    public int MFlValueFloatY
+    {
+        get;
+        set;
+    }
+
+    public int MFlValueFloatYMax
+    {
+        get;
+        set;
+    }
+
+    public int MFlValueFloatYMin
+    {
+        get;
+        set;
+    }
+
+    public int MFlValueFloatZ
+    {
+        get;
+        set;
+    }
+
+    public int MFlValueFloatZMax
+    {
+        get;
+        set;
+    }
+
+    public int MFlValueFloatZMin
+    {
+        get;
+        set;
+    }
+
+    public int MnTextureType
+    {
+        get;
+        set;
+    }
+
+    public int MnValueIntW
+    {
+        get;
+        set;
+    }
+
+    public int MnValueIntX
+    {
+        get;
+        set;
+    }
+
+    public int MnValueIntY
+    {
+        get;
+        set;
+    }
+
+    public int MnValueIntZ
+    {
+        get;
+        set;
+    }
+
+    public int MnValueSystemVar
+    {
+        get;
+        set;
+    }
+
+    public int MnVariableType
+    {
+        get;
+        set;
+    }
+
+    public int MStrExposedFriendlyGroupName
+    {
+        get;
+        set;
+    }
+
+    public int MStrExposedFriendlyName
+    {
+        get;
+        set;
+    }
+
+    public int MStrExposedHiddenWhenTrue
+    {
+        get;
+        set;
+    }
+
+    public int MStrExposedVisibleWhenTrue
+    {
+        get;
+        set;
+    }
+
+    public int MStrName
+    {
+        get;
+        set;
+    }
+
+    public int MStrResourceMaterial
+    {
+        get;
+        set;
+    }
+
+    public int MStrString
+    {
+        get;
+        set;
+    }
+
+    public int MStrTextureCompilationVtexTemplate
+    {
+        get;
+        set;
+    }
+
+    public int MStrTextureContentAssetPath
+    {
+        get;
+        set;
+    }
+
+    public int MStrTextureRuntimeResourcePath
+    {
+        get;
+        set;
+    }
+
+    public int MnCompositeMaterialMatchFilterType
+    {
+        get;
+        set;
+    }
+
+    public int MStrMatchFilter
+    {
+        get;
+        set;
+    }
+
+    public int MStrMatchValue
+    {
+        get;
+        set;
+    }
+
+    public int MFinalKVs
+    {
+        get;
+        set;
+    }
+
+    public int MPreGenerationKVs
+    {
+        get;
+        set;
+    }
+
+    public int MTargetKVs
+    {
+        get;
+        set;
+    }
+
+    public int MVecGeneratedTextures
+    {
+        get;
+        set;
+    }
+
+    public int MDuration
+    {
+        get;
+        set;
+    }
+
+    public int MnWorldGroupId
+    {
+        get;
+        set;
+    }
+
+    public int MTimescale
+    {
+        get;
+        set;
+    }
+
+    public int MTimestamp
+    {
+        get;
+        set;
+    }
+
+    public int MId
+    {
+        get;
+        set;
+    }
+
+    public int MValues
+    {
+        get;
+        set;
+    }
+
+    public int MbSpotted
+    {
+        get;
+        set;
+    }
+
+    public int MbSpottedByMask
+    {
+        get;
+        set;
+    }
+
+    public int MStrBitmapName
+    {
+        get;
+        set;
+    }
+
+    public int MbAbandonAllowsSurrender
+    {
+        get;
+        set;
+    }
+
+    public int MbAbandonOffersInstantSurrender
+    {
+        get;
+        set;
+    }
+
+    public int MbCanControlObservedBot
+    {
+        get;
+        set;
+    }
+
+    public int MbCannotBeKicked
+    {
+        get;
+        set;
+    }
+
+    public int MbControllingBot
+    {
+        get;
+        set;
+    }
+
+    public int MbDisconnection1MinWarningPrinted
+    {
+        get;
+        set;
+    }
+
+    public int MbEverFullyConnected
+    {
+        get;
+        set;
+    }
+
+    public int MbEverPlayedOnTeam
+    {
+        get;
+        set;
+    }
+
+    public int MbHasBeenControlledByPlayerThisRound
+    {
+        get;
+        set;
+    }
+
+    public int MbHasCommunicationAbuseMute
+    {
+        get;
+        set;
+    }
+
+    public int MbHasControlledBotThisRound
+    {
+        get;
+        set;
+    }
+
+    public int MbIsPlayerNameDirty
+    {
+        get;
+        set;
+    }
+
+    public int MbMvpNoMusic
+    {
+        get;
+        set;
+    }
+
+    public int MbPawnHasDefuser
+    {
+        get;
+        set;
+    }
+
+    public int MbPawnHasHelmet
+    {
+        get;
+        set;
+    }
+
+    public int MbPawnIsAlive
+    {
+        get;
+        set;
+    }
+
+    public int MbScoreReported
+    {
+        get;
+        set;
+    }
+
+    public int MeMvpReason
+    {
+        get;
+        set;
+    }
+
+    public int MFlForceTeamTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlPreviousForceJoinTeamTime
+    {
+        get;
+        set;
+    }
+
+    public int MhObserverPawn
+    {
+        get;
+        set;
+    }
+
+    public int MhOriginalControllerOfCurrentPawn
+    {
+        get;
+        set;
+    }
+
+    public int MhPlayerPawn
+    {
+        get;
+        set;
+    }
+
+    public int MiCoachingTeam
+    {
+        get;
+        set;
+    }
+
+    public int MiCompTeammateColor
+    {
+        get;
+        set;
+    }
+
+    public int MiCompetitiveRankType
+    {
+        get;
+        set;
+    }
+
+    public int MiCompetitiveRanking
+    {
+        get;
+        set;
+    }
+
+    public int MiCompetitiveRankingPredictedLoss
+    {
+        get;
+        set;
+    }
+
+    public int MiCompetitiveRankingPredictedTie
+    {
+        get;
+        set;
+    }
+
+    public int MiCompetitiveRankingPredictedWin
+    {
+        get;
+        set;
+    }
+
+    public int MiCompetitiveWins
+    {
+        get;
+        set;
+    }
+
+    public int MiDraftIndex
+    {
+        get;
+        set;
+    }
+
+    public int MiMvPs
+    {
+        get;
+        set;
+    }
+
+    public int MiMusicKitId
+    {
+        get;
+        set;
+    }
+
+    public int MiMusicKitMvPs
+    {
+        get;
+        set;
+    }
+
+    public int MiPawnArmor
+    {
+        get;
+        set;
+    }
+
+    public int MiPawnBotDifficulty
+    {
+        get;
+        set;
+    }
+
+    public int MiPawnHealth
+    {
+        get;
+        set;
+    }
+
+    public int MiPawnLifetimeEnd
+    {
+        get;
+        set;
+    }
+
+    public int MiPawnLifetimeStart
+    {
+        get;
+        set;
+    }
+
+    public int MiPendingTeamNum
+    {
+        get;
+        set;
+    }
+
+    public int MiPing
+    {
+        get;
+        set;
+    }
+
+    public int MMsQueuedModeDisconnectionTimestamp
+    {
+        get;
+        set;
+    }
+
+    public int MnBotsControlledThisRound
+    {
+        get;
+        set;
+    }
+
+    public int MnDisconnectionTick
+    {
+        get;
+        set;
+    }
+
+    public int MnEndMatchNextMapVote
+    {
+        get;
+        set;
+    }
+
+    public int MnPawnCharacterDefIndex
+    {
+        get;
+        set;
+    }
+
+    public int MnPlayerDominated
+    {
+        get;
+        set;
+    }
+
+    public int MnPlayerDominatingMe
+    {
+        get;
+        set;
+    }
+
+    public int MnQuestProgressReason
+    {
+        get;
+        set;
+    }
+
+    public int MpActionTrackingServices
+    {
+        get;
+        set;
+    }
+
+    public int MpDamageServices
+    {
+        get;
+        set;
+    }
+
+    public int MpInGameMoneyServices
+    {
+        get;
+        set;
+    }
+
+    public int MpInventoryServices
+    {
+        get;
+        set;
+    }
+
+    public int MsSanitizedPlayerName
+    {
+        get;
+        set;
+    }
+
+    public int MSzClan
+    {
+        get;
+        set;
+    }
+
+    public int MSzCrosshairCodes
+    {
+        get;
+        set;
+    }
+
+    public int MUiAbandonRecordedReason
+    {
+        get;
+        set;
+    }
+
+    public int MUnActiveQuestId
+    {
+        get;
+        set;
+    }
+
+    public int MUnPlayerTvControlFlags
+    {
+        get;
+        set;
+    }
+
+    public int MVecKills
+    {
+        get;
+        set;
+    }
+
+    public int MTransforms
+    {
+        get;
+        set;
+    }
+
+    public int MbDirty
+    {
+        get;
+        set;
+    }
+
+    public int MbPrevHelmet
+    {
+        get;
+        set;
+    }
+
+    public int MhItem
+    {
+        get;
+        set;
+    }
+
+    public int MnCost
+    {
+        get;
+        set;
+    }
+
+    public int MnPrevArmor
+    {
+        get;
+        set;
+    }
+
+    public int MUnDefIdx
+    {
+        get;
+        set;
+    }
+
+    public int MnCollisionFunctionMask
+    {
+        get;
+        set;
+    }
+
+    public int MnCollisionGroup
+    {
+        get;
+        set;
+    }
+
+    public int MnEntityId
+    {
+        get;
+        set;
+    }
+
+    public int MnHierarchyId
+    {
+        get;
+        set;
+    }
+
+    public int MnInteractsAs
+    {
+        get;
+        set;
+    }
+
+    public int MnInteractsExclude
+    {
+        get;
+        set;
+    }
+
+    public int MnInteractsWith
+    {
+        get;
+        set;
+    }
+
+    public int MnOwnerId
+    {
+        get;
+        set;
+    }
+
+    public int NIndex
+    {
+        get;
+        set;
+    }
+
+    public int NType
+    {
+        get;
+        set;
+    }
+
+    public int QAngle
+    {
+        get;
+        set;
+    }
+
+    public int MnCount
+    {
+        get;
+        set;
+    }
+
+    public int MnItemDefIndex
+    {
+        get;
+        set;
+    }
+
+    public int MWeaponPurchases
+    {
+        get;
+        set;
+    }
+
+    public int LocalBits
+    {
+        get;
+        set;
+    }
+
+    public int LocalSound
+    {
+        get;
+        set;
+    }
+
+    public int SoundEventHash
+    {
+        get;
+        set;
+    }
+
+    public int SoundscapeEntityListIndex
+    {
+        get;
+        set;
+    }
+
+    public int SoundscapeIndex
+    {
+        get;
+        set;
+    }
+
+    public int HdrColorScale
+    {
+        get;
+        set;
+    }
+
+    public int Blend
+    {
+        get;
+        set;
+    }
+
+    public int Blendtobackground
+    {
+        get;
+        set;
+    }
+
+    public int ColorPrimary
+    {
+        get;
+        set;
+    }
+
+    public int ColorPrimaryLerpTo
+    {
+        get;
+        set;
+    }
+
+    public int ColorSecondary
+    {
+        get;
+        set;
+    }
+
+    public int ColorSecondaryLerpTo
+    {
+        get;
+        set;
+    }
+
+    public int DirPrimary
+    {
+        get;
+        set;
+    }
+
+    public int Duration
+    {
+        get;
+        set;
+    }
+
+    public int Enable
+    {
+        get;
+        set;
+    }
+
+    public int End
+    {
+        get;
+        set;
+    }
+
+    public int EndLerpTo
+    {
+        get;
+        set;
+    }
+
+    public int Exponent
+    {
+        get;
+        set;
+    }
+
+    public int Farz
+    {
+        get;
+        set;
+    }
+
+    public int Lerptime
+    {
+        get;
+        set;
+    }
+
+    public int Locallightscale
+    {
+        get;
+        set;
+    }
+
+    public int MbNoReflectionFog
+    {
+        get;
+        set;
+    }
+
+    public int MbPadding
+    {
+        get;
+        set;
+    }
+
+    public int Maxdensity
+    {
+        get;
+        set;
+    }
+
+    public int MaxdensityLerpTo
+    {
+        get;
+        set;
+    }
+
+    public int Scattering
+    {
+        get;
+        set;
+    }
+
+    public int SkyboxFogFactor
+    {
+        get;
+        set;
+    }
+
+    public int SkyboxFogFactorLerpTo
+    {
+        get;
+        set;
+    }
+
+    public int Start
+    {
+        get;
+        set;
+    }
+
+    public int StartLerpTo
+    {
+        get;
+        set;
+    }
+
+    public int MShatterPanelMode
+    {
+        get;
+        set;
+    }
+
+    public int MSurfacePropStringToken
+    {
+        get;
+        set;
+    }
+
+    public int MbParentFrozen
+    {
+        get;
+        set;
+    }
+
+    public int MFlGlassHalfThickness
+    {
+        get;
+        set;
+    }
+
+    public int MnModelId
+    {
+        get;
+        set;
+    }
+
+    public int MSolid
+    {
+        get;
+        set;
+    }
+
+    public int MVecPanelSize
+    {
+        get;
+        set;
+    }
+
+    public int MVecPanelVertices
+    {
+        get;
+        set;
+    }
+
+    public int MVecStressPositionA
+    {
+        get;
+        set;
+    }
+
+    public int MVecStressPositionB
+    {
+        get;
+        set;
+    }
+
+    public int BClip3DSkyBoxNearToWorldFar
+    {
+        get;
+        set;
+    }
+
+    public int FlClip3DSkyBoxNearToWorldFarOffset
+    {
+        get;
+        set;
+    }
+
+    public int Fog
+    {
+        get;
+        set;
+    }
+
+    public int MnWorldGroupId
+    {
+        get;
+        set;
+    }
+
+    public int Origin
+    {
+        get;
+        set;
+    }
+
+    public int Scale
+    {
+        get;
+        set;
+    }
+
+    public int MiNumRoundKills
+    {
+        get;
+        set;
+    }
+
+    public int MiNumRoundKillsHeadshots
+    {
+        get;
+        set;
+    }
+
+    public int MMatchStats
+    {
+        get;
+        set;
+    }
+
+    public int MPerRoundStats
+    {
+        get;
+        set;
+    }
+
+    public int MUnTotalRoundDamageDealt
+    {
+        get;
+        set;
+    }
+
+    public int MDamageList
+    {
+        get;
+        set;
+    }
+
+    public int MnSendUpdate
+    {
+        get;
+        set;
+    }
+
+    public int MiAccount
+    {
+        get;
+        set;
+    }
+
+    public int MiCashSpentThisRound
+    {
+        get;
+        set;
+    }
+
+    public int MiTotalCashSpent
+    {
+        get;
+        set;
+    }
+
+    public int MnPreviousAccount
+    {
+        get;
+        set;
+    }
+
+    public int MnPersonaDataPublicCommendsFriendly
+    {
+        get;
+        set;
+    }
+
+    public int MnPersonaDataPublicCommendsLeader
+    {
+        get;
+        set;
+    }
+
+    public int MnPersonaDataPublicCommendsTeacher
+    {
+        get;
+        set;
+    }
+
+    public int MnPersonaDataPublicLevel
+    {
+        get;
+        set;
+    }
+
+    public int MnPersonaDataXpTrailLevel
+    {
+        get;
+        set;
+    }
+
+    public int MRank
+    {
+        get;
+        set;
+    }
+
+    public int MUnMusicId
+    {
+        get;
+        set;
+    }
+
+    public int MVecServerAuthoritativeWeaponSlots
+    {
+        get;
+        set;
+    }
+
+    public int MhLastWeaponBeforeC4AutoSwitch
+    {
+        get;
+        set;
+    }
+
+    public int MWeaponPurchasesThisMatch
+    {
+        get;
+        set;
+    }
+
+    public int MWeaponPurchasesThisRound
+    {
+        get;
+        set;
+    }
+
+    public int MTotalHitsOnServer
+    {
+        get;
+        set;
+    }
+
+    public int MVecSellbackPurchaseEntries
+    {
+        get;
+        set;
+    }
+
+    public int MAttributes
+    {
+        get;
+        set;
+    }
+
+    public int MpManager
+    {
+        get;
+        set;
+    }
+
+    public int MhCarriedHostage
+    {
+        get;
+        set;
+    }
+
+    public int MhCarriedHostageProp
+    {
+        get;
+        set;
+    }
+
+    public int MbHasDefuser
+    {
+        get;
+        set;
+    }
+
+    public int MbHasHeavyArmor
+    {
+        get;
+        set;
+    }
+
+    public int MbHasHelmet
+    {
+        get;
+        set;
+    }
+
+    public int MStuckLast
+    {
+        get;
+        set;
+    }
+
+    public int MbDesiresDuck
+    {
+        get;
+        set;
+    }
+
+    public int MbDuckOverride
+    {
+        get;
+        set;
+    }
+
+    public int MbHasWalkMovedSinceLastJump
+    {
+        get;
+        set;
+    }
+
+    public int MbInStuckTest
+    {
+        get;
+        set;
+    }
+
+    public int MbOldJumpPressed
+    {
+        get;
+        set;
+    }
+
+    public int MbSpeedCropped
+    {
+        get;
+        set;
+    }
+
+    public int MDuckUntilOnGround
+    {
+        get;
+        set;
+    }
+
+    public int MfStashGrenadeParameterWhen
+    {
+        get;
+        set;
+    }
+
+    public int MFlDuckAmount
+    {
+        get;
+        set;
+    }
+
+    public int MFlDuckOffset
+    {
+        get;
+        set;
+    }
+
+    public int MFlDuckSpeed
+    {
+        get;
+        set;
+    }
+
+    public int MFlHeightAtJumpStart
+    {
+        get;
+        set;
+    }
+
+    public int MFlJumpPressedTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlJumpUntil
+    {
+        get;
+        set;
+    }
+
+    public int MFlJumpVel
+    {
+        get;
+        set;
+    }
+
+    public int MFlLastDuckTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlMaxFallVelocity
+    {
+        get;
+        set;
+    }
+
+    public int MFlMaxJumpHeightThisJump
+    {
+        get;
+        set;
+    }
+
+    public int MFlOffsetTickCompleteTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlOffsetTickStashedSpeed
+    {
+        get;
+        set;
+    }
+
+    public int MFlStamina
+    {
+        get;
+        set;
+    }
+
+    public int MFlStuckCheckTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlWaterEntryTime
+    {
+        get;
+        set;
+    }
+
+    public int MnButtonDownMaskPrev
+    {
+        get;
+        set;
+    }
+
+    public int MnDuckJumpTimeMsecs
+    {
+        get;
+        set;
+    }
+
+    public int MnDuckTimeMsecs
+    {
+        get;
+        set;
+    }
+
+    public int MnGameCodeHasMovedPlayerAfterCommand
+    {
+        get;
+        set;
+    }
+
+    public int MnJumpTimeMsecs
+    {
+        get;
+        set;
+    }
+
+    public int MnLadderSurfacePropIndex
+    {
+        get;
+        set;
+    }
+
+    public int MnOldWaterLevel
+    {
+        get;
+        set;
+    }
+
+    public int MnTraceCount
+    {
+        get;
+        set;
+    }
+
+    public int MVecForward
+    {
+        get;
+        set;
+    }
+
+    public int MVecLadderNormal
+    {
+        get;
+        set;
+    }
+
+    public int MVecLastPositionAtFullCrouchSpeed
+    {
+        get;
+        set;
+    }
+
+    public int MVecUp
+    {
+        get;
+        set;
+    }
+
+    public int MhPlayerPing
+    {
+        get;
+        set;
+    }
+
+    public int MhViewModel
+    {
+        get;
+        set;
+    }
+
+    public int MbIsHoldingLookAtWeapon
+    {
+        get;
+        set;
+    }
+
+    public int MbIsLookingAtWeapon
+    {
+        get;
+        set;
+    }
+
+    public int MFlNextAttack
+    {
+        get;
+        set;
+    }
+
+    public int MnOldInputHistoryCount
+    {
+        get;
+        set;
+    }
+
+    public int MnOldShootPositionHistoryCount
+    {
+        get;
+        set;
+    }
+
+    public int MDefaultLoadoutSlot
+    {
+        get;
+        set;
+    }
+
+    public int MGearSlot
+    {
+        get;
+        set;
+    }
+
+    public int MGearSlotPosition
+    {
+        get;
+        set;
+    }
+
+    public int MWeaponCategory
+    {
+        get;
+        set;
+    }
+
+    public int MWeaponType
+    {
+        get;
+        set;
+    }
+
+    public int MAngPivotAngle
+    {
+        get;
+        set;
+    }
+
+    public int MbCannotShootUnderwater
+    {
+        get;
+        set;
+    }
+
+    public int MbHasBurstMode
+    {
+        get;
+        set;
+    }
+
+    public int MbHideViewModelWhenZoomed
+    {
+        get;
+        set;
+    }
+
+    public int MbIsFullAuto
+    {
+        get;
+        set;
+    }
+
+    public int MbIsRevolver
+    {
+        get;
+        set;
+    }
+
+    public int MbMeleeWeapon
+    {
+        get;
+        set;
+    }
+
+    public int MbUnzoomsAfterShot
+    {
+        get;
+        set;
+    }
+
+    public int MeSilencerType
+    {
+        get;
+        set;
+    }
+
+    public int MFlArmorRatio
+    {
+        get;
+        set;
+    }
+
+    public int MFlAttackMovespeedFactor
+    {
+        get;
+        set;
+    }
+
+    public int MFlBotAudibleRange
+    {
+        get;
+        set;
+    }
+
+    public int MFlCycleTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlFlinchVelocityModifierLarge
+    {
+        get;
+        set;
+    }
+
+    public int MFlFlinchVelocityModifierSmall
+    {
+        get;
+        set;
+    }
+
+    public int MFlHeadshotMultiplier
+    {
+        get;
+        set;
+    }
+
+    public int MFlHeatPerShot
+    {
+        get;
+        set;
+    }
+
+    public int MFlIdleInterval
+    {
+        get;
+        set;
+    }
+
+    public int MFlInaccuracyAltSoundThreshold
+    {
+        get;
+        set;
+    }
+
+    public int MFlInaccuracyCrouch
+    {
+        get;
+        set;
+    }
+
+    public int MFlInaccuracyFire
+    {
+        get;
+        set;
+    }
+
+    public int MFlInaccuracyJump
+    {
+        get;
+        set;
+    }
+
+    public int MFlInaccuracyJumpApex
+    {
+        get;
+        set;
+    }
+
+    public int MFlInaccuracyJumpInitial
+    {
+        get;
+        set;
+    }
+
+    public int MFlInaccuracyLadder
+    {
+        get;
+        set;
+    }
+
+    public int MFlInaccuracyLand
+    {
+        get;
+        set;
+    }
+
+    public int MFlInaccuracyMove
+    {
+        get;
+        set;
+    }
+
+    public int MFlInaccuracyPitchShift
+    {
+        get;
+        set;
+    }
+
+    public int MFlInaccuracyReload
+    {
+        get;
+        set;
+    }
+
+    public int MFlInaccuracyStand
+    {
+        get;
+        set;
+    }
+
+    public int MFlIronSightFov
+    {
+        get;
+        set;
+    }
+
+    public int MFlIronSightLooseness
+    {
+        get;
+        set;
+    }
+
+    public int MFlIronSightPivotForward
+    {
+        get;
+        set;
+    }
+
+    public int MFlIronSightPullUpSpeed
+    {
+        get;
+        set;
+    }
+
+    public int MFlIronSightPutDownSpeed
+    {
+        get;
+        set;
+    }
+
+    public int MFlMaxSpeed
+    {
+        get;
+        set;
+    }
+
+    public int MFlPenetration
+    {
+        get;
+        set;
+    }
+
+    public int MFlRange
+    {
+        get;
+        set;
+    }
+
+    public int MFlRangeModifier
+    {
+        get;
+        set;
+    }
+
+    public int MFlRecoilAngle
+    {
+        get;
+        set;
+    }
+
+    public int MFlRecoilAngleVariance
+    {
+        get;
+        set;
+    }
+
+    public int MFlRecoilMagnitude
+    {
+        get;
+        set;
+    }
+
+    public int MFlRecoilMagnitudeVariance
+    {
+        get;
+        set;
+    }
+
+    public int MFlRecoveryTimeCrouch
+    {
+        get;
+        set;
+    }
+
+    public int MFlRecoveryTimeCrouchFinal
+    {
+        get;
+        set;
+    }
+
+    public int MFlRecoveryTimeStand
+    {
+        get;
+        set;
+    }
+
+    public int MFlRecoveryTimeStandFinal
+    {
+        get;
+        set;
+    }
+
+    public int MFlSpread
+    {
+        get;
+        set;
+    }
+
+    public int MFlThrowVelocity
+    {
+        get;
+        set;
+    }
+
+    public int MFlTimeToIdleAfterFire
+    {
+        get;
+        set;
+    }
+
+    public int MFlZoomTime0
+    {
+        get;
+        set;
+    }
+
+    public int MFlZoomTime1
+    {
+        get;
+        set;
+    }
+
+    public int MFlZoomTime2
+    {
+        get;
+        set;
+    }
+
+    public int MnCrosshairDeltaDistance
+    {
+        get;
+        set;
+    }
+
+    public int MnCrosshairMinDistance
+    {
+        get;
+        set;
+    }
+
+    public int MnDamage
+    {
+        get;
+        set;
+    }
+
+    public int MnKillAward
+    {
+        get;
+        set;
+    }
+
+    public int MnNumBullets
+    {
+        get;
+        set;
+    }
+
+    public int MnPrice
+    {
+        get;
+        set;
+    }
+
+    public int MnPrimaryReserveAmmoMax
+    {
+        get;
+        set;
+    }
+
+    public int MnRecoilSeed
+    {
+        get;
+        set;
+    }
+
+    public int MnRecoveryTransitionEndBullet
+    {
+        get;
+        set;
+    }
+
+    public int MnRecoveryTransitionStartBullet
+    {
+        get;
+        set;
+    }
+
+    public int MnSecondaryReserveAmmoMax
+    {
+        get;
+        set;
+    }
+
+    public int MnSpreadSeed
+    {
+        get;
+        set;
+    }
+
+    public int MnTracerFrequency
+    {
+        get;
+        set;
+    }
+
+    public int MnZoomFov1
+    {
+        get;
+        set;
+    }
+
+    public int MnZoomFov2
+    {
+        get;
+        set;
+    }
+
+    public int MnZoomLevels
+    {
+        get;
+        set;
+    }
+
+    public int MsWrongTeamMsg
+    {
+        get;
+        set;
+    }
+
+    public int MSzAimsightLensMaskModel
+    {
+        get;
+        set;
+    }
+
+    public int MSzAnimClass
+    {
+        get;
+        set;
+    }
+
+    public int MSzAnimExtension
+    {
+        get;
+        set;
+    }
+
+    public int MSzEjectBrassEffect
+    {
+        get;
+        set;
+    }
+
+    public int MSzHeatEffect
+    {
+        get;
+        set;
+    }
+
+    public int MSzMagazineModel
+    {
+        get;
+        set;
+    }
+
+    public int MSzMuzzleFlashParticleAlt
+    {
+        get;
+        set;
+    }
+
+    public int MSzMuzzleFlashThirdPersonParticle
+    {
+        get;
+        set;
+    }
+
+    public int MSzMuzzleFlashThirdPersonParticleAlt
+    {
+        get;
+        set;
+    }
+
+    public int MSzName
+    {
+        get;
+        set;
+    }
+
+    public int MSzPlayerModel
+    {
+        get;
+        set;
+    }
+
+    public int MSzTracerParticle
+    {
+        get;
+        set;
+    }
+
+    public int MSzUseRadioSubtitle
+    {
+        get;
+        set;
+    }
+
+    public int MSzViewModel
+    {
+        get;
+        set;
+    }
+
+    public int MSzWorldDroppedModel
+    {
+        get;
+        set;
+    }
+
+    public int MVecIronSightEyePos
+    {
+        get;
+        set;
+    }
+
+    public int MCachedResults
+    {
+        get;
+        set;
+    }
+
+    public int MProviderType
+    {
+        get;
+        set;
+    }
+
+    public int MProviders
+    {
+        get;
+        set;
+    }
+
+    public int MbPreventLoopback
+    {
+        get;
+        set;
+    }
+
+    public int MhOuter
+    {
+        get;
+        set;
+    }
+
+    public int MiReapplyProvisionParity
+    {
+        get;
+        set;
+    }
+
+    public int MCollisionGroup
+    {
+        get;
+        set;
+    }
+
+    public int MCollisionAttribute
+    {
+        get;
+        set;
+    }
+
+    public int MFlBoundingRadius
+    {
+        get;
+        set;
+    }
+
+    public int MFlCapsuleRadius
+    {
+        get;
+        set;
+    }
+
+    public int MnEnablePhysics
+    {
+        get;
+        set;
+    }
+
+    public int MnSolidType
+    {
+        get;
+        set;
+    }
+
+    public int MnSurroundType
+    {
+        get;
+        set;
+    }
+
+    public int MTriggerBloat
+    {
+        get;
+        set;
+    }
+
+    public int MUsSolidFlags
+    {
+        get;
+        set;
+    }
+
+    public int MvCapsuleCenter1
+    {
+        get;
+        set;
+    }
+
+    public int MvCapsuleCenter2
+    {
+        get;
+        set;
+    }
+
+    public int MVecMaxs
+    {
+        get;
+        set;
+    }
+
+    public int MVecMins
+    {
+        get;
+        set;
+    }
+
+    public int MVecSpecifiedSurroundingMaxs
+    {
+        get;
+        set;
+    }
+
+    public int MVecSpecifiedSurroundingMins
+    {
+        get;
+        set;
+    }
+
+    public int MVecSurroundingMaxs
+    {
+        get;
+        set;
+    }
+
+    public int MVecSurroundingMins
+    {
+        get;
+        set;
+    }
+
+    public int MkVthumbnail
+    {
+        get;
+        set;
+    }
+
+    public int MPoints
+    {
+        get;
+        set;
+    }
+
+    public int MDamagerXuid
+    {
+        get;
+        set;
+    }
+
+    public int MPlayerDamager
+    {
+        get;
+        set;
+    }
+
+    public int MPlayerRecipient
+    {
+        get;
+        set;
+    }
+
+    public int MRecipientXuid
+    {
+        get;
+        set;
+    }
+
+    public int MbIsOtherEnemy
+    {
+        get;
+        set;
+    }
+
+    public int MhPlayerControllerDamager
+    {
+        get;
+        set;
+    }
+
+    public int MhPlayerControllerRecipient
+    {
+        get;
+        set;
+    }
+
+    public int MiActualHealthRemoved
+    {
+        get;
+        set;
+    }
+
+    public int MiDamage
+    {
+        get;
+        set;
+    }
+
+    public int MiLastBulletUpdate
+    {
+        get;
+        set;
+    }
+
+    public int MiNumHits
+    {
+        get;
+        set;
+    }
+
+    public int MKillType
+    {
+        get;
+        set;
+    }
+
+    public int MSzPlayerDamagerName
+    {
+        get;
+        set;
+    }
+
+    public int MSzPlayerRecipientName
+    {
+        get;
+        set;
+    }
+
+    public int MbSetBonus
+    {
+        get;
+        set;
+    }
+
+    public int MFlInitialValue
+    {
+        get;
+        set;
+    }
+
+    public int MFlValue
+    {
+        get;
+        set;
+    }
+
+    public int MiAttributeDefinitionIndex
+    {
+        get;
+        set;
+    }
+
+    public int MnRefundableCurrency
+    {
+        get;
+        set;
+    }
+
+    public int MfFlags
+    {
+        get;
+        set;
+    }
+
+    public int MFlMagnitude
+    {
+        get;
+        set;
+    }
+
+    public int MFlScale
+    {
+        get;
+        set;
+    }
+
+    public int MhEntity
+    {
+        get;
+        set;
+    }
+
+    public int MhOtherEntity
+    {
+        get;
+        set;
+    }
+
+    public int MiEffectName
+    {
+        get;
+        set;
+    }
+
+    public int MnAttachmentIndex
+    {
+        get;
+        set;
+    }
+
+    public int MnAttachmentName
+    {
+        get;
+        set;
+    }
+
+    public int MnColor
+    {
+        get;
+        set;
+    }
+
+    public int MnDamageType
+    {
+        get;
+        set;
+    }
+
+    public int MnEffectIndex
+    {
+        get;
+        set;
+    }
+
+    public int MnExplosionType
+    {
+        get;
+        set;
+    }
+
+    public int MnHitBox
+    {
+        get;
+        set;
+    }
+
+    public int MnMaterial
+    {
+        get;
+        set;
+    }
+
+    public int MnPenetrate
+    {
+        get;
+        set;
+    }
+
+    public int MnSurfaceProp
+    {
+        get;
+        set;
+    }
+
+    public int MvAngles
+    {
+        get;
+        set;
+    }
+
+    public int MvNormal
+    {
+        get;
+        set;
+    }
+
+    public int MvOrigin
+    {
+        get;
+        set;
+    }
+
+    public int MvStart
+    {
+        get;
+        set;
+    }
+
+    public int MPathIndex
+    {
+        get;
+        set;
+    }
+
+    public int MDesignerName
+    {
+        get;
+        set;
+    }
+
+    public int MfDataObjectTypes
+    {
+        get;
+        set;
+    }
+
+    public int MFlags
+    {
+        get;
+        set;
+    }
+
+    public int MName
+    {
+        get;
+        set;
+    }
+
+    public int MNameStringableIndex
+    {
+        get;
+        set;
+    }
+
+    public int MpNextByClass
+    {
+        get;
+        set;
+    }
+
+    public int MpPrev
+    {
+        get;
+        set;
+    }
+
+    public int MpPrevByClass
+    {
+        get;
+        set;
+    }
+
+    public int MWorldGroupId
+    {
+        get;
+        set;
+    }
+
+    public int McScriptComponent
+    {
+        get;
+        set;
+    }
+
+    public int MbVisibleinPvs
+    {
+        get;
+        set;
+    }
+
+    public int MIszPrivateVScripts
+    {
+        get;
+        set;
+    }
+
+    public int MpEntity
+    {
+        get;
+        set;
+    }
+
+    public int MAngAbsRotation
+    {
+        get;
+        set;
+    }
+
+    public int MAngRotation
+    {
+        get;
+        set;
+    }
+
+    public int MbBoneMergeFlex
+    {
+        get;
+        set;
+    }
+
+    public int MbDebugAbsOriginChanges
+    {
+        get;
+        set;
+    }
+
+    public int MbDirtyBoneMergeBoneToRoot
+    {
+        get;
+        set;
+    }
+
+    public int MbDirtyBoneMergeInfo
+    {
+        get;
+        set;
+    }
+
+    public int MbDirtyHierarchy
+    {
+        get;
+        set;
+    }
+
+    public int MbDormant
+    {
+        get;
+        set;
+    }
+
+    public int MbForceParentToBeNetworked
+    {
+        get;
+        set;
+    }
+
+    public int MbNetworkedAnglesChanged
+    {
+        get;
+        set;
+    }
+
+    public int MbNetworkedPositionChanged
+    {
+        get;
+        set;
+    }
+
+    public int MbNetworkedScaleChanged
+    {
+        get;
+        set;
+    }
+
+    public int MbWillBeCallingPostDataUpdate
+    {
+        get;
+        set;
+    }
+
+    public int MFlAbsScale
+    {
+        get;
+        set;
+    }
+
+    public int MFlZOffset
+    {
+        get;
+        set;
+    }
+
+    public int MhParent
+    {
+        get;
+        set;
+    }
+
+    public int MHierarchyAttachName
+    {
+        get;
+        set;
+    }
+
+    public int MnDoNotSetAnimTimeInInvalidatePhysicsCount
+    {
+        get;
+        set;
+    }
+
+    public int MnHierarchicalDepth
+    {
+        get;
+        set;
+    }
+
+    public int MnHierarchyType
+    {
+        get;
+        set;
+    }
+
+    public int MnLatchAbsOrigin
+    {
+        get;
+        set;
+    }
+
+    public int MnParentAttachmentOrBone
+    {
+        get;
+        set;
+    }
+
+    public int MNodeToWorld
+    {
+        get;
+        set;
+    }
+
+    public int MpChild
+    {
+        get;
+        set;
+    }
+
+    public int MpNextSibling
+    {
+        get;
+        set;
+    }
+
+    public int MpOwner
+    {
+        get;
+        set;
+    }
+
+    public int MpParent
+    {
+        get;
+        set;
+    }
+
+    public int MvRenderOrigin
+    {
+        get;
+        set;
+    }
+
+    public int MVecAbsOrigin
+    {
+        get;
+        set;
+    }
+
+    public int MbAnimGraphUpdateEnabled
+    {
+        get;
+        set;
+    }
+
+    public int MbAnimationUpdateScheduled
+    {
+        get;
+        set;
+    }
+
+    public int MbBuiltRagdoll
+    {
+        get;
+        set;
+    }
+
+    public int MbClientRagdoll
+    {
+        get;
+        set;
+    }
+
+    public int MbHasAnimatedMaterialAttributes
+    {
+        get;
+        set;
+    }
+
+    public int MbInitiallyPopulateInterpHistory
+    {
+        get;
+        set;
+    }
+
+    public int MbSuppressAnimEventSounds
+    {
+        get;
+        set;
+    }
+
+    public int MFlMaxSlopeDistance
+    {
+        get;
+        set;
+    }
+
+    public int MnForceBone
+    {
+        get;
+        set;
+    }
+
+    public int MpClientsideRagdoll
+    {
+        get;
+        set;
+    }
+
+    public int MpRagdollPose
+    {
+        get;
+        set;
+    }
+
+    public int MvLastSlopeCheckPos
+    {
+        get;
+        set;
+    }
+
+    public int MVecForce
+    {
+        get;
+        set;
+    }
+
+    public int MbEligibleForScreenHighlight
+    {
+        get;
+        set;
+    }
+
+    public int MbFlashing
+    {
+        get;
+        set;
+    }
+
+    public int MbGlowing
+    {
+        get;
+        set;
+    }
+
+    public int MfGlowColor
+    {
+        get;
+        set;
+    }
+
+    public int MFlGlowStartTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlGlowTime
+    {
+        get;
+        set;
+    }
+
+    public int MGlowColorOverride
+    {
+        get;
+        set;
+    }
+
+    public int MiGlowTeam
+    {
+        get;
+        set;
+    }
+
+    public int MiGlowType
+    {
+        get;
+        set;
+    }
+
+    public int MBvDisabledHitGroups
+    {
+        get;
+        set;
+    }
+
+    public int MRenderAttrName
+    {
+        get;
+        set;
+    }
+
+    public int MTargetEntities
+    {
+        get;
+        set;
+    }
+
+    public int MnResolutionX
+    {
+        get;
+        set;
+    }
+
+    public int MnResolutionY
+    {
+        get;
+        set;
+    }
+
+    public int MnTargetChangeCount
+    {
+        get;
+        set;
+    }
+
+    public int MSzLayoutFileName
+    {
+        get;
+        set;
+    }
+
+    public int MbCreateAsChildSpawnGroup
+    {
+        get;
+        set;
+    }
+
+    public int MbEntitiesSpawned
+    {
+        get;
+        set;
+    }
+
+    public int MbWorldLayerActuallyVisible
+    {
+        get;
+        set;
+    }
+
+    public int MbWorldLayerVisible
+    {
+        get;
+        set;
+    }
+
+    public int MhLayerSpawnGroup
+    {
+        get;
+        set;
+    }
+
+    public int MLayerName
+    {
+        get;
+        set;
+    }
+
+    public int MpOutputOnEntitiesSpawned
+    {
+        get;
+        set;
+    }
+
+    public int MWorldName
+    {
+        get;
+        set;
+    }
+
+    public int MPattern
+    {
+        get;
+        set;
+    }
+
+    public int MSecondaryColor
+    {
+        get;
+        set;
+    }
+
+    public int MSkyAmbientBounce
+    {
+        get;
+        set;
+    }
+
+    public int MSkyColor
+    {
+        get;
+        set;
+    }
+
+    public int MbFlicker
+    {
+        get;
+        set;
+    }
+
+    public int MbMixedShadows
+    {
+        get;
+        set;
+    }
+
+    public int MbPrecomputedFieldsValid
+    {
+        get;
+        set;
+    }
+
+    public int MbRenderDiffuse
+    {
+        get;
+        set;
+    }
+
+    public int MbRenderToCubemaps
+    {
+        get;
+        set;
+    }
+
+    public int MbRenderTransmissive
+    {
+        get;
+        set;
+    }
+
+    public int MbUseSecondaryColor
+    {
+        get;
+        set;
+    }
+
+    public int MbUsesBakedShadowing
+    {
+        get;
+        set;
+    }
+
+    public int MFlAttenuation0
+    {
+        get;
+        set;
+    }
+
+    public int MFlAttenuation1
+    {
+        get;
+        set;
+    }
+
+    public int MFlAttenuation2
+    {
+        get;
+        set;
+    }
+
+    public int MFlBrightnessMult
+    {
+        get;
+        set;
+    }
+
+    public int MFlCapsuleLength
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeMaxDist
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeMinDist
+    {
+        get;
+        set;
+    }
+
+    public int MFlFalloff
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogContributionStength
+    {
+        get;
+        set;
+    }
+
+    public int MFlLightStyleStartTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlMinRoughness
+    {
+        get;
+        set;
+    }
+
+    public int MFlNearClipPlane
+    {
+        get;
+        set;
+    }
+
+    public int MFlOrthoLightHeight
+    {
+        get;
+        set;
+    }
+
+    public int MFlOrthoLightWidth
+    {
+        get;
+        set;
+    }
+
+    public int MFlPhi
+    {
+        get;
+        set;
+    }
+
+    public int MFlPrecomputedMaxRange
+    {
+        get;
+        set;
+    }
+
+    public int MFlShadowCascadeCrossFade
+    {
+        get;
+        set;
+    }
+
+    public int MFlShadowCascadeDistance0
+    {
+        get;
+        set;
+    }
+
+    public int MFlShadowCascadeDistance1
+    {
+        get;
+        set;
+    }
+
+    public int MFlShadowCascadeDistance2
+    {
+        get;
+        set;
+    }
+
+    public int MFlShadowCascadeDistance3
+    {
+        get;
+        set;
+    }
+
+    public int MFlShadowCascadeDistanceFade
+    {
+        get;
+        set;
+    }
+
+    public int MFlShadowFadeMaxDist
+    {
+        get;
+        set;
+    }
+
+    public int MFlShadowFadeMinDist
+    {
+        get;
+        set;
+    }
+
+    public int MFlSkyIntensity
+    {
+        get;
+        set;
+    }
+
+    public int MFlTheta
+    {
+        get;
+        set;
+    }
+
+    public int MhLightCookie
+    {
+        get;
+        set;
+    }
+
+    public int MnBakedShadowIndex
+    {
+        get;
+        set;
+    }
+
+    public int MnCascadeRenderStaticObjects
+    {
+        get;
+        set;
+    }
+
+    public int MnCascades
+    {
+        get;
+        set;
+    }
+
+    public int MnCastShadows
+    {
+        get;
+        set;
+    }
+
+    public int MnDirectLight
+    {
+        get;
+        set;
+    }
+
+    public int MnFogLightingMode
+    {
+        get;
+        set;
+    }
+
+    public int MnIndirectLight
+    {
+        get;
+        set;
+    }
+
+    public int MnRenderSpecular
+    {
+        get;
+        set;
+    }
+
+    public int MnShadowCascadeResolution0
+    {
+        get;
+        set;
+    }
+
+    public int MnShadowCascadeResolution1
+    {
+        get;
+        set;
+    }
+
+    public int MnShadowCascadeResolution2
+    {
+        get;
+        set;
+    }
+
+    public int MnShadowCascadeResolution3
+    {
+        get;
+        set;
+    }
+
+    public int MnShadowHeight
+    {
+        get;
+        set;
+    }
+
+    public int MnShadowPriority
+    {
+        get;
+        set;
+    }
+
+    public int MnShadowWidth
+    {
+        get;
+        set;
+    }
+
+    public int MnStyle
+    {
+        get;
+        set;
+    }
+
+    public int MvPrecomputedBoundsMaxs
+    {
+        get;
+        set;
+    }
+
+    public int MvPrecomputedBoundsMins
+    {
+        get;
+        set;
+    }
+
+    public int MvPrecomputedObbAngles
+    {
+        get;
+        set;
+    }
+
+    public int MvPrecomputedObbExtent
+    {
+        get;
+        set;
+    }
+
+    public int MvPrecomputedObbOrigin
+    {
+        get;
+        set;
+    }
+
+    public int MMeshGroupMask
+    {
+        get;
+        set;
+    }
+
+    public int MbClientClothCreationSuppressed
+    {
+        get;
+        set;
+    }
+
+    public int MhModel
+    {
+        get;
+        set;
+    }
+
+    public int MnClothUpdateFlags
+    {
+        get;
+        set;
+    }
+
+    public int MnForceLod
+    {
+        get;
+        set;
+    }
+
+    public int MnIdealMotionType
+    {
+        get;
+        set;
+    }
+
+    public int MbDiscontinuity
+    {
+        get;
+        set;
+    }
+
+    public int MbSequenceChangeNetworked
+    {
+        get;
+        set;
+    }
+
+    public int MFlPrevCycle
+    {
+        get;
+        set;
+    }
+
+    public int MFlPrevCycleForAnimEventDetection
+    {
+        get;
+        set;
+    }
+
+    public int MFlPrevCycleFromDiscontinuity
+    {
+        get;
+        set;
+    }
+
+    public int MFlWeight
+    {
+        get;
+        set;
+    }
+
+    public int MhSequence
+    {
+        get;
+        set;
+    }
+
+    public int MCurrentFog
+    {
+        get;
+        set;
+    }
+
+    public int MOverrideFogColor
+    {
+        get;
+        set;
+    }
+
+    public int MPlayerFog
+    {
+        get;
+        set;
+    }
+
+    public int MPostProcessingVolumes
+    {
+        get;
+        set;
+    }
+
+    public int MAngDemoViewAngles
+    {
+        get;
+        set;
+    }
+
+    public int MAudio
+    {
+        get;
+        set;
+    }
+
+    public int MbOverrideFogColor
+    {
+        get;
+        set;
+    }
+
+    public int MbOverrideFogStartEnd
+    {
+        get;
+        set;
+    }
+
+    public int MfOverrideFogEnd
+    {
+        get;
+        set;
+    }
+
+    public int MfOverrideFogStart
+    {
+        get;
+        set;
+    }
+
+    public int MFlCsViewPunchAngleTickRatio
+    {
+        get;
+        set;
+    }
+
+    public int MFlOldPlayerViewOffsetZ
+    {
+        get;
+        set;
+    }
+
+    public int MFlOldPlayerZ
+    {
+        get;
+        set;
+    }
+
+    public int MhActivePostProcessingVolume
+    {
+        get;
+        set;
+    }
+
+    public int MhColorCorrectionCtrl
+    {
+        get;
+        set;
+    }
+
+    public int MhOldFogController
+    {
+        get;
+        set;
+    }
+
+    public int MhTonemapController
+    {
+        get;
+        set;
+    }
+
+    public int MhViewEntity
+    {
+        get;
+        set;
+    }
+
+    public int MnCsViewPunchAngleTick
+    {
+        get;
+        set;
+    }
+
+    public int MVecCsViewPunchAngle
+    {
+        get;
+        set;
+    }
+
+    public int MArrForceSubtickMoveWhen
+    {
+        get;
+        set;
+    }
+
+    public int MFlForwardMove
+    {
+        get;
+        set;
+    }
+
+    public int MFlLeftMove
+    {
+        get;
+        set;
+    }
+
+    public int MFlMaxspeed
+    {
+        get;
+        set;
+    }
+
+    public int MFlUpMove
+    {
+        get;
+        set;
+    }
+
+    public int MnButtonDoublePressed
+    {
+        get;
+        set;
+    }
+
+    public int MnButtons
+    {
+        get;
+        set;
+    }
+
+    public int MnImpulse
+    {
+        get;
+        set;
+    }
+
+    public int MnLastCommandNumberProcessed
+    {
+        get;
+        set;
+    }
+
+    public int MnQueuedButtonChangeMask
+    {
+        get;
+        set;
+    }
+
+    public int MnQueuedButtonDownMask
+    {
+        get;
+        set;
+    }
+
+    public int MnToggleButtonDownMask
+    {
+        get;
+        set;
+    }
+
+    public int MpButtonPressedCmdNumber
+    {
+        get;
+        set;
+    }
+
+    public int MVecLastMovementImpulses
+    {
+        get;
+        set;
+    }
+
+    public int MVecOldViewAngles
+    {
+        get;
+        set;
+    }
+
+    public int MAnimGraphNetworkedVars
+    {
+        get;
+        set;
+    }
+
+    public int MbLastUpdateSkipped
+    {
+        get;
+        set;
+    }
+
+    public int MbNetworkedAnimationInputsChanged
+    {
+        get;
+        set;
+    }
+
+    public int MbNetworkedSequenceChanged
+    {
+        get;
+        set;
+    }
+
+    public int MbSequenceFinished
+    {
+        get;
+        set;
+    }
+
+    public int MFlPlaybackRate
+    {
+        get;
+        set;
+    }
+
+    public int MFlPrevAnimUpdateTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlSeqFixedCycle
+    {
+        get;
+        set;
+    }
+
+    public int MFlSeqStartTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlSoundSyncTime
+    {
+        get;
+        set;
+    }
+
+    public int MnAnimLoopMode
+    {
+        get;
+        set;
+    }
+
+    public int MnNotifyState
+    {
+        get;
+        set;
+    }
+
+    public int MbDucked
+    {
+        get;
+        set;
+    }
+
+    public int MbDucking
+    {
+        get;
+        set;
+    }
+
+    public int MbInCrouch
+    {
+        get;
+        set;
+    }
+
+    public int MbInDuckJump
+    {
+        get;
+        set;
+    }
+
+    public int MFlCrouchTransitionStartTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlFallVelocity
+    {
+        get;
+        set;
+    }
+
+    public int MFlStepSoundTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlSurfaceFriction
+    {
+        get;
+        set;
+    }
+
+    public int MGroundNormal
+    {
+        get;
+        set;
+    }
+
+    public int MnCrouchState
+    {
+        get;
+        set;
+    }
+
+    public int MnStepside
+    {
+        get;
+        set;
+    }
+
+    public int MSurfaceProps
+    {
+        get;
+        set;
+    }
+
+    public int MbForcedObserverMode
+    {
+        get;
+        set;
+    }
+
+    public int MFlObserverChaseDistance
+    {
+        get;
+        set;
+    }
+
+    public int MFlObserverChaseDistanceCalcTime
+    {
+        get;
+        set;
+    }
+
+    public int MhObserverTarget
+    {
+        get;
+        set;
+    }
+
+    public int MiObserverLastMode
+    {
+        get;
+        set;
+    }
+
+    public int MiObserverMode
+    {
+        get;
+        set;
+    }
+
+    public int MhActiveWeapon
+    {
+        get;
+        set;
+    }
+
+    public int MhLastWeapon
+    {
+        get;
+        set;
+    }
+
+    public int MhMyWeapons
+    {
+        get;
+        set;
+    }
+
+    public int MiAmmo
+    {
+        get;
+        set;
+    }
+
+    public int MbBatchSameVolumeType
+    {
+        get;
+        set;
+    }
+
+    public int MFlInnerDistance
+    {
+        get;
+        set;
+    }
+
+    public int MnAttachType
+    {
+        get;
+        set;
+    }
+
+    public int MnRtEnvCp
+    {
+        get;
+        set;
+    }
+
+    public int MnRtEnvCpComponent
+    {
+        get;
+        set;
+    }
+
+    public int MSzModifier
+    {
+        get;
+        set;
+    }
+
+    public int MSzParticlePrecipitationEffect
+    {
+        get;
+        set;
+    }
+
+    public int MLightColor
+    {
+        get;
+        set;
+    }
+
+    public int MSpotlightTextureName
+    {
+        get;
+        set;
+    }
+
+    public int MbAlwaysUpdate
+    {
+        get;
+        set;
+    }
+
+    public int MbCameraSpace
+    {
+        get;
+        set;
+    }
+
+    public int MbEnableShadows
+    {
+        get;
+        set;
+    }
+
+    public int MbFlipHorizontal
+    {
+        get;
+        set;
+    }
+
+    public int MbLightOnlyTarget
+    {
+        get;
+        set;
+    }
+
+    public int MbLightWorld
+    {
+        get;
+        set;
+    }
+
+    public int MbSimpleProjection
+    {
+        get;
+        set;
+    }
+
+    public int MbVolumetric
+    {
+        get;
+        set;
+    }
+
+    public int MFlAmbient
+    {
+        get;
+        set;
+    }
+
+    public int MFlColorTransitionTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlFlashlightTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlIntensity
+    {
+        get;
+        set;
+    }
+
+    public int MFlLightFov
+    {
+        get;
+        set;
+    }
+
+    public int MFlLinearAttenuation
+    {
+        get;
+        set;
+    }
+
+    public int MFlNearZ
+    {
+        get;
+        set;
+    }
+
+    public int MFlNoiseStrength
+    {
+        get;
+        set;
+    }
+
+    public int MFlPlaneOffset
+    {
+        get;
+        set;
+    }
+
+    public int MFlProjectionSize
+    {
+        get;
+        set;
+    }
+
+    public int MFlQuadraticAttenuation
+    {
+        get;
+        set;
+    }
+
+    public int MFlVolumetricIntensity
+    {
+        get;
+        set;
+    }
+
+    public int MhTargetEntity
+    {
+        get;
+        set;
+    }
+
+    public int MnNumPlanes
+    {
+        get;
+        set;
+    }
+
+    public int MnShadowQuality
+    {
+        get;
+        set;
+    }
+
+    public int MnSpotlightTextureFrame
+    {
+        get;
+        set;
+    }
+
+    public int MiEnemy3Ks
+    {
+        get;
+        set;
+    }
+
+    public int MiEnemy4Ks
+    {
+        get;
+        set;
+    }
+
+    public int MiEnemy5Ks
+    {
+        get;
+        set;
+    }
+
+    public int MiEnemyKnifeKills
+    {
+        get;
+        set;
+    }
+
+    public int MiEnemyTaserKills
+    {
+        get;
+        set;
+    }
+
+    public int MiAssists
+    {
+        get;
+        set;
+    }
+
+    public int MiCashEarned
+    {
+        get;
+        set;
+    }
+
+    public int MiDeaths
+    {
+        get;
+        set;
+    }
+
+    public int MiEnemiesFlashed
+    {
+        get;
+        set;
+    }
+
+    public int MiEquipmentValue
+    {
+        get;
+        set;
+    }
+
+    public int MiHeadShotKills
+    {
+        get;
+        set;
+    }
+
+    public int MiKillReward
+    {
+        get;
+        set;
+    }
+
+    public int MiKills
+    {
+        get;
+        set;
+    }
+
+    public int MiLiveTime
+    {
+        get;
+        set;
+    }
+
+    public int MiMoneySaved
+    {
+        get;
+        set;
+    }
+
+    public int MiObjective
+    {
+        get;
+        set;
+    }
+
+    public int MiUtilityDamage
+    {
+        get;
+        set;
+    }
+
+    public int MbDirtyMotionType
+    {
+        get;
+        set;
+    }
+
+    public int MbDisableSolidCollisionsForHierarchy
+    {
+        get;
+        set;
+    }
+
+    public int MbIsAnimationEnabled
+    {
+        get;
+        set;
+    }
+
+    public int MbIsGeneratingLatchedParentSpaceState
+    {
+        get;
+        set;
+    }
+
+    public int MbUseParentRenderBounds
+    {
+        get;
+        set;
+    }
+
+    public int MMaterialGroup
+    {
+        get;
+        set;
+    }
+
+    public int MModelState
+    {
+        get;
+        set;
+    }
+
+    public int MnHitboxSet
+    {
+        get;
+        set;
+    }
+
+    public int MCommandContext
+    {
+        get;
+        set;
+    }
+
+    public int MbIsHltv
+    {
+        get;
+        set;
+    }
+
+    public int MbIsLocalPlayerController
+    {
+        get;
+        set;
+    }
+
+    public int MhPawn
+    {
+        get;
+        set;
+    }
+
+    public int MhPredictedPawn
+    {
+        get;
+        set;
+    }
+
+    public int MhSplitOwner
+    {
+        get;
+        set;
+    }
+
+    public int MhSplitScreenPlayers
+    {
+        get;
+        set;
+    }
+
+    public int MiConnected
+    {
+        get;
+        set;
+    }
+
+    public int MiDesiredFov
+    {
+        get;
+        set;
+    }
+
+    public int MIszPlayerName
+    {
+        get;
+        set;
+    }
+
+    public int MnFinalPredictedTick
+    {
+        get;
+        set;
+    }
+
+    public int MnInButtonsWhichAreToggles
+    {
+        get;
+        set;
+    }
+
+    public int MnSplitScreenSlot
+    {
+        get;
+        set;
+    }
+
+    public int MnTickBase
+    {
+        get;
+        set;
+    }
+
+    public int MSteamId
+    {
+        get;
+        set;
+    }
+
+    public int MbStopped
+    {
+        get;
+        set;
+    }
+
+    public int MFlFinalValue
+    {
+        get;
+        set;
+    }
+
+    public int MFlInterval
+    {
+        get;
+        set;
+    }
+
+    public int MFlValues
+    {
+        get;
+        set;
+    }
+
+    public int MnBucketCount
+    {
+        get;
+        set;
+    }
+
+    public int MnCompressionType
+    {
+        get;
+        set;
+    }
+
+    public int MnValueCounts
+    {
+        get;
+        set;
+    }
+
+    public int MItem
+    {
+        get;
+        set;
+    }
+
+    public int MiExternalItemProviderRegisteredToken
+    {
+        get;
+        set;
+    }
+
+    public int MUllRegisteredAsItemId
+    {
+        get;
+        set;
+    }
+
+    public int MLightStyleEvents
+    {
+        get;
+        set;
+    }
+
+    public int MLightStyleString
+    {
+        get;
+        set;
+    }
+
+    public int MLightStyleTargets
+    {
+        get;
+        set;
+    }
+
+    public int MQueuedLightStyleStrings
+    {
+        get;
+        set;
+    }
+
+    public int MStyleEvent
+    {
+        get;
+        set;
+    }
+
+    public int MbContactShadow
+    {
+        get;
+        set;
+    }
+
+    public int MfAlternateColorBrightness
+    {
+        get;
+        set;
+    }
+
+    public int MFlBounceScale
+    {
+        get;
+        set;
+    }
+
+    public int MFlColorTemperature
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeSizeEnd
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeSizeStart
+    {
+        get;
+        set;
+    }
+
+    public int MFlFogScale
+    {
+        get;
+        set;
+    }
+
+    public int MFlLuminaireAnisotropy
+    {
+        get;
+        set;
+    }
+
+    public int MFlLuminaireSize
+    {
+        get;
+        set;
+    }
+
+    public int MFlShadowFadeSizeEnd
+    {
+        get;
+        set;
+    }
+
+    public int MFlShadowFadeSizeStart
+    {
+        get;
+        set;
+    }
+
+    public int MFlShape
+    {
+        get;
+        set;
+    }
+
+    public int MFlSkirt
+    {
+        get;
+        set;
+    }
+
+    public int MFlSkirtNear
+    {
+        get;
+        set;
+    }
+
+    public int MFlSoftX
+    {
+        get;
+        set;
+    }
+
+    public int MFlSoftY
+    {
+        get;
+        set;
+    }
+
+    public int MnBakeSpecularToCubemaps
+    {
+        get;
+        set;
+    }
+
+    public int MnBounceLight
+    {
+        get;
+        set;
+    }
+
+    public int MnColorMode
+    {
+        get;
+        set;
+    }
+
+    public int MnFog
+    {
+        get;
+        set;
+    }
+
+    public int MnFogShadows
+    {
+        get;
+        set;
+    }
+
+    public int MnLuminaireShape
+    {
+        get;
+        set;
+    }
+
+    public int MnShadowMapSize
+    {
+        get;
+        set;
+    }
+
+    public int MvAlternateColor
+    {
+        get;
+        set;
+    }
+
+    public int MvBakeSpecularToCubemapsSize
+    {
+        get;
+        set;
+    }
+
+    public int MvShear
+    {
+        get;
+        set;
+    }
+
+    public int MvSizeParams
+    {
+        get;
+        set;
+    }
+
+    public int MGlowEntity
+    {
+        get;
+        set;
+    }
+
+    public int MSzDisplayText
+    {
+        get;
+        set;
+    }
+
+    public int MUsable
+    {
+        get;
+        set;
+    }
+
+    public int MbClientPredictDelete
+    {
+        get;
+        set;
+    }
+
+    public int MbIsHeldByPlayer
+    {
+        get;
+        set;
+    }
+
+    public int MbJumpThrow
+    {
+        get;
+        set;
+    }
+
+    public int MbJustPulledPin
+    {
+        get;
+        set;
+    }
+
+    public int MbPinPulled
+    {
+        get;
+        set;
+    }
+
+    public int MbThrowAnimating
+    {
+        get;
+        set;
+    }
+
+    public int MfDropTime
+    {
+        get;
+        set;
+    }
+
+    public int MfThrowTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlNextHoldFrac
+    {
+        get;
+        set;
+    }
+
+    public int MFlThrowStrength
+    {
+        get;
+        set;
+    }
+
+    public int MFlThrowStrengthApproach
+    {
+        get;
+        set;
+    }
+
+    public int MhSwitchToWeaponAfterThrow
+    {
+        get;
+        set;
+    }
+
+    public int MnNextHoldTick
+    {
+        get;
+        set;
+    }
+
+    public int FlNextTrailLineTime
+    {
+        get;
+        set;
+    }
+
+    public int MArrTrajectoryTrailPointCreationTimes
+    {
+        get;
+        set;
+    }
+
+    public int MArrTrajectoryTrailPoints
+    {
+        get;
+        set;
+    }
+
+    public int MbCanCreateGrenadeTrail
+    {
+        get;
+        set;
+    }
+
+    public int MbExplodeEffectBegan
+    {
+        get;
+        set;
+    }
+
+    public int MFlSpawnTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlTrajectoryTrailEffectCreationTime
+    {
+        get;
+        set;
+    }
+
+    public int MhSnapshotTrajectoryParticleSnapshot
+    {
+        get;
+        set;
+    }
+
+    public int MnBounces
+    {
+        get;
+        set;
+    }
+
+    public int MnExplodeEffectIndex
+    {
+        get;
+        set;
+    }
+
+    public int MnExplodeEffectTickBegin
+    {
+        get;
+        set;
+    }
+
+    public int MnSnapshotTrajectoryEffectIndex
+    {
+        get;
+        set;
+    }
+
+    public int MvInitialPosition
+    {
+        get;
+        set;
+    }
+
+    public int MvInitialVelocity
+    {
+        get;
+        set;
+    }
+
+    public int MVecExplodeEffectOrigin
+    {
+        get;
+        set;
+    }
+
+    public int VecLastTrailLinePos
+    {
+        get;
+        set;
+    }
+
+    public int MDialogXmlName
+    {
+        get;
+        set;
+    }
+
+    public int MPanelClassName
+    {
+        get;
+        set;
+    }
+
+    public int MPanelId
+    {
+        get;
+        set;
+    }
+
+    public int MBloodColor
+    {
+        get;
+        set;
+    }
+
+    public int MFlFieldOfView
+    {
+        get;
+        set;
+    }
+
+    public int MFlWaterNextTraceTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlWaterWorldZ
+    {
+        get;
+        set;
+    }
+
+    public int MhMyWearables
+    {
+        get;
+        set;
+    }
+
+    public int MLeftFootAttachment
+    {
+        get;
+        set;
+    }
+
+    public int MnWaterWakeMode
+    {
+        get;
+        set;
+    }
+
+    public int MRightFootAttachment
+    {
+        get;
+        set;
+    }
+
+    public int MbIsUsable
+    {
+        get;
+        set;
+    }
+
+    public int McBodyComponent
+    {
+        get;
+        set;
+    }
+
+    public int MDataChangeEventRef
+    {
+        get;
+        set;
+    }
+
+    public int MEntClientFlags
+    {
+        get;
+        set;
+    }
+
+    public int MListEntry
+    {
+        get;
+        set;
+    }
+
+    public int MMoveCollide
+    {
+        get;
+        set;
+    }
+
+    public int MMoveType
+    {
+        get;
+        set;
+    }
+
+    public int MNetworkTransmitComponent
+    {
+        get;
+        set;
+    }
+
+    public int MParticles
+    {
+        get;
+        set;
+    }
+
+    public int MaThinkFunctions
+    {
+        get;
+        set;
+    }
+
+    public int MbAnimTimeChanged
+    {
+        get;
+        set;
+    }
+
+    public int MbAnimatedEveryTick
+    {
+        get;
+        set;
+    }
+
+    public int MbApplyLayerMatchIdToModel
+    {
+        get;
+        set;
+    }
+
+    public int MbClientSideRagdoll
+    {
+        get;
+        set;
+    }
+
+    public int MbHasAddedVarsToInterpolation
+    {
+        get;
+        set;
+    }
+
+    public int MbHasSuccessfullyInterpolated
+    {
+        get;
+        set;
+    }
+
+    public int MbInterpolateEvenWithNoModel
+    {
+        get;
+        set;
+    }
+
+    public int MbIsPlatform
+    {
+        get;
+        set;
+    }
+
+    public int MbPredictable
+    {
+        get;
+        set;
+    }
+
+    public int MbPredictionEligible
+    {
+        get;
+        set;
+    }
+
+    public int MbRenderEvenWhenNotSuccessfullyInterpolated
+    {
+        get;
+        set;
+    }
+
+    public int MbRenderWithViewModels
+    {
+        get;
+        set;
+    }
+
+    public int MbSimulationTimeChanged
+    {
+        get;
+        set;
+    }
+
+    public int MbTakesDamage
+    {
+        get;
+        set;
+    }
+
+    public int MDependencies
+    {
+        get;
+        set;
+    }
+
+    public int MfbBoxVisFlags
+    {
+        get;
+        set;
+    }
+
+    public int MfEffects
+    {
+        get;
+        set;
+    }
+
+    public int MFlAnimTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlCreateTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlElasticity
+    {
+        get;
+        set;
+    }
+
+    public int MFlFriction
+    {
+        get;
+        set;
+    }
+
+    public int MFlGravityScale
+    {
+        get;
+        set;
+    }
+
+    public int MFlNavIgnoreUntilTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlProxyRandomValue
+    {
+        get;
+        set;
+    }
+
+    public int MFlSimulationTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlSpeed
+    {
+        get;
+        set;
+    }
+
+    public int MFlTimeScale
+    {
+        get;
+        set;
+    }
+
+    public int MFlWaterLevel
+    {
+        get;
+        set;
+    }
+
+    public int MhEffectEntity
+    {
+        get;
+        set;
+    }
+
+    public int MhGroundEntity
+    {
+        get;
+        set;
+    }
+
+    public int MhOldMoveParent
+    {
+        get;
+        set;
+    }
+
+    public int MhOwnerEntity
+    {
+        get;
+        set;
+    }
+
+    public int MhSceneObjectController
+    {
+        get;
+        set;
+    }
+
+    public int MhThink
+    {
+        get;
+        set;
+    }
+
+    public int MiCurrentThinkContext
+    {
+        get;
+        set;
+    }
+
+    public int MieFlags
+    {
+        get;
+        set;
+    }
+
+    public int MiHealth
+    {
+        get;
+        set;
+    }
+
+    public int MiMaxHealth
+    {
+        get;
+        set;
+    }
+
+    public int MiTeamNum
+    {
+        get;
+        set;
+    }
+
+    public int MLifeState
+    {
+        get;
+        set;
+    }
+
+    public int MnActualMoveType
+    {
+        get;
+        set;
+    }
+
+    public int MnCreationTick
+    {
+        get;
+        set;
+    }
+
+    public int MnDisableContextThinkStartTick
+    {
+        get;
+        set;
+    }
+
+    public int MnFirstPredictableCommand
+    {
+        get;
+        set;
+    }
+
+    public int MnInterpolationLatchDirtyFlags
+    {
+        get;
+        set;
+    }
+
+    public int MnLastPredictableCommand
+    {
+        get;
+        set;
+    }
+
+    public int MnLastThinkTick
+    {
+        get;
+        set;
+    }
+
+    public int MnNextScriptVarRecordId
+    {
+        get;
+        set;
+    }
+
+    public int MnNextThinkTick
+    {
+        get;
+        set;
+    }
+
+    public int MnNoInterpolationTick
+    {
+        get;
+        set;
+    }
+
+    public int MnSceneObjectOverrideFlags
+    {
+        get;
+        set;
+    }
+
+    public int MnSimulationTick
+    {
+        get;
+        set;
+    }
+
+    public int MnSplitUserPlayerPredictionSlot
+    {
+        get;
+        set;
+    }
+
+    public int MnSubclassId
+    {
+        get;
+        set;
+    }
+
+    public int MnTakeDamageFlags
+    {
+        get;
+        set;
+    }
+
+    public int MnVisibilityNoInterpolationTick
+    {
+        get;
+        set;
+    }
+
+    public int MnWaterType
+    {
+        get;
+        set;
+    }
+
+    public int MpCollision
+    {
+        get;
+        set;
+    }
+
+    public int MpGameSceneNode
+    {
+        get;
+        set;
+    }
+
+    public int MpRenderComponent
+    {
+        get;
+        set;
+    }
+
+    public int MsUniqueHammerId
+    {
+        get;
+        set;
+    }
+
+    public int MSpawnflags
+    {
+        get;
+        set;
+    }
+
+    public int MTokLayerMatchId
+    {
+        get;
+        set;
+    }
+
+    public int MUbInterpolationFrame
+    {
+        get;
+        set;
+    }
+
+    public int MVecAbsVelocity
+    {
+        get;
+        set;
+    }
+
+    public int MVecAngVelocity
+    {
+        get;
+        set;
+    }
+
+    public int MVecBaseVelocity
+    {
+        get;
+        set;
+    }
+
+    public int MVecPredictedScriptFloatIDs
+    {
+        get;
+        set;
+    }
+
+    public int MVecPredictedScriptFloats
+    {
+        get;
+        set;
+    }
+
+    public int MVecVelocity
+    {
+        get;
+        set;
+    }
+
+    public int MFlScaleTime
+    {
+        get;
+        set;
+    }
+
+    public int MnFlags
+    {
+        get;
+        set;
+    }
+
+    public int MCachedViewTarget
+    {
+        get;
+        set;
+    }
+
+    public int MPhonemeClasses
+    {
+        get;
+        set;
+    }
+
+    public int MbResetFlexWeightsOnModelChange
+    {
+        get;
+        set;
+    }
+
+    public int MBlinktime
+    {
+        get;
+        set;
+    }
+
+    public int MBlinktoggle
+    {
+        get;
+        set;
+    }
+
+    public int MFlBlinkAmount
+    {
+        get;
+        set;
+    }
+
+    public int MFlJawOpenAmount
+    {
+        get;
+        set;
+    }
+
+    public int MFlexWeight
+    {
+        get;
+        set;
+    }
+
+    public int MiBlink
+    {
+        get;
+        set;
+    }
+
+    public int MiJawOpen
+    {
+        get;
+        set;
+    }
+
+    public int MiMouthAttachment
+    {
+        get;
+        set;
+    }
+
+    public int MmEyeOcclusionRendererCameraToBoneTransform
+    {
+        get;
+        set;
+    }
+
+    public int MnEyeOcclusionRendererBone
+    {
+        get;
+        set;
+    }
+
+    public int MnLastFlexUpdateFrameCount
+    {
+        get;
+        set;
+    }
+
+    public int MnNextSceneEventId
+    {
+        get;
+        set;
+    }
+
+    public int MPrevblinktoggle
+    {
+        get;
+        set;
+    }
+
+    public int MvEyeOcclusionRendererHalfExtent
+    {
+        get;
+        set;
+    }
+
+    public int MvLookTargetPosition
+    {
+        get;
+        set;
+    }
+
+    public int MDmgRadius
+    {
+        get;
+        set;
+    }
+
+    public int MExplosionSound
+    {
+        get;
+        set;
+    }
+
+    public int MbHasWarnedAi
+    {
+        get;
+        set;
+    }
+
+    public int MbIsLive
+    {
+        get;
+        set;
+    }
+
+    public int MbIsSmokeGrenade
+    {
+        get;
+        set;
+    }
+
+    public int MFlDamage
+    {
+        get;
+        set;
+    }
+
+    public int MFlDetonateTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlWarnAiTime
+    {
+        get;
+        set;
+    }
+
+    public int MhOriginalThrower
+    {
+        get;
+        set;
+    }
+
+    public int MhThrower
+    {
+        get;
+        set;
+    }
+
+    public int MIszBounceSound
+    {
+        get;
+        set;
+    }
+
+    public int McHitboxComponent
+    {
+        get;
+        set;
+    }
+
+    public int McRenderComponent
+    {
+        get;
+        set;
+    }
+
+    public int MClientOverrideTint
+    {
+        get;
+        set;
+    }
+
+    public int MCollision
+    {
+        get;
+        set;
+    }
+
+    public int MConfigEntitiesToPropagateMaterialDecalsTo
+    {
+        get;
+        set;
+    }
+
+    public int MbAllowFadeInView
+    {
+        get;
+        set;
+    }
+
+    public int MbInitModelEffects
+    {
+        get;
+        set;
+    }
+
+    public int MbIsStaticProp
+    {
+        get;
+        set;
+    }
+
+    public int MbUseClientOverrideTint
+    {
+        get;
+        set;
+    }
+
+    public int MClrRender
+    {
+        get;
+        set;
+    }
+
+    public int MFadeMaxDist
+    {
+        get;
+        set;
+    }
+
+    public int MFadeMinDist
+    {
+        get;
+        set;
+    }
+
+    public int MFlDecalHealBloodRate
+    {
+        get;
+        set;
+    }
+
+    public int MFlDecalHealHeightRate
+    {
+        get;
+        set;
+    }
+
+    public int MFlFadeScale
+    {
+        get;
+        set;
+    }
+
+    public int MFlGlowBackfaceMult
+    {
+        get;
+        set;
+    }
+
+    public int MFlShadowStrength
+    {
+        get;
+        set;
+    }
+
+    public int MiOldHealth
+    {
+        get;
+        set;
+    }
+
+    public int MnAddDecal
+    {
+        get;
+        set;
+    }
+
+    public int MnDecalsAdded
+    {
+        get;
+        set;
+    }
+
+    public int MnLastAddDecal
+    {
+        get;
+        set;
+    }
+
+    public int MnObjectCulling
+    {
+        get;
+        set;
+    }
+
+    public int MnRenderFx
+    {
+        get;
+        set;
+    }
+
+    public int MnRenderMode
+    {
+        get;
+        set;
+    }
+
+    public int MpClientAlphaProperty
+    {
+        get;
+        set;
+    }
+
+    public int MvDecalForwardAxis
+    {
+        get;
+        set;
+    }
+
+    public int MvDecalPosition
+    {
+        get;
+        set;
+    }
+
+    public int MVecRenderAttributes
+    {
+        get;
+        set;
+    }
+
+    public int MVecViewOffset
+    {
+        get;
+        set;
+    }
+
+    public int MServerViewAngleChanges
+    {
+        get;
+        set;
+    }
+
+    public int MbIsSwappingToPredictableController
+    {
+        get;
+        set;
+    }
+
+    public int MFlDeathTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlFovSensitivityAdjust
+    {
+        get;
+        set;
+    }
+
+    public int MFlLastCameraSetupTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlMouseSensitivity
+    {
+        get;
+        set;
+    }
+
+    public int MFlOldSimulationTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlPredictionErrorTime
+    {
+        get;
+        set;
+    }
+
+    public int MhController
+    {
+        get;
+        set;
+    }
+
+    public int MiHideHud
+    {
+        get;
+        set;
+    }
+
+    public int MnHighestConsumedServerViewAngleChangeIndex
+    {
+        get;
+        set;
+    }
+
+    public int MnLastExecutedCommandNumber
+    {
+        get;
+        set;
+    }
+
+    public int MnLastExecutedCommandTick
+    {
+        get;
+        set;
+    }
+
+    public int MpAutoaimServices
+    {
+        get;
+        set;
+    }
+
+    public int MpCameraServices
+    {
+        get;
+        set;
+    }
+
+    public int MpFlashlightServices
+    {
+        get;
+        set;
+    }
+
+    public int MpItemServices
+    {
+        get;
+        set;
+    }
+
+    public int MpMovementServices
+    {
+        get;
+        set;
+    }
+
+    public int MpObserverServices
+    {
+        get;
+        set;
+    }
+
+    public int MpUseServices
+    {
+        get;
+        set;
+    }
+
+    public int MpWaterServices
+    {
+        get;
+        set;
+    }
+
+    public int MpWeaponServices
+    {
+        get;
+        set;
+    }
+
+    public int MSkybox3d
+    {
+        get;
+        set;
+    }
+
+    public int MvOldOrigin
+    {
+        get;
+        set;
+    }
+
+    public int MVecLastCameraSetupLocalOrigin
+    {
+        get;
+        set;
+    }
+
+    public int MVecPredictionError
+    {
+        get;
+        set;
+    }
+
+    public int VAngle
+    {
+        get;
+        set;
+    }
+
+    public int VAnglePrevious
+    {
+        get;
+        set;
+    }
+
+    public int MFlNextPrimaryAttackTickRatio
+    {
+        get;
+        set;
+    }
+
+    public int MFlNextSecondaryAttackTickRatio
+    {
+        get;
+        set;
+    }
+
+    public int MiClip1
+    {
+        get;
+        set;
+    }
+
+    public int MiClip2
+    {
+        get;
+        set;
+    }
+
+    public int MnNextPrimaryAttackTick
+    {
+        get;
+        set;
+    }
+
+    public int MnNextSecondaryAttackTick
+    {
+        get;
+        set;
+    }
+
+    public int MpReserveAmmo
+    {
+        get;
+        set;
+    }
+
+    public int MbLocked
+    {
+        get;
+        set;
+    }
+
+    public int MClosedAngles
+    {
+        get;
+        set;
+    }
+
+    public int MClosedPosition
+    {
+        get;
+        set;
+    }
+
+    public int MeDoorState
+    {
+        get;
+        set;
+    }
+
+    public int MhMaster
+    {
+        get;
+        set;
+    }
+
+    public int MModelChanged
+    {
+        get;
+        set;
+    }
+
+    public int MvWhereToSetLightingOrigin
+    {
+        get;
+        set;
+    }
+
+    public int MbClientSidePredicted
+    {
+        get;
+        set;
+    }
+
+    public int MFlAnimationStartTime
+    {
+        get;
+        set;
+    }
+
+    public int MhOldLayerSequence
+    {
+        get;
+        set;
+    }
+
+    public int MhWeapon
+    {
+        get;
+        set;
+    }
+
+    public int MhWeaponModel
+    {
+        get;
+        set;
+    }
+
+    public int MiCameraAttachment
+    {
+        get;
+        set;
+    }
+
+    public int MnAnimationParity
+    {
+        get;
+        set;
+    }
+
+    public int MnOldAnimationParity
+    {
+        get;
+        set;
+    }
+
+    public int MOldLayer
+    {
+        get;
+        set;
+    }
+
+    public int MOldLayerStartTime
+    {
+        get;
+        set;
+    }
+
+    public int MPreviousCycle
+    {
+        get;
+        set;
+    }
+
+    public int MPreviousElapsedDuration
+    {
+        get;
+        set;
+    }
+
+    public int MsAnimationPrefix
+    {
+        get;
+        set;
+    }
+
+    public int MsVmName
+    {
+        get;
+        set;
+    }
+
+    public int MVecLastCameraAngles
+    {
+        get;
+        set;
+    }
+
+    public int MVecLastFacing
+    {
+        get;
+        set;
+    }
+
+    public int MFlArmDamageMultiplier
+    {
+        get;
+        set;
+    }
+
+    public int MFlChestDamageMultiplier
+    {
+        get;
+        set;
+    }
+
+    public int MFlCrouchTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlDrowningDamageInterval
+    {
+        get;
+        set;
+    }
+
+    public int MFlHeadDamageMultiplier
+    {
+        get;
+        set;
+    }
+
+    public int MFlHoldBreathTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlLegDamageMultiplier
+    {
+        get;
+        set;
+    }
+
+    public int MFlStomachDamageMultiplier
+    {
+        get;
+        set;
+    }
+
+    public int MFlUseAngleTolerance
+    {
+        get;
+        set;
+    }
+
+    public int MFlUseRange
+    {
+        get;
+        set;
+    }
+
+    public int MnDrowningDamageInitial
+    {
+        get;
+        set;
+    }
+
+    public int MnDrowningDamageMax
+    {
+        get;
+        set;
+    }
+
+    public int MnWaterSpeed
+    {
+        get;
+        set;
+    }
+
+    public int MsModelName
+    {
+        get;
+        set;
+    }
+
+    public int MbTurnedOff
+    {
+        get;
+        set;
+    }
+
+    public int MfAmplitude
+    {
+        get;
+        set;
+    }
+
+    public int MfEndWidth
+    {
+        get;
+        set;
+    }
+
+    public int MfFadeLength
+    {
+        get;
+        set;
+    }
+
+    public int MfHaloScale
+    {
+        get;
+        set;
+    }
+
+    public int MfSpeed
+    {
+        get;
+        set;
+    }
+
+    public int MfStartFrame
+    {
+        get;
+        set;
+    }
+
+    public int MfWidth
+    {
+        get;
+        set;
+    }
+
+    public int MFlFireTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlFrameRate
+    {
+        get;
+        set;
+    }
+
+    public int MhAttachEntity
+    {
+        get;
+        set;
+    }
+
+    public int MhBaseMaterial
+    {
+        get;
+        set;
+    }
+
+    public int MhEndEntity
+    {
+        get;
+        set;
+    }
+
+    public int MnAttachIndex
+    {
+        get;
+        set;
+    }
+
+    public int MnBeamFlags
+    {
+        get;
+        set;
+    }
+
+    public int MnBeamType
+    {
+        get;
+        set;
+    }
+
+    public int MnClipStyle
+    {
+        get;
+        set;
+    }
+
+    public int MnHaloIndex
+    {
+        get;
+        set;
+    }
+
+    public int MnNumBeamEnts
+    {
+        get;
+        set;
+    }
+
+    public int MQueryHandleHalo
+    {
+        get;
+        set;
+    }
+
+    public int MOnBreak
+    {
+        get;
+        set;
+    }
+
+    public int MOnHealthChanged
+    {
+        get;
+        set;
+    }
+
+    public int MOnTakeDamage
+    {
+        get;
+        set;
+    }
+
+    public int MPerformanceMode
+    {
+        get;
+        set;
+    }
+
+    public int MbHasBreakPiecesOrCommands
+    {
+        get;
+        set;
+    }
+
+    public int MExplodeDamage
+    {
+        get;
+        set;
+    }
+
+    public int MExplodeRadius
+    {
+        get;
+        set;
+    }
+
+    public int MExplosionBuildupSound
+    {
+        get;
+        set;
+    }
+
+    public int MExplosionCustomEffect
+    {
+        get;
+        set;
+    }
+
+    public int MExplosionCustomSound
+    {
+        get;
+        set;
+    }
+
+    public int MExplosionDelay
+    {
+        get;
+        set;
+    }
+
+    public int MExplosionModifier
+    {
+        get;
+        set;
+    }
+
+    public int MFlDefaultFadeScale
+    {
+        get;
+        set;
+    }
+
+    public int MFlDmgModBullet
+    {
+        get;
+        set;
+    }
+
+    public int MFlDmgModClub
+    {
+        get;
+        set;
+    }
+
+    public int MFlDmgModExplosive
+    {
+        get;
+        set;
+    }
+
+    public int MFlDmgModFire
+    {
+        get;
+        set;
+    }
+
+    public int MFlLastPhysicsInfluenceTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlPressureDelay
+    {
+        get;
+        set;
+    }
+
+    public int MFlPreventDamageBeforeTime
+    {
+        get;
+        set;
+    }
+
+    public int MhBreaker
+    {
+        get;
+        set;
+    }
+
+    public int MhFlareEnt
+    {
+        get;
+        set;
+    }
+
+    public int MhLastAttacker
+    {
+        get;
+        set;
+    }
+
+    public int MhPhysicsAttacker
+    {
+        get;
+        set;
+    }
+
+    public int MiInteractions
+    {
+        get;
+        set;
+    }
+
+    public int MiMinHealthDmg
+    {
+        get;
+        set;
+    }
+
+    public int MImpactEnergyScale
+    {
+        get;
+        set;
+    }
+
+    public int MIszBasePropData
+    {
+        get;
+        set;
+    }
+
+    public int MIszPhysicsDamageTableName
+    {
+        get;
+        set;
+    }
+
+    public int MNoGhostCollision
+    {
+        get;
+        set;
+    }
+
+    public int MActiveLightParticleIndex
+    {
+        get;
+        set;
+    }
+
+    public int MbBombPlacedAnimation
+    {
+        get;
+        set;
+    }
+
+    public int MbBombPlanted
+    {
+        get;
+        set;
+    }
+
+    public int MbIsPlantingViaUse
+    {
+        get;
+        set;
+    }
+
+    public int MbPlayedArmingBeeps
+    {
+        get;
+        set;
+    }
+
+    public int MbStartedArming
+    {
+        get;
+        set;
+    }
+
+    public int MeActiveLightEffect
+    {
+        get;
+        set;
+    }
+
+    public int MfArmedTime
+    {
+        get;
+        set;
+    }
+
+    public int MnSpotRules
+    {
+        get;
+        set;
+    }
+
+    public int MSzScreenText
+    {
+        get;
+        set;
+    }
+
+    public int MbNeedToQueueHighResComposite
+    {
+        get;
+        set;
+    }
+
+    public int MbShouldIgnoreOffsetAndAccuracy
+    {
+        get;
+        set;
+    }
+
+    public int MnLastKnownAssociatedWeaponEntIndex
+    {
+        get;
+        set;
+    }
+
+    public int MnOldWeaponParity
+    {
+        get;
+        set;
+    }
+
+    public int MnWeaponParity
+    {
+        get;
+        set;
+    }
+
+    public int MvLoweredWeaponOffset
+    {
+        get;
+        set;
+    }
+
+    public int MAgentItem
+    {
+        get;
+        set;
+    }
+
+    public int MGlovesItem
+    {
+        get;
+        set;
+    }
+
+    public int MnOrdinal
+    {
+        get;
+        set;
+    }
+
+    public int MnRandom
+    {
+        get;
+        set;
+    }
+
+    public int MnVariant
+    {
+        get;
+        set;
+    }
+
+    public int MsWeaponName
+    {
+        get;
+        set;
+    }
+
+    public int MWeaponItem
+    {
+        get;
+        set;
+    }
+
+    public int MXuid
+    {
+        get;
+        set;
+    }
+
+    public int MMatchDevice
+    {
+        get;
+        set;
+    }
+
+    public int MMinimapVerticalSectionHeights
+    {
+        get;
+        set;
+    }
+
+    public int MRetakeRules
+    {
+        get;
+        set;
+    }
+
+    public int MTeamRespawnWaveTimes
+    {
+        get;
+        set;
+    }
+
+    public int MArrFeaturedGiftersAccounts
+    {
+        get;
+        set;
+    }
+
+    public int MArrFeaturedGiftersGifts
+    {
+        get;
+        set;
+    }
+
+    public int MArrProhibitedItemIndices
+    {
+        get;
+        set;
+    }
+
+    public int MArrTournamentActiveCasterAccounts
+    {
+        get;
+        set;
+    }
+
+    public int MbAnyHostageReached
+    {
+        get;
+        set;
+    }
+
+    public int MbBombDropped
+    {
+        get;
+        set;
+    }
+
+    public int MbCtCantBuy
+    {
+        get;
+        set;
+    }
+
+    public int MbCtTimeOutActive
+    {
+        get;
+        set;
+    }
+
+    public int MbDontIncrementCoopWave
+    {
+        get;
+        set;
+    }
+
+    public int MbFreezePeriod
+    {
+        get;
+        set;
+    }
+
+    public int MbGamePaused
+    {
+        get;
+        set;
+    }
+
+    public int MbGameRestart
+    {
+        get;
+        set;
+    }
+
+    public int MbHasMatchStarted
+    {
+        get;
+        set;
+    }
+
+    public int MbHasTriggeredCoopSpawnReset
+    {
+        get;
+        set;
+    }
+
+    public int MbHasTriggeredRoundStartMusic
+    {
+        get;
+        set;
+    }
+
+    public int MbIsDroppingItems
+    {
+        get;
+        set;
+    }
+
+    public int MbIsHltvActive
+    {
+        get;
+        set;
+    }
+
+    public int MbIsQuestEligible
+    {
+        get;
+        set;
+    }
+
+    public int MbIsQueuedMatchmaking
+    {
+        get;
+        set;
+    }
+
+    public int MbIsValveDs
+    {
+        get;
+        set;
+    }
+
+    public int MbLogoMap
+    {
+        get;
+        set;
+    }
+
+    public int MbMapHasBombTarget
+    {
+        get;
+        set;
+    }
+
+    public int MbMapHasBuyZone
+    {
+        get;
+        set;
+    }
+
+    public int MbMapHasRescueZone
+    {
+        get;
+        set;
+    }
+
+    public int MbMarkClientStopRecordAtRoundEnd
+    {
+        get;
+        set;
+    }
+
+    public int MbMatchWaitingForResume
+    {
+        get;
+        set;
+    }
+
+    public int MbPlayAllStepSoundsOnServer
+    {
+        get;
+        set;
+    }
+
+    public int MbRoundEndNoMusic
+    {
+        get;
+        set;
+    }
+
+    public int MbRoundEndShowTimerDefend
+    {
+        get;
+        set;
+    }
+
+    public int MbServerPaused
+    {
+        get;
+        set;
+    }
+
+    public int MbSpawnedTerrorHuntHeavy
+    {
+        get;
+        set;
+    }
+
+    public int MbSwitchingTeamsAtRoundReset
+    {
+        get;
+        set;
+    }
+
+    public int MbtCantBuy
+    {
+        get;
+        set;
+    }
+
+    public int MbTeamIntroPeriod
+    {
+        get;
+        set;
+    }
+
+    public int MbTechnicalTimeOut
+    {
+        get;
+        set;
+    }
+
+    public int MbTerroristTimeOutActive
+    {
+        get;
+        set;
+    }
+
+    public int MbWarmupPeriod
+    {
+        get;
+        set;
+    }
+
+    public int MeRoundEndReason
+    {
+        get;
+        set;
+    }
+
+    public int MeRoundWinReason
+    {
+        get;
+        set;
+    }
+
+    public int MfMatchStartTime
+    {
+        get;
+        set;
+    }
+
+    public int MfRoundStartTime
+    {
+        get;
+        set;
+    }
+
+    public int MfWarmupPeriodEnd
+    {
+        get;
+        set;
+    }
+
+    public int MfWarmupPeriodStart
+    {
+        get;
+        set;
+    }
+
+    public int MFlCmmItemDropRevealEndTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlCmmItemDropRevealStartTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlCtTimeOutRemaining
+    {
+        get;
+        set;
+    }
+
+    public int MFlGameStartTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlGuardianBuyUntilTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlLastPerfSampleTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlNextRespawnWave
+    {
+        get;
+        set;
+    }
+
+    public int MFlRestartRoundTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlTerroristTimeOutRemaining
+    {
+        get;
+        set;
+    }
+
+    public int MGamePhase
+    {
+        get;
+        set;
+    }
+
+    public int MiHostagesRemaining
+    {
+        get;
+        set;
+    }
+
+    public int MiMatchStatsPlayersAliveCt
+    {
+        get;
+        set;
+    }
+
+    public int MiMatchStatsPlayersAliveT
+    {
+        get;
+        set;
+    }
+
+    public int MiMatchStatsRoundResults
+    {
+        get;
+        set;
+    }
+
+    public int MiNumConsecutiveCtLoses
+    {
+        get;
+        set;
+    }
+
+    public int MiNumConsecutiveTerroristLoses
+    {
+        get;
+        set;
+    }
+
+    public int MiRoundEndFunFactData1
+    {
+        get;
+        set;
+    }
+
+    public int MiRoundEndFunFactData2
+    {
+        get;
+        set;
+    }
+
+    public int MiRoundEndFunFactData3
+    {
+        get;
+        set;
+    }
+
+    public int MiRoundEndFunFactPlayerSlot
+    {
+        get;
+        set;
+    }
+
+    public int MiRoundEndLegacy
+    {
+        get;
+        set;
+    }
+
+    public int MiRoundEndPlayerCount
+    {
+        get;
+        set;
+    }
+
+    public int MiRoundEndTimerTime
+    {
+        get;
+        set;
+    }
+
+    public int MiRoundEndWinnerTeam
+    {
+        get;
+        set;
+    }
+
+    public int MiRoundStartRoundNumber
+    {
+        get;
+        set;
+    }
+
+    public int MiRoundTime
+    {
+        get;
+        set;
+    }
+
+    public int MiRoundWinStatus
+    {
+        get;
+        set;
+    }
+
+    public int MiSpectatorSlotCount
+    {
+        get;
+        set;
+    }
+
+    public int MnCtTeamIntroVariant
+    {
+        get;
+        set;
+    }
+
+    public int MnCtTimeOuts
+    {
+        get;
+        set;
+    }
+
+    public int MnEndMatchMapGroupVoteOptions
+    {
+        get;
+        set;
+    }
+
+    public int MnEndMatchMapGroupVoteTypes
+    {
+        get;
+        set;
+    }
+
+    public int MnEndMatchMapVoteWinner
+    {
+        get;
+        set;
+    }
+
+    public int MnGuardianGrenadesToGiveBots
+    {
+        get;
+        set;
+    }
+
+    public int MnGuardianModeSpecialKillsRemaining
+    {
+        get;
+        set;
+    }
+
+    public int MnGuardianModeSpecialWeaponNeeded
+    {
+        get;
+        set;
+    }
+
+    public int MnGuardianModeWaveNumber
+    {
+        get;
+        set;
+    }
+
+    public int MnHalloweenMaskListSeed
+    {
+        get;
+        set;
+    }
+
+    public int MnMatchAbortedEarlyReason
+    {
+        get;
+        set;
+    }
+
+    public int MnMatchEndCount
+    {
+        get;
+        set;
+    }
+
+    public int MnNextMapInMapgroup
+    {
+        get;
+        set;
+    }
+
+    public int MnNumHeaviesToSpawn
+    {
+        get;
+        set;
+    }
+
+    public int MnOvertimePlaying
+    {
+        get;
+        set;
+    }
+
+    public int MnPauseStartTick
+    {
+        get;
+        set;
+    }
+
+    public int MnQueuedMatchmakingMode
+    {
+        get;
+        set;
+    }
+
+    public int MnRoundEndCount
+    {
+        get;
+        set;
+    }
+
+    public int MnRoundStartCount
+    {
+        get;
+        set;
+    }
+
+    public int MnRoundsPlayedThisPhase
+    {
+        get;
+        set;
+    }
+
+    public int MnServerQuestId
+    {
+        get;
+        set;
+    }
+
+    public int MntTeamIntroVariant
+    {
+        get;
+        set;
+    }
+
+    public int MnTerroristTimeOuts
+    {
+        get;
+        set;
+    }
+
+    public int MnTotalPausedTicks
+    {
+        get;
+        set;
+    }
+
+    public int MnTournamentPredictionsPct
+    {
+        get;
+        set;
+    }
+
+    public int MNumBestOfMaps
+    {
+        get;
+        set;
+    }
+
+    public int MNumGlobalGifters
+    {
+        get;
+        set;
+    }
+
+    public int MNumGlobalGiftsGiven
+    {
+        get;
+        set;
+    }
+
+    public int MNumGlobalGiftsPeriodSeconds
+    {
+        get;
+        set;
+    }
+
+    public int MpGameModeRules
+    {
+        get;
+        set;
+    }
+
+    public int MsRoundEndFunFactToken
+    {
+        get;
+        set;
+    }
+
+    public int MsRoundEndMessage
+    {
+        get;
+        set;
+    }
+
+    public int MSzMatchStatTxt
+    {
+        get;
+        set;
+    }
+
+    public int MSzTournamentEventName
+    {
+        get;
+        set;
+    }
+
+    public int MSzTournamentEventStage
+    {
+        get;
+        set;
+    }
+
+    public int MSzTournamentPredictionsTxt
+    {
+        get;
+        set;
+    }
+
+    public int MTimeUntilNextPhaseStarts
+    {
+        get;
+        set;
+    }
+
+    public int MTotalRoundsPlayed
+    {
+        get;
+        set;
+    }
+
+    public int MvMinimapMaxs
+    {
+        get;
+        set;
+    }
+
+    public int MvMinimapMins
+    {
+        get;
+        set;
+    }
+
+    public int MpGameRules
+    {
+        get;
+        set;
+    }
+
+    public int MhDetectParentChange
+    {
+        get;
+        set;
+    }
+
+    public int MEconGloves
+    {
+        get;
+        set;
+    }
+
+    public int MRetakesMvpBoostExtraUtility
+    {
+        get;
+        set;
+    }
+
+    public int MAimPunchAngle
+    {
+        get;
+        set;
+    }
+
+    public int MAimPunchAngleVel
+    {
+        get;
+        set;
+    }
+
+    public int MAimPunchCache
+    {
+        get;
+        set;
+    }
+
+    public int MAimPunchTickBase
+    {
+        get;
+        set;
+    }
+
+    public int MAimPunchTickFraction
+    {
+        get;
+        set;
+    }
+
+    public int MbHasFemaleVoice
+    {
+        get;
+        set;
+    }
+
+    public int MbInBombZone
+    {
+        get;
+        set;
+    }
+
+    public int MbInBuyZone
+    {
+        get;
+        set;
+    }
+
+    public int MbInHostageRescueZone
+    {
+        get;
+        set;
+    }
+
+    public int MbInLanding
+    {
+        get;
+        set;
+    }
+
+    public int MbIsBuyMenuOpen
+    {
+        get;
+        set;
+    }
+
+    public int MbLastHeadBoneTransformIsValid
+    {
+        get;
+        set;
+    }
+
+    public int MbMustSyncRagdollState
+    {
+        get;
+        set;
+    }
+
+    public int MbNeedToReApplyGloves
+    {
+        get;
+        set;
+    }
+
+    public int MbOnGroundLastTick
+    {
+        get;
+        set;
+    }
+
+    public int MbPrevDefuser
+    {
+        get;
+        set;
+    }
+
+    public int MbPreviouslyInBuyZone
+    {
+        get;
+        set;
+    }
+
+    public int MbRagdollDamageHeadshot
+    {
+        get;
+        set;
+    }
+
+    public int MbRetakesHasDefuseKit
+    {
+        get;
+        set;
+    }
+
+    public int MbRetakesMvpLastRound
+    {
+        get;
+        set;
+    }
+
+    public int MbSkipOneHeadConstraintUpdate
+    {
+        get;
+        set;
+    }
+
+    public int MFlHealthShotBoostExpirationTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlLandingTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlLandseconds
+    {
+        get;
+        set;
+    }
+
+    public int MFlLastFiredWeaponTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlNextSprayDecalTime
+    {
+        get;
+        set;
+    }
+
+    public int MFlOldFallVelocity
+    {
+        get;
+        set;
+    }
+
+    public int MFlTimeOfLastInjury
+    {
+        get;
+        set;
+    }
+
+    public int MiRetakesMvpBoostItem
+    {
+        get;
+        set;
+    }
+
+    public int MiRetakesOffering
+    {
+        get;
+        set;
+    }
+
+    public int MiRetakesOfferingCard
+    {
+        get;
+        set;
+    }
+
+    public int MLastLandTime
+    {
+        get;
+        set;
+    }
+
+    public int MnEconGlovesChanged
+    {
+        get;
+        set;
+    }
+
+    public int MnPrevArmorVal
+    {
+        get;
+        set;
+    }
+
+    public int MnPrevGrenadeAmmoCount
+    {
+        get;
+        set;
+    }
+
+    public int MnRagdollDamageBone
+    {
+        get;
+        set;
+    }
+
+    public int MpBulletServices
+    {
+        get;
+        set;
+    }
+
+    public int MpBuyServices
+    {
+        get;
+        set;
+    }
+
+    public int MpGlowServices
+    {
+        get;
+        set;
+    }
+
+    public int MpHostageServices
+    {
+        get;
+        set;
+    }
+
+    public int MqDeathEyeAngles
+    {
+        get;
+        set;
+    }
+
+    public int MSzLastPlaceName
+    {
+        get;
+        set;
+    }
+
+    public int MSzRagdollDamageWeaponName
+    {
+        get;
+        set;
+    }
+
+    public int MUnPreviousWeaponHash
+    {
+        get;
+        set;
+    }
+
+    public int MUnWeaponHash
+    {
+        get;
+        set;
+    }
+
+    public int MvRagdollDamageForce
+    {
+        get;
+        set;
+    }
+
+    public int MvRagdollDamagePosition
+    {
+        get;
+        set;
+    }
+
+    public int MvRagdollServerOrigin
+    {
+        get;
+        set;
+    }
 }
 
 public class FogparamsT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class GeneratedTextureHandleT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class IntervalTimer
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class Members
 {
-    public int WATER_WAKE_IDLE { get; set; }
-    public int WATER_WAKE_NONE { get; set; }
-    public int WATER_WAKE_RUNNING { get; set; }
-    public int WATER_WAKE_WALKING { get; set; }
-    public int WATER_WAKE_WATER_OVERHEAD { get; set; }
-    public int COMP_MAT_MUTATOR_CONDITION_INPUT_CONTAINER_EXISTS { get; set; }
-    public int COMP_MAT_MUTATOR_CONDITION_INPUT_CONTAINER_VALUE_EQUALS { get; set; }
-    public int COMP_MAT_MUTATOR_CONDITION_INPUT_CONTAINER_VALUE_EXISTS { get; set; }
-    public int COMP_MAT_PROPERTY_MUTATOR_CONDITIONAL_MUTATORS { get; set; }
-    public int COMP_MAT_PROPERTY_MUTATOR_COPY_KEYS_WITH_SUFFIX { get; set; }
-    public int COMP_MAT_PROPERTY_MUTATOR_COPY_MATCHING_KEYS { get; set; }
-    public int COMP_MAT_PROPERTY_MUTATOR_COPY_PROPERTY { get; set; }
-    public int COMP_MAT_PROPERTY_MUTATOR_DRAW_TEXT { get; set; }
-    public int COMP_MAT_PROPERTY_MUTATOR_GENERATE_TEXTURE { get; set; }
-    public int COMP_MAT_PROPERTY_MUTATOR_INIT { get; set; }
-    public int COMP_MAT_PROPERTY_MUTATOR_POP_INPUT_QUEUE { get; set; }
-    public int COMP_MAT_PROPERTY_MUTATOR_RANDOM_ROLL_INPUT_VARIABLES { get; set; }
-    public int COMP_MAT_PROPERTY_MUTATOR_SET_VALUE { get; set; }
-    public int CONTAINER_SOURCE_TYPE_LOOSE_VARIABLES { get; set; }
-    public int CONTAINER_SOURCE_TYPE_MATERIAL_FROM_TARGET_ATTR { get; set; }
-    public int CONTAINER_SOURCE_TYPE_SPECIFIC_MATERIAL { get; set; }
-    public int CONTAINER_SOURCE_TYPE_TARGET_INSTANCE_MATERIAL { get; set; }
-    public int CONTAINER_SOURCE_TYPE_TARGET_MATERIAL { get; set; }
-    public int CONTAINER_SOURCE_TYPE_VARIABLE_FROM_TARGET_ATTR { get; set; }
-    public int LOOSE_VARIABLE_TYPE_BOOLEAN { get; set; }
-    public int LOOSE_VARIABLE_TYPE_COLOR4 { get; set; }
-    public int LOOSE_VARIABLE_TYPE_FLOAT1 { get; set; }
-    public int LOOSE_VARIABLE_TYPE_FLOAT2 { get; set; }
-    public int LOOSE_VARIABLE_TYPE_FLOAT3 { get; set; }
-    public int LOOSE_VARIABLE_TYPE_FLOAT4 { get; set; }
-    public int LOOSE_VARIABLE_TYPE_INTEGER1 { get; set; }
-    public int LOOSE_VARIABLE_TYPE_INTEGER2 { get; set; }
-    public int LOOSE_VARIABLE_TYPE_INTEGER3 { get; set; }
-    public int LOOSE_VARIABLE_TYPE_INTEGER4 { get; set; }
-    public int LOOSE_VARIABLE_TYPE_RESOURCE_MATERIAL { get; set; }
-    public int LOOSE_VARIABLE_TYPE_RESOURCE_TEXTURE { get; set; }
-    public int LOOSE_VARIABLE_TYPE_STRING { get; set; }
-    public int LOOSE_VARIABLE_TYPE_SYSTEMVAR { get; set; }
-    public int INPUT_TEXTURE_TYPE_AO { get; set; }
-    public int INPUT_TEXTURE_TYPE_COLOR { get; set; }
-    public int INPUT_TEXTURE_TYPE_DEFAULT { get; set; }
-    public int INPUT_TEXTURE_TYPE_MASKS { get; set; }
-    public int INPUT_TEXTURE_TYPE_NORMALMAP { get; set; }
-    public int INPUT_TEXTURE_TYPE_PEARLESCENCE_MASK { get; set; }
-    public int INPUT_TEXTURE_TYPE_ROUGHNESS { get; set; }
-    public int MATCH_FILTER_MATERIAL_ATTRIBUTE_EQUALS { get; set; }
-    public int MATCH_FILTER_MATERIAL_ATTRIBUTE_EXISTS { get; set; }
-    public int MATCH_FILTER_MATERIAL_NAME_SUBSTR { get; set; }
-    public int MATCH_FILTER_MATERIAL_PROPERTY_EQUALS { get; set; }
-    public int MATCH_FILTER_MATERIAL_PROPERTY_EXISTS { get; set; }
-    public int MATCH_FILTER_MATERIAL_SHADER { get; set; }
-    public int COMPMATSYSVAR_COMPOSITETIME { get; set; }
-    public int COMPMATSYSVAR_EMPTY_RESOURCE_SPACER { get; set; }
+    public int WaterWakeIdle
+    {
+        get;
+        set;
+    }
+
+    public int WaterWakeNone
+    {
+        get;
+        set;
+    }
+
+    public int WaterWakeRunning
+    {
+        get;
+        set;
+    }
+
+    public int WaterWakeWalking
+    {
+        get;
+        set;
+    }
+
+    public int WaterWakeWaterOverhead
+    {
+        get;
+        set;
+    }
+
+    public int CompMatMutatorConditionInputContainerExists
+    {
+        get;
+        set;
+    }
+
+    public int CompMatMutatorConditionInputContainerValueEquals
+    {
+        get;
+        set;
+    }
+
+    public int CompMatMutatorConditionInputContainerValueExists
+    {
+        get;
+        set;
+    }
+
+    public int CompMatPropertyMutatorConditionalMutators
+    {
+        get;
+        set;
+    }
+
+    public int CompMatPropertyMutatorCopyKeysWithSuffix
+    {
+        get;
+        set;
+    }
+
+    public int CompMatPropertyMutatorCopyMatchingKeys
+    {
+        get;
+        set;
+    }
+
+    public int CompMatPropertyMutatorCopyProperty
+    {
+        get;
+        set;
+    }
+
+    public int CompMatPropertyMutatorDrawText
+    {
+        get;
+        set;
+    }
+
+    public int CompMatPropertyMutatorGenerateTexture
+    {
+        get;
+        set;
+    }
+
+    public int CompMatPropertyMutatorInit
+    {
+        get;
+        set;
+    }
+
+    public int CompMatPropertyMutatorPopInputQueue
+    {
+        get;
+        set;
+    }
+
+    public int CompMatPropertyMutatorRandomRollInputVariables
+    {
+        get;
+        set;
+    }
+
+    public int CompMatPropertyMutatorSetValue
+    {
+        get;
+        set;
+    }
+
+    public int ContainerSourceTypeLooseVariables
+    {
+        get;
+        set;
+    }
+
+    public int ContainerSourceTypeMaterialFromTargetAttr
+    {
+        get;
+        set;
+    }
+
+    public int ContainerSourceTypeSpecificMaterial
+    {
+        get;
+        set;
+    }
+
+    public int ContainerSourceTypeTargetInstanceMaterial
+    {
+        get;
+        set;
+    }
+
+    public int ContainerSourceTypeTargetMaterial
+    {
+        get;
+        set;
+    }
+
+    public int ContainerSourceTypeVariableFromTargetAttr
+    {
+        get;
+        set;
+    }
+
+    public int LooseVariableTypeBoolean
+    {
+        get;
+        set;
+    }
+
+    public int LooseVariableTypeColor4
+    {
+        get;
+        set;
+    }
+
+    public int LooseVariableTypeFloat1
+    {
+        get;
+        set;
+    }
+
+    public int LooseVariableTypeFloat2
+    {
+        get;
+        set;
+    }
+
+    public int LooseVariableTypeFloat3
+    {
+        get;
+        set;
+    }
+
+    public int LooseVariableTypeFloat4
+    {
+        get;
+        set;
+    }
+
+    public int LooseVariableTypeInteger1
+    {
+        get;
+        set;
+    }
+
+    public int LooseVariableTypeInteger2
+    {
+        get;
+        set;
+    }
+
+    public int LooseVariableTypeInteger3
+    {
+        get;
+        set;
+    }
+
+    public int LooseVariableTypeInteger4
+    {
+        get;
+        set;
+    }
+
+    public int LooseVariableTypeResourceMaterial
+    {
+        get;
+        set;
+    }
+
+    public int LooseVariableTypeResourceTexture
+    {
+        get;
+        set;
+    }
+
+    public int LooseVariableTypeString
+    {
+        get;
+        set;
+    }
+
+    public int LooseVariableTypeSystemvar
+    {
+        get;
+        set;
+    }
+
+    public int InputTextureTypeAo
+    {
+        get;
+        set;
+    }
+
+    public int InputTextureTypeColor
+    {
+        get;
+        set;
+    }
+
+    public int InputTextureTypeDefault
+    {
+        get;
+        set;
+    }
+
+    public int InputTextureTypeMasks
+    {
+        get;
+        set;
+    }
+
+    public int InputTextureTypeNormalmap
+    {
+        get;
+        set;
+    }
+
+    public int InputTextureTypePearlescenceMask
+    {
+        get;
+        set;
+    }
+
+    public int InputTextureTypeRoughness
+    {
+        get;
+        set;
+    }
+
+    public int MatchFilterMaterialAttributeEquals
+    {
+        get;
+        set;
+    }
+
+    public int MatchFilterMaterialAttributeExists
+    {
+        get;
+        set;
+    }
+
+    public int MatchFilterMaterialNameSubstr
+    {
+        get;
+        set;
+    }
+
+    public int MatchFilterMaterialPropertyEquals
+    {
+        get;
+        set;
+    }
+
+    public int MatchFilterMaterialPropertyExists
+    {
+        get;
+        set;
+    }
+
+    public int MatchFilterMaterialShader
+    {
+        get;
+        set;
+    }
+
+    public int CompmatsysvarCompositetime
+    {
+        get;
+        set;
+    }
+
+    public int CompmatsysvarEmptyResourceSpacer
+    {
+        get;
+        set;
+    }
 }
 
 public class Metadata
 {
-    public string name { get; set; }
-    public string ty { get; set; }
-    public string type { get; set; }
+    public string Name
+    {
+        get;
+        set;
+    }
+
+    public string Ty
+    {
+        get;
+        set;
+    }
+
+    public string Type
+    {
+        get;
+        set;
+    }
 }
 
 public class PhysicsRagdollPoseT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class SellbackPurchaseEntryT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class ShardModelDescT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class Sky3dparamsT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class ViewAngleServerChangeT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class VPhysicsCollisionAttributeT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class WeaponPurchaseCountT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
 
 public class WeaponPurchaseTrackerT
 {
-    public Fields fields { get; set; }
-    public List<Metadata> metadata { get; set; }
-    public object parent { get; set; }
+    public Fields Fields
+    {
+        get;
+        set;
+    }
+
+    public List<Metadata> Metadata
+    {
+        get;
+        set;
+    }
+
+    public object Parent
+    {
+        get;
+        set;
+    }
 }
