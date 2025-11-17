@@ -9,13 +9,14 @@ using Core.Data;
 using Data.Entity;
 using Data.Game;
 using Graphics;
+using Microsoft.Extensions.Hosting;
 using Process.NET.Native.Types;
 using Serilog;
 using SharpDX;
 using Utils;
 using Point = Point;
 
-public sealed class AimBot(ILogger logger) : IDisposable
+public sealed class AimBot : BackgroundService
 {
     private const float AimBotSmoothing = 3f;
     private const double HumanReactThreshold = 30.0;
@@ -25,13 +26,12 @@ public sealed class AimBot(ILogger logger) : IDisposable
     private const int AimEventWindowMs = 1000;
     private static double _anglePerPixel;
 
-    private static ConfigManager? _config;
 
     private static readonly string[] _aimBonePriority = ["head", "neck", "chest", "pelvis"];
-
-    private readonly Keys _aimBotHotKey;
+    private readonly ILogger _logger;
 
     private readonly Lock _stateLock = new();
+    private readonly ITriggerBot _triggerBot;
     private double _aiAggressiveness = 2;
 
     private int _aimSuccessCount;
@@ -62,15 +62,15 @@ public sealed class AimBot(ILogger logger) : IDisposable
 
     private double _userMoveSum;
 
-    public AimBot(GameProcess gameProcess, GameData gameData)
+    public AimBot(GameProcess gameProcess, GameData gameData, ILogger logger, ITriggerBot triggerBot)
     {
+        _logger = logger;
+        _triggerBot = triggerBot;
         GameProcess = gameProcess;
         GameData = gameData;
         MouseHook = new GlobalHook(HookType.WH_MOUSE_LL, MouseHookCallback);
-        _aimBotHotKey = Config.AimBotKey;
     }
 
-    private static ConfigManager Config => _config ??= ConfigManager.Load();
 
     private static MouseMoveMethod MouseMoveMethod =>
         MouseMoveMethod.TryMouseMoveNew;
@@ -112,8 +112,10 @@ public sealed class AimBot(ILogger logger) : IDisposable
         set;
     } = AimBotSmoothing;
 
-    public void Dispose()
+    [SuppressMessage("Design", "CA1063:Implement IDisposable Correctly", Justification = "Class is sealed")]
+    public override void Dispose()
     {
+        base.Dispose();
         if (MouseHook != null)
         {
             MouseHook.Dispose();
@@ -169,7 +171,7 @@ public sealed class AimBot(ILogger logger) : IDisposable
 
         if (GameProcess is not { IsValid: true } ||
             GameData?.Player == null || !GameData.Player.IsAlive() ||
-            TriggerBot.IsHotKeyDown() ||
+            _triggerBot.IsHotKeyDown() ||
             GameData.Player.IsGrenade())
         {
             return true;
@@ -250,8 +252,7 @@ public sealed class AimBot(ILogger logger) : IDisposable
         }
 
         var aimPixels = Point.Empty;
-        Vector2 aimAngles;
-        var aimResult = GetAimTargetWithPrediction(out aimAngles, _dynamicFov);
+        var aimResult = GetAimTargetWithPrediction(out var aimAngles, _dynamicFov);
         if (aimResult)
         {
             if (!float.IsNaN(aimAngles.X) && !float.IsNaN(aimAngles.Y))
@@ -395,7 +396,7 @@ public sealed class AimBot(ILogger logger) : IDisposable
         return targetFound;
     }
 
-    [MemberNotNull(nameof(GameData), nameof(GameData.Player))]
+    [MemberNotNull(nameof(GameData))]
     private void ValidateGameDataPlayer()
     {
         if (GameData?.Player != null)
@@ -403,7 +404,7 @@ public sealed class AimBot(ILogger logger) : IDisposable
             return;
         }
 
-        logger.Error(ErrorMessages.PlayerIsNull);
+        _logger.Error(ErrorMessages.PlayerIsNull);
         throw new InvalidOperationException();
     }
 
@@ -530,6 +531,15 @@ public sealed class AimBot(ILogger logger) : IDisposable
         {
             FrameAction();
             Thread.Sleep(Time.Millisecond);
+        }
+    }
+
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    {
+        while (!stoppingToken.IsCancellationRequested)
+        {
+            FrameAction();
+            await Task.Delay(Time.Millisecond, stoppingToken).ConfigureAwait(false);
         }
     }
 }

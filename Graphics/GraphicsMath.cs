@@ -1,5 +1,6 @@
 namespace CS2Cheat.Graphics;
 
+using System.Drawing;
 using SharpDX;
 
 public static class GraphicsMath
@@ -66,30 +67,33 @@ public static class GraphicsMath
         AcosClamped(Vector3.Dot(leftNormalized, rightNormalized));
 
 
-    public static Vector3 GetNormalized(this Vector3 value) => Vector3.Normalize(value);
-
-    public static float GetSignedAngleTo(this Vector3 vector, Vector3 other, Vector3 about)
+    extension(Vector3 value)
     {
-        if (vector.IsParallelTo(about, 1E-9f))
+        public Vector3 GetNormalized() => Vector3.Normalize(value);
+
+        public float GetSignedAngleTo(Vector3 other, Vector3 about)
         {
-            throw new ArgumentException($"'{nameof(vector)}' is parallel to '{nameof(about)}'.");
+            if (value.IsParallelTo(about, 1E-9f))
+            {
+                throw new ArgumentException($"'{nameof(value)}' is parallel to '{nameof(about)}'.");
+            }
+
+            if (other.IsParallelTo(about, 1E-9f))
+            {
+                throw new ArgumentException($"'{nameof(other)}' is parallel to '{nameof(about)}'.");
+            }
+
+            var plane = new Plane3D(about, new Vector3());
+            var vectorOnPlane = plane.ProjectVector(value).vector.GetNormalized();
+            var otherOnPlane = plane.ProjectVector(other).vector.GetNormalized();
+            var crossProduct = Vector3.Cross(vectorOnPlane, otherOnPlane).GetNormalized();
+            var sign = Vector3.Dot(crossProduct, plane.Normal);
+            return GetAngleBetweenUnitVectors(vectorOnPlane, otherOnPlane) * sign;
         }
 
-        if (other.IsParallelTo(about, 1E-9f))
-        {
-            throw new ArgumentException($"'{nameof(other)}' is parallel to '{nameof(about)}'.");
-        }
-
-        var plane = new Plane3D(about, new Vector3());
-        var vectorOnPlane = plane.ProjectVector(vector).vector.GetNormalized();
-        var otherOnPlane = plane.ProjectVector(other).vector.GetNormalized();
-        var crossProduct = Vector3.Cross(vectorOnPlane, otherOnPlane).GetNormalized();
-        var sign = Vector3.Dot(crossProduct, plane.Normal);
-        return GetAngleBetweenUnitVectors(vectorOnPlane, otherOnPlane) * sign;
+        private bool IsParallelTo(Vector3 other, float tolerance = 1E-6f) =>
+            Math.Abs(1.0 - Math.Abs(Vector3.Dot(value.GetNormalized(), other.GetNormalized()))) <= tolerance;
     }
-
-    private static bool IsParallelTo(this Vector3 vector, Vector3 other, float tolerance = 1E-6f) =>
-        Math.Abs(1.0 - Math.Abs(Vector3.Dot(vector.GetNormalized(), other.GetNormalized()))) <= tolerance;
 
 
     private static float AcosClamped(float value, float tolerance = 1E-6f)

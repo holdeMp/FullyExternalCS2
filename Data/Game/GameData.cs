@@ -1,6 +1,7 @@
 ﻿namespace CS2Cheat.Data.Game;
 
 using System.Diagnostics.CodeAnalysis;
+using Core;
 using Entity;
 using Microsoft.Extensions.Hosting;
 
@@ -43,21 +44,28 @@ public sealed class GameData : BackgroundService
         GameProcess = null;
     }
 
-    protected override Task ExecuteAsync(CancellationToken stoppingToken)
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        if (GameProcess is not { IsValid: true })
+        while (!stoppingToken.IsCancellationRequested)
         {
-            return Task.CompletedTask;
-        }
+            if (GameProcess is not { IsValid: true })
+            {
+                return;
+            }
 
-        Player?.Update(GameProcess);
+            Player?.Update(GameProcess);
 
-        if (Entities != null)
-        {
+            if (Entities == null)
+            {
+                continue;
+            }
+
             foreach (var entity in Entities)
             {
                 entity.Update(GameProcess);
             }
+
+            await Task.Delay(Time.Millisecond, stoppingToken);
         }
     }
 }

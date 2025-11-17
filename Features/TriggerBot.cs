@@ -3,9 +3,11 @@ using Keys = Process.NET.Native.Types.Keys;
 namespace CS2Cheat.Features;
 
 using Data.Game;
+using Microsoft.Extensions.Hosting;
 using Utils;
 
-public sealed class TriggerBot : IDisposable
+public sealed class TriggerBot(GameProcess gameProcess, GameData gameData, ConfigManager config)
+    : BackgroundService, ITriggerBot
 {
     private const float MaxVelocityThreshold = 18f;
     private const int TriggerDelayMs = 5;
@@ -14,54 +16,18 @@ public sealed class TriggerBot : IDisposable
     private const int EntityStride = 112;
     private const int EntityIndexMask = 0x1FF;
     private const int EntityIndexShift = 9;
-    private static Keys _triggerBotHotKey;
-    private static ConfigManager? _config;
-    private readonly GameData _gameData;
+    private readonly ConfigManager _config = config ?? throw new ArgumentNullException(nameof(config));
+    private readonly GameData _gameData = gameData ?? throw new ArgumentNullException(nameof(gameData));
+    private readonly GameProcess _gameProcess = gameProcess ?? throw new ArgumentNullException(nameof(gameProcess));
+    private readonly Keys _triggerBotHotKey = config.TriggerBotKey;
 
-    private readonly GameProcess _gameProcess;
-
-    public TriggerBot(GameProcess gameProcess, GameData gameData)
-    {
-        _gameProcess = gameProcess ?? throw new ArgumentNullException(nameof(gameProcess));
-        _gameData = gameData ?? throw new ArgumentNullException(nameof(gameData));
-        _triggerBotHotKey = Config.TriggerBotKey;
-    }
-
-    private static ConfigManager Config => _config ??= ConfigManager.Load();
-
-    protected string ThreadName => nameof(TriggerBot);
+    public bool IsHotKeyDown() => _triggerBotHotKey.IsKeyDown();
 
     public override void Dispose()
     {
         base.Dispose();
-        GC.SuppressFinalize(this);
-    }
-
-    protected async void FrameAction()
-    {
-        if (!ShouldExecuteTriggerBot())
-        {
-            return;
-        }
-
-        var targetEntity = GetTargetEntity();
-        if (targetEntity == IntPtr.Zero)
-        {
-            return;
-        }
-
-        if (_gameProcess.Process == null)
-        {
-            return;
-        }
-
-        var entityTeam = _gameProcess.Process.Read<int>(targetEntity + Offsets.MiTeamNum);
-        if (!ShouldTriggerOnEntity(entityTeam))
-        {
-            return;
-        }
-
-        await ExecuteTrigger();
+        _gameData.Dispose();
+        _gameProcess.Dispose();
     }
 
     private bool ShouldExecuteTriggerBot() => _gameProcess.IsValid && IsHotKeyDown();
@@ -74,12 +40,7 @@ public sealed class TriggerBot : IDisposable
         }
 
         var localPlayerPawn = _gameProcess.ModuleClient.Read<IntPtr>(Offsets.DwLocalPlayerPawn);
-        if (localPlayerPawn == IntPtr.Zero)
-        {
-            return IntPtr.Zero;
-        }
-
-        if (_gameProcess.Process == null)
+        if (localPlayerPawn == IntPtr.Zero || _gameProcess.Process == null)
         {
             return IntPtr.Zero;
         }
@@ -99,6 +60,10 @@ public sealed class TriggerBot : IDisposable
             entityEntry + (EntityStride * (entityId & EntityIndexMask)));
     }
 
+    // The code checks _gameData.Player.FFlags == 65664. That numeric literal in decimal is 65664.
+    // In hexadecimal 65664 = 0x10080. So the FFlags value has exactly two bits set: 0x80 (decimal 128) and 0x10000 (decimal 65536).
+    // 0x80 is the well-known Source/Source2 bit usually named FL_CLIENT (a "client" / player flag). So one bit says "this entity is a client/player".
+    // 0x10000 is a higher-order flag bit (1<<16). Its exact meaning depends on the engine SDK/version; it's not defined anywhere in this repo. It likely represents an engine-specific state (an extra flag added in this engine version or a composite state).
     private bool ShouldTriggerOnEntity(int entityTeam)
     {
         if (_gameData.Player == null)
@@ -113,12 +78,43 @@ public sealed class TriggerBot : IDisposable
         return (isDifferentTeam || isSpecialCondition) && isWithinVelocityLimit;
     }
 
-    private static async Task ExecuteTrigger()
+    private static async Task ExecuteTriggerAsync()
     {
         await Task.Delay(TriggerDelayMs);
         Utility.MouseLeftDown();
         Utility.MouseLeftUp();
     }
 
-    public static bool IsHotKeyDown() => _triggerBotHotKey.IsKeyDown();
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    {
+        while (!stoppingToken.IsCancellationRequested)
+        {
+            if (!_config.TriggerBot)
+            {
+                await Task.Delay(100, stoppingToken).ConfigureAwait(false);
+                continue;
+            }
+
+            if (!ShouldExecuteTriggerBot())
+            {
+                await Task.Delay(10, stoppingToken).ConfigureAwait(false);
+                continue;
+            }
+
+            var targetEntity = GetTargetEntity();
+            if (targetEntity == IntPtr.Zero || _gameProcess.Process == null)
+            {
+                await Task.Delay(10, stoppingToken).ConfigureAwait(false);
+                continue;
+            }
+
+            var entityTeam = _gameProcess.Process.Read<int>(targetEntity + Offsets.MiTeamNum);
+            if (ShouldTriggerOnEntity(entityTeam))
+            {
+                await ExecuteTriggerAsync();
+            }
+
+            await Task.Delay(TriggerDelayMs, stoppingToken).ConfigureAwait(false);
+        }
+    }
 }

@@ -1,10 +1,12 @@
 ﻿namespace CS2Cheat.Data.Game;
 
 using System.Diagnostics;
+using System.Drawing;
 using Core;
+using Microsoft.Extensions.Hosting;
 using Utils;
 
-public sealed class GameProcess : IDisposable
+public sealed class GameProcess : BackgroundService
 {
     private const string NameProcess = "cs2";
 
@@ -50,35 +52,37 @@ public sealed class GameProcess : IDisposable
 
     public bool IsValid => WindowActive;
 
-    public void Dispose()
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
+        while (!stoppingToken.IsCancellationRequested)
+        {
+            try
+            {
+                if (!EnsureProcessAndModules())
+                {
+                    InvalidateModules();
+                }
+
+                if (!EnsureWindow())
+                {
+                    InvalidateWindow();
+                }
+
+                await Task.Delay(ThreadFrameSleep, stoppingToken);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+        }
+    }
+
+    public override void Dispose()
+    {
+        base.Dispose();
         InvalidateWindow();
         InvalidateModules();
     }
-
-
-    private async void FrameAction()
-    {
-        try
-        {
-            if (!EnsureProcessAndModules())
-            {
-                InvalidateModules();
-            }
-
-            if (!EnsureWindow())
-            {
-                InvalidateWindow();
-            }
-
-            await Task.Delay(ThreadFrameSleep);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-        }
-    }
-
 
     private void InvalidateModules()
     {

@@ -1,9 +1,10 @@
 ﻿namespace CS2Cheat;
 
-using System.Windows;
 using Data.Game;
 using Features;
-using Graphics;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Serilog;
 using Utils;
 
 internal static class Program
@@ -12,39 +13,27 @@ internal static class Program
     {
         await Offsets.UpdateOffsetsAsync();
         var features = ConfigManager.Load();
-        var CancellationTokenSource = new CancellationTokenSource();
-        var cancellationToken = CancellationTokenSource.Token;
-        var gameProcess = new GameProcess();
-        gameProcess.Start();
 
-        GameData = new GameData(GameProcess);
-        GameData.Start();
+        var host = Host.CreateDefaultBuilder()
+            .UseSerilog((_, _, configuration) =>
+            {
+                configuration.WriteTo.Console();
+            })
+            .ConfigureServices((_, services) =>
+            {
+                // Register core services
+                services.AddSingleton<GameProcess>();
+                services.AddHostedService<GameData>();
+                services.AddSingleton(features);
 
-        WindowOverlay = new WindowOverlay(GameProcess);
-        WindowOverlay.Start();
+                // Register background services
+                services.AddHostedService<TriggerBot>();
+                services.AddHostedService<AimBot>();
 
-        Graphics = new Graphics.Graphics(GameProcess, GameData, WindowOverlay);
-        Graphics.Start();
+                // Register application orchestrator
+            })
+            .Build();
 
-        Trigger = new TriggerBot(GameProcess, GameData);
-        if (features.TriggerBot)
-        {
-            Trigger.Start();
-        }
-
-
-        AimBot = new AimBot(GameProcess, GameData);
-        if (features.AimBot)
-        {
-            AimBot.Start(cancellationToken);
-        }
-
-        BombTimer = new BombTimer(Graphics);
-        if (features.BombTimer)
-        {
-            BombTimer.Start();
-        }
-
-        SetWindowDisplayAffinity(WindowOverlay!.Window.Handle, 0x00000011); //obs bypass
+        await host.RunAsync();
     }
 }

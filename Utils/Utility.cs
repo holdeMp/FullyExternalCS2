@@ -4,6 +4,7 @@
 namespace CS2Cheat.Utils;
 
 using System.Diagnostics;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Text;
 using Core;
@@ -90,7 +91,7 @@ public static class Utility
     public static bool IsKeyDown(this Keys key) => (User32.GetAsyncKeyState((int)key) & 0x8000) != 0;
 
 
-    public static void MouseMove(int x, int y)
+    public static uint MouseMove(int x, int y)
     {
         var inputs = new Input[1];
 
@@ -100,16 +101,20 @@ public static class Utility
             Union = new InputUnion { mouse = new MouseInput { deltaX = x, deltaY = y, flags = Mouse.Move } }
         };
 
-        User32.SendInput((uint)inputs.Length, inputs, Marshal.SizeOf(typeof(Input)));
+        return User32.SendInput((uint)inputs.Length, inputs, Marshal.SizeOf<Input>());
     }
 
     /// <summary>
     ///     https://ben.land/post/2021/04/25/windmouse-human-mouse-movement/
     /// </summary>
-    /// <param name="G_0">magnitude of the gravitational fornce</param>
-    /// <param name="W_0">magnitude of the wind force fluctuations</param>
-    /// <param name="M_0"> maximum step size (velocity clip threshold)</param>
-    /// <param name="D_0">distance where wind behavior changes from random to damped</param>
+    /// <param name="destY">The destination Y coordinate (horizontal position) where the mouse movement begins</param>
+    /// <param name="g0">magnitude of the gravitational force</param>
+    /// <param name="w0">magnitude of the wind force fluctuations</param>
+    /// <param name="m0">maximum step size (velocity clip threshold)</param>
+    /// <param name="d0">distance where wind behavior changes from random to damped</param>
+    /// <param name="startX">The initial X coordinate (horizontal position) where the mouse movement begins</param>
+    /// <param name="startY">The initial Y coordinate (vertical position) where the mouse movement begins</param>
+    /// <param name="destX">The destination X coordinate (horizontal position) where the mouse movement begins</param>
     public static void WindMouseMove(int startX, int startY, int destX, int destY, double g0, double w0,
         double m0,
         double d0)
@@ -167,29 +172,33 @@ public static class Utility
     }
 
 
-    public static void MouseLeftDown()
+    public static uint MouseLeftDown()
     {
         var inputs = new Input[1];
 
         inputs[0] = new Input
         {
-            Type = InputType.Mouse, Union = new InputUnion { mouse = new MouseInput { flags = Mouse.LeftDown } }
+            Type = InputType.Mouse,
+            Union = new InputUnion { mouse = new MouseInput { flags = Mouse.LeftDown } }
         };
 
-        User32.SendInput((uint)inputs.Length, inputs, Marshal.SizeOf(typeof(Input)));
+        var result = User32.SendInput((uint)inputs.Length, inputs, Marshal.SizeOf<Input>());
+        return result;
     }
 
 
-    public static void MouseLeftUp()
+    public static uint MouseLeftUp()
     {
         var inputs = new Input[1];
 
         inputs[0] = new Input
         {
-            Type = InputType.Mouse, Union = new InputUnion { mouse = new MouseInput { flags = Mouse.LeftUp } }
+            Type = InputType.Mouse,
+            Union = new InputUnion { mouse = new MouseInput { flags = Mouse.LeftUp } }
         };
 
-        User32.SendInput((uint)inputs.Length, inputs, Marshal.SizeOf(typeof(Input)));
+        var result = User32.SendInput((uint)inputs.Length, inputs, Marshal.SizeOf<Input>());
+        return result;
     }
 
     public static void PressSpace()
@@ -228,7 +237,7 @@ public static class Utility
             }
         };
 
-        User32.SendInput((uint)inputs.Length, inputs, Marshal.SizeOf(typeof(Input)));
+        User32.SendInput((uint)inputs.Length, inputs, Marshal.SizeOf<Input>());
     }
 
 
@@ -250,19 +259,18 @@ public static class Utility
         var handle = GCHandle.Alloc(buffer, GCHandleType.Pinned);
         try
         {
-            Kernel32.ReadProcessMemory(hProcess, lpBaseAddress, handle.AddrOfPinnedObject(), size,
-                out var lpNumberOfBytesRead);
-            if (lpNumberOfBytesRead == size)
+            if (Kernel32.ReadProcessMemory(hProcess, lpBaseAddress, handle.AddrOfPinnedObject(), size,
+                    out var lpNumberOfBytesRead) && lpNumberOfBytesRead == size)
             {
                 return Marshal.PtrToStructure<T>(handle.AddrOfPinnedObject());
             }
+
+            return default;
         }
         finally
         {
             handle.Free();
         }
-
-        return default;
     }
 
     private static byte[] ReadBytes(IntPtr hProcess, IntPtr lpBaseAddress, int maxLength)
